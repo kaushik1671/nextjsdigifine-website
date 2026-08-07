@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'How did you decide to enroll at Digifine’s Digital Marketing Post Graduate Course and was it worth it?',
+        excerpt: ' Making the decision of joining Digifine’s PG in digital marketing was the best decision I made during my final year of college. I was unsure of how I would manage everything at first. Cut to 5 months later, I was not only managing college commitments but also interning at my dream agency. Couldn’t be more grateful!',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Pooja Shrimal',
+        position: 'Sr.Manager, Madison World',
+      },
+      {
+              id: 2,
+              title: 'How did the PG in digital marketing at Digifine contribute to your career growth?',
+              excerpt: 'As someone coming from a completely non-marketing background, I was wondering if going for this postgraduate in digital marketing course would make sense for my career. A year later, I can say that I have gained so much confidence in my skills and have already found my calling working as an executive!',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Nisha Vishwakarma',
+              position: 'Associate Manager, Publicis Group',
+            },
+            {
+              id: 3,
+              title: 'How are the trainers at Digifine’s Postgraduate degree in Digital Marketing?',
+              excerpt: 'Sumeet sir, Siddhi ma’am and Siddharth sir have really made such a huge difference to my learning process. I’ve learnt to do in-depth market research, build actionable strategies and work on campaigns across different platforms, be it paid or organic marketing. Their insights have been truly invaluable!',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Bilal Mulla',
+              position: 'Group Head - Omnicorm media',
+            },
+            {
+              id: 4,
+              title: 'What was your favourite thing about the Digital Marketing Post Graduate Course at Digifine?',
+              excerpt: ' The thing that most impressed me about this PG in digital marketing was its syllabus. I had never even heard about most of these topics before, and the sessions were super insightful and interesting. My favourite lectures were on programmatic ads, OTT and BARC, data analytics and Website Development!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Lavanya Singh',
+              position: 'Executive, Logicserve Digital',
+            },{
+              id: 5,
+              title: 'How did Digifine’s postgraduate in digital marketing course impact your learning and career? ',
+              excerpt: 'Not knowing anything about this field and simply joining Digifine’s course with my friends, I can now say that I have fallen in love with digital marketing! The trainers made everything so fun and easy to understand, my favourite subject being social media marketing. I now work as a full-time social media manager!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Akash Kand',
+              position: 'Associate Manager, GroupM',
+            },{
+              id: 6,
+              title: 'Can you describe your overall experience with Digifine’s Digital Marketing Courses?',
+              excerpt: 'Signing up for Digifine’s PG in digital marketing is no doubt the best decision I made for my career. I was able to build my portfolio and resume, prepare for interviews with the help of my trainers, and gave mock interviews conducted by the placement cell. Proud to say that I landed a pretty rewarding job at just 21!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Sonam Gupta',
+              position: 'Executive, Mob Avenue',
+            },
+        ];
+
+export default testimonials;

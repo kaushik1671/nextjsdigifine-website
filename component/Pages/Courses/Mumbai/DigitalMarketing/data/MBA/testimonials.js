@@ -1,0 +1,58 @@
+
+const testimonials = [
+    {
+      id: 1,
+      title: 'Digifine is the perfect place to learn digital marketing.',
+      excerpt: 'My goal while starting a postgraduate in digital marketing course was to just start my career and crack some high-paying jobs. Found the MBA level program at Digifine to be the perfect fit for me mainly due to their industry residency program. Got some incredible salary hikes in just a few months of completion!',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Riddhi Kolte',
+      position: 'Group Head at Omnicom Media Group',
+    },
+    {
+            id: 2,
+            title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+            excerpt: 'One of the most advanced and extensive programs out there for anyone looking to take their career to the next level! Throughout Digifine’s MBA in digital marketing, I’ve learnt some of the most unique modules and been to Dubai for the most insightful industrial visit. The placements after completion have literally been the best thing!',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Bhavisha Jain',
+            position: 'Marketing Manager at Mahindra Modi',
+          },
+          {
+            id: 3,
+            title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+            excerpt: 'Sumeet sir, Siddharth sir and Siddhi ma’am are amazing teachers and helped me learn some of the most relevant skills that I now apply at my current job! The entire team was always there to support and guide me at every point, especially while preparing me for interviews and throughout the placement process.',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Het Shah',
+            position: 'Executive Growth at JioHotstar',
+          },
+          {
+            id: 4,
+            title: 'Digifine gave me much more than digital marketing knowledge.',
+            excerpt: 'I signed up for the MBA in digital marketing at Digifine purely because of the career prospects it would offer me. And when it came to really fulfilling all those promises, Digifine’s team certainly did not disappoint! Their industry residency program ended up to be extremely rewarding and life-changing for my career! ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Nisha Vishwakarma',
+            position: 'Associate Manager at Publicis Global Delivery',
+          },{
+            id: 5,
+            title: 'Digifine gave me much more than digital marketing knowledge.',
+            excerpt: 'Hands down the best postgraduate in digital marketing program if you want the best syllabus and trainers! I had the chance of learning some of the most interesting modules like OTT ads, programmatic media buying, experiential marketing and so many more, including luxury brand management by actually visiting Dubai.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Sarthak Brid',
+            position: 'Associate Manager - Biddable Media at Publicis Global Delivery',
+          },{
+            id: 6,
+            title: 'Digifine gave me much more than digital marketing knowledge.',
+            excerpt: 'Had the best time during my 6 months classroom training at Digifine! The interactions with trainers and other students were super insightful and rewarding throughout. We worked on campaigns, assignments and projects together before going for internships and full-time jobs at our dream agencies and companies!',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Harshi Agarwal',
+            position: 'Ad Operations Executive at JioHotstar',
+          },
+        ];
+ 
+export default testimonials;
+

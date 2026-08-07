@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+    id: 1,
+    title: 'Digifine is the perfect place to learn digital marketing.',
+    excerpt: 'I was very unsure of what to expect from this digital marketing institute as someone who is coming from a non-marketing background. But anytime I faced any issues, the trainers were always there to solve my problems and help me understand things in a way I could actually understand!',
+    linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+    profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+    name: 'Pooja Shrimal',
+    position: 'Sr.Manager, Madison World',
+  },
+  {
+          id: 2,
+          title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+          excerpt: 'Hats off to Sumeet sir, Siddharth sir and Siddhi ma’am for the patience and mentorship! These trainers have always encouraged and challenged me to be better everyday and get the best out of my digital marketing course at Digifine. Their support has played a huge role in helping me build this skillset and confidence today!',
+          linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+          name: 'Nisha Vishwakarma',
+          position: 'Associate Manager, Publicis Group',
+        },
+        {
+          id: 3,
+          title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+          excerpt: 'I was looking for a digital marketing diploma course that would help me switch careers with ease. Digifine has no doubt provided me with the relevant tools to make this a reality! From theoretical concepts to practical projects, assignments and campaigns, I can safely say that I have mastered it all!',
+          linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+          name: 'Bilal Mulla',
+          position: 'Group Head - Omnicorm media',
+        },
+        {
+          id: 4,
+          title: 'Digifine gave me much more than digital marketing knowledge.',
+          excerpt: 'As a full-time working professional, I wasn’t sure as to how I would be able to manage learning a complete new discipline. But Digifine has a super flexible batch schedule and their weekend digital marketing classes helped me cover every single module with ease. Even the revision and doubt sessions were extremely helpful!',
+          linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+          name: 'Akash Kand',
+          position: 'New York',
+        },{
+          id: 5,
+          title: 'Digifine gave me much more than digital marketing knowledge.',
+          excerpt: 'I run a small business and needed to learn the ins and outs of digital marketing to handle this aspect on my own. Digifine’s lectures have been helpful in helping me run my own Google ads and meta ad campaigns. I have also been able to build my own brand website and list my products on e-commerce platforms!',
+          linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+          name: 'Akash Kand',
+          position: 'New York',
+        },{
+          id: 6,
+          title: 'Digifine gave me much more than digital marketing knowledge.',
+          excerpt: 'This 7 months diploma in digital marketing was the best decision I took to help me get into a full-fledged freelance career! As someone with a strong personal and work ethic, I appreciated the kind of timely support that was provided by Digifine’s team. My favourite part - real-world projects and case studies!',
+          linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+          name: 'Akash Kand',
+          position: 'New York',
+        },
+        ];
+
+export default testimonials;

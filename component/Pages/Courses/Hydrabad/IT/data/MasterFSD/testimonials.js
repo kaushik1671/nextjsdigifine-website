@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'What made you opt for the Full Stack Developer Course at Digifine?',
+      excerpt: 'As I was looking for jobs to start working right after my graduation, I found out that my degree did not provide me with enough real skills to get a good package. So I signed up for Digifine’s Full Stack Development Course in Hyderabad and was able to learn directly through projects and even got a placement with the help of their team.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Rahul Nair',
+      position: 'Full Stack Developer, Osian Infotech',
+    },
+    {
+            id: 2,
+            title: 'How did Digifine impact your tech journey?',
+            excerpt: 'I joined the Full Stack Developer Course at Digifine when I was in my 2nd year of BMS degree as I wanted to add some coding skills to my resume and get into some web and app development. After learning from Chetan sir, my interest actually shifted entirely into full stack and I pursued it as a full-time career. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Nikhil Reddy',
+            position: 'Software Engineer, TCS',
+          },
+          {
+            id: 3,
+            title: 'Why did you sign up for Digifine’s Full Stack Developer Classes?',
+            excerpt: 'I wanted to learn some applicable coding knowledge and work as a freelancer in the tech industry. That’s why I got into Digifine’s Full Stack Development Course. The teachers made me work on many projects that I was able to add to my portfolio and ultimately create an attractive profile which landed me my first few clients',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Sai Kiran',
+            position: 'Python Developer, LiveMint',
+          },
+          {
+            id: 4,
+            title: "Why did you choose Digifine for a Full Stack Development Course?",
+            excerpt: 'After my 12th I was confused as to what exactly I should do with my time. On recommendation by friends, I enrolled for the Full Stack Developer Course at Digifine Institute. Chetan sir and Abdul sir were my teachers and they were very patient with my slow pace and gave me personal attention. I worked at an internship given by them for 3 months too.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Kavya Rao',
+            position: 'Software Engineer, TCS',
+          },{
+            id: 5,
+            title: 'What were your goals before joining Digifine’s Full Stack Development Course and how did you achieve them?',
+            excerpt:"My goal was clear and I wanted to get a good job in the tech industry when I started my Full Stack Developer Classes. I got a 3 months internship certificate after completing my course and then the teachers helped me prepare for interviews for some MNCs. Got placed as a full-time backend NodeJS developer at a really good CTC.",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Swathi Reddy',
+            position: 'Full Stack Developer, Innominds',
+          },
+          {
+            id: 6,
+            title: 'What stood out to you about Digifine’s Full Stack Developer Course in Hyderabad?',
+            excerpt: 'My most favourite thing about Digifine’s Full Stack Development Course is that they have so many languages in just one program. Like I learned backend languages like Python and NodeJS. And for frontend there was MERN and MEAN both, which made it really easy for me to find a job after the course as I had ample skills in my resume.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Meera Iyer',
+            position: 'MERN Stack Developer, Mindtree',
+          }
+  ];
+export default testimonials;

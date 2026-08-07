@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'Can you share how Digifine Academy’s Graphic Design Course helped you with practical learning?',
+        excerpt: 'I wanted to do graphic design immediately after my 12th boards as I was always very interested in the creative field. Digifine’s Graphic Design Course in Andheri, Mumbai was perfect for me as it gave offline classes, certificates and even placement opportunities. I worked as an intern for a few months before being hired as a full-time designer. ',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Pooja Shrimal',
+        position: 'Sr.Manager, Madison World',
+      },
+      {
+              id: 2,
+              title: 'How did Digifine and its trainers help you throughout your Masters Graphic Design Course.',
+              excerpt: 'As someone with a non-creative background, I was unsure if I could pivot into a completely new industry. But the Masters in Graphic Design at Digifine helped me gain confidence through regular classes and practical projects using which I was able to create my portfolio and land a job through their placement guarantee program.',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Nisha Vishwakarma',
+              position: 'Associate Manager, Publicis Group',
+            },
+            {
+              id: 3,
+              title: 'How was your experience at Digifine’s Graphic Design Course in Mumbai?',
+              excerpt: 'My experience at Digifine was really good with their Graphic Design Course in Mumbai. The teachers are incredibly good and experienced with tools and visualization. They always solved my doubts and encouraged me to reach my creative potential. Thanks to Digifine, I am now working in one of the biggest agencies!',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Bilal Mulla',
+              position: 'Group Head - Omnicorm media',
+            },
+            {
+              id: 4,
+              title: 'What was your goal to join Digifine’s Graphic Design Course in Mumbai?',
+              excerpt: 'In just 1 year’s time, I was able to master literally everything from graphics and print designing to UI UX designing and video editing. The branding and showreel projects helped me realise my mistakes and work on them before finally adding my work to a final portfolio and landing a job as a video editor through Digifine’s Masters in Graphic Design placement cell.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Zaheer Abbas',
+              position: 'Video Editor, VFX Expert',
+            },{
+              id: 5,
+              title: 'How did the Masters Graphic Design Course at Digifine help you boost your career?',
+              excerpt: 'I got my first job from Digifine as a full-time video editor and VFX expert. I had joined the Graphic Design Course in Mumbai to enhance my skills and Sujata ma’am really helped me upgrade my resume and add so many impressive projects to my portfolio. This 1 year course was literally my best investment. ',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Yash Soni',
+              position: 'Graphic Designer, Komli Media',
+            },{
+              id: 6,
+              title: 'What was your goal to join Digifine’s Graphic Design Course in Mumbai?',
+              excerpt: 'After completing my graduation, I was unsure where to take my career next. That’s when I found Digifine’s Masters in Graphic Design that offered me a clear-cut path from learning to internships and finally finding a well-paying job. Thanks to my teachers, I was able to crack multiple interviews and now work at my dream start-up.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Waqar Khan',
+              position: 'Junior Graphic Designer, Publisys Group',
+            },
+        ];
+
+export default testimonials;

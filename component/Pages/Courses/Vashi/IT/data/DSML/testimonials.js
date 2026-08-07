@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'How did the Data Science Course with ML in Vashi, Navi Mumbai at Digifine help you with your career?',
+      excerpt: 'My purpose for joining Digifine’s Data Science Course with Machine Learning was to start my career in the tech field immediately after my TY. I got placement guarantee over here and after just 8 months I got placed as a full-time machine learning engineer with a great package at one of the few companies where Digifine had aligned my interviews.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Pooja Singh',
+    position: 'Business Intelligence Analyst, InsightIQ Solutions',
+    },
+    {
+            id: 2,
+            title: 'What did you like most about Digifine’s Data Science and Machine Learning Course in Vashi, Navi Mumbai?',
+            excerpt: 'My favourite thing about the Data Science Course with ML at Digifine Academy was the emphasis they put on practical skills and exposure. All the classes were super in-depth and everything was taught entirely from basics so non-tech people like me didn’t struggle with later being able to master the advanced tools. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Neha Gupta',
+    position: 'Junior ML Engineer, Zetta Analytics',
+          },
+          {
+            id: 3,
+            title: 'What was your goal to join the Data Science Course with Machine Learning at Digifine Academy? ',
+            excerpt: 'My goal was to switch my career from sales to tech. Digifine’s Data Science and Machine Learning Course in Vashi, Navi Mumbai helped me gain confidence with getting into a completely new field from scratch and even promised me placements to boost my career growth as a complete fresher.',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Neha Gupta',
+    position: 'Junior ML Engineer, Zetta Analytics',
+          },
+          {
+            id: 4,
+            title: "Did Digifine’s Data Science Course with ML meet your expectations? If yes, how?",
+            excerpt: 'As a data analyst myself, I joined Digifine to upskill and diversify my portfolio of projects as well. The Data Science Course with Machine Learning was entirely task and assignment-based which I really liked. I got to practice and learn from my mistakes and even ended up collaborating with others in my class. ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Pooja Singh',
+            position: 'Business Intelligence Analyst, InsightIQ Solutions',
+          },{
+            id: 5,
+            title: 'What made you decide to join this Data Science and Machine Learning Course in Vashi, Navi Mumbai?.',
+            excerpt:"I enrolled for the Data Science Course with ML in Vashi, Navi Mumbai after my 12th boards to gain some real-world skills. At Digifine I got the kind of practical experience and industry exposure that I needed and they even gave me a paid internship even before I was done with my first year of graduation. ",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Rahul Patel',
+            position: 'Data Scientist (Python), TCS',
+          },
+          {
+            id: 6,
+            title: 'What is the training like at Digifine’s Data Science Course with Machine Learning?',
+            excerpt: 'The best thing about Digifine is the kind of training they provide. The whole Data Science and Machine Learning Course in Vashi, Navi Mumbai is taught by amazing teachers like Chetan sir and Abdul sir who are super helpful and guided me through all my doubts. They even encouraged me to appear for interviews at several companies.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Priya Verma',
+            position: 'Machine Learning Engineer, QuantAI Labs',
+          }
+  ];
+export default testimonials;

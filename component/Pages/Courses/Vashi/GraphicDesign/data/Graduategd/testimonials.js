@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1, 
+      title: 'How did Digifine’s Graphic Design Institute contribute to your career?',
+      excerpt: 'Digifine helped me a lot with my career in graphic design. I had enrolled for their Graphic Design Classes for building my portfolio in designing so that I could build my portfolio and appear for interviews. The team at Digifine even helped me with resume building and mock interviews which boosted my confidence.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Aarav Mehta',
+      position: 'Jr Graphic Designer, Nykaa',
+    },
+    {
+            id: 2,
+            title: 'How was your overall experience with the Graphic Design Classes at Digifine Academy?',
+            excerpt: 'I joined the Digifine Graphic Design Institute in Vashi, Navi Mumbai as I wanted to become a graphic designer after my 12th boards. Although I had no previous experience in this field, the trainers helped me understand each thing from the most basic points and gave me personal attention when I had too many doubts. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Riya Sharma',
+            position: 'Creative Graphic Designer, Schbang',
+          },
+          {
+            id: 3,
+            title: 'What was your goal to enroll for Digifine’s Graphic Design Institute in Vashi, Navi Mumbai? ',
+            excerpt: 'My goal for joining the Graphic Design Classes was to upskill during my graduation so that I could have some experience beforehand. Digifine definitely did not disappoint with this as I got to learn major graphic design software like Adobe Photoshop, Illustrator, InDesign and even Figma for UI and UX design.',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Social Media Designer',
+            position: 'Branding Designer - Pepper Content',
+          },
+          {
+            id: 4,
+            title: "What did you like most about the Graphic Design Classes at Digifine?",
+            excerpt: 'Coming from a small town, I did not have enough confidence to start my career in a fast-paced industry like graphic design. But joining Digifine’s masters course in graphic design was the best decision I made. The curriculum and skills provided here helped me meet industry standards in less than a yeaMy favourite part about Digifine’s Graphic Design Institute is the kind of trainers they have. Sujata ma’am and Nitin sir are some of the most knowledgeable teachers who tell us a lot of their own design experience and make everything easier and really fun to learn. They even encouraged me to directly opt for a job after the course.! ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Priya Joshi',
+            position: 'Illustrator & Graphic Designer - Dentsu',
+          },{
+            id: 5,
+            title: 'How did this Graphic Design Institute provide you with real experience and practical exposure?',
+            excerpt: 'The Graphic Design Classes at Digifine gave me so much exposure through projects, training and assignments. I worked on UI and UX as well which is a field I wasn’t even aware of before applying. All of this helped me create an amazing portfolio of my own which I could later use to crack an incredible opportunity at one of my dream agencies.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Junior Visual Designer',
+            position: 'Illustrator Designer - White Rivers Media',
+          },
+          {
+            id: 6,
+            title: 'Were Digifine’s Graphic Design Classes able to match your expectations? If yes, how?',
+            excerpt: 'I am really grateful to Digifine Graphic Design Institute for the support they gave me during and even after my course. Their practical training approach and career guidance helped me find a graphic design internship after which I could make a switch and find a full-time job. They honestly have everything I needed - best faculty, syllabus and career support!',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Vikas Yadav',
+            position: 'Motion Graphic Designer - Zee Entertainment Enterprises',
+          }
+  ];
+export default testimonials;

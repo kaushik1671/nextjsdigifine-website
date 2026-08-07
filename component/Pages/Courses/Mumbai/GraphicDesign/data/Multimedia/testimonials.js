@@ -1,0 +1,56 @@
+const testimonials = [
+      {
+              id: 2,
+              title: 'How did Digifine’s Multimedia & Animation Course impact your creativity?',
+              excerpt: 'I had no creative background before but just wanted to learn designing from scratch. After joining the Multimedia & Animation Course in Mumbai at Digifine, I got to learn softwares and editing from basic to advanced. I did not even know I could be this creative but today, I’m working as a video editor and animator!',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Riya Sharma',
+              position: 'Sr. Graphic Designer, Ogilvy India',
+            },
+            {
+              id: 3,
+              title: 'Why did you enroll for the Multimedia & Animation Course at Digifine?',
+              excerpt: 'I was pursuing Bcom but always had deep interest in designing and only knew some Canva basics. To upgrade my skills, I enrolled in the Multimedia & Animation Course in Mumbai at Digifine Academy. I learnt graphic design, UI UX, video editing, motion graphics and animation. Now I got a job as an animator and I’m really grateful to the institute for that.',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Karan Patel',
+              position: 'Motion Graphic Artist, Social Beat',
+            },
+            {
+              id: 4,
+              title: 'Did Digifine help you achieve your learning goals with its Multimedia & Animation Course in Mumbai?',
+              excerpt: 'I found Digifine through a friend who did their course and now works as a full-time designer. Sujata Ma’am is a really great teacher. While pursuing college itself, I got a chance to work on agency projects and build a really amazing portfolio. My experience at Digifine has been extremely good with everything from training to placements.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Arjun Mehta',
+              position: 'Visual Designer, Dentsu',
+            },{
+              id: 5,
+              title: 'How was your experience at Digifine’s Multimedia & Animation Course?',
+              excerpt: 'Before joining the Digifine Multimedia & Animation Course, I had tried to learn some graphic designing basics myself. But my goal was to build a portfolio and to make a career in this field. Digifine actually offered me placement guarantee with a paid internship during my course and full time job too. Couldn’t be more thankful!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Aisha Khan',
+              position: 'Visual Communication Designer, Leo Burnett India',
+            },{
+              id: 6,
+              title: 'What made you pick Digifine for doing the Multimedia & Animation Course in Mumbai?',
+              excerpt: "My reason for choosing Digifine for Multimedia & Animation Course was their written placement guarantee aspect which attracted me most. Throughout my classes, I learned a lot of interesting skills and covered softwares that have helped me to create my own videos, animations and films from scratch. ",
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Aditya Joshi',
+              position: 'Motion Graphic Designer, Kinnect',
+            },
+            {
+              id: 7,
+              title: 'What did you like most about Digifine’s Multimedia & Animation Course in Mumbai?',
+              excerpt: "The favourite thing about the Multimedia & Animation Course at Digifine for me was the fact that apart from basic graphics softwares, I was getting to learn things like website and app designing along with video editing, motion graphics, 2D and 3D Animation. These were literally the most fun and rewarding 18 months for me learning and earning.",
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Rohit Desai',
+              position: 'Creative Designer, WATConsult',
+            },
+        ];
+
+export default testimonials;

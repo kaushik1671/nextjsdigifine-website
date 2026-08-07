@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1, 
+        title: 'Digifine is the perfect place to learn full stack development.',
+        excerpt: 'I was unsure at first about my career in full stack as I am not even from a tech background. But Chetan sir is genuinely very helpful and supportive. He made coding very easy to understand and I was able to master many languages after the full stack developer course at Digifine.',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Kunda Jadhav',
+        position: 'Full Stack Developer, Osian Infotech',
+      },
+      {
+              id: 2,
+              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              excerpt: 'Before starting my full stack development course in Digifine, I had very limited knowledge and experience in coding. I wanted to develop my skills to find a good job. And completing my course with Chetan sir actually helped me build a vast portfolio and I even got a job from the institute itself.',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Lakshay Kumar',
+              position: 'Python Developer, LiveMint',
+            },
+            {
+              id: 3,
+              title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+              excerpt: 'The best part about Digifine and their full stack developer course in mumbai is that it has placement guarantee. Even the teachers there are really good and explain everything in a lot of depth. I have even approached them multiple times outside class and they never say no for guidance.',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Bilal Mulla',
+              position: 'Software Engineer, TCS',
+            },
+            {
+              id: 4,
+              title: 'Digifine gave me much more than full stack development knowledge.',
+              excerpt: 'I am so grateful to Digifine and especially Chetan sir. Did not know that I could have such a good career in a well-known company in just 6 months. The industry exposure and kind of projects that they give are so high-quality and ended up adding a lot of value to my resume.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Gaurav Singh',
+              position: 'Engineer, Microsoft',
+            },{
+              id: 5,
+              title: 'Digifine gave me much more than full stack development knowledge.',
+              excerpt: 'The reason why I am so proficient with both frontend and backend development is the training given to me by Chetan sir. He is super kind and very patient with his teaching. Right now I have a pretty high-paying job as a backend developer and I definitely have Digifine and their placement team for this.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Farhan Khan',
+              position: 'Full Stack Developer, Wipro',
+            },{
+              id: 6,
+              title: 'Digifine gave me much more than full stack development knowledge.',
+              excerpt: 'I have worked on some of the most interesting frontend, backend and full stack projects at Digifine. After completing the full stack developer course there, I can say with confidence that I am proficient in multiple languages, databases and frameworks. Thank you for all the guidance and support!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Xavier Dsouza',
+              position: 'Backend Developer, Accenture',
+            },
+        ];
+
+export default testimonials;

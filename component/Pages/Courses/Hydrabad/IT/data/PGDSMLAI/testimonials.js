@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'Why did you join the Data Science Classes at Digifine?',
+      excerpt: 'I found out about Digifine in my 4th year of mechanical engineering college. I knew how big data was becoming in that time and how much potential it had. So without wasting time, I joined the Data Science Course in Hyderabad with Machine Learning & AI. As promised, I got my placement as well immediately after my graduation.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Arman Chowdhury',
+              position: 'Data Engineer, Oriental Weavers',
+    }, 
+    {
+            id: 2,
+            title: 'What made you opt for Digifine’s Data Science & Advanced Artificial Intelligence Course in Hyderabad?',
+            excerpt: 'I got interested in Machine Learning and AI algorithms in 11th standard itself. My interest was in learning more about this and getting the right guidance. Joining Digifine’s Data Science & Artificial Intelligence Course in Hyderabad helped me get in-depth understanding about things that I had never even known! ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Geet Kapoor',
+              position: 'Data Analyst, Accenture',
+          },
+          {
+            id: 3,
+            title: 'How was your experience with the Data Science Course at Digifine?',
+            excerpt: 'At Digifine, I had a great experience with teachers like Abdul sir and Chetan sir. Their way of training is just easy and fun to understand. The constant tasks and projects made it possible for me to actually know where I stand in terms of my strengths and weaknesses. I worked on my mistakes and was able to crack my dream job in months! ',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Nikhil Akhand',
+              position: 'Data Scientist, Publicis Sapient',
+          },
+          {
+            id: 4,
+            title: "What value did this Data Science & Artificial Intelligence Course add to your career?",
+            excerpt: 'my analytics resume and get a job in the data science or AI field. I was able to learn a lot of additional software and tools which helped me enhance my profile and then get placed via the institute. Thank you Chetan sir.   ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Rohit Jadhav',
+        position: 'Data Scientist, Publicis Sapient',
+          },{
+            id: 5,
+            title: 'What was the one thing you loved about the Data Science Classes at Digifine?',
+            excerpt:"The thing that I liked and that attracted me most about Digifine’s Data Science & Advanced Artificial Intelligence Course in Hyderabad was the kind of syllabus they were offering in the 1 year duration. I was able to learn deep learning, natural language processing and a lot of such ML and AI skills pretty easily with added projects.  ",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Harsh Akhand',
+              position: 'Growth Analyst, Publicis Sapient',
+          },
+          {
+            id: 6,
+            title: 'Did Digifine’s Data Science Course in Hyderabad match your expectations?',
+            excerpt: 'I got to know about Digifine from a friend who had gotten tech placement from them. My high expectations were met by their team and trainers very well. I loved the teaching style and the personal attention aspect from Abdul sir. Everything was taught with clarity and practical examples, case studies and assignments.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Satyarth Akhand',
+              position: 'Data Scientist, Future Group',
+          }
+  ];
+export default testimonials;

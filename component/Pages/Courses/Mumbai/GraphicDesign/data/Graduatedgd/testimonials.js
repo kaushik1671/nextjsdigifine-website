@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'Digifine is the perfect place to learn digital marketing.',
+        excerpt: 'I joined Digifine’s Graphic Design Classes to gain some designing skills for my own venture that I was planning to start back then. What I learnt there exceeded my expectations. Not only did I learn basic graphic design, but also advanced things in Illustrator, Photoshop and Indesign along with UI UX design which helped me design my own product website. ',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Riya Sharma',
+        position: 'Sr. Graphic Designer, Ogilvy India',
+      },
+      {
+              id: 2,
+              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              excerpt: 'Before I enrolled for this Graphic Design Institute in Mumbai, I had hardly any idea about graphic design apart from Canva. At Digifine, I was trained by Sujata Ma’am who guided me through each and every step and even helped me after classes when I had doubts. Now I can confidently say that I have mastered the softwares of this field.',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Karan Patel',
+              position: 'Motion Graphic Artist, Social Beat',
+            },
+            {
+              id: 3,
+              title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+              excerpt: 'As a traditional graphic designer, I knew I needed to upskill and learn the latest technologies to sustain my current role. So I started with the Graphic Design Classes at Digifine and was able to upgrade my current portfolio and profile with the software and projects I was made to work on. They even assisted me with switching my job and getting a better package.',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Arjun Mehta',
+              position: 'Visual Designer, Dentsu',
+            },
+            {
+              id: 4,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'I have always been interested in getting creative skills and that inclination made me go for Digifine’s Graphic Design Institute. Nitin sir and Sujata ma’am focused a lot on making me practise everything and work on several projects through which I was able to gain skills. Now I’m working as a designer in one of my dream agencies.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Aisha Khan',
+              position: 'Visual Communication Designer, Leo Burnett India',
+            },{
+              id: 5,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'My goal to enroll for the Graphic Design Classes at Digifine Academy was to restart my creative career after a long break. I was worried if my age would be a negative factor but the teachers here assured me and helped me learn at my comfort. After my course I was able to find a good placement with interview prep given by them too. ',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Aditya Joshi',
+              position: 'Motion Graphic Designer, Kinnect',
+            },{
+              id: 6,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'I wanted to learn graphic design mainly just for career and job purposes. That’s why I joined Digifine as it’s a Graphic Design Institute that promised placement assistance. They helped me prepare my portfolio with good projects and even with my resume and mock interviews. Now I work as a full-time graphic designer, thanks to this program!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Rohit Desai',
+              position: 'Creative Designer, WATConsult',
+            },
+        ];
+
+export default testimonials;

@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'How did the Python Full Stack Developer Classes at Digifine benefit you?',
+      excerpt: 'I found Digifine’s Python Full Stack Developer Course right after completing my 12th and it became one of the best, most important experiences of my life. I had no idea I could actually get real-world exposure even before graduating but Digifine made it possible by giving me a paid internship after 6 months. This boosted my confidence so much!',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Pooja Shrimal',
+      position: 'Sr.Manager, Madison World',
+    },
+    {
+            id: 2,
+            title: 'What was your reason to enroll for Digifine’s Python Full Stack Developer Classes?',
+            excerpt: 'The reason I enrolled for the Python Full Stack Developer Course at Digifine was because I wanted to turn my basic programming knowledge into an advanced skillset that would help me start my career as a developer. Digifine not only built my skills through projects but also gave me an internship letter and full-time job in my desired company. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Nisha Vishwakarma',
+            position: 'Associate Manager, Publicis Group',
+          },
+          {
+            id: 3,
+            title: 'Why did you decide to join Digifine? ',
+            excerpt: 'I joined Digifine Academy for their Python Full Stack Developer Classes with placement guarantee. The teachers there helped me with my portfolio and resume building part and even trained me on mock interviews. Digifine’s placement team aligned 4 interviews for me until I finally got placed at one of the companies as a full-time developer!',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Bilal Mulla',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 4,
+            title: "What was your experience with Digifine’s Python Full Stack Developer Course?",
+            excerpt: 'My experience at Digifine has and still continues to be extraordinary. The entire team is super helpful with everything with regards to doubts, missed sessions, personal attention and complete placement support. Even after my Python Full Stack Developer Course was over, they still guided me through a job switch for a higher package. ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Nishant Singh',
+            position: 'Backend Python Developer, Capital First',
+          },{
+            id: 5,
+            title: 'Can you tell us about your journey at Digifine?',
+            excerpt:"The journey I had throughout my Python Full Stack Developer Classes at Digifine was extremely memorable. I got to learn from amazing trainers like Chetan sir and Abdul sir who used to give plenty of tasks and assignments after every class. This practical kind of teaching style helped me learn a lot and grow my skills with confidence. ",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Uday Sharma',
+            position: 'Backend Python Developer, HCL Technologies',
+          },
+          {
+            id: 6,
+            title: 'Why did you enroll for the Digifine Python Full Stack Developer Classes?',
+            excerpt: 'I had enrolled for Digifine Academy’s Python Full Stack Developer Course to completely change my field after being a commerce graduate. Chetan sir would always help me out and made my interest and skills in coding grow immensely in just a couple of months. I was able to easily crack interviews and got into a role at one of those companies.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Jayesh Kumar',
+            position: 'Backend Python Developer, LiveMint',
+          }
+  ];
+export default testimonials;

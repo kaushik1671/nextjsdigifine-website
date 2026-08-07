@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'What was your goal to join the full stack course at Digifine? Were you able to achieve it?',
+      excerpt: 'I was in my BSc IT 3rd year when I joined the Digifine Full Stack Developer Course in Vashi, Navi Mumbai. My goal was always to learn skills that could land me a good and well-paying job in the tech field. In my classes I was able to learn and master multiple coding languages and even applied them on many projects.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Lakshay Kumar',
+      position: 'Python Developer, LiveMint',
+    }, 
+    {
+            id: 2,
+            title: 'What did you like most about the Full Stack Developer Course?',
+            excerpt: 'The main thing that I liked about the full stack course at Digifine was that it was teaching me both MERN plus MEAN stack in the same program. I even got to work on Python and NodeJS here. Through their placement guarantee, I was able to get a full-time job at one of my dream companies as a backend developer',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Kunda Jadhav',
+        position: 'Full Stack Developer, Osian Infotech',
+          },
+          {
+            id: 3,
+            title: "What made you go for Digifine’s full stack course?",
+            excerpt: 'As someone who had just completed 12th boards, I was unsure about what to do before I decided to upgrade my very basic coding knowledge with Digifine’s Full Stack Developer Course in Vashi, Navi Mumbai. Apart from gaining advanced developing skills here, I even got an internship to apply them and get exposure',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Gaurav Singh',
+              position: 'Engineer, Microsoft',
+          },
+          {
+            id: 4,
+            title: 'What stood out to you about the Full Stack Developer Course at Digifine?',
+            excerpt:  "The teaching style at Digifine is the best thing about the whole full stack course. Chetan sir and Abdul sir are really helpful and friendly trainers who always helped me with all my doubts. I was coming from a completely non-tech background and they taught me everything from basics and I was able to ace my projects and even job interview assignments with their help.",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Farhan Khan',
+              position: 'Full Stack Developer, Wipro',
+          },{
+            id: 5,
+            title: 'Why did you join Digifine for a full stack course?',
+            excerpt: 'I had joined the Full Stack Developer Course in Vashi, Navi Mumbai at Digifine with the goal to switch my career from sales to tech. I had zero knowledge of coding or programming. But as promised, everything started from scratch and I was able to cover that and master so many languages in just 6 months. Now I work as a full-time developer.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Xavier Dsouza',
+              position: 'Backend Developer, Accenture',
+          },{
+            id: 6,
+            title: 'What made you enroll at Digifine and what did you take away from it?',
+            excerpt: 'My college was already covering coding basics but I knew that this was not enough for me to get the kind of jobs I was aiming for. So I enrolled in Digifine’s full stack course for both skills and placements. I was surprised how easily I grasped everything and knew how to practically apply all my skills, thanks to the daily tasks given in class!',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Bilal Mulla',
+              position: 'Software Engineer, TCS',
+          },
+        ];
+
+export default testimonials;

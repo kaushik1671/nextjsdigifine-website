@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'Why did you start with the Digital Marketing Course for Beginners at Digifine?',
+      excerpt: 'I joined Digifine’s Advanced Executive Digital Marketing Classes in Vashi, Navi Mumbai to learn skills for growing my own family business. I’ve successfully learned google ads, social media marketing, seo, webdev, ecommerce and other things that have helped me apply them to my brand. The trainers also helped me with all related doubts even after the course.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Pooja Shrimal',
+      position: 'Sr.Manager, Madison World',
+    },
+    {
+            id: 2,
+            title: 'What was your purpose to join Digifine’s Digital Marketing Classes in Vashi, Navi Mumbai?',
+            excerpt: 'My goal was to find a short term beginner digital marketing course to complete after my 12th and before college. I took admission in Digifine after seeing their syllabus and attending demo class. The teaching style is really good and mostly practical. I got to study many brand case studies and worked on presentations and projects to boost my confidence. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Nisha Vishwakarma',
+            position: 'Associate Manager, Publicis Group',
+          },
+          {
+            id: 3,
+            title: "How would you describe your experience with the Digital Marketing Course for Beginners at Digifine?",
+            excerpt: 'My experience at Digifine was amazing. I had no background knowledge and was completely new to this field but after completing my Digital Marketing Classes here, I can say with certainty that I’ve become highly skilled in performance marketing, social media, SEO, ecommerce management and much more. ',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Bilal Mulla',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 4,
+            title: 'What made you enroll for Digifine’s Digital Marketing Classes in Vashi, Navi Mumbai?',
+            excerpt:  "I came to Digifine initially to just learn some very basic digital marketing concepts and joined their digital marketing course for beginners with no expectations in mind. But I was pleasantly surprised by my experience there. The subject matter was so in-depth and training and support are even better. I learnt things I never imagined I would before, thanks to Digifine!",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Farhan Khan',
+            position: 'Marketing Executive, Publicis Group',
+          },{
+            id: 5,
+            title: 'How has your experience been with this Digital Marketing Course for Beginners at Digifine Academy?',
+            excerpt: 'Digifine has been literally the perfect place for me to learn digital marketing in Vashi, Navi Mumbai. I got to learn from really experienced trainers like Sumeet sir and Manav sir. They even helped me with doubts after my course was over. I built a pretty great professional network in Digifine’s class through projects and I work with them even today.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Qasim Khan',
+            position: 'Performance Marketing Executive, Publicis Group',
+          },{
+            id: 6,
+            title: 'How did Digifine’s digital marketing classes contribute to your career growth?',
+            excerpt: 'Thanks to Digifine, I was able to build my own portfolio website and get freelancing projects right after my digital marketing classes in Vashi, Navi Mumbai. I took help from trainers to build my portfolio and get some initial projects done effectively. At Digifine, I was able to gain a lot of skills and hands-on experience through assignments.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Umar Farooq',
+            position: 'Executive, Foxymoron',
+          },
+        ];
+
+export default testimonials;

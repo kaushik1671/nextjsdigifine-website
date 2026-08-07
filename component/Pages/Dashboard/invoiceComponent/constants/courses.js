@@ -1,0 +1,17 @@
+export const COURSES = [
+      {name:'Ai Powered Post Graduate Program in Digital Marketing'},
+      {name:'Ai Powered Master\'s Program in Digital Marketing'},
+      {name:'MBA Level Ai Powered Marketing & Data Analytics Program'},
+      {name:'Digifine Graduate Digital Marketing Program'},
+      {name:'Digifine Executive Digital Marketing Program'},
+      {name:'Graphic Design Graduate Program'},
+      {name:'Masters In Graphic Design & Video Editing Program'},
+      {name:'Masters In Multimedia Graphic Design & Animation Program'},
+      {name:'E-commerce Website Development'},
+      {name:'Master\'s in Full Stack Developer Program'},
+      {name:'Master\'s in Full Stack Developer Program (Python)'},
+      {name:'Master\'s in Data Analytics Program'},
+      {name:'Master\'s in Data Science Ai Program'},
+      {name:'Data Science & Machine Learning Program'},
+      {name:'Master\'s in Data Science, Machine Learning & Ai Program'},
+  ];

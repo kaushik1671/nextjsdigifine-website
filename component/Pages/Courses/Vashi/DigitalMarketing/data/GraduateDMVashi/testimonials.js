@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'How did Digifine’s Diploma in Digital Marketing help you in your career?',
+      excerpt: ' I was stuck in a dead-end job and always had an interest in digital marketing. After doing the diploma in digital marketing at Digifine, I’ve become more confident in making this career switch. The skills and knowledge I got here from the trainers has been so valuable to me, besides their constant support!',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Pooja Shrimal',
+      position: 'Sr.Manager, Madison World',
+    },
+    {
+            id: 2,
+            title: 'How was your overall experience with the Digital Marketing Diploma Course at Digifine Academy?',
+            excerpt: 'As a student fresh out of college with very few practical skills, I was unsure of where to start. Finding Digifine’s digital marketing diploma course was genuinely such a blessing! I got the right knowledge, guidance, direction and training not only in terms of equipping me with real-world skills but also for kickstarting my career. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Nisha Vishwakarma',
+            position: 'Associate Manager, Publicis Group',
+          },
+          {
+            id: 3,
+            title: "What was your goal to enroll for Digifine’s Diploma in Digital Marketing?",
+            excerpt: 'My main focus with joining a digital marketing course offline was to add more valuable skills to my resume. The diploma program at Digifine was my perfect choice because it covered everything right from the basics and covered some advanced and pretty unique topics like brand management and Website Development.',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Bilal Mulla',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 4,
+            title: 'What did you like most about the Digital Marketing Diploma Course at Digifine?',
+            excerpt:  "One thing I loved about Digifine is that it doesn’t just train you on digital marketing topics and skills, but it also makes you industry-ready. Apart from regular classes, they also conduct sessions on portfolio and resume building as well as interview preparation. Mock interviews with the placement cell are also super helpful!",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Vaibhav Soni',
+            position: 'Executive, Kinnect Digital',
+          },{
+            id: 5,
+            title: 'What was your main concern before joining the Diploma in Digital Marketing and did Digifine help you resolve that?.',
+            excerpt: 'Standing out in such a fast-paced job market is difficult, and that is what worried me the most. But completing the diploma in digital marketing at Digfine has given me a lot to add to my portfolio and resume. I’ve worked on some of the most fun, interesting and challenging projects and assignments here!',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Sumeet Singh',
+            position: 'Senior Executive, Zribble Digital',
+          },{
+            id: 6,
+            title: 'Can you talk about the training provided at Digifine’s Digital Marketing Diploma Course?',
+            excerpt: 'Sumeet sir and Siddhi ma’am are amazing trainers! They always used real-world examples to explain concepts and make everything extremely easy to understand. They also always encouraged us to come up with original ideas and build well-researched, actionable digital marketing strategies.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Sanjay Kumar',
+            position: 'Executive, Publicis Group',
+          },
+        ];
+
+export default testimonials;

@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'Digifine is the perfect place to learn digital marketing.',
+        excerpt: 'My favourite part about this master in digital marketing course is the 100% internship guarantee aspect. I got placed at a pretty renowned company as a paid intern just halfway through my course and got tons of industry exposure. The placement team and trainers at Digifine are really helpful in this regard.',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Pooja Shrimal',
+        position: 'Sr.Manager, Madison World',
+      },
+      {
+              id: 2,
+              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              excerpt: 'If you’ve done your 12th or are graduating / have graduated, I would say go for this masters in digital marketing course. Definitely a great decision on my part as just after my 12th standard I learned some relevant skills, built a pretty good resume and then got a high-paying internship at Hotstar.',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Nisha Vishwakarma',
+              position: 'Associate Manager, Publicis Group',
+            },
+            {
+              id: 3,
+              title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+              excerpt: 'I love that the trainers at Digifine put so much emphasis on practical learning! That was my main concern while joining their digital marketing institute and I was happy to find out that they majorly focus on making us work on campaign creation, live projects and assignments so that we can practically apply our knowledge.',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Bilal Mulla',
+              position: 'Group Head - Omnicorm media',
+            },
+            {
+              id: 4,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'I am really proud of myself to say that I have successfully completed an amazing internship even before completing the master in digital marketing course at Digifine. I had just completed my 12th and not even started college when I joined. And now I have so much confidence and experience in my skills, thanks to Digifine!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Akash Kand',
+              position: 'New York',
+            },{
+              id: 5,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'Best trainers, best curriculum and hands-down the best learning experience I have had at Digifine. I spent around 9 months doing the masters in digital marketing program there and got a lot of valuable insights from Sumeet sir and Siddharth sir. The internships given by their placement cell are also great.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Akash Kand',
+              position: 'New York',
+            },{
+              id: 6,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'Thanks to Sumeet sir and Siddhi ma’am for guiding me throughout my digital marketing classes at Digifine. I had absolutely no background to begin with and they were so patient with me and made me understand things in a way I could actually grasp. Definitely the best place to get the best-quality training!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Akash Kand',
+              position: 'New York',
+            },
+        ];
+
+export default testimonials;

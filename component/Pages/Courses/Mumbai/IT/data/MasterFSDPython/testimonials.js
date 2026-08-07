@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'How did the Python Full Stack Developer Classes at Digifine benefit you?',
+        excerpt: 'I joined the Python Full Stack Developer Course in Mumbai at Digifine to start my career in coding after I had completed BSc IT. The practical training here was so much better than the college curriculum. I got to learn everything in full depth and actually realised I barely knew anything about web development before doing this program.',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Pooja Shrimal',
+        position: 'Sr.Manager, Madison World',
+      },
+      {
+              id: 2,
+              title: 'What was your reason to enroll for Digifine’s Python Full Stack Developer Classes?',
+              excerpt: "As someone coming from a totally non-IT background, I was at first a bit skeptical about joining Digifine’s Python Full Stack Developer Institute but my mind changed instantly. The curriculum and teachers here are so good. Everything is taught from scratch and their placement guarantee part is actually the best thing.",
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Nisha Vishwakarma',
+              position: 'Associate Manager, Publicis Group',
+            },
+            {
+              id: 3,
+              title: 'Why did you decide to join Digifine? ',
+              excerpt: 'I wanted to learn web development to switch my career after working for 4 years in a different field. The Python Full Stack Developer Training provided at Digifine was entirely hands-on and I got to practise every software constantly through projects and tasks. I also got placed as a full-time backend python developer after the course.',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Bilal Mulla',
+              position: 'Group Head - Omnicorm media',
+            },
+            {
+              id: 4,
+              title: 'What was your experience with Digifine’s Python Full Stack Developer Course?',
+              excerpt: 'After my 12th, I signed up for the Python Full Stack Web Development Course to get a better footing before my first year of degree was over. Digifine helped me achieve my goal of learning advanced coding and web development practically by working on projects and even a paid internship after my course.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Harshvardhan Singh',
+              position: 'Backend Python Developer, LiveMint',
+            },{
+              id: 5,
+              title: 'Can you tell us about your journey at Digifine?',
+              excerpt: "I was doing my BMS when I got really interested in coding and websites through college workshops. That’s when I joined Digifine to do the Python Full Stack Developer Course in Andheri, Mumbai. Completing the program gave me immense confidence and clarity about what career I want to pursue, and then I got a job through Digifine too!",
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Lakshya Singh',
+              position: 'Full Stack Developer, TechCorp',
+            },{
+              id: 6,
+              title: 'Why did you enroll for the Digifine Python Full Stack Developer Classes?',
+              excerpt: 'My next experience at Digifine’s Python Full Stack Developer Institute was with the training. Chetan sir and Abdul sir are really friendly and knowledgeable. They made everything much easier to learn and understand throughout. I am grateful to them for always correcting my mistakes and helping me push myself to grow and become a good developer.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Yash Sharma',
+              position: 'Backend Python Developer, HCL Technologies',
+            },
+        ];
+ 
+export default testimonials;

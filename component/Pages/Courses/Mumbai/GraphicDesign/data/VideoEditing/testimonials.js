@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'Digifine is the perfect place to learn video editing.',
+        excerpt: 'I wanted to learn proper video editing to be better at my current social media content creation job as before doing this Video Editing Course in Mumbai, I was working just with some basic tools that were not enough anymore. Safe to say, Digifine delivered. I was able to learn Premier Pro and AfterEffects that helped me take my content to the next level!',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Riya Sharma',
+        position: 'Sr. Graphic Designer, Ogilvy India',
+      },
+      {
+              id: 2,
+              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              excerpt: 'After learning photography & videography and working in the industry for a couple of years, my next aim was to learn video editing so that I could freelance for end-to-end services. Digifine’s Video Editing and Motion Graphics Course actually was super helpful in training me on the tools I would need to achieve my career goals.',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Karan Patel',
+              position: 'Motion Graphic Artist, Social Beat',
+            },
+            {
+              id: 3,
+              title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+              excerpt: 'As someone with zero experience in creativity, I was simply just drawn towards this video editing field after watching a few videos on YouTube. Video Editing Classes at Digifine helped me learn everything from basics and I was able to master advanced concepts and software like Premier Pro and AfterEffects very quickly.',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Arjun Mehta',
+              position: 'Visual Designer, Dentsu',
+            },
+            {
+              id: 4,
+              title: 'Digifine gave me much more than video editing knowledge.',
+              excerpt: 'My aim to start Digifine’s Video Editing Course in Mumbai was to get a job in that industry as soon as possible. In around 5 or 6 months, I was able to go for a paid internship where I worked with Premier Pro. After my entire course, the institute placed me at a known agency with a 70% hike and I now work as a full-time editor.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Aisha Khan',
+              position: 'Visual Communication Designer, Leo Burnett India',
+            },{
+              id: 5,
+              title: 'Digifine gave me much more than video editing knowledge.',
+              excerpt: 'I joined the Video Editing Classes in Andheri as it was providing me with upskilling and placement opportunities while being close to my place. The trainers here are really great, especially Sujata ma’am and Nitin sir who are knowledgeable and very helpful. They even encouraged me to appear for interviews at leading agencies and get a job.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Aditya Joshi',
+              position: 'Motion Graphic Designer, Kinnect',
+            },{
+              id: 6,
+              title: 'Digifine gave me much more than video editing knowledge.',
+              excerpt: 'What attracted me most about Digifine is the kind of projects and practical focus they gave in the Video Editing and Motion Graphics Course. And on enrolling I was not disappointed. This institute has the best faculty and syllabus. They even gave me 100% job guarantee and a paid internship in just a few months of training. ',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Rohit Desai',
+              position: 'Creative Designer, WATConsult',
+            },
+        ];
+
+export default testimonials;

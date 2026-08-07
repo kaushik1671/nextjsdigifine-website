@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'Digifine is the perfect place to learn digital marketing.',
+        excerpt: 'I was confused about my career after graduation but always had an inclination towards marketing. After counselling at Digifine, I decided to join their PG in digital marketing and it has truly been a life-changing decision for me! I’ve found my true passion and work as a full-time executive now!',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Sahile Kale',
+        position: 'Sr. Manager, Tonic',
+      },
+      {
+              id: 2,
+              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              excerpt: 'The trainers at Digifine are no doubt the most experienced and supportive people out there. Sumeet sir’s and Siddhi ma’am’s sessions have been super fun and insightful in helping me gain relevant knowledge and skills. Thanks to the placement team for helping me crack the role I always wanted too!',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Nitish Sharma',
+              position: 'Associate Manager, Break the code',
+            },
+            {
+              id: 3,
+              title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+              excerpt: 'After my 12th, I wanted to get an early start into the digital marketing field and build a career in it. Digifine’s digital marketing course with placement guarantee was the perfect investment for me as I got a lot of industry exposure through multiple live projects and highly rewarding internships!',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Radhe Tiwari',
+              position: 'Group Head, Adbizit',
+            },
+            {
+              id: 4,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'The curriculum of Digifine’s digital marketing course in Mumbai is literally the most advanced and interesting one. I have successfully been able to master a range of tools and skills throughout this 1 year program and even got a job from the placement team as a performance marketing executive! ',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Anushka Mishra',
+              position: 'Manager , Group M',
+            },{
+              id: 5,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'Sumeet sir and Siddhi ma’am’s lectures are the highlight of my digital marketing course at Digifine! They were always willing to help and solve my doubts. I got to work on a lot of different campaigns which enhanced my overall understanding of digital marketing concepts. 100% recommend this course!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Akash Kand',
+              position: 'Associate Manager, GroupM',
+            },{
+              id: 6,
+              title: 'Digifine gave me much more than digital marketing knowledge.',
+              excerpt: 'For anyone looking to start their career in digital marketing, I would definitely recommend the PG program at Digifine. You can learn from teachers who are experts, get deep knowledge through their vast syllabus and get placed for internships and full-time jobs, literally everything in one place!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Sonam Gupta',
+              position: 'Executive, Mob Avenue',
+            },
+        ];
+
+export default testimonials;

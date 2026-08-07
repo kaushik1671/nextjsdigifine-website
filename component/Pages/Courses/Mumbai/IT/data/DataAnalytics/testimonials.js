@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+    id: 1,
+    title: 'Digifine is the perfect place to learn data analytics.',
+    excerpt: 'I was majorly looking for a data analytics course offline in Mumbai to upskill for my current job. With Digifine, I got a lot of help with this and now I can easily handle all the data-related concerns at my current job through the skills I got over there. Thanks to the team for all their support throughout!',
+    linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+    profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+    name: 'Kunda Jadhav',
+    position: 'Risk Analyst, HDFC Bank',
+  },
+  {
+          id: 2,
+          title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+          excerpt: 'As a fresh graduate with no relevant skills or experience, I wanted to get into something that would help me kickstart my career in a field with good scope. That’s when I found out about Digifine and their data analytics course with placement guarantee. Definitely the best investment for my career so far!',
+          linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+          name: 'Malay Roy Chowdhury',
+          position: 'Data Analyst, Aditya Birla Finance Limited',
+        },
+        {
+          id: 3,
+          title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+          excerpt: 'The kind of knowledge Chetan sir has about this field is genuinely commendable. He has always made our data analytics classes fun and interactive. Got to learn Python, Tableau, PowerBI, MySQL, basically all the relevant softwares from him and now I am working as a data analyst myself!',
+          linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+          name: 'Ketan Kapoor',
+          position: 'Business Analyst, Qualitykiosk Technologies',
+        },
+        {
+          id: 4,
+          title: 'Digifine gave me much more than data analytics knowledge.',
+          excerpt: 'Digifine is actually the perfect place to start if you want to build a career as a data analyst. I did their 6 months course and got an internship certificate there. The placement team even guided me and helped me prepare for interviews. The team literally hand-holds you throughout the whole data analytics course. ',
+          linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+          name: 'Bohaj Khan',
+          position: 'Data Analyst, HDFC AMC',
+        },{
+          id: 5,
+          title: 'Digifine gave me much more than data analytics knowledge.',
+          excerpt: 'Amazing course syllabus and trainers at Digifine! After completing the data analytics course there, I can say with guarantee that they have got some of the best modules and high-quality teaching. The projects we worked on were both informative and fun. Best decision I’ve made!',
+          linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+          name: 'Omkar Singh',
+          position: 'Financial Analyst, Capital First',
+        },{
+          id: 6,
+          title: 'Digifine gave me much more than data analytics knowledge.',
+          excerpt: 'Best part about Digifine’s data analytics course for me was how every tool and software was taught with so much depth and then we were asked to work on multiple assignments for the same. This actually helped me master everything slowly and perfectly. Grateful to Chetan sir for his mentorship!',
+          linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+          profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+          name: 'Vishal Singh',
+          position: 'Business Analyst, Newgen Software Technologies',
+        },
+      ];
+
+export default testimonials;

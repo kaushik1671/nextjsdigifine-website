@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'What was your goal to join Digifine?',
+      excerpt: 'My goal to join Digifine for Python Full Stack Developer Course was to upgrade my existing programming skills and take them to a level where I could get into great companies for full-time roles. With the internship letter and placement support & guarantee from Digifine, all of that became extremely reachable and I was able to achieve my dreams easily!',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Pooja Shrimal',
+      position: 'Sr.Manager, Madison World',
+    },
+    {
+            id: 2,
+            title: 'What made you choose Digifine for the Python Full Stack Developer Course in Hyderabad?',
+            excerpt: 'The reason I believed Digifine would be the perfect Python Full Stack Developer Classes for me was because they made us work on a range of projects based on which I then received a 3-months internship letter. The best thing was the 100% placement guarantee promise and complete support they gave me especially through mock interviews.',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Nisha Vishwakarma',
+            position: 'Associate Manager, Publicis Group',
+          },
+          {
+            id: 3,
+            title: 'What was the best part about Digifine’s Python Full Stack Web Development Course for you?',
+            excerpt: 'The best part for me at Digifine was the faculty. Abdul sir and Chetan sir made the Python Full Stack Developer Classes interesting by explaining everything in-depth and giving fun and challenging tasks throughout. The projects I worked on were extremely rewarding and helped me build a pretty impressive web dev portfolio.',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Bilal Mulla',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 4,
+            title: "How did Digifine contribute to your growth in tech?",
+            excerpt: 'The Python Full Stack Course at Digifine added so much value to my growth including personal and professional. I was able to develop skills through practical sessions and apply them on assignments and projects. The interview prep helped me gain confidence and gave me access to opportunities I had only dreamed of.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Akash Kand',
+            position: 'New York',
+          },{
+            id: 5,
+            title: 'Tell us about your experience at Digifine. ',
+            excerpt:"I actually had one of the most rewarding experiences during my time at Digifine’s Python Full Stack Developer Classes. The sessions were completely hands-on and I got to practice and learn both frontend as well as backend programming languages like Javascript, HTML, CSS, Angular, Bootstrap, ReactJS and NextJS besides Python.",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Akash Kand',
+            position: 'New York',
+          },
+          {
+            id: 6,
+            title: 'How did this Python Full Stack Developer Course in Hyderabad help you?',
+            excerpt: 'Digifine’s Python Full Stack Web Development Course helped me launch my career from literally knowing nothing about coding to working a full-time job as a backend developer. The trainers were always super supportive and taught everything from scratch, solved doubts and gave daily tasks which made me perfect my skills in a short period of time.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Akash Kand',
+            position: 'New York',
+          }
+  ];
+export default testimonials;

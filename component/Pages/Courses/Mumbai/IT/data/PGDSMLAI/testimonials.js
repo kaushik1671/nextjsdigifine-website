@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+        id: 1,
+        title: 'Digifine is the perfect place to learn data science ML and AI.',
+        excerpt: 'This 1 year course has literally helped me master everything in data analytics, data science, machine learning and even AI. I have worked on so many relevant tools and interesting projects. Even got an internship letter from Digifine and the job guarantee aspect was the best thing about the program!',
+        linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+        profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+        name: 'Rohit Jadhav',
+        position: 'Data Scientist, Publicis Sapient',
+      },
+      {
+              id: 2,
+              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              excerpt: 'My goal of joining Digifine’s data science and machine learning course in Mumbai was to give a proper start to my career after graduation. The training from Chetan sir is no doubt top-notch. It is clear that he has a lot of knowledge and was always ready to clear my doubts and help me anytime I needed.',
+              linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+              name: 'Arman Chowdhury',
+              position: 'Data Engineer, Oriental Weavers',
+            },
+            {
+              id: 3,
+              title: 'I had zero background in marketing, but the trainers at Digifine made it so simple, ',
+              excerpt: 'Hands down the most advanced data science machine learning artificial intelligence course out there! Digifine and its team, especially Chetan sir, are genuinely some of the most supportive people. From training and skills to interview prep and finding a great job, I have had the best experience here!',
+              linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+              name: 'Geet Kapoor',
+              position: 'Data Analyst, Accenture',
+            },
+            {
+              id: 4,
+              title: 'Digifine gave me much more than data science ML and AI knowledge.',
+              excerpt: 'Currently working as a data scientist, I definitely have to thank Digifine for my career launch and growth. I started off with zero knowledge about this field but now I can confidently say that I have acquired enough skills and experience working on several projects at Digifine that I am pretty good at my job!',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Nikhil Akhand',
+              position: 'Data Scientist, Publicis Sapient',
+            },{
+              id: 5,
+              title: 'Digifine gave me much more than data science ML and AI knowledge.',
+              excerpt: 'Highly recommend Digifine’s data science course with placement guarantee for anyone serious about their career! The placement team here actually guides and aligns interviews until you actually land a job at a good company. My friends and I graduated from here and we all have had the best experience.',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Harsh Akhand',
+              position: 'Growth Analyst, Publicis Sapient',
+            },{
+              id: 6,
+              title: 'Digifine gave me much more than data science ML and AI knowledge.',
+              excerpt: 'I had a lot of interest in knowing about AI, machine learning and its growth in recent years but had no proper place to start. That’s when I found Digifine and I have to say, the best decision was signing up for this 1 year course! Chetan sir has been the most inspiring person to learn from. ',
+              linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+              profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+              name: 'Satyarth Akhand',
+              position: 'Data Scientist, Future Group',
+            },
+        ];
+
+export default testimonials;

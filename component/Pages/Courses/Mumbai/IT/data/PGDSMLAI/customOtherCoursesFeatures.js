@@ -1,0 +1,14 @@
+const customOtherCoursesFeatures = [
+    " No placement guarantee",
+    " No internship letter during the course",
+    " No globally recognized certifications",
+    " Faculty with not enough relevant experience",
+    " No overseas mentorship",
+    " No unique, relevant, and upgraded syllabus with multiple tools, programming languages, and databases",
+    " Not enough assessments or hands-on training",
+    " No post-course support after training",
+    " Not enough hours of training",
+    // Add more features
+  ];
+
+export default customOtherCoursesFeatures

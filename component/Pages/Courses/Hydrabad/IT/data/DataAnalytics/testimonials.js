@@ -1,0 +1,56 @@
+const testimonials = [
+    { 
+      id: 1,
+      title: 'Did the Data Analyst Classes at Digifine benefit you? If yes, how?',
+      excerpt: 'I did my data analytics course at Digifine back when I was just starting with my BSc in Statistics. I knew how important this skill was going to be for me going forward so I wanted to learn it thoroughly. During my classes I got to learn tools that I could actually use and apply on my existing math and stats knowledge and take it to the next level. ',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Varun Gupta',
+      position: 'Sr.Manager, Madison World',
+    },
+    {
+            id: 2,
+            title: 'How did Digifine’s Data Analyst Course impact your career?',
+            excerpt: 'I wanted to start my career in the tech field after working in BPO for 6 months. Digifine helped me make that switch with their Data Analytics Classes in Hyderabad and placement guarantee promise. They actually gave me certificates and prepared me for interviews which I was ultimately able to crack and get my 1st tech job. ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Sneha Nair',
+            position: 'Associate Manager, Publicis Group',
+          },
+          {
+            id: 3,
+            title: 'Was Digifine able to meet your expectations with its Data Analyst Course in Hyderabad? ',
+            excerpt: 'As I had some spare time in between 12th boards completion and college start, I decided to upskill and get some exposure. Digifine literally surprised me with their training style and even internship opportunity which I had not even thought about. After 1 year I wanted to pursue this full-time and got placed from Digifine as they promised support even after the program. ',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Priya Sharma',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 4,
+            title: "What made you choose Digifine for Data Analytics Classes?",
+            excerpt: 'The reason I opted for Digifine’s Data Analyst Course in Hyderabad was due to its curriculum which covered every aspect I wanted to learn. My focus was software like Tableau and Power BI along with programming which I had zero experience in. But with guidance and practical knowledge I was able to learn Python and MySQL as well.   ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Meera Iyer',
+            position: 'Associate Manager, Publicis Group',
+          },{
+            id: 5,
+            title: 'Can you describe your experience with the data analytics course at Digifine?',
+            excerpt:"I had a really fruitful experience at Digifine during my Data Analytics Classes there. Working on projects with my classmates there helped me build a network and learn a lot. Chetan sir is a great teacher and even Abdul sir helped a lot in technical doubts. Now I’m working as a freelancer thankfully with several projects on my plate.   ",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Neha Reddy',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 6,
+            title: 'What was your primary aim to join Digifine’s Data Analyst Classes in Hyderabad??',
+            excerpt: 'I joined Digifine to get their placement guarantee and certificates as that was my main focus while joining the data analytics course. I was really glad that in just 6 months, I was able to get an internship letter and Professional certificates. The teachers and team even helped me appear in multiple job interviews until I finally got placed at my desired company. ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Rahul Nair',
+            position: 'Associate Manager, Publicis Group',
+          }
+  ];
+export default testimonials;

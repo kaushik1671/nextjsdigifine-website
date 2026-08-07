@@ -1,0 +1,56 @@
+const testimonials = [
+    {
+      id: 1,
+      title: 'How was your experience with the data analyst course at Digifine Academy?',
+      excerpt: 'My experience at Digifine’s data analyst classes in Navi Mumbai was the best in terms of curriculum, teaching style, and placements. Both trainers including Abdul sir and Chetan sir are really helpful and they guided me through every topic easily. Through the placement cell I was able to crack a really well-paying job as a full-time data analyst.',
+      linkedinUrl: 'https://www.linkedin.com/in/kunda-jadhav-52409716/',
+      profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Kunda%20(1)-e302a64fbfba4afb9385067e2f368efd.webp',
+      name: 'Pooja Shrimal',
+      position: 'Sr.Manager, Madison World',
+    },
+    {
+            id: 2,
+            title: 'What was the best part about joining Digifine’s data analyst classes for you?',
+            excerpt: 'I am really glad I joined the data analyst course at Digifine Academy. The best part was the internship letter they gave me for 3 months which I could use to get a full-time job at a company through Digifine. I even learned Python programming and tools like Power BI, Tableau and MySQL which I could add to my resume as well! ',
+            linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
+            name: 'Nisha Vishwakarma',
+            position: 'Associate Manager, Publicis Group',
+          },
+          {
+            id: 3,
+            title: 'What was your goal to enroll for the data analyst course at Digifine? ',
+            excerpt: 'My goal for enrolling in Digifine was to upgrade my knowledge as per current industry standards. The syllabus at these data analyst classes is really in-depth and covers more concepts than I expected. Not only did I learn detailed analytics and visualization but I could also use programming skills to achieve certain goals.',
+            linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
+            name: 'Bilal Mulla',
+            position: 'Group Head - Omnicorm media',
+          },
+          {
+            id: 4,
+            title: "How did Digifine’s data analyst course in Navi Mumbai help you in your growth?",
+            excerpt: 'After my graduation in Arts I wanted to pursue a technical career due to the growth it promises. That’s when I thankfully found Digifine for a data analyst course with placement guarantee. As my main aim was career, the trainers helped me focus on thoroughly learning skills and applying them on projects that I could add to my portfolio. ',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Wahaj Khan',
+            position: 'Data Analyst, HDFC AMC',
+          },{
+            id: 5,
+            title: 'How is the faculty at Digifine’s data analyst classes?',
+            excerpt:"Digifine has the best data analyst classes with some of the most experienced and helpful trainers and team. Chetan sir was there to guide me from the admission process till the end placement part where he took my mock interviews so I was prepared to crack a full-time job as a data analyst. ",
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Deepak Kumar',
+            position: 'Business Analyst, FedEx',
+          },
+          {
+            id: 6,
+            title: 'Was the data analytics course at Digifine able to meet your career expectations?',
+            excerpt: 'While joining the data analytics course at Digifine, my focus was to gain each and every tool necessary to upskill in my finance career. I was able to do this through the practical tasks and training given and I built some projects myself too. Now I have gotten into my dream career role as a financial analyst in an AMC.',
+            linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
+            profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
+            name: 'Nikhil Kumar',
+            position: 'Financial Analyst, AMC',
+          }
+  ];
+export default testimonials;

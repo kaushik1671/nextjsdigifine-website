@@ -69,6 +69,10 @@ export default function Page() {
         title="Why Join Digifine?"
         subtitle="We prioritize growth, culture, and high-impact work."
       />
+
+      <BenefitsSection />
+      <HiringProcess />
+      <ApplicationForm />
     </main>
   );
 }

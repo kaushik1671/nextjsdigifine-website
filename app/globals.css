@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
 /* Aapka no-scroll class yahan add karein jo aapne useEffect mein use kiya hai */
 .no-scroll {
   overflow: hidden;

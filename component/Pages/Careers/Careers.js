@@ -64,6 +64,11 @@ export default function Page() {
         jobListings={jobOpenings}    
         onApplyJob={handleApplyClick}  
       />
+
+      <WhyJoinDigifine 
+        title="Why Join Digifine?"
+        subtitle="We prioritize growth, culture, and high-impact work."
+      />
     </main>
   );
 }

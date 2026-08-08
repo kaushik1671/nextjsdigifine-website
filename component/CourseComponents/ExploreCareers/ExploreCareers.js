@@ -98,6 +98,28 @@ const JOBS_DATA = [
       "Strong problem-solving mindset and willingness to learn."
     ]
   },
+  {
+    id: 5,
+    title: "Video Content Creator and Graphic Designer",
+    department: "Video & Graphics",
+    location: "Mumbai - Andheri",
+    type: "Internship",
+    experience: "0-1 Years",
+    description: "Create engaging video content and compelling graphics for our digital platforms.",
+    tags: ["Video Editing", "Graphic Design", "Content Creation"],
+    posted: "3 days ago",
+    fullDescription: "Join our creative team to produce high-quality video content and visual assets that drive engagement and brand awareness across digital platforms.",
+    responsibilities: [
+      "Design engaging graphics, banners, social media posts, and marketing collateral using tools like Photoshop, Illustrator, or Canva.",
+      "Edit and produce high-quality video content for YouTube, Instagram Reels, and promotional campaigns.",
+      "Collaborate with the marketing team to brainstorm creative concepts and visual strategies."
+    ],
+    requirements: [
+      "Proficiency in video editing and graphic design software (Adobe Premiere Pro, After Effects, Photoshop, Illustrator, etc.).",
+      "A strong portfolio showcasing previous video editing and design projects.",
+      "Creative mindset with a good eye for aesthetics, typography, and color theory."
+    ]
+},
   // {
   //   id: 5,
   //   title: "Sports Data Analyst",

@@ -49,13 +49,12 @@ export default function UniqueModules({ uniqueModulesData }) {
         )}
 
         {/* Main Title */}
-        <h3 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-none max-w-5xl mx-auto">
-          {title} <br className="hidden md:inline" />
-          <span className="text-[#046AED] bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
-            {highlightTitle}
-          </span>
-        </h3>
-
+<h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+  {title} <br className="hidden md:inline" />
+  <span className="text-[#046AED] bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
+    {highlightTitle}
+  </span>
+</h3>
         {/* Paragraph Description */}
         <p className="mt-6 text-slate-600 text-sm md:text-lg max-w-4xl mx-auto leading-relaxed font-medium opacity-90">
           {description}

@@ -73,6 +73,7 @@ export default function Page() {
       <BenefitsSection />
       <HiringProcess />
       <ApplicationForm />
+      <LifeAtDigifine />
     </main>
   );
 }

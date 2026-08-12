@@ -39,6 +39,10 @@ export default function Page() {
     alert(`Applying for role: ${jobTitle}`);
   };
 
+  const handleFormSubmit = (data) => {
+    console.log("Form Data Received in Parent:", data);
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 font-sans">
       <HeroSection
@@ -72,7 +76,11 @@ export default function Page() {
 
       <BenefitsSection />
       <HiringProcess />
-      <ApplicationForm />
+      <ApplicationForm
+      title="Join Our Growing Team"
+        subtitle="We are always looking for passionate developers and designers."
+        badgeText="We Are Hiring"
+        onSubmitSuccess={handleFormSubmit} />
       <LifeAtDigifine />
     </main>
   );

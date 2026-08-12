@@ -6,27 +6,27 @@ import { HeartPulse, PartyPopper, Coffee, Scale, Train, Award, Sparkles } from '
 const benefitsData = [
   {
     title: "Celebration & Activities",
-    icon: <PartyPopper className="w-6 h-6 text-[#046AED]" />,
+    icon: <PartyPopper className="w-5 h-5 sm:w-6 sm:h-6 text-[#046AED]" />,
   },
   {
     title: "Health Insurance",
-    icon: <HeartPulse className="w-6 h-6 text-[#046AED]" />,
+    icon: <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 text-[#046AED]" />,
   },
   {
     title: "Snacks & Beverages",
-    icon: <Coffee className="w-6 h-6 text-[#046AED]" />,
+    icon: <Coffee className="w-5 h-5 sm:w-6 sm:h-6 text-[#046AED]" />,
   },
   {
     title: "Work-Life Balance",
-    icon: <Scale className="w-6 h-6 text-[#046AED]" />,
+    icon: <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#046AED]" />,
   },
   {
     title: "Ease of Travel",
-    icon: <Train className="w-6 h-6 text-[#046AED]" />,
+    icon: <Train className="w-5 h-5 sm:w-6 sm:h-6 text-[#046AED]" />,
   },
   {
     title: "Increments & Incentives",
-    icon: <Award className="w-6 h-6 text-[#046AED]" />,
+    icon: <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#046AED]" />,
   },
 ];
 
@@ -56,29 +56,33 @@ export default function BenefitsSection({
           </p>
         </div>
 
-        {/* 
-          Desktop view: Original Honeycomb Grid Container 
-          Mobile view: Hidden, replaced by trading-style horizontal ticker below
+        {/* Honeycomb Grid Container:
+            - Mobile: Exact 2-column interlocking layout untouched (w-36 h-44, -mt-8).
+            - Desktop: Standard 3-column clean row layout (sm:grid-cols-3) with zero vertical overlapping/touching issues.
         */}
-        <div className="hidden sm:flex flex-wrap justify-center items-center gap-6 max-w-5xl mx-auto py-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 justify-center items-center max-w-5xl mx-auto py-8 gap-x-4 gap-y-6 sm:gap-8">
           {benefitsData.map((item, index) => (
             <div 
               key={index}
-              className="group relative w-72 h-80 flex flex-col items-center justify-center p-6 text-center transition-transform duration-300 hover:-translate-y-2"
+              className={`group relative w-36 h-44 sm:w-72 sm:h-80 flex flex-col items-center justify-center p-3 sm:p-6 text-center transition-transform duration-300 hover:-translate-y-2 justify-self-center ${
+                index % 2 !== 0 
+                  ? '-mt-8 sm:mt-0' 
+                  : 'mt-0'
+              }`}
               style={{
                 clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
               }}
             >
               <div 
-                className="absolute inset-0 bg-[#EAF2FE] border-2 border-[#D0E2FC] transition-all duration-300 group-hover:bg-[#046AED] group-hover:border-[#046AED] flex flex-col items-center justify-center p-8 text-center shadow-md"
+                className="absolute inset-0 bg-[#EAF2FE] border-2 border-[#D0E2FC] transition-all duration-300 group-hover:bg-[#046AED] group-hover:border-[#046AED] flex flex-col items-center justify-center p-3 sm:p-8 text-center shadow-md"
                 style={{
                   clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
                 }}
               >
-                <div className="w-20 h-20 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                <div className="w-10 h-10 sm:w-20 sm:h-20 rounded-full bg-white shadow-sm flex items-center justify-center mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
                   {item.icon}
                 </div>
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-white transition-colors">
+                <h3 className="text-[10px] sm:text-base font-bold text-slate-900 group-hover:text-white transition-colors px-1">
                   {item.title}
                 </h3>
               </div>
@@ -86,38 +90,6 @@ export default function BenefitsSection({
           ))}
         </div>
 
-      </div>
-
-      {/* 
-        Mobile view ONLY: Trading-style horizontal scrolling ticker line 
-        (Sirf mobile ke liye side-by-side line / ticker format)
-      */}
-      <div className="flex sm:hidden w-full overflow-x-auto pb-6 pt-2 scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none]">
-        <div className="flex items-center gap-4 px-4 w-max">
-          {benefitsData.map((item, index) => (
-            <div 
-              key={index}
-              className="group relative w-60 h-68 flex-shrink-0 flex flex-col items-center justify-center p-6 text-center transition-transform duration-300 active:scale-95"
-              style={{
-                clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
-              }}
-            >
-              <div 
-                className="absolute inset-0 bg-[#EAF2FE] border-2 border-[#D0E2FC] transition-all duration-300 active:bg-[#046AED] active:border-[#046AED] flex flex-col items-center justify-center p-6 text-center shadow-md"
-                style={{
-                  clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
-                }}
-              >
-                <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-3">
-                  {item.icon}
-                </div>
-                <h3 className="text-xs font-bold text-slate-900 active:text-white transition-colors">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
     </section>

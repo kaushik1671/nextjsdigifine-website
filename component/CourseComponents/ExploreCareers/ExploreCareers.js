@@ -75,7 +75,6 @@ const JOBS_DATA = [
       "Data-driven mindset with strong analytical skills."
     ]
   },
-  // --- 3 NEW JOBS ADDED BELOW ---
   {
     id: 4,
     title: "SAP ABAP Trainee",
@@ -119,29 +118,7 @@ const JOBS_DATA = [
       "A strong portfolio showcasing previous video editing and design projects.",
       "Creative mindset with a good eye for aesthetics, typography, and color theory."
     ]
-},
-  // {
-  //   id: 5,
-  //   title: "Sports Data Analyst",
-  //   department: "ANALYTICS",
-  //   location: "Remote",
-  //   type: "Full-Time",
-  //   experience: "1-3 Years",
-  //   description: "Analyze match footage, tag key events, and generate statistical insights for team performance.",
-  //   tags: ["Video Analysis", "Data Tagging", "Sports Tech"],
-  //   posted: "4 days ago",
-  //   fullDescription: "Join our sports analytics division to break down match videos, analyze player movements, and deliver actionable data that helps coaches make strategic decisions on the field.",
-  //   responsibilities: [
-  //     "Review match footage and accurately tag in-game events using proprietary software.",
-  //     "Generate post-match statistical reports and visual insights.",
-  //     "Collaborate with the data science team to improve predictive models."
-  //   ],
-  //   requirements: [
-  //     "Deep understanding of sports rules (especially football/cricket).",
-  //     "Experience with video analysis tools (e.g., Hudl, Wyscout, or similar).",
-  //     "High attention to detail and ability to work under tight deadlines."
-  //   ]
-  // },
+  },
   {
     id: 6,
     title: "Content Moderation Associate",
@@ -166,7 +143,7 @@ const JOBS_DATA = [
   }
 ];
 
-export default function CareerSection() {
+export default function ExploreCareers() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("All");
   const [activeJob, setActiveJob] = useState(null);
@@ -181,7 +158,6 @@ export default function CareerSection() {
       andheri: JOBS_DATA.filter((j) => j.location === "Mumbai - Andheri").length,
       vashi: JOBS_DATA.filter((j) => j.location === "Navi Mumbai - Vashi").length,
       hyd: JOBS_DATA.filter((j) => j.location === "Hyderabad").length,
-      // remote: JOBS_DATA.filter((j) => j.location === "Remote").length,
     };
   }, []);
 
@@ -208,11 +184,10 @@ export default function CareerSection() {
       setSubmitted(false);
       setIsApplying(false);
       setActiveJob(null);
-      setFileName(""); // Reset file
+      setFileName(""); 
     }, 2500);
   };
 
-  // Handle File Upload Display
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       setFileName(e.target.files[0].name);
@@ -224,11 +199,10 @@ export default function CareerSection() {
     { label: "Mumbai - Andheri", value: "Mumbai - Andheri", count: counts.andheri },
     { label: "Navi Mumbai - Vashi", value: "Navi Mumbai - Vashi", count: counts.vashi },
     { label: "Hyderabad", value: "Hyderabad", count: counts.hyd },
-    // { label: "Remote", value: "Remote", count: counts.remote },
   ];
 
   return (
-    <section className="py-16 bg-white min-h-screen font-sans">
+    <section id="career-section" className="py-16 bg-white min-h-screen font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 1. Header Section */}
@@ -250,7 +224,7 @@ export default function CareerSection() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search by job title, skill, or department..."
-              className="w-full pl-12 pr-4 py-3.5 bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm font-medium"
+              className="w-full pl-12 pr-4 py-3.5 bg-white text-slate-900 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-500/25 transition-all text-sm font-medium"
             />
           </div>
 
@@ -467,8 +441,8 @@ export default function CareerSection() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
                           <label className="block text-sm font-semibold text-slate-700 mb-1.5 flex items-center gap-2">
-  <FaLinkedin className="w-4 h-4 text-[#0A66C2]" /> LinkedIn URL *
-</label>
+                            <FaLinkedin className="w-4 h-4 text-[#0A66C2]" /> LinkedIn URL *
+                          </label>
                           <input required type="url" placeholder="https://linkedin.com/in/username" className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all bg-slate-50 hover:bg-white focus:bg-white" />
                         </div>
                         <div>

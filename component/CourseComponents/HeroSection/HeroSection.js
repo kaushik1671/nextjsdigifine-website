@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 
 export default function HeroSection({
   badgeText = "WE'RE HIRING ACROSS 3 LOCATIONS",
@@ -16,6 +16,24 @@ export default function HeroSection({
   floatingCardTitle = "Fast-Track Growth",
   floatingCardSubtitle = "Performance-based reviews"
 }) {
+  
+  // FIXED: Yahan 'ExploreCareers' ki jagah 'career-section' kar diya hai taaki ID match ho jaye
+  const handleExploreClick = (e) => {
+    e.preventDefault();
+    const element = document.getElementById('career-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleTalentNetworkClick = (e) => {
+    e.preventDefault();
+    const element = document.getElementById('talent-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="relative bg-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
       {/* Background subtle glow */}
@@ -48,8 +66,8 @@ export default function HeroSection({
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               {primaryBtnText && (
                 <button
-                  onClick={onPrimaryClick}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 cursor-pointer"
+                  onClick={handleExploreClick}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/25 cursor-pointer"
                 >
                   <span>{primaryBtnText}</span>
                   <span className="text-base">↓</span>
@@ -58,7 +76,7 @@ export default function HeroSection({
 
               {secondaryBtnText && (
                 <button
-                  onClick={onSecondaryClick}
+                  onClick={handleTalentNetworkClick}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 font-semibold px-7 py-3.5 rounded-xl transition-all cursor-pointer"
                 >
                   <span>{secondaryBtnText}</span>

@@ -10,7 +10,7 @@ export default function TransparentRewardStructure({
   referrerReward = "₹3,000 Cash Reward credited directly upon successful enrollment.",
   refereeReward = "Special Discount on course admission fees."
 }) {
-  const [activeTab, setActiveTab] = useState('referrer'); // 'referrer' or 'referee'
+  const [activeTab, setActiveTab] = useState('referrer');
 
   const defaultTiers = [
     {
@@ -39,151 +39,140 @@ export default function TransparentRewardStructure({
   const tiers = customTiers || defaultTiers;
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 min-h-screen flex items-center justify-center">
-      <div className="max-w-5xl w-full mx-auto space-y-12">
+    <section className="py-14 px-4 sm:px-6 bg-slate-50 flex items-center justify-center">
+      {/* Testimonial section ke bilkul barabar max-w-6xl kar diya hai taaki poora baher tak spread ho */}
+      <div className="max-w-6xl w-full mx-auto space-y-10">
         
-        {/* Section Header with Props */}
-        <div className="text-center space-y-3">
-          <span className="bg-blue-50 text-[#046AED] border border-blue-200 text-xs font-bold px-3.5 py-2 rounded-full uppercase tracking-wider inline-block shadow-sm">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto space-y-2">
+          <span className="bg-blue-50 text-[#046AED] border border-blue-200 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block shadow-sm">
             {badgeText}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight pt-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             {title}
           </h2>
-          <p className="text-slate-600 max-w-lg mx-auto text-sm sm:text-base">
+          <p className="text-slate-600 text-xs sm:text-sm">
             {subtitle}
           </p>
         </div>
 
-        {/* Dual Toggle for Referrer & Referee Benefits */}
+        {/* Dual Toggle */}
         <div className="flex justify-center">
-          <div className="bg-slate-200/80 p-1.5 rounded-2xl flex space-x-2 border border-slate-300/60 max-w-md w-full shadow-inner">
+          <div className="bg-slate-200/80 p-1 rounded-xl flex space-x-1 border border-slate-300/60 max-w-xs w-full shadow-inner">
             <button
               onClick={() => setActiveTab('referrer')}
-              className={`flex-1 py-3 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-300 ${
+              className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${
                 activeTab === 'referrer'
-                  ? 'bg-[#046AED] text-white shadow-md transform scale-105'
+                  ? 'bg-[#046AED] text-white shadow-sm'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              For You (Referrer)
+              For You
             </button>
             <button
               onClick={() => setActiveTab('referee')}
-              className={`flex-1 py-3 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-300 ${
+              className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${
                 activeTab === 'referee'
-                  ? 'bg-[#046AED] text-white shadow-md transform scale-105'
+                  ? 'bg-[#046AED] text-white shadow-sm'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              For Your Friend (Referee)
+              For Friend
             </button>
           </div>
         </div>
 
-        {/* Dynamic Content Display based on Tab */}
+        {/* Dynamic Content Display */}
         {activeTab === 'referrer' ? (
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-6">
             {/* Tiers Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
               {tiers.map((tier, index) => (
                 <div 
                   key={index} 
-                  className={`rounded-3xl p-8 transition-all duration-300 relative flex flex-col justify-between group overflow-hidden ${
+                  className={`rounded-xl p-6 transition-all duration-200 relative flex flex-col justify-between group overflow-hidden ${
                     tier.highlight 
-                      ? 'bg-gradient-to-b from-blue-500/[0.03] to-white border-2 border-[#046AED] shadow-xl transform md:-translate-y-2' 
-                      : 'bg-white border border-blue-100 shadow-sm hover:shadow-lg'
+                      ? 'bg-gradient-to-b from-blue-500/[0.03] to-white border-2 border-[#046AED] shadow-md' 
+                      : 'bg-white border border-gray-100 shadow-sm hover:shadow-md'
                   }`}
                 >
                   {tier.highlight && (
-                    <span className="absolute top-0 right-0 bg-[#046AED] text-white text-[10px] font-extrabold px-3 py-1 rounded-bl-xl uppercase tracking-widest shadow-sm">
-                      Most Popular
+                    <span className="absolute top-0 right-0 bg-[#046AED] text-white text-[9px] font-extrabold px-2.5 py-0.5 rounded-bl-lg uppercase tracking-wider">
+                      Popular
                     </span>
                   )}
 
                   <div>
-                    <div className="mb-6">
-                      <span className={`inline-block px-3.5 py-1.5 rounded-xl font-bold text-xs ${
+                    <div className="mb-4">
+                      <span className={`inline-block px-2.5 py-1 rounded-lg font-bold text-[11px] ${
                         tier.highlight ? 'bg-[#046AED] text-white' : 'bg-blue-50 text-[#046AED]'
                       }`}>
                         {tier.level}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 mb-1">
+                    <h3 className="text-base font-bold text-slate-900 mb-0.5">
                       {tier.referrals}
                     </h3>
-                    <p className="text-xs text-slate-500 mb-6">
-                      Successful admissions per season
+                    <p className="text-[11px] text-slate-500 mb-4">
+                      Successful admissions
                     </p>
 
-                    <div className="bg-slate-50/80 border border-blue-100/60 rounded-2xl p-5 mb-6">
-                      <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Reward Per Admission</span>
-                      <span className="text-3xl sm:text-4xl font-black text-[#046AED] mt-1 block">
+                    <div className="bg-slate-50 border border-blue-100/60 rounded-xl p-3.5 mb-4">
+                      <span className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Reward / Admission</span>
+                      <span className="text-2xl font-black text-[#046AED] mt-0.5 block">
                         {tier.rewardPerAdmission}
                       </span>
                     </div>
 
-                    <div className="flex items-center space-x-2 text-xs font-bold text-yellow-600 bg-yellow-50 border border-yellow-200/60 rounded-xl px-3 py-2">
-                      <span role="img" aria-label="sparkle">✨</span>
+                    <div className="flex items-center space-x-1.5 text-[11px] font-bold text-yellow-700 bg-yellow-50 border border-yellow-200/60 rounded-lg px-2.5 py-1.5">
+                      <span>✨</span>
                       <span>{tier.bonus}</span>
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                    <span>Instant Crediting</span>
-                    <span className="font-semibold text-[#046AED]">100% Transparent</span>
+                  <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Instant Credit</span>
+                    <span className="font-semibold text-[#046AED]">Transparent</span>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Referrer Banner Detail */}
-            <div className="bg-blue-50/60 border border-blue-200 rounded-2xl p-6 shadow-sm flex items-center space-x-4">
-              <span className="text-3xl">🏆</span>
+            {/* Referrer Banner */}
+            <div className="bg-blue-50/60 border border-blue-200/80 rounded-xl p-4 shadow-sm flex items-center space-x-3">
+              <span className="text-xl">🏆</span>
               <div>
-                <h4 className="text-sm font-bold text-slate-900">Referrer Benefit Overview</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-0.5">{referrerReward}</p>
+                <h4 className="text-xs font-bold text-slate-900">Referrer Benefit Overview</h4>
+                <p className="text-xs text-slate-600">{referrerReward}</p>
               </div>
             </div>
           </div>
         ) : (
-          <div className="max-w-2xl mx-auto bg-white border border-blue-100 rounded-3xl p-8 sm:p-12 shadow-xl text-center space-y-6 animate-fade-in">
-            <div className="w-16 h-16 bg-blue-50 text-[#046AED] rounded-2xl flex items-center justify-center text-3xl mx-auto shadow-inner">
+          <div className="max-w-xl mx-auto bg-white border border-gray-100 rounded-xl p-6 sm:p-8 shadow-md text-center space-y-4">
+            <div className="w-12 h-12 bg-blue-50 text-[#046AED] rounded-xl flex items-center justify-center text-xl mx-auto shadow-inner">
               🎁
             </div>
-            <div className="space-y-2">
-              <span className="bg-yellow-50 text-yellow-700 border border-yellow-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            <div className="space-y-1">
+              <span className="bg-yellow-50 text-yellow-700 border border-yellow-200 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">
                 Friend Perk
               </span>
-              <h3 className="text-2xl font-black text-slate-900">What Your Friend Gets</h3>
+              <h3 className="text-lg font-black text-slate-900">What Your Friend Gets</h3>
             </div>
-            <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6">
-              <p className="text-base sm:text-lg font-bold text-[#046AED]">
+            <div className="bg-slate-50 border border-slate-200/60 rounded-xl p-4">
+              <p className="text-sm font-bold text-[#046AED]">
                 {refereeReward}
               </p>
-              <p className="text-xs sm:text-sm text-slate-500 mt-2">
-                Every friend you refer automatically unlocks special fee waivers upon enrolling in any professional track at Digifine Academy.
+              <p className="text-xs text-slate-500 mt-1">
+                Fee waivers automatically unlocked upon enrolling in any professional track at Digifine Academy.
               </p>
             </div>
-            <div className="pt-4 border-t border-slate-100 flex items-center justify-center space-x-6 text-xs font-semibold text-slate-500">
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-center space-x-4 text-[11px] font-semibold text-slate-500">
               <span>✅ Zero Hidden Fees</span>
-              <span>✅ Instant Discount Application</span>
+              <span>✅ Instant Discount</span>
             </div>
           </div>
         )}
-
-        {/* Bottom Banner */}
-        <div className="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="space-y-1">
-            <h4 className="text-sm font-bold text-slate-900">Have questions about payouts or custom institutional tie-ups?</h4>
-            <p className="text-xs text-slate-500">Our support team is available 24/7 to help you track your earnings.</p>
-          </div>
-          <button className="bg-[#046AED] hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-md whitespace-nowrap">
-            Contact Support
-          </button>
-        </div>
-
       </div>
     </section>
   );

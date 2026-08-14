@@ -1,0 +1,138 @@
+"use client";
+
+import React, { useState } from "react";
+import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
+import Link from "next/link"; // Agar Next.js ka link use karna hai
+
+export default function ReferFAQSection({ faqs = defaultFaqs }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="py-16 bg-white relative overflow-hidden">
+      {/* Decorative background glow */}
+      <div className="absolute bottom-0 right-10 w-64 h-64 bg-[#046AED]/5 blur-3xl pointer-events-none rounded-full" />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#046AED]/10 text-[#046AED] font-semibold text-xs mb-3 border border-[#046AED]/20 shadow-sm">
+            <HelpCircle className="w-3.5 h-3.5 text-[#FACC15]" />
+            <span>Got Questions? We've Got Answers</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+            Frequently Asked <span className="text-[#046AED]">Questions</span>
+          </h2>
+
+          <p className="mt-2 text-xs sm:text-sm text-gray-600">
+            Everything you need to know about the referral policy, payouts, and rewards.
+          </p>
+        </div>
+
+        {/* FAQ Accordion List */}
+        <div className="space-y-3">
+          {faqs.map((faq, index) => {
+            const isOpen = activeIndex === index;
+            return (
+              <div
+                key={index}
+                className={`rounded-xl transition-all duration-200 border ${
+                  isOpen 
+                    ? "bg-white border-[#046AED]/30 shadow-sm shadow-[#046AED]/5" 
+                    : "bg-gray-50/70 border-gray-200/80 hover:border-gray-300"
+                }`}
+              >
+                {/* Question Button */}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                >
+                  <span className={`font-bold text-sm sm:text-base transition-colors ${
+                    isOpen ? "text-[#046AED]" : "text-gray-900"
+                  }`}>
+                    {faq.question}
+                  </span>
+                  
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                    isOpen ? "bg-[#046AED] text-white rotate-180" : "bg-gray-200/80 text-gray-600"
+                  }`}>
+                    <ChevronDown className="w-3.5 h-3.5" />
+                  </div>
+                </button>
+
+                {/* Answer Box with CSS transition */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 pb-5 pt-1 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 mt-0.5">
+                      {/* Agar last FAQ item hai toh custom JSX render karo jisme link clickable ho */}
+                      {index === 7 ? (
+                        <span>
+                          If you are a Digifine Academy employee, please{" "}
+                          <Link 
+                            href="/employee-referral" // Yahan apna employee referral form ka route/link daal dena
+                            className="text-[#046AED] font-semibold underline hover:text-blue-700 transition-colors"
+                          >
+                            click here
+                          </Link>{" "}
+                          to fill out the referral form.
+                        </span>
+                      ) : (
+                        faq.answer
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+// Default FAQ Data
+const defaultFaqs = [
+  {
+    question: "Do I get rewards every time a friend signs up?",
+    answer: "You get a referral reward for every friend you refer through the website. Please note the referral reward is only valid for the first transaction of friends/connections (referrals) who are new to Digifine Academy and enrol themselves in one of our courses. You will be eligible to receive the reward once the referral pays their full fee."
+  },
+  {
+    question: "When and How will I get paid for referrals?",
+    answer: "You will be eligible to receive the reward once your friend pays their full fee. You will be contacted by the Digifine Academy team to collect your bank details. You will receive the referral reward 15 days after your friend has made the full payment of fees."
+  },
+  {
+    question: "How can I track the status of my referrals?",
+    answer: "You will be informed by email once Digifine Academy receives your referral details."
+  },
+  {
+    question: "How will my friends be informed that I referred them?",
+    answer: "Your friends will receive an email confirmation from Digifine Academy informing them that they have been referred by you. They will be asked to confirm."
+  },
+  {
+    question: "Will I get a referral reward if a friend/connection already exists in the Digifine Academy database?",
+    answer: "No. You will not be eligible if a friend/connection exists in the Digifine Academy database."
+  },
+  {
+    question: "Do I need to be a Digifine Academy customer to refer my friends?",
+    answer: "Only Digifine Academy students/faculty/employees can participate in the referral program."
+  },
+  {
+    question: "How can I refer my friends/connections?",
+    answer: "Refer your friends from the website or LMS portal. You will have to provide your email id, and mobile no. for us to contact you. You can refer your friends by entering their email addresses one at a time or share your friend's details with the Digifine Academy team members you are connected with."
+  },
+  {
+    question: "How can Digifine Academy employees fill out the referral form?",
+    answer: "If you are a Digifine Academy employee, please click here to fill out the referral form."
+  }
+];

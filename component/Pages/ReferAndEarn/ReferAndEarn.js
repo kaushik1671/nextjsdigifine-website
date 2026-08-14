@@ -9,6 +9,7 @@ import TransparentRewardStructure from "../../CourseComponents/TransparentReward
 import ReferTestimonialSection from "../../CourseComponents/ReferTestimonialSection/ReferTestimonialSection";
 import ReferFAQSection from "../../CourseComponents/ReferFAQSection/ReferFAQSection";
 import ReferralForm from "../../CourseComponents/ReferralForm/ReferralForm";
+import ReferBox from "../../CourseComponents/ReferBox/ReferBox";
 
 export default function Page() {
   const handleFormRedirect = () => {
@@ -29,7 +30,7 @@ export default function Page() {
       <TransparentRewardStructure />
       <ReferTestimonialSection />
       <ReferFAQSection />
-      
+      <ReferBox />
       {/* Id ke zariye smooth scroll target banaya */}
       <div id="referral-form-section">
         <ReferralForm />

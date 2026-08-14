@@ -23,11 +23,9 @@ export default function ReferralForm() {
   };
 
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
-      {/* Decorative background glow matching the FAQ section */}
+    <section id="referral-form" className="py-16 bg-white relative overflow-hidden">
       <div className="absolute bottom-0 right-10 w-64 h-64 bg-[#046AED]/5 blur-3xl pointer-events-none rounded-full" />
 
-      {/* Same max-w-4xl width as FAQ section for exact layout consistency */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}

@@ -1,26 +1,32 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
-import Link from "next/link"; // Agar Next.js ka link use karna hai
+import { ChevronDown, HelpCircle } from "lucide-react";
+import Link from "next/link";
 
-export default function ReferFAQSection({ faqs = defaultFaqs }) {
+export default function ReferFAQSection({ faqs = defaultFaqs, onTriggerForm }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    if (onTriggerForm) {
+      onTriggerForm();
+    }
+  };
+
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
-      {/* Decorative background glow */}
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       <div className="absolute bottom-0 right-10 w-64 h-64 bg-[#046AED]/5 blur-3xl pointer-events-none rounded-full" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-5xl w-full mx-auto relative z-10 space-y-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#046AED]/10 text-[#046AED] font-semibold text-xs mb-3 border border-[#046AED]/20 shadow-sm">
+        <div className="text-center max-w-xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#046AED]/10 text-[#046AED] font-semibold text-xs mb-1 border border-[#046AED]/20 shadow-sm">
             <HelpCircle className="w-3.5 h-3.5 text-[#FACC15]" />
             <span>Got Questions? We've Got Answers</span>
           </div>
@@ -29,25 +35,24 @@ export default function ReferFAQSection({ faqs = defaultFaqs }) {
             Frequently Asked <span className="text-[#046AED]">Questions</span>
           </h2>
 
-          <p className="mt-2 text-xs sm:text-sm text-gray-600">
+          <p className="text-slate-600 text-xs sm:text-sm">
             Everything you need to know about the referral policy, payouts, and rewards.
           </p>
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-3">
+        <div className="space-y-3 w-full">
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
             return (
               <div
                 key={index}
-                className={`rounded-xl transition-all duration-200 border ${
+                className={`rounded-2xl transition-all duration-200 border ${
                   isOpen 
                     ? "bg-white border-[#046AED]/30 shadow-sm shadow-[#046AED]/5" 
-                    : "bg-gray-50/70 border-gray-200/80 hover:border-gray-300"
+                    : "bg-slate-50/70 border-gray-200/80 hover:border-gray-300"
                 }`}
               >
-                {/* Question Button */}
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
@@ -59,30 +64,32 @@ export default function ReferFAQSection({ faqs = defaultFaqs }) {
                   </span>
                   
                   <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? "bg-[#046AED] text-white rotate-180" : "bg-gray-200/80 text-gray-600"
+                    isOpen ? "bg-[#046AED] text-white rotate-180" : "bg-slate-200/80 text-gray-600"
                   }`}>
                     <ChevronDown className="w-3.5 h-3.5" />
                   </div>
                 </button>
 
-                {/* Answer Box with CSS transition */}
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
                     isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-5 pb-5 pt-1 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 mt-0.5">
-                      {/* Agar last FAQ item hai toh custom JSX render karo jisme link clickable ho */}
+                    <div className="px-5 pb-5 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 mt-0.5">
                       {index === 7 ? (
                         <span>
                           If you are a Digifine Academy employee, please{" "}
-                          <Link 
-                            href="/employee-referral" // Yahan apna employee referral form ka route/link daal dena
-                            className="text-[#046AED] font-semibold underline hover:text-blue-700 transition-colors"
-                          >
-                            click here
-                          </Link>{" "}
+                          <a 
+  href="#referral-form-section"
+  onClick={(e) => {
+    e.preventDefault();
+    if (onTriggerForm) onTriggerForm();
+  }}
+  className="text-[#046AED] font-semibold underline hover:text-blue-700 transition-colors cursor-pointer"
+>
+  click here
+</a>{" "}
                           to fill out the referral form.
                         </span>
                       ) : (
@@ -101,7 +108,6 @@ export default function ReferFAQSection({ faqs = defaultFaqs }) {
   );
 }
 
-// Default FAQ Data
 const defaultFaqs = [
   {
     question: "Do I get rewards every time a friend signs up?",
@@ -125,11 +131,11 @@ const defaultFaqs = [
   },
   {
     question: "Do I need to be a Digifine Academy customer to refer my friends?",
-    answer: "Only Digifine Academy students/faculty/employees can participate in the referral program."
+    answer: "No, you don't need to be a customer or student! Anyone can participate in the Digifine Academy referral program and start earning rewards by referring their friends and connections."
   },
   {
     question: "How can I refer my friends/connections?",
-    answer: "Refer your friends from the website or LMS portal. You will have to provide your email id, and mobile no. for us to contact you. You can refer your friends by entering their email addresses one at a time or share your friend's details with the Digifine Academy team members you are connected with."
+    answer: "Refer your friends from the website or contact the Digifine Academy team. You will have to provide your email id, and mobile no. for us to contact you. You can refer your friends by entering their email addresses one at a time or share your friend's details with the Digifine Academy team members you are connected with."
   },
   {
     question: "How can Digifine Academy employees fill out the referral form?",

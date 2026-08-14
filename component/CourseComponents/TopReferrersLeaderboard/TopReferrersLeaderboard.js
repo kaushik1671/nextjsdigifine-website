@@ -33,31 +33,32 @@ export default function TopReferrersLeaderboard() {
   const currentLeaders = leaderboardData[timeframe];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 min-h-screen flex items-center justify-center">
-      <div className="max-w-4xl w-full mx-auto space-y-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
+      {/* Matched width and spacing with upper section */}
+      <div className="max-w-5xl w-full mx-auto relative z-10 space-y-8">
         
         {/* Section Header */}
-        <div className="text-center space-y-3">
+        <div className="text-center max-w-xl mx-auto space-y-3">
           <span className="bg-yellow-50 text-yellow-600 border border-yellow-200 text-xs font-bold px-3.5 py-2 rounded-full uppercase tracking-wider inline-block shadow-sm">
             🏆 Hall of Fame
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#046AED] tracking-tight pt-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight pt-2">
             Top Referrers Leaderboard
           </h2>
-          <p className="text-slate-600 max-w-md mx-auto text-sm sm:text-base">
+          <p className="text-slate-600 text-xs sm:text-sm">
             Compete with peers, climb the ranks, and unlock massive cash rewards!
           </p>
         </div>
 
         {/* Main Card Container */}
-        <div className="bg-white border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-xl space-y-8">
+        <div className="bg-white border border-blue-100 rounded-2xl p-6 sm:p-8 shadow-sm space-y-8">
           
           {/* Enhanced Tab Switcher with Unique Sliding Effect */}
           <div className="flex justify-center">
-            <div className="bg-slate-100 p-1.5 rounded-2xl flex space-x-2 border border-slate-200 w-full max-w-md">
+            <div className="bg-slate-100 p-1.5 rounded-xl flex space-x-2 border border-slate-200 w-full max-w-md">
               <button
                 onClick={() => setTimeframe('weekly')}
-                className={`flex-1 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
+                className={`flex-1 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-300 ${
                   timeframe === 'weekly'
                     ? 'bg-[#046AED] text-white shadow-md transform scale-105'
                     : 'text-slate-600 hover:text-slate-900'
@@ -67,7 +68,7 @@ export default function TopReferrersLeaderboard() {
               </button>
               <button
                 onClick={() => setTimeframe('monthly')}
-                className={`flex-1 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
+                className={`flex-1 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-300 ${
                   timeframe === 'monthly'
                     ? 'bg-[#046AED] text-white shadow-md transform scale-105'
                     : 'text-slate-600 hover:text-slate-900'
@@ -77,7 +78,7 @@ export default function TopReferrersLeaderboard() {
               </button>
               <button
                 onClick={() => setTimeframe('alltime')}
-                className={`flex-1 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
+                className={`flex-1 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-300 ${
                   timeframe === 'alltime'
                     ? 'bg-[#046AED] text-white shadow-md transform scale-105'
                     : 'text-slate-600 hover:text-slate-900'
@@ -91,7 +92,6 @@ export default function TopReferrersLeaderboard() {
           {/* Podiums for Top 3 (Special Highlight Layout) */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-2">
             {currentLeaders.slice(0, 3).map((user, index) => {
-              // Reorder for podium effect: 2nd place, 1st place, 3rd place
               const podiumOrder = [1, 0, 2];
               const actualUser = currentLeaders[podiumOrder[index]];
               const isFirst = actualUser.rank === 1;
@@ -143,10 +143,10 @@ export default function TopReferrersLeaderboard() {
             {currentLeaders.slice(3).map((user) => (
               <div 
                 key={user.rank}
-                className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-all"
+                className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-all"
               >
                 <div className="flex items-center space-x-4">
-                  <span className="w-8 h-8 rounded-xl bg-slate-200 text-slate-700 font-bold flex items-center justify-center text-xs">
+                  <span className="w-8 h-8 rounded-lg bg-slate-200 text-slate-700 font-bold flex items-center justify-center text-xs">
                     #{user.rank}
                   </span>
                   <div>

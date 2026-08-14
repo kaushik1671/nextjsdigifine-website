@@ -39,16 +39,16 @@ export default function TransparentRewardStructure({
   const tiers = customTiers || defaultTiers;
 
   return (
-    <section className="py-14 px-4 sm:px-6 bg-slate-50 flex items-center justify-center">
-      {/* Testimonial section ke bilkul barabar max-w-6xl kar diya hai taaki poora baher tak spread ho */}
-      <div className="max-w-6xl w-full mx-auto space-y-10">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
+      {/* Matched width and spacing with upper and lower sections */}
+      <div className="max-w-5xl w-full mx-auto relative z-10 space-y-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="bg-blue-50 text-[#046AED] border border-blue-200 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block shadow-sm">
+        <div className="text-center max-w-xl mx-auto space-y-3">
+          <span className="bg-blue-50 text-[#046AED] border border-blue-200 text-xs font-bold px-3.5 py-2 rounded-full uppercase tracking-wider inline-block shadow-sm">
             {badgeText}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight pt-2">
             {title}
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
@@ -58,10 +58,10 @@ export default function TransparentRewardStructure({
 
         {/* Dual Toggle */}
         <div className="flex justify-center">
-          <div className="bg-slate-200/80 p-1 rounded-xl flex space-x-1 border border-slate-300/60 max-w-xs w-full shadow-inner">
+          <div className="bg-slate-200/80 p-1.5 rounded-xl flex space-x-1 border border-slate-300/60 max-w-xs w-full shadow-inner">
             <button
               onClick={() => setActiveTab('referrer')}
-              className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${
+              className={`flex-1 py-2.5 rounded-lg text-xs font-bold transition-all duration-200 ${
                 activeTab === 'referrer'
                   ? 'bg-[#046AED] text-white shadow-sm'
                   : 'text-slate-600 hover:text-slate-900'
@@ -71,7 +71,7 @@ export default function TransparentRewardStructure({
             </button>
             <button
               onClick={() => setActiveTab('referee')}
-              className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${
+              className={`flex-1 py-2.5 rounded-lg text-xs font-bold transition-all duration-200 ${
                 activeTab === 'referee'
                   ? 'bg-[#046AED] text-white shadow-sm'
                   : 'text-slate-600 hover:text-slate-900'
@@ -90,10 +90,10 @@ export default function TransparentRewardStructure({
               {tiers.map((tier, index) => (
                 <div 
                   key={index} 
-                  className={`rounded-xl p-6 transition-all duration-200 relative flex flex-col justify-between group overflow-hidden ${
+                  className={`rounded-2xl p-6 transition-all duration-200 relative flex flex-col justify-between group overflow-hidden ${
                     tier.highlight 
                       ? 'bg-gradient-to-b from-blue-500/[0.03] to-white border-2 border-[#046AED] shadow-md' 
-                      : 'bg-white border border-gray-100 shadow-sm hover:shadow-md'
+                      : 'bg-white border border-gray-200/80 shadow-sm hover:shadow-md'
                   }`}
                 >
                   {tier.highlight && (
@@ -140,7 +140,7 @@ export default function TransparentRewardStructure({
             </div>
 
             {/* Referrer Banner */}
-            <div className="bg-blue-50/60 border border-blue-200/80 rounded-xl p-4 shadow-sm flex items-center space-x-3">
+            <div className="bg-blue-50/60 border border-blue-200/80 rounded-2xl p-4 shadow-sm flex items-center space-x-3">
               <span className="text-xl">🏆</span>
               <div>
                 <h4 className="text-xs font-bold text-slate-900">Referrer Benefit Overview</h4>
@@ -149,7 +149,7 @@ export default function TransparentRewardStructure({
             </div>
           </div>
         ) : (
-          <div className="max-w-xl mx-auto bg-white border border-gray-100 rounded-xl p-6 sm:p-8 shadow-md text-center space-y-4">
+          <div className="max-w-xl mx-auto bg-white border border-gray-200/80 rounded-2xl p-6 sm:p-8 shadow-sm text-center space-y-4">
             <div className="w-12 h-12 bg-blue-50 text-[#046AED] rounded-xl flex items-center justify-center text-xl mx-auto shadow-inner">
               🎁
             </div>

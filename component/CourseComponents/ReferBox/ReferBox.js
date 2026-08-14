@@ -49,20 +49,15 @@ export default function TransparentRewardStructure() {
   const currentCategory = categories.find((cat) => cat.id === activeTab);
 
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Decorative glow */}
       <div className="absolute top-10 left-10 w-64 h-64 bg-[#046AED]/5 blur-3xl pointer-events-none rounded-full" />
 
-      {/* Consistent max-w-4xl width with same side spacing */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      {/* Matched width and spacing with upper section */}
+      <div className="max-w-5xl w-full mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-10">
-          {/* <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#046AED]/10 text-[#046AED] font-semibold text-xs mb-3 border border-[#046AED]/20 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#FACC15]" />
-            <span>Transparent Payouts</span>
-          </div> */}
-
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
             Reward Structure by <span className="text-[#046AED]">School & Course</span>
           </h2>

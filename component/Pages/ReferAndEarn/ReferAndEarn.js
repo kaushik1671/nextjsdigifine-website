@@ -26,11 +26,14 @@ export default function Page() {
       />
       <EarningsCalculator />
       <HowTheProgramWorks />
+      <ReferBox />
       <TopReferrersLeaderboard />
       <TransparentRewardStructure />
       <ReferTestimonialSection />
-      <ReferFAQSection />
-      <ReferBox />
+      
+      {/* Yahan onTriggerForm prop pass kar diya */}
+      <ReferFAQSection onTriggerForm={handleFormRedirect} />
+      
       {/* Id ke zariye smooth scroll target banaya */}
       <div id="referral-form-section">
         <ReferralForm />

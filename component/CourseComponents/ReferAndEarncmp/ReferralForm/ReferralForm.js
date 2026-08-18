@@ -93,7 +93,7 @@ export default function ReferralForm() {
                   type="email"
                   name="yourEmail"
                   required
-                  placeholder="Email Id?"
+                  placeholder="Email Id"
                   value={formData.yourEmail}
                   onChange={handleChange}
                   className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
@@ -146,7 +146,7 @@ export default function ReferralForm() {
                   type="email"
                   name="friendEmail"
                   required
-                  placeholder="Email Id?"
+                  placeholder="Email Id"
                   value={formData.friendEmail}
                   onChange={handleChange}
                   className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"

@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import HeroSection from '../../CourseComponents/HeroSection/HeroSection';
-import ExploreCareers from '../../CourseComponents/ExploreCareers/ExploreCareers';
-import WhyJoinDigifine from '../../CourseComponents/WhyJoinDigifine/WhyJoinDigifine';
-import BenefitsSection from '../../CourseComponents/BenefitsSection/BenefitsSection';
-import HiringProcess from '../../CourseComponents/HiringProcess/HiringProcess';
-import ApplicationForm from '../../CourseComponents/ApplicationForm/ApplicationForm';
-import LifeAtDigifine from '../../CourseComponents/LifeAtDigifine/LifeAtDigifine';
+import HeroSection from '../../CourseComponents/Careercmp/HeroSection';
+import ExploreCareers from '../../CourseComponents/Careercmp/ExploreCareers';
+import WhyJoinDigifine from '../../CourseComponents/Careercmp/WhyJoinDigifine';
+import HiringProcess from '../../CourseComponents/Careercmp/HiringProcess';
+import BenefitsSection from '../../CourseComponents/Careercmp/BenefitsSection';
+import ApplicationForm from '../../CourseComponents/Careercmp/ApplicationForm';
+import LifeAtDigifine from '../../CourseComponents/Careercmp/LifeAtDigifine';
 import FinalCta from '../../CourseComponents/FinalCta/FinalCta';
 
 const heroStatsData = [

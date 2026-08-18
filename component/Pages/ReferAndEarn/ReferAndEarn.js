@@ -1,15 +1,15 @@
 "use client";
 
 import React from 'react';
-import ReferralHero from "../../CourseComponents/ReferralHero/ReferralHero";
-import EarningsCalculator from "../../CourseComponents/EarningsCalculator/EarningsCalculator";
-import HowTheProgramWorks from "../../CourseComponents/HowTheProgramWorks/HowTheProgramWorks";
-import TopReferrersLeaderboard from "../../CourseComponents/TopReferrersLeaderboard/TopReferrersLeaderboard";
-import TransparentRewardStructure from "../../CourseComponents/TransparentRewardStructure/TransparentRewardStructure";
-import ReferTestimonialSection from "../../CourseComponents/ReferTestimonialSection/ReferTestimonialSection";
-import ReferFAQSection from "../../CourseComponents/ReferFAQSection/ReferFAQSection";
-import ReferralForm from "../../CourseComponents/ReferralForm/ReferralForm";
-import ReferBox from "../../CourseComponents/ReferBox/ReferBox";
+import ReferralHero from "../../CourseComponents/ReferAndEarncmp/ReferralHero/ReferralHero";
+import EarningsCalculator from "../../CourseComponents/ReferAndEarncmp/EarningsCalculator/EarningsCalculator";
+import HowTheProgramWorks from "../../CourseComponents/ReferAndEarncmp/HowTheProgramWorks/HowTheProgramWorks";
+import TopReferrersLeaderboard from "../../CourseComponents/ReferAndEarncmp/TopReferrersLeaderboard/TopReferrersLeaderboard";
+import TransparentRewardStructure from "../../CourseComponents/ReferAndEarncmp/TransparentRewardStructure/TransparentRewardStructure";
+import ReferTestimonialSection from "../../CourseComponents/ReferAndEarncmp/ReferTestimonialSection/ReferTestimonialSection";
+import ReferFAQSection from "../../CourseComponents/ReferAndEarncmp/ReferFAQSection/ReferFAQSection";
+import ReferralForm from "../../CourseComponents/ReferAndEarncmp/ReferralForm/ReferralForm";
+import ReferBox from "../../CourseComponents/ReferAndEarncmp/ReferBox/ReferBox";
 
 export default function Page() {
   const handleFormRedirect = () => {
@@ -26,6 +26,9 @@ export default function Page() {
       />
       <EarningsCalculator />
       <HowTheProgramWorks />
+      <div id="referral-form-section">
+        <ReferralForm />
+      </div>
       <ReferBox />
       <TopReferrersLeaderboard />
       <TransparentRewardStructure />
@@ -33,11 +36,6 @@ export default function Page() {
       
       {/* Yahan onTriggerForm prop pass kar diya */}
       <ReferFAQSection onTriggerForm={handleFormRedirect} />
-      
-      {/* Id ke zariye smooth scroll target banaya */}
-      <div id="referral-form-section">
-        <ReferralForm />
-      </div>
     </main>
   );
 }

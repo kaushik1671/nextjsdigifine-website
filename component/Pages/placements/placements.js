@@ -8,6 +8,7 @@ import StatsBar from '../../CourseComponents/Placementscmp/StatsBar';
 import CompanyMarquee from '../../CourseComponents/CompanyMarquee/CompanyMarquee';
 import StudentPlacedAt from '../../CourseComponents/StudentPlacedAt/StudentPlacedAt';
 import Testimonal from "../../CourseComponents/Testimonal/Testimonal";
+import PlacementProcess from "../../CourseComponents/Placementscmp/PlacementProcess"
 
 const marqueeTopLogos = [
   "/images/company_logo/dm/1.webp",
@@ -75,6 +76,7 @@ export default function PlacementsPage() {
         topLogos={marqueeTopLogos}
         bottomLogos={marqueeBottomLogos}
       />  
+      
       <StudentPlacedAt 
         companiesData={mbaPlacementsData} 
         btntext="Know More" 
@@ -85,7 +87,8 @@ export default function PlacementsPage() {
         bluetitle='Students Have To Say:'
         testimonial={testimonials}
         paragraph="Still wondering what your career will look like after studying at Digifine? Whether it's Digital Marketing, Graphic Design, or IT — hear directly from our students about their journey, practical training, and placement success!" 
-      />        
+      /> 
+      <PlacementProcess />       
     </main>
   );
 }

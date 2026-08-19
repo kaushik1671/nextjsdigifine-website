@@ -1,5 +1,5 @@
-import placements from "../../component/Pages/placements/placements";
+import Placements from "../../component/Pages/placements/placements";
 
-export default function placementsPage() {
-  return <placements />;
+export default function PlacementsPage() {
+  return <Placements />;
 }

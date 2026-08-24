@@ -33,12 +33,12 @@ export default function MastersDMVashi() {
     // {
     //   title: "Core Curriculum & Advanced Modules",
     //   description: "Get access to a syllabus that is vetted in the industry and includes all key digital marketing concepts. Learn search marketing, social media strategies, web designing, branding and advanced data courses.",
-    //   imageSrc: "/images/banner-image/dm/faculty.jpg"
+    //   imageSrc: "/images/banner-image/dm/faculty.webp"
     // },
     {
       title: "Early Placement Support",
       description: "Gain a competitive edge in your career from day 1 through focused placement assistance, portfolio creation, and corporate interviews organized long before you graduate from your program.",
-      imageSrc: "/images/banner-image/dm/placement.jpg"
+      imageSrc: "/images/banner-image/dm/placement.webp"
     },
     {
       title: "Agency-Aligned Practical Mastery",

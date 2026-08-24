@@ -33,7 +33,7 @@ export default function GraduateDMVashi() {
     {
       title: "Core Curriculum & Advanced Modules",
       description: "Get access to a syllabus that is vetted in the industry and includes all key digital marketing concepts. Learn search marketing, social media strategies, web designing, branding and advanced data courses.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     },
     {
       title: "Practical, Hands-on Training Model",
@@ -48,7 +48,7 @@ export default function GraduateDMVashi() {
     // {
     //   title: "Placement before Course Completion",
     //   description: "Ensure that you bag your dream job beforehand. With our unique placement process, we will help you create a portfolio, enhance your CV, and crack interview sessions through mock drills to ensure employment even before graduation!",
-    //   imageSrc: "/images/banner-image/dm/placement.jpg"
+    //   imageSrc: "/images/banner-image/dm/placement.webp"
     // },
     
   ];

@@ -41,12 +41,12 @@ export default function DataAnalytics() {
     {
       title: "Get a 3-Month Internship Program as a Part of the Course",
       description: "Gain industry experience with the help of a 3-month internship program, which is a part of the Data Analytics course program. Practice industry datasets and live analytics projects to build up your experience and make your professional resume more attractive.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Gain Professional Certifications in Tableau, Power BI and Data Analytics",
       description: "Gain industry-specific certifications in Tableau, Power BI and Data Analytics to validate your knowledge and skills in this particular industry. This will help build up your reputation and earn more money working in your analytics job role.",
-      imageSrc: "/images/USP/certificate.jpg"
+      imageSrc: "/images/USP/certificate.webp"
     },
     {
       title: "Practice Industry-Oriented Case Studies, Live Projects and Practical Assignments",
@@ -56,7 +56,7 @@ export default function DataAnalytics() {
     {
       title: "Get Overseas and International Training and Mentoring",
       description: "Train with international mentors who are experienced in the area of data analytics and who can pass their experience to you and prepare you for a data-driven business problem.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -163,23 +163,23 @@ export default function DataAnalytics() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

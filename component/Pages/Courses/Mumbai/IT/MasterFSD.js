@@ -35,12 +35,12 @@ export default function MasterFSD() {
     {
       title: "India’s First Full Stack Developer Program with Job Guidance",
       description: "Kick start your IT career by taking up India’s first full stack developer program which is equipped with a job guidance facility. Acquire the technologies that are in high demand in the field with practical training and get employed as a software developer.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Secure a Certificate for 3 Months Internship for Starting your IT Career",
       description: "Enhance your practical development skills with a certificate for 3 months internship. The certificate will help you gain an exposure to practical projects before stepping into the IT world.",
-      imageSrc: "/images/USP/certificate.jpg"
+      imageSrc: "/images/USP/certificate.webp"
     },
     {
       title: "Become a Professionally Certified Programmer in Front End, Back End and Full Stack Development",
@@ -50,7 +50,7 @@ export default function MasterFSD() {
     {
       title: "Access to Mentoring Programs from Overseas",
       description: "Gain experience by taking up mentoring programs offered by overseas mentors who offer you industry related insights and information. Boost your technical expertise with the latest trends in software engineering.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -156,23 +156,23 @@ export default function MasterFSD() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

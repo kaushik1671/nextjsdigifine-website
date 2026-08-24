@@ -12,3 +12,22 @@ function Logo() {
 }
 
 export default Logo;
+
+// import React from 'react';
+
+// function Logo() {
+//   return (
+//     <div style={{ width: '79%' }}>
+//       {/* Reference directly from the public folder */}
+//       <img 
+//         src="/images/logo/digi-logo.webp" 
+//         alt="digifine-logo" 
+//         loading="lazy" 
+//         className="h-12 w-auto" 
+//       />
+//     </div>
+//   );
+// }
+
+// export default Logo;
+

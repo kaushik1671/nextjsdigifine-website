@@ -53,9 +53,9 @@ const CourseCard = ({
               </div>
 
               {/* 🛠️ ADJUSTED: Balanced font sizes for the wider layout */}
-              <h1 className="text-2xl sm:text-3xl md:text-[30px] lg:text-[36px] leading-tight font-medium mb-3 text-slate-900">
+              <h2 className="text-2xl sm:text-3xl md:text-[30px] lg:text-[36px] leading-tight font-medium mb-3 text-slate-900">
                 {title} <span className="text-[#046AED]">{highlightText}</span>
-              </h1>
+              </h2>
               <p className="text-sm md:text-base text-gray-600 mb-2 leading-relaxed">{description}</p>
             </div>
 

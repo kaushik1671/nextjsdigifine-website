@@ -36,18 +36,18 @@ export default function VideoEditing() {
     {
       title: "India’s First Masters Graphic Design Course in Mumbai with Placement Guarantee",
       description: "An innovative, production-focused course in Mumbai, combining creative training with a guaranteed placement to facilitate your journey towards professional success in the field of design.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Earn More Than 10 Internationally Certified Courses After Course Completion",
       description: "Prove your creativity through an exhaustive set of 10+ internationally certified courses, which guarantee that you have all the technical knowledge as per international standards.",
-      imageSrc: "/images/banner-image/gd/FeatureS/ICertifiedC.jpg"
+      imageSrc: "/images/banner-image/gd/FeatureS/ICertifiedC.webp"
     },
     
     {
       title: "Access All Major Software Packages under One Roof!",
       description: "Get access to the complete design ecosystem including Adobe Creative Suite and Figma through a single, high-end platform.",
-      imageSrc: "/images/banner-image/gd/FeatureS/umbrella.jpg"
+      imageSrc: "/images/banner-image/gd/FeatureS/umbrella.webp"
     },
      {
       title: "Work on Real Projects and Make a Distinctive Portfolio for Yourself on Behance!",

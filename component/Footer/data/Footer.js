@@ -37,5 +37,7 @@ export const quickLinksSection = {
     { label: "Hire From Us", href: "/hire-from-us", type: "internal" },
     { label: "Careers", href: "/careers", type: "internal" },
     { label: "Refer & Earn", href: "/refer-and-earn", type: "internal" },
+    { label: "Privacy Policy", href: "/privacy-policy", type: "internal" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions", type: "internal" },
   ],
 };

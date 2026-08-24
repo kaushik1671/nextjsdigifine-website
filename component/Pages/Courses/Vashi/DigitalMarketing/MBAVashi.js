@@ -33,7 +33,7 @@ export default function MBAVashi() {
     {
       title: "International Visit to Dubai",
       description: "An immersive global residency program specializing in international luxury brand management and global market strategies.",
-      imageSrc: "/images/banner-image/dm/dubai.jpg"
+      imageSrc: "/images/banner-image/dm/dubai.webp"
     },
     {
       title: "Salary Hike",

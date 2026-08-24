@@ -38,7 +38,7 @@ export default function PGDMHydrabad() {
     // {
     //   title: "Placement before Course Completion",
     //   description: "Ensure that you bag your dream job beforehand. With our unique placement process, we will help you create a portfolio, enhance your CV, and crack interview sessions through mock drills to ensure employment even before graduation!",
-    //   imageSrc: "/images/banner-image/dm/placement.jpg"
+    //   imageSrc: "/images/banner-image/dm/placement.webp"
     // },
     {
       title: "Live Project Deployment & Case Studies",
@@ -48,7 +48,7 @@ export default function PGDMHydrabad() {
     {
       title: "Senior Industry Practitioners & Faculty",
       description: "Skip the old textbooks. All our courses are designed and delivered by skilled marketing professionals and current agency operators. Learn real world strategies from those who are on the ground spending millions of dollars on ads and creating cutting edge digital campaigns every single day.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 

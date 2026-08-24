@@ -35,7 +35,7 @@ export default function MasterFSDPythonVashi  () {
     {
       title: "Three-Month Corporate Internship",
       description: "Upon completion of all courses in the curriculum, candidates will get a letter confirming their three-month internship period. This is a necessary period for gaining practical experience for being eligible in technical recruitment processes.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Expert Certification in Frontend, Backend, and Full-Stack Development",
@@ -50,7 +50,7 @@ export default function MasterFSDPythonVashi  () {
     {
       title: "International Training and Practical Experience",
       description: "Develop an unmatched advantage with our international training program. Develop applications with an international perspective with international mentorship from global mentors.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -155,23 +155,23 @@ export default function MasterFSDPythonVashi  () {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

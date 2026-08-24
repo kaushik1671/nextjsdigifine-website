@@ -33,7 +33,7 @@ export default function MBA() {
     {
       title: "Expert Faculty",
       description: "Learns skills and marketing from corporate professionals. Learn all about the latest marketing tools and optimize campaigns only by field-tested certified professionals.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     },
     {
       title: "Placement before Course Completion",
@@ -48,7 +48,7 @@ export default function MBA() {
     // {
     //   title: "Placement before Course Completion",
     //   description: "Ensure that you bag your dream job beforehand. With our unique placement process, we will help you create a portfolio, enhance your CV, and crack interview sessions through mock drills to ensure employment even before graduation!",
-    //   imageSrc: "/images/banner-image/dm/placement.jpg"
+    //   imageSrc: "/images/banner-image/dm/placement.webp"
     // },
     
   ];

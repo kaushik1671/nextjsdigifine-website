@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+
 export default function Registration() {
   const router = useRouter();
 
@@ -16,7 +18,7 @@ export default function Registration() {
     course: "",
     branch: "",
     mode: "",
-    agreed: false
+    agreeTerms: false
   });
 
   const [errors, setErrors] = useState({});
@@ -25,42 +27,55 @@ export default function Registration() {
   const validate = () => {
     let newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.includes("@")) newErrors.email = "Valid email required";
-    if (formData.phone.length < 10) newErrors.phone = "Enter valid phone";
-    if (!formData.guardian_phone.trim())
+    if (!formData.name.trim())
+      newErrors.name = "Name is required";
+
+    if (!formData.email.includes("@"))
+      newErrors.email = "Valid email required";
+
+    if (formData.phone.length < 10)
+      newErrors.phone = "Enter valid phone";
+
+    if (!formData.guardian_phone?.trim())
       newErrors.guardian_phone = "Guardian phone is required";
-    if (!formData.course) newErrors.course = "Select a course";
-    if (!formData.branch) newErrors.branch = "Select a branch";
-    if (!formData.mode) newErrors.mode = "Select a mode";
+
     if (!formData.guardian_name.trim())
       newErrors.guardian_name = "Guardian name is required";
+
     if (!formData.course_field)
       newErrors.course_field = "Select course field";
-    if (!formData.agreed)
-      newErrors.agreed = "You must agree to terms";
+
+    if (!formData.course)
+      newErrors.course = "Select a course";
+
+    if (!formData.branch)
+      newErrors.branch = "Select a branch";
+
+    if (!formData.mode)
+      newErrors.mode = "Select a mode";
+
+    if (!formData.agreeTerms)
+      newErrors.agreeTerms = "Please accept the Terms & Conditions";
 
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
   const handleChange = (e) => {
-    const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
-    setFormData({
-      ...formData,
-      [e.target.name]: value
-    });
+  const { name, value, type, checked } = e.target;
 
-    setErrors({
-      ...errors,
-      [e.target.name]: ""
-    });
-  };
+  setFormData({
+    ...formData,
+    [name]: type === "checkbox" ? checked : value
+  });
 
-  const handleModeSelect = (selectedMode) => {
-    setFormData({ ...formData, mode: selectedMode });
-    setErrors({ ...errors, mode: "" });
-  };
+  setErrors({
+    ...errors,
+    [name]: ""
+  });
+};
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,7 +86,7 @@ export default function Registration() {
       setLoading(true);
 
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/registrations`,
+        `${API_BASE}/api/registrations`,
         {
           method: "POST",
           headers: {
@@ -88,11 +103,8 @@ export default function Registration() {
         return;
       }
 
-      // ✅ SUCCESS → REDIRECT
       router.push("/payment");
-
     } catch (err) {
-      console.error(err);
       alert("Something went wrong. Try again.");
     } finally {
       setLoading(false);
@@ -100,228 +112,372 @@ export default function Registration() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row w-full max-w-5xl">
-        
-        {/* Left Section - Blue Hero Banner */}
-        <div className="bg-[#2563eb] text-white p-8 md:p-12 md:w-5/12 flex flex-col justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Start Your Career Journey 🚀
-          </h1>
-          <p className="text-blue-100 text-sm md:text-base mb-8 leading-relaxed">
-            Join our industry-ready programs in AI, Digital Marketing, Full Stack Development, Data Science, and more.
-          </p>
+    
+  
+<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 flex items-center justify-center px-4 py-10">
+  <div className="w-full max-w-5xl bg-white shadow-2xl rounded-3xl overflow-hidden grid lg:grid-cols-2">
 
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold">
-                ✓
-              </div>
-              <span className="text-sm font-medium">Industry Expert Trainers</span>
-            </div>
+    {/* Left Side Banner */}
+    <div className="lg:flex flex-col justify-center bg-blue-600 text-white p-10">
+      <h1 className="text-4xl font-bold leading-tight mb-4">
+        Start Your Career Journey 🚀
+      </h1>
 
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold">
-                ✓
-              </div>
-              <span className="text-sm font-medium">100% Placement Assistance</span>
-            </div>
+      <p className="text-blue-100 text-lg leading-relaxed">
+        Join our industry-ready programs in AI, Digital Marketing,
+        Full Stack Development, Data Science, and more.
+      </p>
 
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold">
-                ✓
-              </div>
-              <span className="text-sm font-medium">Live Project Experience</span>
-            </div>
-          </div>
+      <div className="mt-8 space-y-4">
+        <div className="flex items-center gap-3">
+          <span className="bg-white/20 p-2 rounded-full">✔</span>
+          <p>Industry Expert Trainers</p>
         </div>
 
-        {/* Right Section - Form */}
-        <div className="p-8 md:p-12 md:w-7/12 bg-white">
-          <div className="mb-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800">Register Now</h2>
-            <p className="text-gray-500 text-sm mt-1">Fill your details to get started</p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Grid 1: Name & Guardian Name */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
-                <input
-                  name="name"
-                  placeholder="Enter your name"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Guardian Name</label>
-                <input
-                  name="guardian_name"
-                  placeholder="Guardian name"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                {errors.guardian_name && <p className="text-red-500 text-xs mt-1">{errors.guardian_name}</p>}
-              </div>
-            </div>
-
-            {/* Grid 2: Email & Phone */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Email</label>
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Phone</label>
-                <input
-                  name="phone"
-                  placeholder="Enter phone number"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-              </div>
-            </div>
-
-            {/* Guardian Phone */}
-            <div>
-              <label className="block text-xs font-semibold text-gray-700 mb-1">Guardian Phone</label>
-              <input
-                name="guardian_phone"
-                placeholder="Guardian phone number"
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              {errors.guardian_phone && <p className="text-red-500 text-xs mt-1">{errors.guardian_phone}</p>}
-            </div>
-
-            {/* Grid 3: Course Field & Branch */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Course Field</label>
-                <select
-                  name="course_field"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select Field</option>
-                  <option value="IT">IT</option>
-                  <option value="GD">GD</option>
-                  <option value="DM">DM</option>
-                </select>
-                {errors.course_field && <p className="text-red-500 text-xs mt-1">{errors.course_field}</p>}
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Branch</label>
-                <select
-                  name="branch"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select Branch</option>
-                  <option>Mumbai</option>
-                  <option>Navi Mumbai</option>
-                  <option>Hyderabad</option>
-                </select>
-                {errors.branch && <p className="text-red-500 text-xs mt-1">{errors.branch}</p>}
-              </div>
-            </div>
-
-            {/* Course Select */}
-            <div>
-              <label className="block text-xs font-semibold text-gray-700 mb-1">Course</label>
-              <select
-                name="course"
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">Select Course</option>
-                <option>MBA Digital Marketing</option>
-                <option>Data Science</option>
-                <option>Full Stack</option>
-              </select>
-              {errors.course && <p className="text-red-500 text-xs mt-1">{errors.course}</p>}
-            </div>
-
-            {/* Learning Mode Toggle Buttons */}
-            <div>
-              <label className="block text-xs font-semibold text-gray-700 mb-1">Learning Mode</label>
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  type="button"
-                  onClick={() => handleModeSelect("Online")}
-                  className={`py-2 text-sm font-medium rounded-lg border transition-all ${
-                    formData.mode === "Online"
-                      ? "border-blue-600 text-blue-600 bg-blue-50"
-                      : "border-gray-300 text-gray-700 hover:bg-gray-50"
-                  }`}
-                >
-                  Online
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleModeSelect("Offline")}
-                  className={`py-2 text-sm font-medium rounded-lg border transition-all ${
-                    formData.mode === "Offline"
-                      ? "border-blue-600 text-blue-600 bg-blue-50"
-                      : "border-gray-300 text-gray-700 hover:bg-gray-50"
-                  }`}
-                >
-                  Offline
-                </button>
-              </div>
-              {errors.mode && <p className="text-red-500 text-xs mt-1">{errors.mode}</p>}
-            </div>
-
-            {/* Terms Checkbox */}
-            <div className="pt-2">
-              <label className="flex items-center gap-2 text-xs text-gray-600 cursor-pointer">
-                <input
-                  type="checkbox"
-                  name="agreed"
-                  onChange={handleChange}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                />
-                <span>
-                  I agree to the{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
-                    Terms & Conditions
-                  </a>{" "}
-                  and{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
-                    Refund Policy
-                  </a>
-                  .
-                </span>
-              </label>
-              {errors.agreed && <p className="text-red-500 text-xs mt-1">{errors.agreed}</p>}
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 disabled:opacity-50 mt-4 text-sm"
-            >
-              {loading ? "Submitting..." : "Register Now"}
-            </button>
-          </form>
+        <div className="flex items-center gap-3">
+          <span className="bg-white/20 p-2 rounded-full">✔</span>
+          <p>100% Placement Assistance</p>
         </div>
 
+        <div className="flex items-center gap-3">
+          <span className="bg-white/20 p-2 rounded-full">✔</span>
+          <p>Live Project Experience</p>
+        </div>
       </div>
     </div>
+
+    {/* Right Side Form */}
+    <div className="p-6 sm:p-8 lg:p-10">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-800">
+          Register Now
+        </h2>
+        <p className="text-gray-500 mt-2">
+          Fill your details to get started
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-5">
+
+        {/* Name + Guardian */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block mb-1 text-sm font-semibold text-gray-700">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={formData.name}
+              placeholder="Enter your name"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.name}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block mb-1 text-sm font-semibold text-gray-700">
+              Guardian Name
+            </label>
+
+            <input
+              type="text"
+              name="guardian_name"
+              onChange={handleChange}
+              value={formData.guardian_name}
+              placeholder="Guardian name"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+
+            {errors.guardian_name && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.guardian_name}
+              </p>
+            )}
+          </div>
+        </div>
+
+        
+
+        {/* Email + Phone */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block mb-1 text-sm font-semibold text-gray-700">
+              Email
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+              placeholder="Enter your email"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.email}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block mb-1 text-sm font-semibold text-gray-700">
+              Phone
+            </label>
+
+            <input
+              type="text"
+              name="phone"
+              onChange={handleChange}
+              value={formData.phone}
+              placeholder="Enter phone number"
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.phone}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div>
+  <label className="block mb-1 text-sm font-semibold text-gray-700">
+    Guardian Phone
+  </label>
+
+  <input
+    type="text"
+    name="guardian_phone"
+    onChange={handleChange}
+    value={formData.guardian_phone}
+    placeholder="Guardian phone number"
+    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+  />
+
+  {errors.guardian_phone && (
+    <p className="text-red-500 text-sm mt-1">
+      {errors.guardian_phone}
+    </p>
+  )}
+</div>
+
+        {/* Course Field + Branch */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div>
+            <label className="block mb-1 text-sm font-semibold text-gray-700">
+              Course Field
+            </label>
+
+            <select
+              name="course_field"
+              onChange={handleChange}
+              value={formData.course_field}
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+            >
+              <option value="">Select Field</option>
+              <option value="IT">IT</option>
+              <option value="GD">GD</option>
+              <option value="DM">DM</option>
+            </select>
+
+            {errors.course_field && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.course_field}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block mb-1 text-sm font-semibold text-gray-700">
+              Branch
+            </label>
+
+            <select
+              name="branch"
+              onChange={handleChange}
+              value={formData.branch}
+              className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+            >
+              <option value="">Select Branch</option>
+              <option>Mumbai</option>
+              <option>Navi Mumbai</option>
+              <option>Hyderabad</option>
+            </select>
+
+            {errors.branch && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.branch}
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Course */}
+        <div>
+          <label className="block mb-1 text-sm font-semibold text-gray-700">
+            Course
+          </label>
+
+          <select
+            name="course"
+            onChange={handleChange}
+            value={formData.course}
+            className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+          >
+            <option value="">Select Course</option>
+
+            <option>
+              MBA- Level Digital Marketing Program
+            </option>
+
+            <option>
+              AI Powered Post Graduation Program in Digital Marketing
+            </option>
+
+            <option>
+              AI Powered Graphic Design & Video Editing Program
+            </option>
+
+            <option>
+              Master Certification in Data Science, ML & AI Program
+            </option>
+
+            <option>
+              Master Certification in Data Science & ML Program
+            </option>
+
+            <option>
+              Full Stack Development Program with AI and Cloud Engineering
+            </option>
+
+            <option>
+              AI Powered Data Analytics Program
+            </option>
+          </select>
+
+          {errors.course && (
+            <p className="text-red-500 text-sm mt-1">
+              {errors.course}
+            </p>
+          )}
+        </div>
+
+        {/* Mode */}
+        <div>
+          <label className="block mb-1 text-sm font-semibold text-gray-700">
+            Learning Mode
+          </label>
+
+          <div className="grid grid-cols-2 gap-4">
+            <label
+              className={`border rounded-xl p-3 cursor-pointer flex items-center justify-center font-medium transition ${
+                formData.mode === "Online"
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "border-gray-300 hover:border-blue-400"
+              }`}
+            >
+              <input
+                type="radio"
+                name="mode"
+                value="Online"
+                checked={formData.mode === "Online"}
+                onChange={handleChange}
+                className="hidden"
+              />
+              Online
+            </label>
+
+            <label
+              className={`border rounded-xl p-3 cursor-pointer flex items-center justify-center font-medium transition ${
+                formData.mode === "Offline"
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "border-gray-300 hover:border-blue-400"
+              }`}
+            >
+              <input
+                type="radio"
+                name="mode"
+                value="Offline"
+                checked={formData.mode === "Offline"}
+                onChange={handleChange}
+                className="hidden"
+              />
+              Offline
+            </label>
+          </div>
+
+          {errors.mode && (
+            <p className="text-red-500 text-sm mt-1">
+              {errors.mode}
+            </p>
+          )}
+        </div>
+
+        {/* agree */}
+        <div>
+  <label className="flex items-start gap-3 cursor-pointer">
+    <input
+      type="checkbox"
+      name="agreeTerms"
+      checked={formData.agreeTerms}
+      onChange={handleChange}
+      className="mt-1 h-4 w-4 text-blue-600 rounded"
+    />
+
+    <span className="text-sm text-gray-700">
+      I agree to the{" "}
+      <a
+        href="/terms-and-conditions"
+        target="_blank"
+        className="text-blue-600 hover:underline font-medium"
+      >
+        Terms & Conditions
+      </a>{" "}
+      and{" "}
+      <a
+        href="/privacy-policy"
+        target="_blank"
+        className="text-blue-600 hover:underline font-medium"
+      >
+        Refund Policy
+      </a>.
+    </span>
+  </label>
+
+  {errors.agreeTerms && (
+    <p className="text-red-500 text-sm mt-2">
+      {errors.agreeTerms}
+    </p>
+  )}
+</div>
+
+        {/* Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className={`w-full py-3 rounded-xl text-white font-semibold text-lg transition-all duration-300 shadow-md ${
+            loading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700 hover:scale-[1.01]"
+          }`}
+        >
+          {loading ? "Submitting..." : "Register Now"}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
   );
 }

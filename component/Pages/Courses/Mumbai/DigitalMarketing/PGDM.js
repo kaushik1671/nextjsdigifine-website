@@ -38,7 +38,7 @@ export default function PGDM() {
     {
       title: "Placement before Course Completion",
       description: "Ensure that you bag your dream job beforehand. With our unique placement process, we will help you create a portfolio, enhance your CV, and crack interview sessions through mock drills to ensure employment even before graduation!",
-      imageSrc: "/images/banner-image/dm/placement.jpg"
+      imageSrc: "/images/banner-image/dm/placement.webp"
     },
     // {
     //   title: "Live Projects",
@@ -48,7 +48,7 @@ export default function PGDM() {
     {
       title: "Expert Faculty",
       description: "Benefit from real-world professionals who share their experiences in class. Our courses are conducted by industry professionals who have been working in the industry and know about market updates and changes in algorithms.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 

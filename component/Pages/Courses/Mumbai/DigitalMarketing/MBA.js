@@ -38,12 +38,12 @@ export default function MBA() {
     {
       title: "Global Immersion",
       description: "International Visit to Dubai for Luxury Brand Management experience.",
-      imageSrc: "/images/banner-image/dm/Dubai.jpg"
+      imageSrc: "/images/banner-image/dm/Dubai.webp"
     },
     {
       title: "100% Placement Support",
       description: "Dedicated placement cell with mock interviews and resume building.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Live Projects",
@@ -53,7 +53,7 @@ export default function MBA() {
     {
       title: "Executive Faculty",
       description: "Learn directly from corporate leaders and senior digital marketers.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 

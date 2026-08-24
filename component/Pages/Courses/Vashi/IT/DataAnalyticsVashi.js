@@ -41,12 +41,12 @@ export default function DataAnalyticsVashi() {
     {
       title: "India's First Data Analyst Course with Placement Program",
       description: "Here is a chance to be a part of India’s First Ever Data Analyst Course with Placement, where you get to learn, garner, and get guided by industry-ready experience to turn you into a Data Analyst professional.",
-      imageSrc: "/images/banner-image/dm/Dubai.jpg"
+      imageSrc: "/images/banner-image/dm/Dubai.webp"
     },
     {
       title: "Acquire a 3-month Internship Certificate",
       description: "You will acquire a 3-month Internship Certificate as a part of the course and get an edge in the race among the aspirants during the Data Analytics Interviews.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Live Projects and Real Time Case Studies With Assignments",
@@ -56,7 +56,7 @@ export default function DataAnalyticsVashi() {
     {
       title: "International Exposure Through Mentorship and Practical Experience",
       description: "You will gain international exposure through the mentorship of industry practitioners and the completion of industry-related case studies.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -160,23 +160,23 @@ export default function DataAnalyticsVashi() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

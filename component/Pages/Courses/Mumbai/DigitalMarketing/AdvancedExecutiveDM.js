@@ -33,12 +33,12 @@ export default function AdvancedExecutiveDM() {
     // {
     //   title: "Core Curriculum & Advanced Modules",
     //   description: "Get access to a syllabus that is vetted in the industry and includes all key digital marketing concepts. Learn search marketing, social media strategies, web designing, branding and advanced data courses.",
-    //   imageSrc: "/images/banner-image/dm/faculty.jpg"
+    //   imageSrc: "/images/banner-image/dm/faculty.webp"
     // },
     {
       title: "100% Placement Assistance",
       description: "No need to go through a fiercely competitive job market all alone. The dedicated career cell at our end equips you from day one through personalized resume writing, portfolio making, and practice interviews to land the best jobs in top companies effortlessly.",
-      imageSrc: "/images/banner-image/dm/placement.jpg"
+      imageSrc: "/images/banner-image/dm/placement.webp"
     },
     {
       title: "E-Commerce Management",

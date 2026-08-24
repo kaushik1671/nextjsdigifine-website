@@ -28,7 +28,7 @@ export default function PlacementFAQ() {
       answer: "Yes, many of our top-tier partners offer 6-month pre-placement internships (PPIs) during the final year, which successfully convert into high-paying full-time roles based on student performance."
     }
   ];
-
+  
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };

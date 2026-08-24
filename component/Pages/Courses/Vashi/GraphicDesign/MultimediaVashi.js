@@ -36,12 +36,12 @@ export default function MultimediaVashi() {
     {
       title: "Industry-Oriented Multimedia & Animation Program",
       description: "An academically designed program to reflect actual studio settings so that students acquire the necessary knowledge and technical skills required by contemporary creative agencies",
-      imageSrc: "/images/banner-image/dm/Dubai.jpg"
+      imageSrc: "/images/banner-image/dm/Dubai.webp"
     },
     {
       title: "Professional Certification After Course Completion",
       description: "Gain the recognition of professional certifications which will authenticate your expertise in design, motion, and animation before global recruiters.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Become A Pro in Graphic Design, UI/UX, Motion Graphics and Animation",
@@ -51,7 +51,7 @@ export default function MultimediaVashi() {
     {
       title: "Make An Impressive Portfolio Through Real Projects",
       description: "Connect the missing link between learning and recruiting by working on client-based projects and creating an extremely valuable portfolio of yours.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 

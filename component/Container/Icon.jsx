@@ -1,8 +1,8 @@
-import React , {useState} from 'react';
+import React, { useState } from 'react';
 
 const Icon = ({ src, hoverSrc, alt, text, onClick }) => {
-
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       className="flex flex-col items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-primary-main hover:grayscale-0"
@@ -12,6 +12,7 @@ const Icon = ({ src, hoverSrc, alt, text, onClick }) => {
       role="button"
       tabIndex={0}
       aria-label={`Select ${text}`}
+      suppressHydrationWarning={true} // <-- Add this line to ignore injected extension attributes
     >
       <img src={isHovered ? hoverSrc : src} alt={alt} loading="lazy" className="w-8 h-8 transition-all duration-300 ease-in-out" />
       <span className="text-sm font-medium text-center capitalize whitespace-nowrap">{text}</span>

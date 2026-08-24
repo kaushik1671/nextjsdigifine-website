@@ -1,8 +1,126 @@
+// "use client";
+
+// import React, { useEffect, useMemo, useState } from "react";
+// import { brochureConfig } from "./BroucherConfig";
+// import BrochureCard from "./BrochureCard"; 
+
+// const conversionMap = {
+//   "course-brochures": "AW-834246291/hphSCNW6i7IaEJOt5o0D",
+//   "it-course-brochures": "AW-834246291/29uyCLu-i7IaEJOt5o0D",
+//   "graphic-design-curriculum": "AW-834246291/XMXzCLi-i7IaEJOt5o0D",
+// };
+
+// if (typeof window !== "undefined") {
+//   window.conversionMap = conversionMap;
+// }
+
+// const sendConversion = (sendTo) => {
+//   if (typeof window === "undefined") return;
+
+//   const sendTo = conversionMap[type];
+
+//   console.log("Conversion:", {
+//     type,
+//     sendTo,
+//   });
+
+//   if (!sendTo) return;
+
+
+
+//   const trySend = () => {
+//     if (typeof window.gtag === "function") {
+//       window.gtag("event", "conversion", {
+//         send_to: sendTo,
+//       });
+//       return;
+//     }
+
+//     setTimeout(trySend, 300);
+//   };
+
+//   trySend();
+// };
+
+// const DownloadBrochure = ({ type }) => {
+
+//   const [mounted, setMounted] = useState(false);
+
+//   useEffect(() => {
+//     setMounted(true);
+//   }, []);
+
+//   const currentData = useMemo(() => {
+//     return brochureConfig.find((item) => item.route === type);
+//   }, [type]);
+
+//   useEffect(() => {
+//     const sendTo = conversionMap[type];
+//     if (!sendTo) return;
+
+//     const storageKey = `conv_${type}`;
+//     if (sessionStorage.getItem(storageKey)) return;
+
+//     sendConversion(sendTo);
+//     sessionStorage.setItem(storageKey, "true");
+//   }, [type]);
+
+//   if (!currentData) {
+//     return (
+//       <section className="flex min-h-[70vh] items-center justify-center bg-gray-50 px-4">
+//         <div className="max-w-md rounded-xl bg-white p-8 text-center shadow-md">
+//           <h2 className="text-2xl font-semibold text-gray-800">
+//             No Brochures Available
+//           </h2>
+//         </div>
+//       </section>
+//     );
+//   }
+
+//   if (!mounted) return null;
+
+//   return ( 
+//     <section className="bg-gray-50 py-14">
+//       <div className="mx-auto max-w-7xl px-4">
+        
+//         <div className="mb-12 text-center">
+//           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+//             {currentData.heading}
+//           </h1>
+
+//           {currentData.subHeading && (
+//             <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+//               {currentData.subHeading}
+//             </p>
+//           )}
+//         </div>
+
+//         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+//           {currentData.cards.map((card, index) => (
+//             <BrochureCard
+//               key={card.id || index}
+//               icon={card.icon}
+//               title={card.title}
+//               fileUrl={card.fileUrl}
+//             />
+//           ))}
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default DownloadBrochure;
+
+
+
+
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
 import { brochureConfig } from "./BroucherConfig";
-import BrochureCard from "./BrochureCard"; 
+import BrochureCard from "./BrochureCard";
 
 const conversionMap = {
   "course-brochures": "AW-834246291/hphSCNW6i7IaEJOt5o0D",
@@ -10,16 +128,27 @@ const conversionMap = {
   "graphic-design-curriculum": "AW-834246291/XMXzCLi-i7IaEJOt5o0D",
 };
 
+// Expose conversion map in browser DevTools
+if (typeof window !== "undefined") {
+  window.conversionMap = conversionMap;
+}
+
 const sendConversion = (sendTo) => {
   if (typeof window === "undefined") return;
+
+  console.log("Google Ads Conversion:", sendTo);
 
   const trySend = () => {
     if (typeof window.gtag === "function") {
       window.gtag("event", "conversion", {
         send_to: sendTo,
       });
+
+      console.log("Conversion sent:", sendTo);
       return;
     }
+
+    console.log("Waiting for gtag...");
 
     setTimeout(trySend, 300);
   };
@@ -28,7 +157,6 @@ const sendConversion = (sendTo) => {
 };
 
 const DownloadBrochure = ({ type }) => {
-
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -40,13 +168,28 @@ const DownloadBrochure = ({ type }) => {
   }, [type]);
 
   useEffect(() => {
+    if (!type) return;
+
     const sendTo = conversionMap[type];
-    if (!sendTo) return;
+
+    console.log("Current brochure type:", type);
+    console.log("Current conversion:", sendTo);
+
+    if (!sendTo) {
+      console.warn(`No conversion mapping found for type: ${type}`);
+      return;
+    }
 
     const storageKey = `conv_${type}`;
-    if (sessionStorage.getItem(storageKey)) return;
+
+    // Prevent duplicate conversion during the same browser session
+    if (sessionStorage.getItem(storageKey)) {
+      console.log("Conversion already sent:", type);
+      return;
+    }
 
     sendConversion(sendTo);
+
     sessionStorage.setItem(storageKey, "true");
   }, [type]);
 
@@ -62,24 +205,27 @@ const DownloadBrochure = ({ type }) => {
     );
   }
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return null;
+  }
 
-  return ( 
+  return (
     <section className="bg-gray-50 py-14">
       <div className="mx-auto max-w-7xl px-4">
-        
+        {/* Heading */}
         <div className="mb-12 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
             {currentData.heading}
           </h1>
 
           {currentData.subHeading && (
-            <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
               {currentData.subHeading}
             </p>
           )}
         </div>
 
+        {/* Brochure Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {currentData.cards.map((card, index) => (
             <BrochureCard
@@ -90,7 +236,6 @@ const DownloadBrochure = ({ type }) => {
             />
           ))}
         </div>
-
       </div>
     </section>
   );

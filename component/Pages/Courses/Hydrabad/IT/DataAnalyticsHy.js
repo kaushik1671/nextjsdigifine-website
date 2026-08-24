@@ -41,12 +41,12 @@ export default function DataAnalyticsHy() {
     {
       title: "Industry Specific Data Analytics Program",
       description: "Equip yourself with knowledge that is required by companies and choose to take an industry specific Data Analytics Course. Learn skills in using Excel, SQL, Python, Power BI, Tableau and AI analytics to prepare yourself for the industry right from day one.",
-      imageSrc: "/images/USP/da.jpg"
+      imageSrc: "/images/USP/da.webp"
     },
     {
       title: "Get 3 Month Internship Offer",
       description: "Increase your resume weightage by getting a 3 month internship offer in Data Analytics. Gather industry experience by handling real-world data projects even before you step into the industry.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Get Industry Approved Data Analytics Certification",
@@ -56,7 +56,7 @@ export default function DataAnalyticsHy() {
     {
       title: "Practical Training From Industry Experts",
       description: "Benefit from the practical training provided by industry experts and experienced mentors who teach you how to apply analytics concepts to solve business problems.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -163,23 +163,23 @@ export default function DataAnalyticsHy() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

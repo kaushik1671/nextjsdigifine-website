@@ -96,14 +96,14 @@ const [isVisible, setIsVisible] = useState(false);
           count: "50+",
           title: "Placement Partners",
           desc: "Top brands actively recruit from Digifine.",
-          img: "/images/aboutus/learnSection/newspaper.png",
+          img: "/images/aboutus/learnSection/newspaper.webp",
           wide: false,
         },
         {
           count: "10+",
           title: "Live Projects & Case Studies",
           desc: "Earn industry-recognized international certificates.",
-          img: "/images/aboutus/learnSection/mobile.png",
+          img: "/images/aboutus/learnSection/mobile.webp",
           wide: true,
         },  
         {

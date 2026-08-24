@@ -35,12 +35,12 @@ export default function DSMLVashi() {
     {
       title: "India’s First Data Science & Machine Learning Course",
       description: "Get started on your career with India's best Data Science & Machine Learning course, designed on an industry-oriented curriculum for practical knowledge. Check out the latest technologies that big companies are using.",
-      imageSrc: "/images/USP/mlds.png"
+      imageSrc: "/images/USP/mlds.webp"
     },
     {
       title: "Resume Letter for 3 Month Internship",
       description: "After the course is completed, get a 3-month internship letter highlighting the industrial experience. Create a fantastic resume and improve your chances of landing the best Data Science jobs.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Data Analytics, Data Science & Machine Learning Professional Certifications",
@@ -50,7 +50,7 @@ export default function DSMLVashi() {
     {
       title: "International Mentors & Hands-on Training",
       description: "Your mentor is an international industry expert Get the practical aspect of data by using real time data and its business application.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -157,23 +157,23 @@ export default function DSMLVashi() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

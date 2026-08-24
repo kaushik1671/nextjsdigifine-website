@@ -35,12 +35,12 @@ export default function PGDSMLAL() {
     {
       title: "Get 3 Months Internship Letter as Part of the Program",
       description: "Enhance your CV with a 3-months internship letter that confirms your practical skills in the field of Data Science and Machine Learning. Gain theoretical and practical experience working with real business datasets and cases.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: "Get Certified in Data Analytics, Data Science, Machine Learning & AI",
       description: "Get a certificate of proficiency in Data Analytics, Data Science, Machine Learning, and Artificial Intelligence. Take advantage of having these certificates as confirmation of your expertise.",
-      imageSrc: "/images/USP/certificate.jpg"
+      imageSrc: "/images/USP/certificate.webp"
     },
     {
       title: "Solve Industry Cases and Work on Real-World Datasets",
@@ -50,7 +50,7 @@ export default function PGDSMLAL() {
     {
       title: "Attend Overseas Training and Mentoring",
       description: "Participate in overseas training and mentoring delivered by specialists in Data Science who will share with you their practical experience and reveal modern approaches in AI, Machine Learning, and Data Science.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -158,23 +158,23 @@ export default function PGDSMLAL() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

@@ -35,12 +35,12 @@ export default function MasterFSD() {
     {
       title: "Get a 3-Month Internship Letter to Begin a Successful Career",
       description: "Add value to your career profile by obtaining a 3-month internship letter which will showcase your hands-on experience in practical development. Gain hands-on experience and work on projects to be exposed to the industry, which is necessary for Python Full Stack Developer candidates.",
-      imageSrc: "/images/banner-image/dm/Placement.jpg"
+      imageSrc: "/images/banner-image/dm/Placement.webp"
     },
     {
       title: " Get Professional Certifications for Front-End, Back-End and Python Full Stack Development",
       description: "Obtain professional certifications in Front-End Development, Back-End Development, and Python Full Stack Development. Showcase your knowledge in technology through certifications in order to stand out among recruiters.",
-      imageSrc: "/images/USP/certificate.jpg"
+      imageSrc: "/images/USP/certificate.webp"
     },
     {
       title: "Create Live Projects, Coding Problems and Real Industry Case Studies",
@@ -50,7 +50,7 @@ export default function MasterFSD() {
     {
       title: "Get Overseas and International Mentorship and Training",
       description: "Learn through mentorship and training provided by overseas and international mentors and experienced software developers who have global software development practice and industry level expertise.",
-      imageSrc: "/images/banner-image/dm/faculty.jpg"
+      imageSrc: "/images/banner-image/dm/faculty.webp"
     }
   ];
 
@@ -156,23 +156,23 @@ export default function MasterFSD() {
 };
 
   const marqueeTopLogos = [
-  "/images/company_logo/it/1.jpg",
-  "/images/company_logo/it/2.jpg",
-  "/images/company_logo/it/3.jpg",
-  "/images/company_logo/it/4.jpg",
-  "/images/company_logo/it/5.jpg",
-  "/images/company_logo/it/6.jpg",
-  "/images/company_logo/it/7.jpg",
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/it/8.jpg",
-  "/images/company_logo/it/9.jpg",
-  "/images/company_logo/it/10.jpg",
-  "/images/company_logo/it/11.jpg",
-  "/images/company_logo/it/12.jpg",
-  "/images/company_logo/it/13.jpg",
-  "/images/company_logo/it/1.jpg", // loop seamless dikhne ke liye pehli image repeat ki hai
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // loop seamless dikhne ke liye pehli image repeat ki hai
 ];
 
   const successStoriesData = [

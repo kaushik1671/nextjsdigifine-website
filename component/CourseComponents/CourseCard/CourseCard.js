@@ -47,7 +47,7 @@ const CourseCard = ({
                 <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8F4FF]">
                   <span className="text-[#046AED] text-xs md:text-sm font-medium">New Course</span>
                 </div>
-                <button className="text-xl md:text-2xl text-gray-500 hover:text-gray-700">
+                <button suppressHydrationWarning className="text-xl md:text-2xl text-gray-500 hover:text-gray-700">
                   <i className="ri-share-fill"></i>
                 </button>
               </div>
@@ -104,12 +104,14 @@ const CourseCard = ({
             {/* Buttons Section */}
             <div className="flex flex-col sm:flex-row gap-3 mt-1">
               <button 
+                suppressHydrationWarning
                 className="w-full sm:flex-1 h-11 border border-gray-300 rounded-lg text-sm font-medium hover:border-gray-400 transition-colors bg-white text-gray-700"
                 onClick={() => openFormModal('Apply Now')}            
               >
                 Apply Now
               </button>
               <button 
+                suppressHydrationWarning
                 className="w-full sm:flex-1 h-11 bg-gradient-to-r from-[#046AED] to-[#0BABCE] text-white text-sm font-medium rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 onClick={() => openFormModal('Download Syllabus')}
               >
@@ -145,6 +147,7 @@ const CourseCard = ({
         <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
           <div className="relative bg-white rounded-[20px] shadow-xl w-full max-w-3xl p-4 sm:p-6 overflow-y-auto max-h-[90vh]">
             <button
+              suppressHydrationWarning
               onClick={closeFormModal}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-50 p-1 bg-gray-50 rounded-full"
               aria-label="Close"

@@ -1,4 +1,5 @@
 import About from "../../component/Pages/About/About";
+import { pageSchemas } from "../../lib/coursesData";
 
 export const metadata = {
   title: "About Digifine Academy | Mumbai, Navi Mumbai & Hyderabad",

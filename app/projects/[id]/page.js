@@ -129,8 +129,9 @@ export default function ProjectDetailPage() {
           </p>
           
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-            {/* Direct Browser History Back (Pichle Page Par Lautne Ke Liye) */}
+            {/* Direct Browser History Back */}
             <button
+              suppressHydrationWarning
               onClick={() => router.back()}
               className="text-xs font-semibold bg-gray-900 text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
             >
@@ -157,6 +158,7 @@ export default function ProjectDetailPage() {
         {/* Back Navigation Bar */}
         <div className="p-4 sm:px-10 border-b border-gray-100 bg-gray-50/50 flex items-center justify-between">
           <button 
+            suppressHydrationWarning
             onClick={() => router.back()} 
             className="text-xs font-bold text-[#046AED] hover:underline flex items-center gap-1 cursor-pointer"
           >
@@ -227,4 +229,4 @@ export default function ProjectDetailPage() {
       </div>
     </main>
   );
-}
+} 

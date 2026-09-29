@@ -111,6 +111,7 @@ export default function Toogle({ content }) {
           <button
             type="button"
             onClick={() => setIsDigifine(true)}
+            suppressHydrationWarning
             className={`relative z-10 flex-1 text-center py-2.5 text-[11px] sm:text-sm font-black rounded-full transition-colors duration-200 cursor-pointer ${
               isDigifine ? "text-white" : "text-slate-600 hover:text-slate-900"
             }`}

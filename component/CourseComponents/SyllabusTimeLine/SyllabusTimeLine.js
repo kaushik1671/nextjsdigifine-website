@@ -26,9 +26,9 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
         
         {/* Modernist Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200/60 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600">
+          {/* <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200/60 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600">
             <FiLayers className="w-3.5 h-3.5" /> Curriculum Blueprint
-          </span>
+          </span> */}
           <h2 className="mt-4 text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-none">
             Explore the <span className="text-[#046AED]">Digifine Syllabus</span>
           </h2>

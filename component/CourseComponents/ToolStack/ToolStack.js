@@ -10,7 +10,7 @@ const ToolStack = ({
   subtitle = "AI tools and industry platforms in one stack — everything you'll run campaigns, analyze data, and create with."
 }) => {
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 font-sans antialiased selection:bg-blue-50">
+    <section className="bg-white py-12 sm:px-6 lg:px-8 font-sans antialiased selection:bg-blue-50">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Group */}

@@ -60,7 +60,7 @@ export default function DSMLSimulationVashi() {
   const timelineSteps = [
     { title: "Enroll", description: "Onboarding & cohort mapping" },
     { title: "Offer Letter", description: "Issued on day one" },
-    { title: "Monthly Stipend", description: "₹10,000 while you train" },
+    { title: "Monthly Stipend", description: "₹20,000 while you train" },
     { title: "Live Corporate Training", description: "Real client campaigns" },
     { title: "Experience Letter", description: "Verifiable work history" },
     { title: "Placement", description: "Hiring partner network" }

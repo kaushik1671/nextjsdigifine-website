@@ -32,28 +32,28 @@ export default function GDSimulation() {
 
   const dataset = [
     {
-      title: "Corporate Simulation",
-      description: "Work inside a simulated agency floor from week one, not just a classroom."
+      title: "Premium Institute of Learning",
+      description: "Train at a premium institute built specifically around industry-recognized design and animation courses, not generic classroom teaching."
     },
     {
-      title: "AI Integrated Learning",
-      description: "Every module is layered with the AI tools professionals use on the job today."
+      title: "Certified Industry Trainers",
+      description: "Learn from certified industry trainers who work with top technologies and tools used daily inside real design studios."
     },
     {
-      title: "Real Client Projects",
-      description: "Execute live briefs for actual Digifine and Adbizit clients, not mock data."
+      title: "Live Projects, Real Briefs",
+      description: "Get hands-on experience on live projects and daily creative challenges, not just theory-based assignments."
     },
     {
-      title: "Paid Internship",
-      description: "Earn a stipend while you train — this is a job, not just a course."
+      title: "Versatile Batch Timings",
+      description: "Choose from flexible batch timings designed around working professionals, students, and career switchers alike."
     },
     {
-      title: "Offer Letter",
-      description: "Receive your offer letter on day one, before you've written a single ad."
+      title: "100% Placement Assistance",
+      description: "Get career guidance, mentoring, and 100% placement assistance backed by professional and international certificates."
     },
     {
-      title: "Placement Assistance",
-      description: "Structured placement support through Digifine's hiring partner network."
+      title: "Post-Placement Support",
+      description: "Stay supported even after you're placed, with continued mentoring in a genuinely supportive learning environment."
     }
   ];
 
@@ -112,23 +112,22 @@ export default function GDSimulation() {
     ];
 
     const aiToolsList = [
-        "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-        "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more"
+        "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Adobe Premiere", "Adobe After Effects",
       ];
     
-      const platformsList = [
-        "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-        "Looker Studio", "Power BI", "DV360", "Merchant Center"
-      ];
+      // const platformsList = [
+      //   "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
+      //   "Looker Studio", "Power BI", "DV360", "Merchant Center"
+      // ];
 
         const journeySteps = [
-          { title: "Enrollment", description: "Counselling call, city & mode selection, admission confirmed." },
-          { title: "Training", description: "Structured classroom + live sessions across every module." },
-          { title: "Assignments", description: "Weekly graded assignments to lock in each concept." },
-          { title: "Live Projects", description: "Real client briefs from Digifine and Adbizit accounts." },
-          { title: "Corporate Simulation", description: "Full agency-floor simulation with deliverables and deadlines." },
-          { title: "Certification", description: "14 certifications across platforms and specializations." },
-          { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." }
+          { title: "Enroll for Our Simulation Program", description: "Kickstart your creative career today. Join our immersive graphic design simulation program designed to build real-world skills from the ground up — no prior experience needed." },
+          { title: "Receive Offer Letter Immediately", description: "Start earning Rs. 15,000 monthly from day one. Get your official offer letter instantly upon enrollment and begin earning a stipend while learning, turning your creativity into income." },
+          { title: "Learn While on the Job in a Real Corporate Environment", description: "Work on real design projects in a professional setup. Master Illustrator, Photoshop, InDesign, Premiere Pro, After Effects and more through live briefs, mentorship, and daily creative challenges — just like a pro designer." },
+          { title: "Get Certified with Experience Letter", description: "Earn an industry-recognized certification along with a verifiable experience letter, showcasing your practical design expertise to employers and strengthening your portfolio." },
+          { title: "Get Absorbed by Our Partner Agency", description: "Seamlessly transition into full-time placement with our partner agencies. Launch your graphic design career with strong portfolio projects, real experience, and industry connections." },
+          // { title: "Certification", description: "14 certifications across platforms and specializations." },
+          // { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." }
         ];
 
   // const uniqueModulesSectionData = {
@@ -391,10 +390,10 @@ const marqueeBottomLogos = [
 
       <Toggle content={toggleData} />
 
-      <div className="py-5 md:py-13 border-b border-gray-50">
+      <div className="border-b border-gray-50">
         <ToolStack 
           aiTools={aiToolsList}
-          platforms={platformsList}
+          // platforms={platformsList}
           title="Tools you'll master"
         />
       </div>

@@ -305,7 +305,7 @@ const marqueeBottomLogos = [
       />
       
       <MyComponent type='dm'
-redirectlink = "/course-brochures"
+redirectlink = "/course-brochures" category="digital"
 title='Why Digifine for an MBA - Level Digital Marketing Program'
 subtitlePart1='Why Digifine for an' subtitleHighlight='MBA in Digital Marketing?'
 />

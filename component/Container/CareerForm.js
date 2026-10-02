@@ -1,10 +1,60 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+
+// ✅ COURSE CATEGORY MAP
+const courseOptionsMap = {
+  digital: [
+    "MBA Level Program AI Powered Marketing Data Analytics Program",
+    "AI Powered PG Program in Digital Marketing with Corporate Simulation",
+    "Post Graduate Program Ai Powered Digital Marketing",
+    "Master Program in Digital Marketing",
+    "Graduate Program in Digital Marketing",
+    "Advanced Executive Program in Digital Marketing",
+  ],
+  ds: [
+    "Masters Certification in Data Science and Machine Learning with Ai",
+    "Masters Certification in Data Science and Machine Learning",
+    "Masters Certification in Data Analytics with Gen AI"
+  ],
+  fsd: [
+    "Master Certification in Full Stack Developer with Ai & Cloud Engineering",
+    "Masters Certification in Full Stack Developer Java",
+    "Masters Certification in Full Stack Developer Python"
+  ],
+  design: [
+    "AI Powered Graphic Designing and Animation Program with Corporate Simulation",
+    "Master Certification in Multimedia Design and Animation Program",
+    "Master Certification in Graphic Design Program",
+    "Graduate Graphic Design Program",
+    "Master Certification in Video Editing and Motion Graphics Program",
+    "Master Certification in UI and UX Design Program",
+  ],
+  all: [
+    "MBA Level Program AI Powered Marketing Data Analytics Program",
+    "AI Powered PG Program in Digital Marketing with Corporate Simulation",
+    "Post Graduate Program AI Powered Digital Marketing",
+    "Master Program in Digital Marketing",
+    "Graduate Program in Digital Marketing",
+    "Advanced Executive Program in Digital Marketing",
+    "AI Powered Graphic Designing and Animation Program with Corporate Simulation",
+    "Master Certification in Multimedia Design and Animation Program",
+    "Master Certification in Graphic Design Program",
+    "Graduate Graphic Design Program",
+    "Master Certification in Video Editing and Motion Graphics Program",
+    "Master Certification in UI and UX Design Program",
+    "Masters Certification in Data Science and Machine Learning with AI",
+    "Masters Certification in Data Science and Machine Learning",
+    "Masters Certification in Data Analytics",
+    "Master Certification in Full Stack Developer with AI & Cloud Engineering",
+    "Masters Certification in Full Stack Developer Java",
+    "Masters Certification in Full Stack Developer Python"
+  ]
+};
 
 // ✅ PURE REUSABLE FORM FIELD COMPONENT
 const FormField = ({ label, type, name, value, onChange, options = [], errorMessage, className }) => {
@@ -44,14 +94,50 @@ const FormField = ({ label, type, name, value, onChange, options = [], errorMess
 };
 
 // ✅ MAIN FORM COMPONENT
-const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectlink = 'course-brochures', btntext = "Download Brochure" }) => {
+const CareerForm = ({
+  courseTitle = "Get the Course Brochure",
+  style,
+  redirectlink = 'course-brochures',
+  btntext = "Download Brochure"
+}) => {
   const navigate = useRouter();
+  const pathname = usePathname();
 
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Category determination based on active route
+  let category = "all";
+  if (
+    pathname.includes("full-stack") ||
+    pathname.includes("fullstack") ||
+    pathname.includes("fsd")
+  ) {
+    category = "fsd";
+  } else if (
+    pathname.includes("data-science") ||
+    pathname.includes("data") ||
+    pathname.includes("analytics") ||
+    pathname.includes("machine-learning")
+  ) {
+    category = "ds";
+  } else if (
+    pathname.includes("graphic") ||
+    pathname.includes("design") ||
+    pathname.includes("video")
+  ) {
+    category = "design";
+  } else if (
+    pathname.includes("digitalmarketing") ||
+    pathname.includes("marketing")
+  ) {
+    category = "digital";
+  }
+
+  const courseOptions = courseOptionsMap[category] || courseOptionsMap.all;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -71,10 +157,13 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // Fetch full metadata (OS, Browser, IP with fallbacks, URL, Timestamp)
   useEffect(() => {
+    let isMounted = true;
+
     const fetchMetadata = async () => {
-      const ua = navigator.userAgent;
-      const platform = navigator.platform || '';
+      const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
+      const platform = typeof navigator !== 'undefined' ? (navigator.platform || '') : '';
 
       // OS Detection
       let os = 'Unknown';
@@ -90,7 +179,6 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
         os = 'iOS';
       }
 
-      // Edge case fix: if Linux but Chrome/Edge/Brave, likely Windows
       if (os === 'Linux' && /Chrome|Edg|Brave/.test(ua) && !/Android/.test(ua)) {
         os = 'Windows';
       }
@@ -99,7 +187,7 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
       let browser = 'Unknown';
       if (/Edg/.test(ua)) {
         browser = 'Edge';
-      } else if (/\bBrave\b/i.test(ua) || navigator.brave) {
+      } else if (/\bBrave\b/i.test(ua) || (typeof navigator !== 'undefined' && navigator.brave)) {
         browser = 'Brave';
       } else if (/Chrome/.test(ua) && !/Edg/.test(ua)) {
         browser = 'Chrome';
@@ -111,7 +199,7 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
         browser = 'Internet Explorer';
       }
 
-      const pageUrl = window.location.href;
+      const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
       const dateTime = new Date().toISOString();
 
       // IP Fetch with Fallback
@@ -120,40 +208,44 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
         const res = await fetch('https://api.ipify.org?format=json');
         if (!res.ok) throw new Error('Primary IP fetch failed');
         const data = await res.json();
-        ip = data.ip;
+        ip = data.ip || 'Unknown';
       } catch (err) {
         console.warn("ipify blocked/failed, trying fallback service...", err);
         try {
           const fallbackRes = await fetch('https://ipapi.co/json/');
           if (fallbackRes.ok) {
             const fallbackData = await fallbackRes.json();
-            ip = fallbackData.ip;
+            ip = fallbackData.ip || 'Unknown';
           }
         } catch (fallbackErr) {
           console.error("All IP fetch attempts failed:", fallbackErr);
         }
       }
 
-      setFormData(prev => ({
-        ...prev,
-        ip,
-        browser,
-        os,
-        pageUrl,
-        dateTime,
-      }));
+      if (isMounted) {
+        setFormData(prev => ({
+          ...prev,
+          ip,
+          browser,
+          os,
+          pageUrl,
+          dateTime,
+        }));
+      }
     };
 
     fetchMetadata();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  // ✅ INPUT HANDLER
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // ✅ VALIDATION
   const validateForm = () => {
     const formErrors = {};
     let isValid = true;
@@ -194,7 +286,7 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await response.json().catch(() => ({}));
         alert('Error: ' + (errorData.error || 'Failed to submit'));
         setLoading(false);
         return;
@@ -202,8 +294,9 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
 
       setSubmitted(true);
 
-      const selectedCourse = formData.course; // ✅ FIX
+      const selectedCourse = formData.course;
 
+      // Reset user form fields
       setFormData(prev => ({
         ...prev,
         name: '',
@@ -214,14 +307,23 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
         course: '',
       }));
 
+      // Combined Redirect Logic (handles both Hyderabad dynamic routes & course keyword matching)
       setTimeout(() => {
         let finalRedirect = redirectlink;
-        const course = selectedCourse.toLowerCase(); // ✅ use stored value
 
-        if (!redirectlink || redirectlink === "course-brochures") {
+        if (pathname.toLowerCase().includes("hyderabad")) {
+          const hydRedirects = {
+            digital: "/hyderabad-course-brochures",
+            ds: "/hyderabad-it-course-brochures",
+            fsd: "/hyderabad-fsd-course-brochures",
+          };
+          finalRedirect = hydRedirects[category] || redirectlink;
+        } else if (!redirectlink || redirectlink === "course-brochures") {
+          const course = selectedCourse.toLowerCase();
+
           if (course.includes("digital marketing")) {
             finalRedirect = "/course-brochures";
-          } else if (course.includes("graphic design") || course.includes("video editing")) {
+          } else if (course.includes("graphic design") || course.includes("video editing") || course.includes("multimedia") || course.includes("animation")) {
             finalRedirect = "/graphic-design-curriculum";
           } else if (
             course.includes("data science") ||
@@ -239,6 +341,7 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
 
         navigate.push(finalRedirect);
       }, 500);
+
     } catch (err) {
       console.error('Submit error:', err);
       alert('Something went wrong while submitting the form.');
@@ -250,7 +353,7 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
 
   return (
     <div
-      className={`max-w-full mx-auto p-6 bg-white rounded-lg ${style} flex flex-col gap-3`}
+      className={`max-w-full mx-auto bg-white rounded-lg ${style} flex flex-col gap-3`}
       style={{
         backgroundSize: '500px',
         height: 'full',
@@ -265,6 +368,8 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
 
       <form onSubmit={handleSubmit} className="w-full">
         <div className="flex flex-col gap-6">
+
+          {/* Name Field */}
           <FormField
             label="Name"
             type="text"
@@ -274,6 +379,8 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
             errorMessage={errors.name}
             className="w-full"
           />
+
+          {/* Email & Phone */}
           <div className="flex flex-row flex-wrap gap-3 md:flex-nowrap">
             <FormField
               label="Email"
@@ -294,6 +401,8 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
               className="w-full"
             />
           </div>
+
+          {/* City & Mode */}
           <div className="flex flex-row flex-wrap gap-3 md:flex-nowrap">
             <FormField
               label="Choose City"
@@ -315,24 +424,18 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
             />
           </div>
 
+          {/* Dynamic Course Select based on Route Category */}
           <FormField
             label="Choose Course"
             type="select"
             name="course"
             value={formData.course}
             onChange={handleChange}
-            options={[
-              "MBA- Level Digital Marketing Program",
-              "AI Powered Post Graduation Program in Digital Marketing",
-              "AI Powered Graphic Design & Video Editing Program",
-              "Master Certification in Data Science, ML & AI Program",
-              "Master Certification in Data Science & ML Program",
-              "Full Stack Development Program with AI and Cloud Engineering",
-              "AI Powered Data Analytics Program"
-            ]}
+            options={courseOptions}
             className="w-full md:max-w-full max-w-md truncate overflow-hidden whitespace-nowrap appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
+          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
@@ -344,9 +447,11 @@ const CareerForm = ({ courseTitle = "Get the Course Brochure", style, redirectli
             {loading ? 'Downloading.....' : btntext}
           </button>
 
+          {/* Success Message */}
           {submitted && (
             <p className="text-green-500 text-center mt-4">Form Submitted Successfully!</p>
           )}
+
         </div>
       </form>
     </div>

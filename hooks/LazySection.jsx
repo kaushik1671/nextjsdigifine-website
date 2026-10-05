@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -16,10 +18,10 @@ function LazySection({
 
   return (
     <section ref={ref}>
-      {inView && (
-        <Suspense fallback={fallback}>
-          {children}
-        </Suspense>
+      {inView ? (
+        <Suspense fallback={fallback}>{children}</Suspense>
+      ) : (
+        fallback
       )}
     </section>
   );

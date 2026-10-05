@@ -1,151 +1,118 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"; 
+import { useState, useEffect, lazy, Suspense } from "react";
+import LazySection from "../../../../../hooks/LazySection";
+import { Code2, Layout, Server, Cloud, Bot } from "lucide-react";
+
+// Static Imports (Above the Fold - Critical Path)
 import CourseCard from "../../../../CourseComponents/CourseCard/CourseCard";
 import MyComponent from "../../../../Container/MyComponent";
-import Toggle from "../../../../CourseComponents/Toggle/Toggle";
-import CompanyMarquee from "../../../../CourseComponents/CompanyMarquee/CompanyMarquee";
-import SuccessStories from "../../../../CourseComponents/SuccessStories/SuccessStories";
-import StudentPlacedAt from "../../../../CourseComponents/StudentPlacedAt/StudentPlacedAt"; 
-import Testimonal from "../../../../CourseComponents/Testimonal/Testimonal";
-import SyllabusTimeLine from "../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine";
-import CertificateSection from "../../../../CourseComponents/CertificateSection/CertificateSection";
-import VerticalTimeline from "../../../../CourseComponents/VerticleTimeLine/VerticalTimeLine";
-import BoxCardSection from "../../../../Sections/BoxCardSection";
-import FAQsSection from "../../../../FAQsSection/FAQsSection";
-import Location from "../../../../CourseComponents/Location/Location";
-import WhyDigifine from "../../../../CourseComponents/WhyDigifine/WhyDigifine"
-import HorizontalTimeline from "../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"
-import CorporateProjects from "../../../../CourseComponents/CorporateProjects/CorporateProjects";
-import CourseOverview from "../../../../CourseComponents/CourseOverview/CourseOverview";
-import ToolsSectionSimulation from "../../../../CourseComponents/ToolsSectionSimulation/ToolsSectionSimulation"
-import StudentJourney from "../../../../CourseComponents/StudentJourney/StudentJourney";
 
-export default function ITSimulation() {
+// Lazy Loaded Components (Below the Fold - Deferred)
+const PlacementStats = lazy(() => import("../../../../CourseComponents/PlacementStats/PlacementStats"));
+const FeaturesSection = lazy(() => import("../../../../CourseComponents/FeatureSection/FeatureSection"));
+const CareerPath = lazy(() => import("../../../../CourseComponents/CareerPath/CareerPath"));
+const SupportSection = lazy(() => import("../../../../CourseComponents/SupportSection/SupportSection"));
+const CourseOverview = lazy(() => import("../../../../CourseComponents/CourseOverview/CourseOverview"));
+const ToolsMastered = lazy(() => import("../../../../CourseComponents/ToolsMastered/ToolsMastered"));
+const Toggle = lazy(() => import("../../../../CourseComponents/Toggle/Toggle"));
+const CompanyMarquee = lazy(() => import("../../../../CourseComponents/CompanyMarquee/CompanyMarquee"));
+const SyllabusTimeLine = lazy(() => import("../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine"));
+const SuccessStories = lazy(() => import("../../../../CourseComponents/SuccessStories/SuccessStories"));
+const StudentPlacedAt = lazy(() => import("../../../../CourseComponents/StudentPlacedAt/StudentPlacedAt"));
+const Testimonal = lazy(() => import("../../../../CourseComponents/Testimonal/Testimonal"));
+const CertificateSection = lazy(() => import("../../../../CourseComponents/CertificateSection/CertificateSection"));
+const VerticalTimeline = lazy(() => import("../../../../CourseComponents/VerticleTimeLine/VerticalTimeLine"));
+const BoxCardSection = lazy(() => import("../../../../Sections/BoxCardSection"));
+const FAQsSection = lazy(() => import("../../../../FAQsSection/FAQsSection"));
+const Location = lazy(() => import("../../../../CourseComponents/Location/Location"));
 
-  const pgdmStatsData = [
-    { src: '/images/Icons/formicon/ficon1.webp', hover: "/images/Icons/formicon/ficon5.webp", label: '35+ Industry Tools' },
-    { src: '/images/Icons/formicon/ficon2.webp', hover: "/images/Icons/formicon/ficon6.webp", label: '50+ Live Projects' },
-    { src: '/images/Icons/formicon/ficon3.webp', hover: "/images/Icons/formicon/ficon7.webp", label: '300+ Hours Training' },
-    { src: '/images/Icons/formicon/ficon4.webp', hover: "/images/Icons/formicon/ficon8.webp", label: '10,000+ Students Trained' },
-  ];
+/* ---------- Static data (outside component = no re-creation on render) ---------- */
 
-  const dataset = [
+const pgdmStatsData = [
+  { src: "/images/Icons/formicon/ficon1.webp", hover: "/images/Icons/formicon/ficon5.webp", label: "35+ Industry Tools" },
+  { src: "/images/Icons/formicon/ficon2.webp", hover: "/images/Icons/formicon/ficon6.webp", label: "50+ Live Projects" },
+  { src: "/images/Icons/formicon/ficon3.webp", hover: "/images/Icons/formicon/ficon7.webp", label: "300+ Hours Training" },
+  { src: "/images/Icons/formicon/ficon4.webp", hover: "/images/Icons/formicon/ficon8.webp", label: "10,000+ Students Trained" },
+];
+
+const mbaFeatures = [
+  {
+    title: "Paid Internship with Offer Letter on Day One",
+    description: "Secure your future before you've written your first line of code. Earn a monthly stipend while you train in a real corporate environment with mentor guidance, and finish with a verifiable experience letter.",
+    imageSrc: "/images/banner-image/dm/Placement.webp",
+  },
+  {
+    title: "Work Inside a Live Corporate Simulation",
+    description: "Work inside a simulated development environment from week one with real client projects, not just classroom theory. Learn through daily challenges, deliverables and deadlines.",
+    imageSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop",
+  },
+  {
+    title: "Build Portfolio-Ready Real Projects",
+    description: "Build applications like e-commerce stores, job portals, food delivery apps, weather apps and your own portfolio website, using HTML, CSS, JavaScript, React, Node.js, Python and Django.",
+    imageSrc: "/images/USP/certificate.webp",
+  },
+  {
+    title: "Deploy to the Cloud with AWS & Azure",
+    description: "Deploy applications to AWS and Azure and learn industry-standard DevOps practices from day one, along with Gen AI tools used in modern development teams.",
+    imageSrc: "/images/banner-image/dm/faculty.webp",
+  },
+];
+
+const supportSectionData = [
+  {
+    badge: "Hands-on Experience",
+    title: "Expert Faculty",
+    description: "Learn from industry experts and highly skilled in-house trainers with real development experience. Every module is backed by live coding, hands-on projects and continuous assessments.",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop",
+    alt: "Industry expert trainers guiding students on live coding projects",
+    theme: "blue",
+  },
+  {
+    badge: "Placement & Beyond",
+    title: "Post Course Support",
+    description: "Support doesn't stop when the course ends. Career coaching, mock interviews and placement guidance stay available even after completion.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop",
+    alt: "Post course career guidance and placement support",
+    theme: "emerald",
+  },
+];
+
+const overviewSectionData = {
+  title: "Overview of",
+  highlightTitle: "AI Powered Full Stack Developer & Cloud Engineering Course in Mumbai",
+  paragraphs: [
     {
-      title: "Corporate Simulation",
-      description: "Work inside a simulated development environment from week one with real client projects, not just classroom theory."
+      text: "This program is built for people who want to work as developers from day one, not just learn theory. Instead of a regular classroom, you train in a live corporate simulation with real client projects, hands-on coding and daily challenges. You cover the complete stack: front-end, back-end, databases, cloud deployment and Gen AI tools, across 300+ hours of training and 50+ live projects. You also earn a monthly stipend while you train, receive your offer letter on day one, and get structured placement support through Digifine's hiring partner network.",
+      alwaysVisible: true,
     },
-    {
-      title: "Full Stack Coverage",
-      description: "Master front-end, back-end, databases, cloud deployment, and AI tools in one comprehensive program."
-    },
-    {
-      title: "Real Live Projects",
-      description: "Build portfolio-ready applications: e-commerce stores, job portals, food delivery apps, and more."
-    },
-    {
-      title: "Paid Internship",
-      description: "Earn Rs. 15,000 monthly while you train in a real corporate environment with mentor guidance."
-    },
-    {
-      title: "Offer Letter Day 1",
-      description: "Secure your future before you've written your first line of code. Employment starts immediately."
-    },
-    {
-      title: "Cloud Deployment",
-      description: "Deploy applications to AWS and Azure. Learn industry-standard DevOps practices from day one."
-    }
-  ];
+  ],
+  keyFeatures: [
+    { title: "Corporate Simulation", text: "Work inside a simulated development environment from week one with real client projects, not just classroom theory.", alwaysVisible: true },
+    { title: "Full Stack Coverage", text: "Master front-end, back-end, databases, cloud deployment, and AI tools in one comprehensive program.", alwaysVisible: false },
+    { title: "Real Live Projects", text: "Build portfolio-ready applications: e-commerce stores, job portals, food delivery apps, and more.", alwaysVisible: false },
+    { title: "Paid Internship", text: "Earn a monthly stipend while you train in a real corporate environment with mentor guidance.", alwaysVisible: false },
+    { title: "Cloud Deployment", text: "Deploy applications to AWS and Azure. Learn industry-standard DevOps practices from day one.", alwaysVisible: false },
+  ],
+};
 
-  const timelineSteps = [
-    { title: "Enroll", description: "Onboarding & cohort mapping" },
-    { title: "Offer Letter", description: "Issued on day one" },
-    { title: "Monthly Stipend", description: "₹10,000 while you train" },
-    { title: "Live Corporate Training", description: "Real client campaigns" },
-    { title: "Experience Letter", description: "Verifiable work history" },
-    { title: "Placement", description: "Hiring partner network" }
-  ];
+const toolsSectionData = {
+  title: "Master",
+  highlightTitle: "Industry-Standard Developer Tools",
+  caption: "Work with the same tools used by professional developers and engineering teams, from coding and testing to deployment and AI-assisted development.",
+  tools: [
+    { name: "Visual Studio Code", image: "images/toolslogo/IT/vscode.png" },
+    { name: "GitHub", image: "images/toolslogo/IT/github.png" },
+    { name: "Git", image: "images/toolslogo/IT/git.png" },
+    { name: "Postman", image: "images/toolslogo/IT/postman.png" },
+    { name: "Vercel", image: "images/toolslogo/IT/vercel.png" },
+    { name: "Render", image: "images/toolslogo/IT/render.png" },
+    { name: "AI Tools like Lovable", image: "images/toolslogo/IT/lovable.png" },
+    { name: "Cursor AI", image: "images/toolslogo/IT/cursor.png" },
+  ],
+};
 
-  const digitalMarketingProjects = [
-      {
-        id: "1",
-        title: "Game: Tic Tac Toe",
-        studentName: "Interactive game using HTML, CSS, JavaScript",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "Meta ads preview"
-      },
-      {
-        id: "2",
-        title: "Game: Rock, Paper & Scissor",
-        studentName: "Game with scoring logic and user interaction",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "Google ads preview"
-      },
-      {
-        id: "3",
-        title: "Game: Quiz Game (KBC Style)",
-        studentName: "Interactive quiz with scoring and timer",
-        imageUrl: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "SEO growth preview"
-      },
-      {
-        id: "4",
-        title: "Tip Calculator",
-        studentName: "Frontend calculator with user-friendly interface",
-        imageUrl: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "ABM campaign preview"
-      },
-      {
-        id: "5",
-        title: "Job Portal (Naukri/Shine Clone)",
-        studentName: "Full-stack job listing and search application",
-        imageUrl: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "Email automation preview"
-      },
-      {
-        id: "6",
-        title: "E-Commerce Store",
-        studentName: "Full-stack shopping cart with payment integration",
-        imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "YouTube funnel preview"
-      }
-    ];
-
-    const myTools = [
-    'Visual Studio Code', 'GitHub', 'Postman', 'Git', 'Vercel', 'Render',
-    'AI Tools like Lovable', 'Cursor AI ', 'Plotly', 'Power BI', 'Tableau', 'Scikit-learn',
-    'TensorFlow', 'GitHub', 'ChatGPT', 'Julius AI'
-  ];
-
-        const journeySteps = [
-          { title: "Enroll for Simulation Program", description: "Secure your spot in our immersive corporate simulation program. No prior experience required. Start your transformation today." },
-          { title: "Receive Offer Letter Immediately", description: "Get your official offer letter on day one. Start earning Rs. 15,000 per month from day one as a trainee developer." },
-          { title: "Learn While on the Job", description: "Dive into hands-on training with HTML, CSS, JavaScript, React, Python, Django, Node.js, MongoDB, AWS, and more through live projects and daily challenges." },
-          { title: "Build Real-World Projects", description: "Create portfolio-ready applications: e-commerce stores, job portals, food delivery platforms, weather apps, and your personal portfolio website." },
-          { title: "Get Certified & Placed", description: "Earn industry-recognized certification and an experience letter. Get absorbed into full-time positions with our partner agencies or secure external opportunities." },
-        ];
-
-  const overviewSectionData = {
-    title: "Overview of",
-    highlightTitle: "MBA-Level Digital Marketing Program in Mumbai",
-    paragraphs: [
-      { 
-        text: "This is one of India’s top MBA-level Postgraduate Digital Marketing programs in Mumbai.The program runs for 6 months of intensive classroom training followed by 6 months of industry residency at top agencies across the country. In Mumbai, you also get an extra 6+6 months of guaranteed extensions and salary hikes with partner companies to support your career growth.",
-        alwaysVisible: true 
-      }
-    ],
-    keyFeatures: [
-      { title: "Expert Training", text: "Learn from experienced professionals who’ve worked on real campaigns and know the current digital marketing landscape.", alwaysVisible: true },
-      { title: "Comprehensive Curriculum", text: "Covers Experiential Marketing, Website Development, E-Commerce Management, Programmatic Media Buying, OTT Advertising, Data Analytics, Television Planning, and more.", alwaysVisible: false },
-      { title: "Strong Placements", text: "Get help securing high-paying jobs with leading companies. You’ll build a portfolio, update your resume, and do mock interviews.", alwaysVisible: false },
-      { title: "Hands-on Tools", text: "Master the tools and software actually used in the industry, with free access to major AI tools.", alwaysVisible: false },
-      { title: "Certifications", text: " Earn multiple Google certificates, an international certification from Digifine Academy, and one from the IBM Institute in Berlin, Germany.", alwaysVisible: false },
-      { title: "Real Mentorship", text: "Get trained by in-house trainers and guest lecturers who have real industry experience.", alwaysVisible: false },
-      { title: "Practical Focus", text: "Lots of live projects, real case studies, and hands-on assignments instead of just theory.", alwaysVisible: false }
-    ]
-  };
-
-  const toggleData = {
+const toggleData = {
   digifine: {
     subheading: "Life With Digifine",
     description: "We designed this learning experience to actually help you build useful skills, get real exposure to the industry, and walk into career opportunities feeling like you're ready for them.",
@@ -161,8 +128,8 @@ export default function ITSimulation() {
       { text: "Post-Course Support Even After Completion", icon: "ShieldCheck" },
       { text: "Practical Training with Industry Experience", icon: "Laptop" },
       { text: "Continuous Assessments & Hands-On Learning", icon: "CheckSquare" },
-      { text: "Career Coaching & Mock Interviews", icon: "UserCheck" }
-    ]
+      { text: "Career Coaching & Mock Interviews", icon: "UserCheck" },
+    ],
   },
   without: {
     subheading: "Imagine Without Digifine",
@@ -179,128 +146,129 @@ export default function ITSimulation() {
       { text: "No Post-Course Guidance", icon: "ShieldCheck" },
       { text: "Not Enough Practical Exposure", icon: "Laptop" },
       { text: "Limited Practical Training & Live Projects", icon: "CheckSquare" },
-      { text: "No Interview Preparation", icon: "UserCheck" }
-    ]
-  }
+      { text: "No Interview Preparation", icon: "UserCheck" },
+    ],
+  },
 };
 
-  const marqueeTopLogos = [
-  "/images/company_logo/dm/1.webp",
-  "/images/company_logo/dm/2.webp",
-  "/images/company_logo/dm/3.webp",
-  "/images/company_logo/dm/4.webp",
-  "/images/company_logo/dm/5.webp",
-  "/images/company_logo/dm/6.webp",
-  "/images/company_logo/dm/7.webp",
+const marqueeTopLogos = [
+  "/images/company_logo/it/1.webp",
+  "/images/company_logo/it/2.webp",
+  "/images/company_logo/it/3.webp",
+  "/images/company_logo/it/4.webp",
+  "/images/company_logo/it/5.webp",
+  "/images/company_logo/it/6.webp",
+  "/images/company_logo/it/7.webp",
 ];
 
 const marqueeBottomLogos = [
-  "/images/company_logo/dm/8.webp",
-  "/images/company_logo/dm/9.webp",
-  "/images/company_logo/dm/10.webp",
-  "/images/company_logo/dm/11.webp",
-  "/images/company_logo/dm/12.webp",
-  "/images/company_logo/dm/13.webp",
-  "/images/company_logo/dm/1.webp",
+  "/images/company_logo/it/8.webp",
+  "/images/company_logo/it/9.webp",
+  "/images/company_logo/it/10.webp",
+  "/images/company_logo/it/11.webp",
+  "/images/company_logo/it/12.webp",
+  "/images/company_logo/it/13.webp",
+  "/images/company_logo/it/1.webp", // first image repeated for a seamless loop
 ];
 
-  const successStoriesData = [
-    [
-      { title: "Brand One", revenue: "₹5L+ Revenue", description: "Premium student-built brand with strong market demand.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200" },
-      { title: "Brand Two", revenue: "₹3L+ Revenue", description: "Creative products built with innovation and quality.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" },
-      { title: "Brand Three", revenue: "₹4L+ Revenue", description: "Fast growing startup solving real customer problems.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200" },
-      { title: "Brand Four", revenue: "₹2L+ Revenue", description: "Student founders building successful businesses.", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200" },
-    ],
-    [
-      { title: "Brand Five", revenue: "₹6L+ Revenue", description: "Rapidly expanding with strong customer loyalty.", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200" },
-      { title: "Brand Six", revenue: "₹7L+ Revenue", description: "Premium products loved by thousands of customers.", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200" },
-      { title: "Brand One", revenue: "₹5L+ Revenue", description: "Premium student-built brand with strong market demand.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200" },
-      { title: "Brand Two", revenue: "₹3L+ Revenue", description: "Creative products built with innovation and quality.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" },
-    ],
-  ];
+const successStoriesData = [
+  [
+    { title: "Brand One", revenue: "₹5L+ Revenue", description: "Premium student-built brand with strong market demand.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200" },
+    { title: "Brand Two", revenue: "₹3L+ Revenue", description: "Creative products built with innovation and quality.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" },
+    { title: "Brand Three", revenue: "₹4L+ Revenue", description: "Fast growing startup solving real customer problems.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200" },
+    { title: "Brand Four", revenue: "₹2L+ Revenue", description: "Student founders building successful businesses.", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200" },
+  ],
+  [
+    { title: "Brand Five", revenue: "₹6L+ Revenue", description: "Rapidly expanding with strong customer loyalty.", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200" },
+    { title: "Brand Six", revenue: "₹7L+ Revenue", description: "Premium products loved by thousands of customers.", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200" },
+    { title: "Brand One", revenue: "₹5L+ Revenue", description: "Premium student-built brand with strong market demand.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200" },
+    { title: "Brand Two", revenue: "₹3L+ Revenue", description: "Creative products built with innovation and quality.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" },
+  ],
+];
 
-  const mbaPlacementsData = [
-    { id: 1, logo: "/images/placement/student1.webp", alt: "Santhana Pandian" },
-    { id: 2, logo: "/images/placement/student2.webp", alt: "Piyush Gurav" },
-    { id: 3, logo: "/images/placement/student3.webp", alt: "Ayushi Mehta" },
-    { id: 4, logo: "/images/placement/student4.webp", alt: "Dhruv Narwani" },
-    { id: 5, logo: "/images/placement/student5.webp", alt: "Student 5" },
-    { id: 6, logo: "/images/placement/student6.webp", alt: "Student 6" },
-    { id: 7, logo: "/images/placement/student7.webp", alt: "Student 7" },
-    { id: 8, logo: "/images/placement/student8.webp", alt: "Student 8" },
-    { id: 9, logo: "/images/placement/student9.webp", alt: "Student 9" },
-  ];
+const mbaPlacementsData = [
+  { id: 1, logo: "/images/placement/student1.webp", alt: "Santhana Pandian" },
+  { id: 2, logo: "/images/placement/student2.webp", alt: "Piyush Gurav" },
+  { id: 3, logo: "/images/placement/student3.webp", alt: "Ayushi Mehta" },
+  { id: 4, logo: "/images/placement/student4.webp", alt: "Dhruv Narwani" },
+  { id: 5, logo: "/images/placement/student5.webp", alt: "Student 5" },
+  { id: 6, logo: "/images/placement/student6.webp", alt: "Student 6" },
+  { id: 7, logo: "/images/placement/student7.webp", alt: "Student 7" },
+  { id: 8, logo: "/images/placement/student8.webp", alt: "Student 8" },
+  { id: 9, logo: "/images/placement/student9.webp", alt: "Student 9" },
+];
 
-  const syllabusSectionData = [
-    {
-      term: "Term 1",
-      title: "FrontEnd",
-      description: "Master data-driven strategies, paid campaigns, and analytical tools to track and scale business growth effectively.",
-      modules: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Advance JavaScript",
-        "Bootstrap",
-        "React JS",
-        "Next JS",
-        "Tailwind CSS"
-      ]
-    },
-    {
-      term: "Term 2",
-      title: "BackEnd & Framework",
-      description: "Build powerful brand presence and organic visibility through search optimization, content funnels, and social engagement.",
-      modules: [
-        "Python",
-        "NodeJS",
-        "MySQL",
-        "MongoDB",
-        "Django",
-        "Express JS",
-      ]
-    },
-    {
-      term: "Term 3",
-      title: "Cloud Deployment & Gen AI",
-      description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
-      modules: [
-        "Gen AI",
-        "AWS",
-        "Azure",
-      ]
-    }
-  ];
+const syllabusSectionData = [
+  {
+    term: "Term 1",
+    title: "FrontEnd",
+    description: "Build responsive, modern user interfaces with core web technologies and popular front-end frameworks.",
+    modules: ["HTML", "CSS", "JavaScript", "Advance JavaScript", "Bootstrap", "React JS", "Next JS", "Tailwind CSS"],
+  },
+  {
+    term: "Term 2",
+    title: "BackEnd & Framework",
+    description: "Create secure server-side applications, APIs and databases that power real-world products.",
+    modules: ["Python", "NodeJS", "MySQL", "MongoDB", "Django", "Express JS"],
+  },
+  {
+    term: "Term 3",
+    title: "Cloud Deployment & Gen AI",
+    description: "Deploy your applications to the cloud and add Gen AI features using industry-standard DevOps practices.",
+    modules: ["Gen AI", "AWS", "Azure"],
+  },
+];
 
-  const timelineStepsData = [
-    { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-    { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-    { title: "Assessments", description: "Solve real-world problems to test your skills." },
-    { title: "International Emmersion", description: "Practice with interview panels and boost your confidence." },
-    { title: "Coorporate Training", description: "Secure a job with 100% placement support." },
-  ];
+const timelineStepsData = [
+  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
+  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
+  { title: "Assessments", description: "Solve real-world problems to test your skills." },
+  { title: "International Emmersion", description: "Practice with interview panels and boost your confidence." },
+  { title: "Coorporate Training", description: "Secure a job with 100% placement support." },
+];
 
-  const locationsSectionData = [
-    {
-      city: "Mumbai",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.7205418753974!2d72.8490324!3d19.1199119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d8dd9a8411%3A0xf4014bbce03395d7!2sDigifine%20Academy!5e0!3m2!1sen!2sin", 
-      googleMapsLink: "https://www.google.com/maps?q=Digifine+Academy+Andheri+Mumbai",
-      address: "303, 3rd Floor, Vertex Vikas Building, Andheri East, Mumbai, Maharashtra 400069",
-      phone: "+91 81690-04863 /+91 88790-25425", 
-      email: "info@adbizit.com",
-      timing: "Mon - Sat: 10:00 AM - 7:00 PM"
-    }
-  ];
+const analyticsSteps = [
+  {
+    id: "01",
+    title: "Full Stack Developer",
+    description: "Build complete web applications, from user interface to server, database and deployment.",
+    icon: <Code2 size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "02",
+    title: "Front-End Developer",
+    description: "Create fast, responsive and accessible user interfaces using React, Next.js and Tailwind CSS.",
+    icon: <Layout size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "03",
+    title: "Back-End Developer",
+    description: "Design APIs, manage databases and build secure server-side logic with Node.js, Python and Django.",
+    icon: <Server size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "04",
+    title: "Cloud Engineer",
+    description: "Deploy, monitor and scale applications on AWS and Azure using industry-standard DevOps practices.",
+    icon: <Cloud size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "05",
+    title: "AI Application Developer",
+    description: "Integrate Gen AI features and AI-assisted workflows into modern web and cloud applications.",
+    icon: <Bot size={32} strokeWidth={1.5} />,
+  },
+];
 
+/* ---------- Component ---------- */
 
-
+export default function ITSimulation() {
   const [testimonials, setTestimonials] = useState([]);
   const [customCertificates, setCustomCertificates] = useState([]);
   const [categories, setCategories] = useState([]);
   const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
-    // Sahi Relative Paths for dynamic imports
     import("./data/FullStack/testimonials")
       .then((m) => setTestimonials(m.default))
       .catch((err) => console.error("Testimonials load fail:", err));
@@ -318,25 +286,25 @@ const marqueeBottomLogos = [
       .catch((err) => console.error("Faqs load fail:", err));
   }, []);
 
-
   return (
-    <>
+    <main className="w-full overflow-hidden">
+      {/* Critical Above-The-Fold Components */}
       <CourseCard
         title="AI Powered Full Stack Developer & Cloud Engineering "
         highlightText="with Corporate Simulation"
         description="Train inside a live corporate simulation with real-world projects, hands-on coding, cloud deployment, and an offer letter on day one. Start earning Rs. 15,000 monthly while you build your developer career."
         emi="Placements"
         startDate="Industry Experts"
-        startDateby='Practical Training from'
+        startDateby="Practical Training from"
         duration="Curriculum with Unique Modules"
-        durationValue='One of its kind'
+        durationValue="One of its kind"
         appliedText=""
         contactNumber=""
         imageUrl="/images/banner-image/it/fsd.webp"
-        redirectlink = "/course-brochures"
+        redirectlink="/course-brochures"
       />
 
-      <MyComponent 
+      <MyComponent
         title="What Makes Digifine's AI Powered Full Stack Developer & Cloud Engineering with Corporate Simulation Different "
         highlightTitle="in Mumbai"
         statsSubheading="100% Placement Assurance Upon Course Completion"
@@ -344,93 +312,137 @@ const marqueeBottomLogos = [
         redirectlink="course-brochures"
       />
 
-      <div className="pt-5 pb-5 md:pt-6 md:pb-6 border-b border-gray-50"></div>
-      <WhyDigifine 
-        featuresData={dataset} 
-        title="Six reasons this program trains differently"
-        blueSubtitle="Why Digifine" 
-      /> 
+      {/* Lazy-Loaded Below-The-Fold Sections */}
+      <LazySection>
+        <Suspense fallback={null}>
+          <PlacementStats />
+        </Suspense>
+      </LazySection>
 
-      <div className="py-7 md:py-12 bg-gray-50/30"></div>
-      <HorizontalTimeline 
-        stepsData={timelineSteps}
-        title="The Corporate Simulation Timeline"
-        subtitle="Six stages that mirror a real agency career path."
-      />
+      <LazySection>
+        <Suspense fallback={null}>
+          <FeaturesSection featuresData={mbaFeatures} columns={4} />
+        </Suspense>
+      </LazySection>
 
-      <Toggle content={toggleData} />
+      <LazySection>
+        <Suspense fallback={null}>
+          <SupportSection supportData={supportSectionData} />
+        </Suspense>
+      </LazySection>
 
-      <div className="py-5 md:py-13 border-b border-gray-50">
-        <ToolsSectionSimulation
-                badge="TOOLS"
-                subBadge="TOOLS COVERED"
-                title="Work with the tools employers recognise"
-                tools={myTools}
-              />
-      </div>
+      <LazySection>
+        <Suspense fallback={null}>
+          <ToolsMastered toolsData={toolsSectionData} />
+        </Suspense>
+      </LazySection>
 
-      <div className="py-15 md:py-22 border-b border-gray-50">
-        <CorporateProjects 
-          projectsData={digitalMarketingProjects} 
-          title="Real corporate projects" 
-        />
-      </div>
+      <LazySection>
+        <Suspense fallback={null}>
+          <CareerPath
+            mainDescription="Build job-ready skills in Full Stack Development, Cloud Engineering, and high-demand tech careers."
+            steps={analyticsSteps}
+          />
+        </Suspense>
+      </LazySection>
 
-      <SyllabusTimeLine syllabusData={syllabusSectionData} />
+      <LazySection>
+        <Suspense fallback={null}>
+          <CourseOverview overviewData={overviewSectionData} />
+        </Suspense>
+      </LazySection>
 
-      <div className="py-5 md:py-6 border-b border-gray-50">
-        <StudentJourney 
-          stepsData={journeySteps}
-          title="Your journey to becoming a full stack developer"
-        />
-      </div> 
+      <LazySection>
+        <Suspense fallback={null}>
+          <Toggle content={toggleData} />
+        </Suspense>
+      </LazySection>
 
-      {/* <CourseOverview overviewData={overviewSectionData} /> */}
-      
-      <CompanyMarquee tagline="Our Placements"
-        title="Companies They"
-        highlightTitle="Work At"
-        topLogos={marqueeTopLogos}
-        bottomLogos={marqueeBottomLogos}/>
+      <LazySection>
+        <Suspense fallback={null}>
+          <CompanyMarquee
+            tagline="Our Placements"
+            title="Companies They"
+            highlightTitle="Work At"
+            topLogos={marqueeTopLogos}
+            bottomLogos={marqueeBottomLogos}
+          />
+        </Suspense>
+      </LazySection>
 
-      {/* <SuccessStories storiesData={successStoriesData} /> */}
+      <LazySection>
+        <Suspense fallback={null}>
+          <SyllabusTimeLine syllabusData={syllabusSectionData} />
+        </Suspense>
+      </LazySection>
 
-      <StudentPlacedAt 
-        companiesData={mbaPlacementsData} 
-        btntext="Know More" 
-        redirectlink="/course-brochures" 
-      />
-      
-      <Testimonal 
-        title='What Our'
-        bluetitle='Students Have To Say:'
-        testimonial={testimonials}
-        paragraph="Hear from our students what their experience was like on the floor!" 
-      />
+      <LazySection>
+        <Suspense fallback={null}>
+          <SuccessStories storiesData={successStoriesData} />
+        </Suspense>
+      </LazySection>
 
-      <CertificateSection
-        title="Certifications"
-        subtitlePart1="Earn Professional"
-        subtitleHighlight="Certifications"
-        paragraph="Acquire several professional certifications by the end of your simulator program."
-        certificates={customCertificates}
-      />
+      <LazySection>
+        <Suspense fallback={null}>
+          <StudentPlacedAt
+            companiesData={mbaPlacementsData}
+            btntext="Know More"
+            redirectlink="/course-brochures"
+          />
+        </Suspense>
+      </LazySection>
 
-      <VerticalTimeline 
-        steps={timelineStepsData} 
-        title="Steps Towards Success With" 
-        bluetitle="Digifine" 
-        paragraph="Process mapped carefully to transform learners into digital marketing experts." 
-      />
+      <LazySection>
+        <Suspense fallback={null}>
+          <Testimonal
+            title="What Our"
+            bluetitle="Students Have To Say:"
+            testimonial={testimonials}
+            paragraph="Hear from our students what their experience was like on the floor!"
+          />
+        </Suspense>
+      </LazySection>
 
-      <BoxCardSection coursedata={categories}/>
+      <LazySection>
+        <Suspense fallback={null}>
+          <CertificateSection
+            title="Certifications"
+            subtitlePart1="Earn Professional"
+            subtitleHighlight="Certifications"
+            paragraph="Acquire several professional certifications by the end of your simulator program."
+            certificates={customCertificates}
+          />
+        </Suspense>
+      </LazySection>
 
-      <FAQsSection
-        sectionTitle="Frequently Asked Questions"
-        faqData={faqs}
-      />
-      
-      <Location locationsData={locationsSectionData} />
-    </> 
+      <LazySection>
+        <Suspense fallback={null}>
+          <VerticalTimeline
+            steps={timelineStepsData}
+            title="Steps Towards Success With"
+            bluetitle="Digifine"
+            paragraph="Process mapped carefully to transform learners into job-ready full stack developers."
+          />
+        </Suspense>
+      </LazySection>
+
+      <LazySection>
+        <Suspense fallback={null}>
+          <BoxCardSection coursedata={categories} />
+        </Suspense>
+      </LazySection>
+
+      <LazySection>
+        <Suspense fallback={null}>
+          <FAQsSection sectionTitle="Frequently Asked Questions" faqData={faqs} />
+        </Suspense>
+      </LazySection>
+
+      <LazySection>
+        <Suspense fallback={null}>
+          <Location city="Mumbai" />
+        </Suspense>
+      </LazySection>
+    </main>
   );
 }

@@ -115,6 +115,7 @@ const Footer = () => {
         {/* Bottom Bar (Locations Button & Enroll Now) */}
         <div className="border-t border-gray-800 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
           <button
+          suppressHydrationWarning
             onClick={() => setShowLocations(!showLocations)}
             className="inline-flex items-center gap-2 text-yellow-500 hover:underline text-sm focus:outline-none"
           >

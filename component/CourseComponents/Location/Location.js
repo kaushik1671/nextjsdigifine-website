@@ -1,18 +1,51 @@
 "use client";
 
 import React from 'react';
-import { FiMapPin, FiExternalLink, FiClock, FiPhone, FiMail } from "react-icons/fi"; 
+import { FiMapPin, FiExternalLink, FiClock, FiPhone, FiMail } from "react-icons/fi";
+
+// Default Data array for all locations
+const DEFAULT_LOCATIONS_DATA = [
+  {
+    city: "Mumbai",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.7205418753974!2d72.8490324!3d19.1199119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d8dd9a8411%3A0xf4014bbce03395d7!2sDigifine%20Academy!5e0!3m2!1sen!2sin",
+    googleMapsLink: "https://www.google.com/maps?q=Digifine+Academy+Andheri+Mumbai",
+    address: "303, 3rd Floor, Vertex Vikas Building, A Wing, Court Ln, above A2Z Xerox, opposite Railway Station, Andheri East, Mumbai, Maharashtra 400069",
+    phone: "+91 81690-04863 /+91 88790-25425",
+    email: "info@adbizit.com",
+    timing: "Mon - Sat: 10:00 AM - 7:00 PM",
+  },
+  {
+    city: "Hyderabad",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.379087549703!2d78.39266049999999!3d17.4894082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91922683190b%3A0x1aa3a76ef5e0199e!2sDigifine%20Academy!5e0!3m2!1sen!2sin",
+    googleMapsLink: "https://www.google.com/maps/place/Digifine+Academy+%7C+Digital+Marketing,+I.T.,+Graphic+Design+%26+Video+Editing+Institute+in+Hyderabad/@17.4895142,78.3923309,3323m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3bcb91922683190b:0x1aa3a76ef5e0199e!2sDigifine+Academy+%7C+Digital+Marketing,+I.T.,+Graphic+Design+%26+Video+Editing+Institute+in+Hyderabad!8m2!3d17.4894082!4d78.3926605!10e5!16s%2Fg%2F11ym_kqlv_!3m5!1s0x3bcb91922683190b:0x1aa3a76ef5e0199e!8m2!3d17.4894082!4d78.3926605!16s%2Fg%2F11ym_kqlv_?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D",
+    address: "3rd & 4th Floor, SITA CITY ONE Venkatarambagh, SITA CITY ONE, Begumpet, Hyderabad, Telangana 500016",
+    phone: "+91 81690-04863 /+91 88790-25425",
+    email: "info@adbizit.com",
+    timing: "Mon - Sat: 10:30 AM - 7:30 PM",
+  },
+  {
+    city: "Vashi",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.9696402193986!2d72.9952648!3d19.0650724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c16a1f13fa3f%3A0x55e10730cac72380!2sDigifine%20Academy!5e0!3m2!1sen!2sin",
+    googleMapsLink: "https://www.google.com/maps/place/Digifine+Academy+%7C+Digital+Marketing,+I.T.,+Graphic+Design+%26+Video+Editing+Institute+in+Vashi,+Navi+Mumbai/@19.065072,72.995265,15z/data=!4m6!3m5!1s0x3be7c16a1f13fa3f:0x55e10730cac72380!8m2!3d19.0650724!4d72.9952648!16s%2Fg%2F11mclhkbs5?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D",
+    address: "6th Floor, Vashi Infotech Park, 610, 611, Sector 30A, Vashi, Navi Mumbai, Maharashtra 400703, India",
+    phone: "+91 81690-04863 /+91 88790-25425",
+    email: "info@adbizit.com",
+    timing: "Mon - Sat: 10:00 AM - 7:00 PM",
+  },
+];
 
 const Locations = ({ city, locationsData }) => {
-  // Fallback check agar array data na mile
-  if (!locationsData || !locationsData.length) return null;
+  // Agar locationsData prop na diya gaya ho to internal DEFAULT_LOCATIONS_DATA use karein
+  const activeLocationsData = locationsData || DEFAULT_LOCATIONS_DATA;
 
-  // Filter functionality agar component ko koi specific city pass ki jaye
+  // Specific city filter (Case-insensitive)
   const filteredLocations = city
-    ? locationsData.filter(
+    ? activeLocationsData.filter(
         (loc) => loc.city.toLowerCase() === city.toLowerCase()
       )
-    : locationsData;
+    : activeLocationsData;
+
+  if (!filteredLocations.length) return null;
 
   const title = filteredLocations.length > 1 ? "Locations" : "Location";
 
@@ -31,11 +64,11 @@ const Locations = ({ city, locationsData }) => {
           <div className="w-12 h-1 bg-blue-600 mx-auto mt-3 rounded-full" />
         </div>
 
-        {/* 2-Column Split Grid Layout */}
-        <div className="w-full flex justify-center">
+        {/* Multi-Location Vertical Stack Grid */}
+        <div className="w-full flex flex-col gap-8 items-center">
           {filteredLocations.map((loc, index) => (
             <div 
-              key={index} 
+              key={loc.city || index} 
               className="w-full grid grid-cols-1 lg:grid-cols-12 bg-white rounded-2xl shadow-md hover:shadow-2xl border border-slate-100 transition-all duration-500 overflow-hidden max-w-6xl lg:h-[340px] group" 
             >
               

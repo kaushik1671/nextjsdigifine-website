@@ -1,28 +1,30 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"; 
+import { useState, useEffect, lazy } from "react";
+import LazySection from "../../../../../hooks/LazySection";
+
+// Static Imports (Above the Fold - Critical Path)
 import CourseCard from "../../../../CourseComponents/CourseCard/CourseCard";
 import MyComponent from "../../../../Container/MyComponent";
-import Toggle from "../../../../CourseComponents/Toggle/Toggle";
-import CompanyMarquee from "../../../../CourseComponents/CompanyMarquee/CompanyMarquee";
-import SuccessStories from "../../../../CourseComponents/SuccessStories/SuccessStories";
-import StudentPlacedAt from "../../../../CourseComponents/StudentPlacedAt/StudentPlacedAt"; 
-import Testimonal from "../../../../CourseComponents/Testimonal/Testimonal";
-import SyllabusTimeLine from "../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine";
-import CertificateSection from "../../../../CourseComponents/CertificateSection/CertificateSection";
-import VerticalTimeline from "../../../../CourseComponents/VerticleTimeLine/VerticalTimeLine";
-import BoxCardSection from "../../../../Sections/BoxCardSection";
-import FAQsSection from "../../../../FAQsSection/FAQsSection";
-import Location from "../../../../CourseComponents/Location/Location";
-import WhyDigifine from "../../../../CourseComponents/WhyDigifine/WhyDigifine"
-import HorizontalTimeline from "../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"
-import CorporateProjects from "../../../../CourseComponents/CorporateProjects/CorporateProjects";
-import CourseOverview from "../../../../CourseComponents/CourseOverview/CourseOverview";
-import ToolStack from "../../../../CourseComponents/ToolStack/ToolStack"
-import StudentJourney from "../../../../CourseComponents/StudentJourney/StudentJourney";
+
+// Lazy Loaded Components (Below the Fold - Deferred)
+const WhyDigifine = lazy(() => import("../../../../CourseComponents/WhyDigifine/WhyDigifine"));
+const HorizontalTimeline = lazy(() => import("../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"));
+const Toggle = lazy(() => import("../../../../CourseComponents/Toggle/Toggle"));
+const ToolStack = lazy(() => import("../../../../CourseComponents/ToolStack/ToolStack"));
+const CorporateProjects = lazy(() => import("../../../../CourseComponents/CorporateProjects/CorporateProjects"));
+const SyllabusTimeLine = lazy(() => import("../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine"));
+const StudentJourney = lazy(() => import("../../../../CourseComponents/StudentJourney/StudentJourney"));
+const CompanyMarquee = lazy(() => import("../../../../CourseComponents/CompanyMarquee/CompanyMarquee"));
+const StudentPlacedAt = lazy(() => import("../../../../CourseComponents/StudentPlacedAt/StudentPlacedAt"));
+const Testimonal = lazy(() => import("../../../../CourseComponents/Testimonal/Testimonal"));
+const CertificateSection = lazy(() => import("../../../../CourseComponents/CertificateSection/CertificateSection"));
+const VerticalTimeline = lazy(() => import("../../../../CourseComponents/VerticleTimeLine/VerticalTimeLine"));
+const BoxCardSection = lazy(() => import("../../../../Sections/BoxCardSection"));
+const FAQsSection = lazy(() => import("../../../../FAQsSection/FAQsSection"));
+const Location = lazy(() => import("../../../../CourseComponents/Location/Location"));
 
 export default function DMSimulation() {
-
   const pgdmStatsData = [
     { src: '/images/Icons/formicon/ficon1.webp', hover: "/images/Icons/formicon/ficon5.webp", label: '35+ Industry Tools' },
     { src: '/images/Icons/formicon/ficon2.webp', hover: "/images/Icons/formicon/ficon6.webp", label: '50+ Live Projects' },
@@ -67,84 +69,69 @@ export default function DMSimulation() {
   ];
 
   const digitalMarketingProjects = [
-      {
-        id: "1",
-        title: "Meta Ads E-Commerce Campaign Simulation",
-        studentName: "Aarav Sharma",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "Meta ads preview"
-      },
-      {
-        id: "2",
-        title: "Google Search Ads & B2B Lead Gen Campaign",
-        studentName: "Ananya Patel",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "Google ads preview"
-      },
-      {
-        id: "3",
-        title: "Organic SEO Growth & Content Strategy Simulation",
-        studentName: "Rohan Das",
-        imageUrl: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "SEO growth preview"
-      },
-      {
-        id: "4",
-        title: "LinkedIn B2B Account-Based Marketing Campaign",
-        studentName: "Kabir Mehta",
-        imageUrl: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "ABM campaign preview"
-      },
-      {
-        id: "5",
-        title: "E-Commerce Email & Retention Marketing Setup",
-        studentName: "Sneha Reddy",
-        imageUrl: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "Email automation preview"
-      },
-      {
-        id: "6",
-        title: "YouTube Video Ad Funnel Simulation",
-        studentName: "Vikram Malhotra",
-        imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600",
-        placeholderText: "YouTube funnel preview"
-      }
-    ];
+    {
+      id: "1",
+      title: "Meta Ads E-Commerce Campaign Simulation",
+      studentName: "Aarav Sharma",
+      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
+      placeholderText: "Meta ads preview"
+    },
+    {
+      id: "2",
+      title: "Google Search Ads & B2B Lead Gen Campaign",
+      studentName: "Ananya Patel",
+      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+      placeholderText: "Google ads preview"
+    },
+    {
+      id: "3",
+      title: "Organic SEO Growth & Content Strategy Simulation",
+      studentName: "Rohan Das",
+      imageUrl: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&q=80&w=600",
+      placeholderText: "SEO growth preview"
+    },
+    {
+      id: "4",
+      title: "LinkedIn B2B Account-Based Marketing Campaign",
+      studentName: "Kabir Mehta",
+      imageUrl: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=600",
+      placeholderText: "ABM campaign preview"
+    },
+    {
+      id: "5",
+      title: "E-Commerce Email & Retention Marketing Setup",
+      studentName: "Sneha Reddy",
+      imageUrl: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=600",
+      placeholderText: "Email automation preview"
+    },
+    {
+      id: "6",
+      title: "YouTube Video Ad Funnel Simulation",
+      studentName: "Vikram Malhotra",
+      imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600",
+      placeholderText: "YouTube funnel preview"
+    }
+  ];
 
-    const aiToolsList = [
-        "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-        "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more"
-      ];
-    
-      const platformsList = [
-        "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-        "Looker Studio", "Power BI", "DV360", "Merchant Center"
-      ];
+  const aiToolsList = [
+    "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
+    "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more"
+  ];
+  
+  const platformsList = [
+    "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
+    "Looker Studio", "Power BI", "DV360", "Merchant Center"
+  ];
 
-        const journeySteps = [
-          { title: "Enrollment", description: "Counselling call, city & mode selection, admission confirmed." },
-          { title: "Training", description: "Structured classroom + live sessions across every module." },
-          { title: "Assignments", description: "Weekly graded assignments to lock in each concept." },
-          { title: "Live Projects", description: "Real client briefs from Digifine and Adbizit accounts." },
-          { title: "Corporate Simulation", description: "Full agency-floor simulation with deliverables and deadlines." },
-          { title: "Certification", description: "14 certifications across platforms and specializations." },
-          { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." }
-        ];
-
-  // const uniqueModulesSectionData = {
-  //   tagline: "About us",
-  //   title: "Advanced Marketing Specializations for",
-  //   highlightTitle: "Future Marketing Leaders",
-  //   description: "You’ll also get to learn in-demand specializations like Programmatic Advertising, OTT Advertising, Luxury Brand Management, and Strategic Management.",
-  //   modules: [
-  //     { iconName: "Gem", title: "Luxury Brand", subtitle: "Management" },
-  //     { iconName: "Users", title: "Experiential", subtitle: "Marketing" },
-  //     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
-  //     { iconName: "Tv", title: "BARC Television", subtitle: "Ad Planning" },
-  //     { iconName: "PlayCircle", title: "OTT Ads", subtitle: "" },
-  //     { iconName: "Landmark", title: "Strategic", subtitle: "Management" }
-  //   ]
-  // };
+  const journeySteps = [
+    { title: "Enrollment", description: "Counselling call, city & mode selection, admission confirmed." },
+    { title: "Training", description: "Structured classroom + live sessions across every module." },
+    { title: "Assignments", description: "Weekly graded assignments to lock in each concept." },
+    { title: "Live Projects", description: "Real client briefs from Digifine and Adbizit accounts." },
+    { title: "Corporate Simulation", description: "Full agency-floor simulation with deliverables and deadlines." },
+    { title: "Certification", description: "14 certifications across platforms and specializations." },
+    { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." }
+  ];
 
   const overviewSectionData = {
     title: "Overview of",
@@ -167,63 +154,63 @@ export default function DMSimulation() {
   };
 
   const toggleData = {
-  digifine: {
-    subheading: "Life With Digifine",
-    description: "We designed this learning experience to actually help you build useful skills, get real exposure to the industry, and walk into career opportunities feeling like you're ready for them.",
-    cards: [
-      { text: "100% Placement Assistance with Industry Residency Program", icon: "Briefcase" },
-      { text: "Guaranteed Extensions & Salary Hikes", icon: "TrendingUp" },
-      { text: "In-Hand Offer Letter on Day 1", icon: "FileCheck" },
-      { text: "International Visit to Dubai", icon: "Plane" },
-      { text: "Unique Modules for Real-World Edge", icon: "Zap" },
-      { text: "10+ Globally Recognized Certifications", icon: "Award" },
-      { text: "Industry Expert, Highly Skilled In-House Trainers", icon: "Users" },
-      { text: "400+ Hours of Intense Classroom Training", icon: "Clock" },
-      { text: "Post-Course Support Even After Completion", icon: "ShieldCheck" },
-      { text: "Practical Training with Industry Experience", icon: "Laptop" },
-      { text: "Continuous Assessments & Hands-On Learning", icon: "CheckSquare" },
-      { text: "Career Coaching & Mock Interviews", icon: "UserCheck" }
-    ]
-  },
-  without: {
-    subheading: "Imagine Without Digifine",
-    description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
-    cards: [
-      { text: "No Placement Assistance", icon: "Briefcase" },
-      { text: "No Guarantee of High-Paying Jobs", icon: "TrendingUp" },
-      { text: "No Offer Letter Upon Admission", icon: "FileCheck" },
-      { text: "No International Exposure", icon: "Plane" },
-      { text: "Outdated & Generic Syllabus", icon: "Zap" },
-      { text: "No Globally Recognized Certifications", icon: "Award" },
-      { text: "Teachers & Trainers with Limited Experience", icon: "Users" },
-      { text: "Not Enough Hours of Classroom Training", icon: "Clock" },
-      { text: "No Post-Course Guidance", icon: "ShieldCheck" },
-      { text: "Not Enough Practical Exposure", icon: "Laptop" },
-      { text: "Limited Practical Training & Live Projects", icon: "CheckSquare" },
-      { text: "No Interview Preparation", icon: "UserCheck" }
-    ]
-  }
-};
+    digifine: {
+      subheading: "Life With Digifine",
+      description: "We designed this learning experience to actually help you build useful skills, get real exposure to the industry, and walk into career opportunities feeling like you're ready for them.",
+      cards: [
+        { text: "100% Placement Assistance with Industry Residency Program", icon: "Briefcase" },
+        { text: "Guaranteed Extensions & Salary Hikes", icon: "TrendingUp" },
+        { text: "In-Hand Offer Letter on Day 1", icon: "FileCheck" },
+        { text: "International Visit to Dubai", icon: "Plane" },
+        { text: "Unique Modules for Real-World Edge", icon: "Zap" },
+        { text: "10+ Globally Recognized Certifications", icon: "Award" },
+        { text: "Industry Expert, Highly Skilled In-House Trainers", icon: "Users" },
+        { text: "400+ Hours of Intense Classroom Training", icon: "Clock" },
+        { text: "Post-Course Support Even After Completion", icon: "ShieldCheck" },
+        { text: "Practical Training with Industry Experience", icon: "Laptop" },
+        { text: "Continuous Assessments & Hands-On Learning", icon: "CheckSquare" },
+        { text: "Career Coaching & Mock Interviews", icon: "UserCheck" }
+      ]
+    },
+    without: {
+      subheading: "Imagine Without Digifine",
+      description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
+      cards: [
+        { text: "No Placement Assistance", icon: "Briefcase" },
+        { text: "No Guarantee of High-Paying Jobs", icon: "TrendingUp" },
+        { text: "No Offer Letter Upon Admission", icon: "FileCheck" },
+        { text: "No International Exposure", icon: "Plane" },
+        { text: "Outdated & Generic Syllabus", icon: "Zap" },
+        { text: "No Globally Recognized Certifications", icon: "Award" },
+        { text: "Teachers & Trainers with Limited Experience", icon: "Users" },
+        { text: "Not Enough Hours of Classroom Training", icon: "Clock" },
+        { text: "No Post-Course Guidance", icon: "ShieldCheck" },
+        { text: "Not Enough Practical Exposure", icon: "Laptop" },
+        { text: "Limited Practical Training & Live Projects", icon: "CheckSquare" },
+        { text: "No Interview Preparation", icon: "UserCheck" }
+      ]
+    }
+  };
 
   const marqueeTopLogos = [
-  "/images/company_logo/dm/1.webp",
-  "/images/company_logo/dm/2.webp",
-  "/images/company_logo/dm/3.webp",
-  "/images/company_logo/dm/4.webp",
-  "/images/company_logo/dm/5.webp",
-  "/images/company_logo/dm/6.webp",
-  "/images/company_logo/dm/7.webp",
-];
+    "/images/company_logo/dm/1.webp",
+    "/images/company_logo/dm/2.webp",
+    "/images/company_logo/dm/3.webp",
+    "/images/company_logo/dm/4.webp",
+    "/images/company_logo/dm/5.webp",
+    "/images/company_logo/dm/6.webp",
+    "/images/company_logo/dm/7.webp",
+  ];
 
-const marqueeBottomLogos = [
-  "/images/company_logo/dm/8.webp",
-  "/images/company_logo/dm/9.webp",
-  "/images/company_logo/dm/10.webp",
-  "/images/company_logo/dm/11.webp",
-  "/images/company_logo/dm/12.webp",
-  "/images/company_logo/dm/13.webp",
-  "/images/company_logo/dm/1.webp",
-];
+  const marqueeBottomLogos = [
+    "/images/company_logo/dm/8.webp",
+    "/images/company_logo/dm/9.webp",
+    "/images/company_logo/dm/10.webp",
+    "/images/company_logo/dm/11.webp",
+    "/images/company_logo/dm/12.webp",
+    "/images/company_logo/dm/13.webp",
+    "/images/company_logo/dm/1.webp",
+  ];
 
   const successStoriesData = [
     [
@@ -311,27 +298,12 @@ const marqueeBottomLogos = [
     { title: "Coorporate Training", description: "Secure a job with 100% placement support." },
   ];
 
-  const locationsSectionData = [
-    {
-      city: "Mumbai",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.7205418753974!2d72.8490324!3d19.1199119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d8dd9a8411%3A0xf4014bbce03395d7!2sDigifine%20Academy!5e0!3m2!1sen!2sin", 
-      googleMapsLink: "https://www.google.com/maps?q=Digifine+Academy+Andheri+Mumbai",
-      address: "303, 3rd Floor, Vertex Vikas Building, Andheri East, Mumbai, Maharashtra 400069",
-      phone: "+91 81690-04863 /+91 88790-25425", 
-      email: "info@adbizit.com",
-      timing: "Mon - Sat: 10:00 AM - 7:00 PM"
-    }
-  ];
-
-
-
   const [testimonials, setTestimonials] = useState([]);
   const [customCertificates, setCustomCertificates] = useState([]);
   const [categories, setCategories] = useState([]);
   const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
-    // Sahi Relative Paths for dynamic imports
     import("./data/MBA/testimonials")
       .then((m) => setTestimonials(m.default))
       .catch((err) => console.error("Testimonials load fail:", err));
@@ -349,9 +321,9 @@ const marqueeBottomLogos = [
       .catch((err) => console.error("Faqs load fail:", err));
   }, []);
 
-
   return (
-    <>
+    <main className="w-full overflow-hidden">
+      {/* Critical Above-The-Fold Components */}
       <CourseCard
         title="Digital Marketing Corporate Simulation with"
         highlightText="100% Placement Assistance"
@@ -364,7 +336,7 @@ const marqueeBottomLogos = [
         appliedText=""
         contactNumber=""
         imageUrl="/images/banner-image/dm/mba.webp"
-        redirectlink = "/course-brochures"
+        redirectlink="/course-brochures"
       />
 
       <MyComponent 
@@ -375,92 +347,121 @@ const marqueeBottomLogos = [
         subtitleHighlight='Simulation Training?'
       />
 
+      {/* Lazy-Loaded Below-The-Fold Sections */}
       <div className="pt-5 pb-5 md:pt-6 md:pb-6 border-b border-gray-50"></div>
-      <WhyDigifine 
-        featuresData={dataset} 
-        title="Six reasons this program trains differently"
-        blueSubtitle="Why Digifine" 
-      /> 
+      <LazySection>
+        <WhyDigifine 
+          featuresData={dataset} 
+          title="Six reasons this program trains differently"
+          blueSubtitle="Why Digifine" 
+        /> 
+      </LazySection>
 
       <div className="py-7 md:py-12 bg-gray-50/30"></div>
-      <HorizontalTimeline 
-        stepsData={timelineSteps}
-        title="The Corporate Simulation Timeline"
-        subtitle="Six stages that mirror a real agency career path."
-      />
+      <LazySection>
+        <HorizontalTimeline 
+          stepsData={timelineSteps}
+          title="The Corporate Simulation Timeline"
+          subtitle="Six stages that mirror a real agency career path."
+        />
+      </LazySection>
 
-      <Toggle content={toggleData} />
+      <LazySection>
+        <Toggle content={toggleData} />
+      </LazySection>
 
       <div className="py-5 md:py-13 border-b border-gray-50">
-        <ToolStack 
-          aiTools={aiToolsList}
-          platforms={platformsList}
-          title="Tools you'll master"
-        />
+        <LazySection>
+          <ToolStack 
+            aiTools={aiToolsList}
+            platforms={platformsList}
+            title="Tools you'll master"
+          />
+        </LazySection>
       </div>
 
       <div className="py-15 md:py-22 border-b border-gray-50">
-        <CorporateProjects 
-          projectsData={digitalMarketingProjects} 
-          title="Real corporate projects" 
-        />
+        <LazySection>
+          <CorporateProjects 
+            projectsData={digitalMarketingProjects} 
+            title="Real corporate projects" 
+          />
+        </LazySection>
       </div>
 
-      <SyllabusTimeLine syllabusData={syllabusSectionData} />
+      <LazySection>
+        <SyllabusTimeLine syllabusData={syllabusSectionData} />
+      </LazySection>
 
       <div className="py-5 md:py-6 border-b border-gray-50">
-        <StudentJourney 
-          stepsData={journeySteps}
-          title="Student journey"
-        />
+        <LazySection>
+          <StudentJourney 
+            stepsData={journeySteps}
+            title="Student journey"
+          />
+        </LazySection>
       </div> 
 
-      {/* <CourseOverview overviewData={overviewSectionData} /> */}
+      <LazySection>
+        <CompanyMarquee 
+          tagline="Our Placements"
+          title="Companies They"
+          highlightTitle="Work At"
+          topLogos={marqueeTopLogos}
+          bottomLogos={marqueeBottomLogos}
+        />
+      </LazySection>
+
+      <LazySection>
+        <StudentPlacedAt 
+          companiesData={mbaPlacementsData} 
+          btntext="Know More" 
+          redirectlink="/course-brochures" 
+        />
+      </LazySection>
       
-      <CompanyMarquee tagline="Our Placements"
-        title="Companies They"
-        highlightTitle="Work At"
-        topLogos={marqueeTopLogos}
-        bottomLogos={marqueeBottomLogos}/>
+      <LazySection>
+        <Testimonal 
+          title='What Our'
+          bluetitle='Students Have To Say:'
+          testimonial={testimonials}
+          paragraph="Hear from our students what their experience was like on the floor!" 
+        />
+      </LazySection>
 
-      {/* <SuccessStories storiesData={successStoriesData} /> */}
+      <LazySection>
+        <CertificateSection
+          title="Certifications"
+          subtitlePart1="Earn Professional"
+          subtitleHighlight="Certifications"
+          paragraph="Acquire several professional certifications by the end of your simulator program."
+          certificates={customCertificates}
+        />
+      </LazySection>
 
-      <StudentPlacedAt 
-        companiesData={mbaPlacementsData} 
-        btntext="Know More" 
-        redirectlink="/course-brochures" 
-      />
+      <LazySection>
+        <VerticalTimeline 
+          steps={timelineStepsData} 
+          title="Steps Towards Success With" 
+          bluetitle="Digifine" 
+          paragraph="Process mapped carefully to transform learners into digital marketing experts." 
+        />
+      </LazySection>
+
+      <LazySection>
+        <BoxCardSection coursedata={categories}/>
+      </LazySection>
+
+      <LazySection>
+        <FAQsSection
+          sectionTitle="Frequently Asked Questions"
+          faqData={faqs}
+        />
+      </LazySection>
       
-      <Testimonal 
-        title='What Our'
-        bluetitle='Students Have To Say:'
-        testimonial={testimonials}
-        paragraph="Hear from our students what their experience was like on the floor!" 
-      />
-
-      <CertificateSection
-        title="Certifications"
-        subtitlePart1="Earn Professional"
-        subtitleHighlight="Certifications"
-        paragraph="Acquire several professional certifications by the end of your simulator program."
-        certificates={customCertificates}
-      />
-
-      <VerticalTimeline 
-        steps={timelineStepsData} 
-        title="Steps Towards Success With" 
-        bluetitle="Digifine" 
-        paragraph="Process mapped carefully to transform learners into digital marketing experts." 
-      />
-
-      <BoxCardSection coursedata={categories}/>
-
-      <FAQsSection
-        sectionTitle="Frequently Asked Questions"
-        faqData={faqs}
-      />
-      
-      <Location locationsData={locationsSectionData} />
-    </> 
+      <LazySection>
+        <Location city="Mumbai" />
+      </LazySection>
+    </main>
   );
 }

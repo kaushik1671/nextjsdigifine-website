@@ -2,10 +2,10 @@
 
 import "./globals.css"; // if you have global CSS
 
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import FooterNav from "@/components/Footer/FooterNav";
-import ScrollToTop from "@/components/CourseComponents/ScrollToTop/ScrollToTop";
+import Header from "../component/Header/Header";
+import Footer from "../component/Footer/Footer";
+import FooterNav from "../component/Footer/FooterNav";
+import ScrollToTop from "../component/CourseComponents/ScrollToTop/ScrollToTop";
 import Script from "next/script";
 import localFont from "next/font/local";
 

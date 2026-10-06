@@ -1,5 +1,3 @@
-// app/layout.js
-
 import "./globals.css"; // if you have global CSS
 
 import Header from "../component/Header/Header";
@@ -8,7 +6,6 @@ import FooterNav from "../component/Footer/FooterNav";
 import ScrollToTop from "../component/CourseComponents/ScrollToTop/ScrollToTop";
 import Script from "next/script";
 import localFont from "next/font/local";
-
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,7 +37,6 @@ const raleway = localFont({
   display: "swap",
 });
 
-
 export const metadata = {
   metadataBase: new URL("https://digifine.in"),
 
@@ -59,142 +55,136 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={raleway.className} suppressHydrationWarning>
-        <head>
-            {/* <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
-            <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
-            <link rel="preload" href="/fonts/Raleway-SemiBold.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
-            <link rel="preload" href="/fonts/Raleway-Medium.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/> */}
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://d2o2utebsixu4k.cloudfront.net/1sr%20persona-d3d4f120e8b2439a99ec96449bbdb5be.webp"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
+        <link rel="stylesheet" href="./globals.css" />
 
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P6MCP2M');`,
+          }}
+        />
 
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-            <link rel="preload" as="image" href="https://d2o2utebsixu4k.cloudfront.net/1sr%20persona-d3d4f120e8b2439a99ec96449bbdb5be.webp" />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QFEG0K7Z98"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-            <link rel="stylesheet" href="./globals.css" />
+            gtag('config', 'G-QFEG0K7Z98');
+          `}
+        </Script>
 
-            
-            
-            <Script
-  id="google-tag-manager"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P6MCP2M');`,
-  }}
-/>
+        <meta
+          name="google-site-verification"
+          content="o5E-7v0oapuUt7G2GfU8ikBnKNIQQHSpToQrU9XsLwk"
+        />
 
-<Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-QFEG0K7Z98"
-  strategy="afterInteractive"
-/>
+        {/* Microsoft Clarity */}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "9gacx26o3a");`,
+          }}
+        />
 
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        {/* Facebook Pixel */}
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}
+            (window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '733157131397045');
+            fbq('track', 'PageView');`,
+          }}
+        />
 
-    gtag('config', 'G-QFEG0K7Z98');
-  `}
-</Script>
+        {/* OpenAI Ads Conversion Pixel */}
+        <Script
+          id="openai-ads-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.oaiq = window.oaiq || function () {
+                (window.oaiq.q = window.oaiq.q || []).push(arguments);
+              };
 
-          <meta
-            name="google-site-verification"
-            content="o5E-7v0oapuUt7G2GfU8ikBnKNIQQHSpToQrU9XsLwk"
+              oaiq("init", {
+                pixelId: "TBWfZ3jNGeSsgLXtZcHHeo"
+              });
+            `,
+          }}
+        />
+        <Script
+          id="openai-ads-pixel-sdk"
+          src="https://bzrcdn.openai.com/sdk/oaiq.min.js"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P6MCP2M"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
           />
-
-          <Script id="microsoft-clarity"
-  strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `(function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "9gacx26o3a");`,
-            }}
+        </noscript>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=733157131397045&ev=PageView&noscript=1"
+            alt=""
           />
+        </noscript>
+        
+        <ScrollToTop />
+        <Header />
 
-            {/* Facebook Pixel */}
+        <main>{children}</main>
 
-          <Script id="facebook-pixel"
-      strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `!function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}
-              (window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '733157131397045');
-              fbq('track', 'PageView');`,
-            }}
-          />
-
-          {/* ================================ */}
-          {/* OPENAI ADS CONVERSION PIXEL      */}
-          {/* ================================ */}
-
-          <Script id="openai-ads-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{
-    __html: `
-      window.oaiq = window.oaiq || function () {
-        (window.oaiq.q = window.oaiq.q || []).push(arguments);
-      };
-
-      oaiq("init", {
-        pixelId: "TBWfZ3jNGeSsgLXtZcHHeo"
-      });
-    `,
-  }}
-/>
-
-<Script
-  id="openai-ads-pixel-sdk"
-  src="https://bzrcdn.openai.com/sdk/oaiq.min.js"
-  strategy="afterInteractive"
-/>
-          
-
-        </head>
-        <body>
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-P6MCP2M"
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            />
-          </noscript>
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              style={{ display: "none" }}
-              src="https://www.facebook.com/tr?id=733157131397045&ev=PageView&noscript=1"
-              alt=""
-            />
-          </noscript>
-            <ScrollToTop />
-            <Header />
-
-            <main>
-                {children}
-            </main>
-
-            <Footer />
-            <FooterNav />
+        <Footer />
+        {/* Added default openCourses prop to resolve TypeScript type error */}
+        <FooterNav openCourses={[]} />
       </body>
     </html>
   );

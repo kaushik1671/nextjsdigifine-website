@@ -1,5 +1,7 @@
+"use client"
+
 import React, { useEffect, useState, lazy } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'next/navigation';
 
 const Breadcrumb = lazy(() => import('../../../CourseComponents/BreadCrumb/Breadcrumb'));
 const API_BASE = process.env.NEXT_PUBLIC_API_URL;

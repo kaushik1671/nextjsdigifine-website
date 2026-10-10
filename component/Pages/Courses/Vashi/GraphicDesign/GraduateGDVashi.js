@@ -259,7 +259,7 @@ const syllabusSectionData = [
     description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
     modules: [
       "Website Development",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Influencer Marketing",
       "Mobile Marketing",
     ],

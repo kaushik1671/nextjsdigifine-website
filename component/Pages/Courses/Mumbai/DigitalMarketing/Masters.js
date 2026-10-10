@@ -98,7 +98,7 @@ const overviewSectionData = {
     { title: "Expert Training", text: "Digifine’s Master’s Digital Marketing Program uses only senior industry experts as its lecturers, all of whom have hands-on experience successfully leading digital marketing initiatives for top-tier brands.", alwaysVisible: false },
     { title: "Comprehensive Curriculum", text: "The Master’s Program in Digital Marketing launched by Digifine has developed a comprehensive curriculum that covers all core sectors of modern digital marketing. Its core modules include SEO, Google Ads, social media marketing, AI marketing tools, and other key content.", alwaysVisible: false },
     { title: "Hands-on Tools", text: "The Digifine Master’s Program in Digital Marketing adopts the latest digital marketing tools used by leading global agencies and top international brands. The program covers nine mainstream marketing platforms, including those supporting SEO, Google Ads, and data analytics.", alwaysVisible: false },
-    { title: "Certifications", text: "certificate issued by Digifine Academy, and may also sign up to take certifications from leading industry platforms including Google and NSDC. The certificates serve as proof of practical skills in disciplines including SEO, Google Ads, social media marketing, and data analysis.", alwaysVisible: false },
+    { title: "Certifications", text: "Certificate issued by Digifine Academy, and may also sign up to take certifications from leading industry platforms including Google and NSDC. The certificates serve as proof of practical skills in disciplines including SEO, Google Ads, social media marketing, and data analysis.", alwaysVisible: false },
     { title: "Real Mentorship", text: "Digifine has introduced a vocational educational service that incorporates a real mentor system for the digital marketing industry stream. The program participants will benefit from the mentorship of experienced and industry veterans.", alwaysVisible: false },
     { title: "Practical Focus", text: "The program incorporates three types of content—real projects, industry case studies, and hands-on assignments—to replicate the actual marketing challenges faced by businesses, helping students refine their critical thinking, execution, and problem-solving skills, and grow into qualified professional digital marketing talents suited to today’s competitive landscape.", alwaysVisible: false },
   ],
@@ -227,7 +227,7 @@ const syllabusSectionData = [
     modules: [
       "Website Development",
       "Brand Management",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Strategic Management",
       "OTT Advertising",
       "Influencer Marketing",

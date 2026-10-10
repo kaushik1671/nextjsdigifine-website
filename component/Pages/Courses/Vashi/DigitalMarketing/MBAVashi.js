@@ -70,7 +70,7 @@ const uniqueModulesSectionData = {
     { iconName: "Users", title: "Experiential", subtitle: "Marketing" },
     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
     { iconName: "Tv", title: "BARC Television", subtitle: "Ad Planning" },
-    { iconName: "PlayCircle", title: "OTT Ads", subtitle: "" },
+    { iconName: "PlayCircle", title: "OTT", subtitle: "Ads" },
     { iconName: "Landmark", title: "Strategic", subtitle: "Management" },
   ],
 };
@@ -247,7 +247,7 @@ const syllabusSectionData = [
     modules: [
       "Website Development",
       "Brand Management",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Strategic Management",
       "Data Analytics",
       "OTT Advertising",

@@ -241,7 +241,7 @@ const syllabusSectionData = [
     modules: [
       "Website Development",
       "Brand Management",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Strategic Management",
       "Data Analytics",
       "OTT Advertising",

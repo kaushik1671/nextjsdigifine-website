@@ -20,8 +20,8 @@ const customCertificates = [
     {
       id: 3,
       image: "/images/certificates/Mumbai/DM/EM.webp",
-      title: "E-Commmerce Management",
-      description: "E-Commmerce Management from Digifine Academy",
+      title: "E-Commerce Management",
+      description: "E-Commerce Management from Digifine Academy",
     },
     {
       id: 5,

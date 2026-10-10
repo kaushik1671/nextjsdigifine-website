@@ -47,7 +47,7 @@ const customContent = [
   {
     content: [
       {
-        heading: "Adobe Indesign",
+        heading: "Adobe InDesign",
         items:[
           "Basics",
           "Working with Frames",

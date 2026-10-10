@@ -138,7 +138,7 @@ export default function DMSimulation() {
     highlightTitle: "MBA-Level Digital Marketing Program in Mumbai",
     paragraphs: [
       { 
-        text: "This is one of India’s top MBA-level Postgraduate Digital Marketing programs in Mumbai.The program runs for 6 months of intensive classroom training followed by 6 months of industry residency at top agencies across the country. In Mumbai, you also get an extra 6+6 months of guaranteed extensions and salary hikes with partner companies to support your career growth.",
+        text: "This is one of India’s top MBA-level Postgraduate Digital Marketing programs in Mumbai. The program runs for 6 months of intensive classroom training followed by 6 months of industry residency at top agencies across the country. In Mumbai, you also get an extra 6+6 months of guaranteed extensions and salary hikes with partner companies to support your career growth.",
         alwaysVisible: true 
       }
     ],
@@ -278,7 +278,7 @@ export default function DMSimulation() {
       modules: [
         "Website Development",
         "Brand Management",
-        "E-commerce Management",
+        "E-Commerce Management",
         "Strategic Management",
         "Data Analytics",
         "OTT Advertising",
@@ -294,8 +294,8 @@ export default function DMSimulation() {
     { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
     { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
     { title: "Assessments", description: "Solve real-world problems to test your skills." },
-    { title: "International Emmersion", description: "Practice with interview panels and boost your confidence." },
-    { title: "Coorporate Training", description: "Secure a job with 100% placement support." },
+    { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
+    { title: "Corporate training", description: "Secure a job with 100% placement support." },
   ];
 
   const [testimonials, setTestimonials] = useState([]);

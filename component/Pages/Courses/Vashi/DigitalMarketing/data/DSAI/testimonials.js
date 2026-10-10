@@ -24,7 +24,7 @@ const testimonials = [
           linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
           profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
           name: 'Bilal Mulla',
-          position: 'Group Head - Omnicorm media',
+          position: 'Group Head - Omnicom media',
         },
         {
           id: 4,

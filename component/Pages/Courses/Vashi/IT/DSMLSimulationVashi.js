@@ -141,7 +141,7 @@ export default function DSMLSimulationVashi() {
   //     { iconName: "Users", title: "Experiential", subtitle: "Marketing" },
   //     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
   //     { iconName: "Tv", title: "BARC Television", subtitle: "Ad Planning" },
-  //     { iconName: "PlayCircle", title: "OTT Ads", subtitle: "" },
+  //     { iconName: "PlayCircle", title: "OTT", subtitle: "Ads" },
   //     { iconName: "Landmark", title: "Strategic", subtitle: "Management" }
   //   ]
   // };
@@ -151,7 +151,7 @@ export default function DSMLSimulationVashi() {
     highlightTitle: "MBA-Level Digital Marketing Program in Mumbai",
     paragraphs: [
       { 
-        text: "This is one of India’s top MBA-level Postgraduate Digital Marketing programs in Mumbai.The program runs for 6 months of intensive classroom training followed by 6 months of industry residency at top agencies across the country. In Mumbai, you also get an extra 6+6 months of guaranteed extensions and salary hikes with partner companies to support your career growth.",
+        text: "This is one of India’s top MBA-level Postgraduate Digital Marketing programs in Mumbai. The program runs for 6 months of intensive classroom training followed by 6 months of industry residency at top agencies across the country. In Mumbai, you also get an extra 6+6 months of guaranteed extensions and salary hikes with partner companies to support your career growth.",
         alwaysVisible: true 
       }
     ],
@@ -263,7 +263,7 @@ const marqueeBottomLogos = [
         "SQL",
         "Pandas",
         "NumPy",
-        "Statisticsm PowerBI ",
+        "Statistics Power BI ",
         "Tableau",
       ]
     },
@@ -296,8 +296,8 @@ const marqueeBottomLogos = [
     { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
     { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
     { title: "Assessments", description: "Solve real-world problems to test your skills." },
-    { title: "International Emmersion", description: "Practice with interview panels and boost your confidence." },
-    { title: "Coorporate Training", description: "Secure a job with 100% placement support." },
+    { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
+    { title: "Corporate training", description: "Secure a job with 100% placement support." },
   ];
 
   const locationsSectionData = [

@@ -250,7 +250,7 @@ const syllabusSectionData = [
     modules: [
       "Website Development",
       "Brand Management",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Strategic Management",
       "Influencer Marketing",
       "Mobile Marketing",
@@ -380,14 +380,14 @@ export default function GraduateDMVashi() {
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      {/* <LazySection>
         <Suspense fallback={null}>
           <CareerPath
             mainDescription="Build job-ready skills across performance marketing, organic marketing and advanced marketing management."
             steps={careerSteps}
           />
         </Suspense>
-      </LazySection>
+      </LazySection> */}
 
       <LazySection>
         <Suspense fallback={null}>

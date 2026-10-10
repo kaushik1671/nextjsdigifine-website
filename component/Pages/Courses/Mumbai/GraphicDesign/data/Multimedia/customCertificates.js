@@ -14,8 +14,8 @@ const customCertificates = [
     {
       id: 2,
       image: "/images/certificates/Mumbai/GD/mmd_certificates/c3.webp",
-      title: "Adobe Indesign",
-      description: "Adobe Indesign certification from Digifine Academy",
+      title: "Adobe InDesign",
+      description: "Adobe InDesign certification from Digifine Academy",
     },
     {
       id: 3,

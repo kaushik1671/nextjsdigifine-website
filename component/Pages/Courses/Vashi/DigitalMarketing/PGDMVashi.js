@@ -68,7 +68,7 @@ const uniqueModulesSectionData = {
   modules: [
     // { iconName: "Gem", title: "Luxury Brand", subtitle: "Management" },
     { iconName: "Landmark", title: "Strategic", subtitle: "Management" },
-    { iconName: "PlayCircle", title: "OTT Ads", subtitle: "" },
+    { iconName: "PlayCircle", title: "OTT", subtitle: "Ads" },
     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
     { iconName: "TrendingUp", title: "Salary", subtitle: "Hike" },
   ],
@@ -246,7 +246,7 @@ const syllabusSectionData = [
     description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
     modules: [
       "Website Development",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Brand Management",
       "Strategic Management",
       "OTT Advertising",

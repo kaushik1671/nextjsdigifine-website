@@ -53,7 +53,7 @@ const categories = [
           imageSrc: "/images/card/DM/dm11.webp",
           hoverImageSrc:  "/images/card/DM/dm12.webp",
           buttonText: "Know More",
-          link: "DS-ML-simulation-course-in-mumbai",
+          link: "digital-marketing-simulation-course-mumbai",
           hovericonImageSrc:"/images/Icons/arrows/rightarrowblack.svg",
           iconimageSrc:"/images/Icons/arrows/rightarrow.svg",
         }
@@ -188,7 +188,7 @@ const categories = [
       imageSrc: "/images/card/DM/dm1.webp",
       hoverImageSrc:  "/images/card/DM/dm6.webp",
       buttonText: "Know More",
-      link: "DS-ML-simulation-course-in-mumbai",
+      link: "ds-ml-simulation-course-in-mumbai",
       hovericonImageSrc:"/images/Icons/arrows/rightarrowblack.svg",
       headline:"India #1 IT Course",
       iconimageSrc:"/images/Icons/arrows/rightarrow.svg",

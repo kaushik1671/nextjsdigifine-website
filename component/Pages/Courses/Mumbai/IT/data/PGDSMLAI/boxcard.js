@@ -170,7 +170,7 @@ const categories = [
       imageSrc: "/images/card/DM/dm1.webp",
       hoverImageSrc:  "/images/card/DM/dm6.webp",
       buttonText: "Know More",
-      link: "DS-ML-simulation-course-in-mumbai",
+      link: "ds-ml-simulation-course-in-mumbai",
       hovericonImageSrc:"/images/Icons/arrows/rightarrowblack.svg",
       headline:"India #1 IT Course",
       iconimageSrc:"/images/Icons/arrows/rightarrow.svg",

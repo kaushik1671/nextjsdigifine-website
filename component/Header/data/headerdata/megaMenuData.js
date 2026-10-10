@@ -40,7 +40,7 @@ export const megaMenuData = [
               provider: "DM Simulation",
               title: "Digital Marketing Simulation",
               image: "/images/logo/digi-logo.svg",
-              link: "/ds-ml-simulation-course-in-mumbai"
+              link: "/digital-marketing-simulation-course-mumbai"
             }
             
           ]
@@ -138,7 +138,7 @@ export const megaMenuData = [
               provider: "DSML Simulation",
               title: "Certification in DSML Simulation",
               image: "/images/logo/digi-logo.svg",
-              link: "/DS-ML-simulation-course-in-mumbai"
+              link: "/ds-ml-simulation-course-in-mumbai"
             }
           ]
         }

@@ -68,7 +68,7 @@ const uniqueModulesSectionData = {
   modules: [
     // { iconName: "Gem", title: "Luxury Brand", subtitle: "Management" },
     { iconName: "Landmark", title: "Strategic", subtitle: "Management" },
-    { iconName: "PlayCircle", title: "OTT Ads", subtitle: "" },
+    { iconName: "PlayCircle", title: "OTT", subtitle: "Ads" },
     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
     { iconName: "TrendingUp", title: "Salary", subtitle: "Hike" },
   ],
@@ -249,7 +249,7 @@ const syllabusSectionData = [
     modules: [
       "Website Development",
       "Brand Management",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Strategic Management",
       "OTT Advertising",
       "Influencer Marketing",

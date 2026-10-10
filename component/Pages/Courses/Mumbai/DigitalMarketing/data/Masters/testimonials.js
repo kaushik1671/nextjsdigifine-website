@@ -24,7 +24,7 @@ const testimonials = [
               linkedinUrl: 'https://www.linkedin.com/in/ketan-kapoor-4591781b3/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Ketan%20Kapoor%20(1)-8501c19cfc86402cb622a3b14a469e1f.webp',
               name: 'Rani Kumari',
-              position: 'Group Head - Omnicorm media',
+              position: 'Group Head - Omnicom media',
             },
             {
               id: 4,
@@ -41,7 +41,7 @@ const testimonials = [
               linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
               name: 'Surya Pandey',
-              position: 'SEO - Publisis',
+              position: 'SEO - Publicis',
             },{
               id: 6,
               title: 'Digifine gave me much more than digital marketing knowledge.',
@@ -49,7 +49,7 @@ const testimonials = [
               linkedinUrl: 'https://www.linkedin.com/in/liveakhand/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Akhand%20Pratap%20Singh%20(1)-011f057e9d6f4f9bbf9c587e3c837559.webp',
               name: 'Sahil Jankya',
-              position: 'Performance Marketing - Publisis',
+              position: 'Performance Marketing - Publicis',
             },
         ];
 

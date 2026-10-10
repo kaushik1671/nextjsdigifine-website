@@ -106,7 +106,7 @@ const toolsSectionData = {
     { name: "Figma", image: "images/toolslogo/figma.webp" },
     { name: "Adobe Premiere Pro", image: "images/toolslogo/APPro.webp" },
     { name: "Adobe After Effects", image: "images/toolslogo/AE.jpg" },
-    { name: "Davinci", image: "images/toolslogo/davinci.webp" },
+    { name: "DaVinci", image: "images/toolslogo/DaVinci.webp" },
     { name: "Adobe Animate", image: "images/toolslogo/AAnimate.png" },
     { name: "Adobe Audition", image: "images/toolslogo/AA.jpg" },
     { name: "Blender", image: "https://cdn.worldvectorlogo.com/logos/blender-2.svg" },
@@ -216,7 +216,7 @@ const syllabusSectionData = [
       "Advanced Techniques",
       "Artboards & Export",
     ],
-    part2Title: "PAdobe Photoshop",
+    part2Title: "Adobe Photoshop",
     part2Modules: [
       "Introduction to Adobe Photoshop",
       "Get Started",
@@ -257,7 +257,7 @@ const syllabusSectionData = [
     description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
     modules: [
       "Website Development",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Influencer Marketing",
       "Mobile Marketing",
     ],

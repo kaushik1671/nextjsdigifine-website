@@ -14,8 +14,8 @@ const customCertificates = [
     {
       id: 2,
       image: "/images/certificates/Vashi/GD/ggd_certificates/c2.webp",
-      title: "Adobe Indesign",
-      description: "Adobe Indesign certification from Digifine Academy",
+      title: "Adobe InDesign",
+      description: "Adobe InDesign certification from Digifine Academy",
     },
     {
       id: 3,

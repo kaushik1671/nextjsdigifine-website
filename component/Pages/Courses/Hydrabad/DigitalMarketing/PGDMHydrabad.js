@@ -67,7 +67,7 @@ const uniqueModulesSectionData = {
     { iconName: "Users", title: "Experiential", subtitle: "Marketing" },
     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
     { iconName: "Tv", title: "BARC Television", subtitle: "Ad Planning" },
-    { iconName: "PlayCircle", title: "OTT Ads", subtitle: "" },
+    { iconName: "PlayCircle", title: "OTT", subtitle: "Ads" },
     { iconName: "Landmark", title: "Strategic", subtitle: "Management" },
   ],
 };
@@ -230,7 +230,7 @@ const syllabusSectionData = [
     description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
     modules: [
       "Website Development",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Brand Management",
       "Strategic Management",
       "OTT Advertising",
@@ -251,7 +251,7 @@ const timelineStepsData = [
 
 /* ---------- Component ---------- */
 
-export default function PGDMHydrabad() {
+export default function PGDMHyderabad() {
   const [testimonials, setTestimonials] = useState([]);
   const [customCertificates, setCustomCertificates] = useState([]);
   const [categories, setCategories] = useState([]);

@@ -101,7 +101,7 @@ const customContent = [
   {
     content: [
       {
-        heading: "Davinci",
+        heading: "DaVinci",
         items: [
           "Introduction",
           "Editing Basics",

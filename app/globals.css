@@ -13,27 +13,13 @@
   overflow: hidden;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url("/fonts/Raleway-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("/fonts/Raleway-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap; /* fallback text shows immediately */
-}    
-      
-@font-face {
-  font-family: "Berlin";
-  src: url("/fonts/BRLNSDB.woff") format("woff");
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
 
 
 @keyframes marquee {

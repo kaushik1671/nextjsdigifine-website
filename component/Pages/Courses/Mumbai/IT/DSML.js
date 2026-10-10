@@ -204,7 +204,7 @@ const syllabusSectionData = [
   },
   {
     term: "Term 2",
-    title: "Intermediate (Data Visulization)",
+    title: "Intermediate (Data Visualization)",
     description: "Build powerful brand presence and organic visibility through search optimization, content funnels, and social engagement.",
     modules: ["Statistics", "PowerBI", "Tableau", "Seaborn", "Scipy"],
   },
@@ -220,8 +220,8 @@ const timelineStepsData = [
   { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
   { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
   { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "International Emmersion", description: "Practice with interview panels and boost your confidence." },
-  { title: "Coorporate Training", description: "Secure a job with 100% placement support." },
+  { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
+  { title: "Corporate training", description: "Secure a job with 100% placement support." },
 ];
 
 const analyticsSteps = [

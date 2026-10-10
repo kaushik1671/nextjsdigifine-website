@@ -211,7 +211,7 @@ const syllabusSectionData = [
       "Advanced Techniques",
       "Artboards & Export",
     ],
-    part2Title: "PAdobe Photoshop",
+    part2Title: "Adobe Photoshop",
     part2Modules: [
       "Introduction to Adobe Photoshop",
       "Get Started",
@@ -252,7 +252,7 @@ const syllabusSectionData = [
     description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
     modules: [
       "Website Development",
-      "E-commerce Management",
+      "E-Commerce Management",
       "Influencer Marketing",
       "Mobile Marketing",
     ],

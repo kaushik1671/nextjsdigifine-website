@@ -1791,11 +1791,11 @@ const nextConfig: NextConfig = {
   destination: "/ai-powered-pg-in-digital-marketing-in-mumbai",
   permanent: true,
 },
-{
-  source: "/blog/10-ways-to-make-your-digital-marketing-efforts-successful",
-  destination: "/ai-powered-pg-in-digital-marketing-in-mumbai",
-  permanent: true,
-},
+// {
+//   source: "/blog/10-ways-to-make-your-digital-marketing-efforts-successful",
+//   destination: "/ai-powered-pg-in-digital-marketing-in-mumbai",
+//   permanent: true,
+// },
 {
   source: "/blog/seo-tips-tricks-a-complete-guide-to-boost-rankings-in-2024",
   destination: "/ai-powered-pg-in-digital-marketing-in-mumbai",

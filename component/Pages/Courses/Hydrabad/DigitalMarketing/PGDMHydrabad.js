@@ -258,11 +258,11 @@ export default function PGDMHyderabad() {
   const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
-    import("../DigitalMarketing/data/PGDM/testimonials")
+    import("./data/PGDM/testimonials")
       .then((m) => setTestimonials(m.default))
       .catch((err) => console.error("Testimonials load fail:", err));
 
-    import("../DigitalMarketing/data/PGDM/customCertificates")
+    import("./data/PGDM/customCertificates")
       .then((m) => setCustomCertificates(m.default))
       .catch((err) => console.error("Certificates load fail:", err));
 
@@ -270,7 +270,7 @@ export default function PGDMHyderabad() {
       .then((m) => setCategories(m.default))
       .catch((err) => console.error("Boxcard load fail:", err));
 
-    import("../DigitalMarketing/data/PGDM/faqs")
+    import("./data/PGDM/faqs")
       .then((m) => setFaqs(m.default))
       .catch((err) => console.error("Faqs load fail:", err));
   }, []);

@@ -43,7 +43,7 @@ const mbaFeatures = [
   {
     title: "Placement before Course Completion",
     description: "Ensure that you bag your dream job beforehand. With our unique placement process, we will help you create a portfolio, enhance your CV, and crack interview sessions through mock drills to ensure employment even before graduation!",
-    imageSrc: "/images/banner-image/dm/placement.webp",
+    imageSrc: "/images/banner-image/dm/Placement.webp",
   },
   {
     title: "Expert Faculty",

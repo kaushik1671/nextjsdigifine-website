@@ -1,4 +1,5 @@
 import ContactUs from "../../component/Pages/Contact/ContactUs";
+import { pageSchemas } from "../../lib/coursesData";
 
 export const metadata = {
   title: "Contact Digifine Academy | Mumbai, Navi Mumbai & Hyderabad",
@@ -9,5 +10,15 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-    return <ContactUs />;
+    return <>
+      {pageSchemas.about.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
+      ))} <ContactUs />
+      </>;
 }

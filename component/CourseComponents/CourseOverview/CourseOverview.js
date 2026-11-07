@@ -52,7 +52,7 @@ export default function CourseOverviewPG({ overviewData }) {
 
   return (
     <section className="bg-[#fcfcfd] py-12 md:py-20 px-3 md:px-4 font-sans">
-      <div className="max-w-6xl mx-auto bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300 p-6 md:p-10">
+      <div className="max-w-6xl mx-auto bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] p-6 md:p-10">
 
         {/* Heading & Description */}
         <div>
@@ -79,7 +79,7 @@ export default function CourseOverviewPG({ overviewData }) {
             
             {/* Always Visible Features */}
             {visibleFeatures.map((feature, index) => (
-              <li key={`visible-${index}`} className="flex items-start gap-2.5 md:gap-4 p-2 md:p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+              <li key={`visible-${index}`} className="flex items-start gap-2.5 md:gap-4 p-2 md:p-3 rounded-xl border border-transparent">
                 <div className="flex-shrink-0 w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-full bg-blue-50 flex items-center justify-center text-[#046AED]">
                   {getIconByTitle(feature.title)}
                 </div>
@@ -92,7 +92,7 @@ export default function CourseOverviewPG({ overviewData }) {
 
             {/* Hidden Features */}
             {expanded && hiddenFeatures.map((feature, index) => (
-              <li key={`hidden-${index}`} className="flex items-start gap-2.5 md:gap-4 p-2 md:p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 animate-in fade-in duration-300">
+              <li key={`hidden-${index}`} className="flex items-start gap-2.5 md:gap-4 p-2 md:p-3 rounded-xl border border-transparent">
                 <div className="flex-shrink-0 w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-full bg-blue-50 flex items-center justify-center text-[#046AED]">
                   {getIconByTitle(feature.title)}
                 </div>
@@ -109,10 +109,10 @@ export default function CourseOverviewPG({ overviewData }) {
         <div className="mt-4 md:mt-8 pt-4 border-t border-slate-100 flex justify-end">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-slate-50 hover:bg-[#046AED] text-[#046AED] hover:text-white text-xs md:text-sm font-semibold transition-all duration-300"
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-slate-50 text-[#046AED] text-xs md:text-sm font-semibold"
           >
             <span>{expanded ? "Read Less" : "Read More"}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-4 h-4 transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={`w-4 h-4 ${expanded ? 'rotate-180' : ''}`}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
             </svg>
           </button>

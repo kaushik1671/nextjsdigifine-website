@@ -22,7 +22,6 @@ import {
   UserX,
   BookOpenCheck,
   Ban,
-  // 🌟 NAYE ICONS IMPORT KIYE HAI DIVERSITY KE LIYE
   Building,
   GitBranch,
   Sliders,
@@ -37,7 +36,6 @@ import {
   Activity
 } from "lucide-react";
 
-// 🌟 Fully Updated Icons Map: Sabhi dynamic icons ab strictly mapped hain
 const iconMap = {
   Briefcase: Briefcase,
   TrendingUp: TrendingUp,
@@ -57,7 +55,6 @@ const iconMap = {
   UserX: UserX,
   BookOpenCheck: BookOpenCheck,
   Ban: Ban,
-  // New Graphic Design & Unique mapping entries
   Building: Building,
   GitBranch: GitBranch,
   Sliders: Sliders,
@@ -80,8 +77,8 @@ export default function Toogle({ content }) {
   const currentView = isDigifine ? content.digifine : content.without;
 
   const statusIcon = isDigifine 
-    ? <BadgeCheck className="w-5 h-5 text-blue-600 animate-pulse" /> 
-    : <CircleX className="w-5 h-5 text-red-500 animate-pulse" />;
+    ? <BadgeCheck className="w-5 h-5 text-blue-600" /> 
+    : <CircleX className="w-5 h-5 text-red-500" />;
 
   return (
     <section className="w-full max-w-6xl mx-auto px-4 py-12 md:py-16 bg-[#F8FAFC] font-sans rounded-3xl my-6 md:my-10 overflow-hidden">
@@ -101,7 +98,7 @@ export default function Toogle({ content }) {
         <div className="bg-slate-200/70 p-1.5 rounded-full flex items-center relative w-[310px] sm:w-[400px] shadow-inner border border-slate-300/40 border-solid">
           
           <div 
-            className={`absolute top-1.5 bottom-1.5 rounded-full transition-all duration-300 ease-out ${
+            className={`absolute top-1.5 bottom-1.5 rounded-full ${
               isDigifine 
                 ? "left-1.5 w-[48%] bg-blue-600 shadow-lg shadow-blue-500/30" 
                 : "left-[51%] w-[48%] bg-slate-800 shadow-lg shadow-slate-900/30"
@@ -112,8 +109,8 @@ export default function Toogle({ content }) {
             type="button"
             onClick={() => setIsDigifine(true)}
             suppressHydrationWarning
-            className={`relative z-10 flex-1 text-center py-2.5 text-[11px] sm:text-sm font-black rounded-full transition-colors duration-200 cursor-pointer ${
-              isDigifine ? "text-white" : "text-slate-600 hover:text-slate-900"
+            className={`relative z-10 flex-1 text-center py-2.5 text-[11px] sm:text-sm font-black rounded-full cursor-pointer ${
+              isDigifine ? "text-white" : "text-slate-600"
             }`}
           >
             With Digifine
@@ -122,8 +119,8 @@ export default function Toogle({ content }) {
           <button
             type="button"
             onClick={() => setIsDigifine(false)}
-            className={`relative z-10 flex-1 text-center py-2.5 text-[11px] sm:text-sm font-black rounded-full transition-colors duration-200 cursor-pointer ${
-              !isDigifine ? "text-white" : "text-slate-600 hover:text-slate-900"
+            className={`relative z-10 flex-1 text-center py-2.5 text-[11px] sm:text-sm font-black rounded-full cursor-pointer ${
+              !isDigifine ? "text-white" : "text-slate-600"
             }`}
           >
             Without Digifine
@@ -133,7 +130,7 @@ export default function Toogle({ content }) {
 
       {/* Sub-heading Context */}
       <div className="max-w-3xl mx-auto text-center mb-10 px-2">
-        <h3 className={`text-xl md:text-3xl font-extrabold mb-3 transition-colors duration-300 ${isDigifine ? "text-blue-600" : "text-slate-800"}`}>
+        <h3 className={`text-xl md:text-3xl font-extrabold mb-3 ${isDigifine ? "text-blue-600" : "text-slate-800"}`}>
           {currentView.subheading}
         </h3>
         <p className="text-slate-600 text-xs sm:text-sm md:text-base font-medium leading-relaxed">
@@ -144,16 +141,15 @@ export default function Toogle({ content }) {
       {/* Dynamic Cards Output */}
       <div className="flex overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-4 gap-5 max-w-6xl mx-auto pb-6 pt-2 px-2 md:pb-0 scrollbar-hide snap-x snap-mandatory touch-pan-x">
         {currentView.cards.map((card, index) => {
-          // 🛠️ FIX: Agar dynamic icon map me available hai toh wahi dikhega, repeat nahi hoga
           const RenderIcon = iconMap[card.icon] || Briefcase;
           
           return (
             <div
               key={index}
-              className={`group relative border border-solid rounded-2xl p-5 min-h-[140px] md:min-h-[160px] overflow-hidden flex flex-col justify-between items-start transition-all duration-300 transform md:hover:-translate-y-1 shrink-0 w-[260px] sm:w-[280px] md:w-auto snap-center ${
+              className={`relative border border-solid rounded-2xl p-5 min-h-[140px] md:min-h-[160px] overflow-hidden flex flex-col justify-between items-start shrink-0 w-[260px] sm:w-[280px] md:w-auto snap-center ${
                 isDigifine 
-                  ? "bg-white border-slate-100 hover:border-blue-300 shadow-[0_4px_15px_rgba(0,0,0,0.02)] md:hover:shadow-xl md:hover:shadow-blue-500/5" 
-                  : "bg-white border-slate-200/60 hover:border-red-300 shadow-sm md:hover:shadow-xl md:hover:shadow-red-500/5"
+                  ? "bg-white border-slate-100 shadow-[0_4px_15px_rgba(0,0,0,0.02)]" 
+                  : "bg-white border-slate-200/60 shadow-sm"
               }`}
             >
               {/* Background Watermark Icon */}

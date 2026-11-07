@@ -130,7 +130,7 @@ const toggleData = {
     ]
   },
   without: {
-    subheading: "Imagine Without Digifine",
+    subheading: "life Without Digifine",
     description: "Without practical exposure and structured career guidance, learning often stays limited to theory, making it difficult to build confidence and succeed in real-world digital marketing roles.",
     cards: [
       { text: "✕ Limited Practical Exposure Beyond Classroom Learning", icon: "BookOpen" },

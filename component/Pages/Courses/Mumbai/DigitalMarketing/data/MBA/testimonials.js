@@ -11,7 +11,7 @@ const testimonials = [
     },
     {
             id: 2,
-            title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+            title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
             excerpt: 'One of the most advanced and extensive programs out there for anyone looking to take their career to the next level! Throughout Digifine’s MBA in digital marketing, I’ve learnt some of the most unique modules and been to Dubai for the most insightful industrial visit. The placements after completion have literally been the best thing!',
             linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
             profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

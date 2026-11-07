@@ -10,7 +10,7 @@ const testimonials = [
       },
       {
               id: 2,
-              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
               excerpt: 'Before I enrolled for this Graphic Design Institute in Mumbai, I had hardly any idea about graphic design apart from Canva. At Digifine, I was trained by Sujata Ma’am who guided me through each and every step and even helped me after classes when I had doubts. Now I can confidently say that I have mastered the softwares of this field.',
               linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

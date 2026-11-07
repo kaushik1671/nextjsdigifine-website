@@ -33,7 +33,7 @@ const CorporateProjects = ({
             <span className="text-[11px] font-bold tracking-wider uppercase bg-[#046AED]/10 text-[#046AED] px-2.5 py-0.5 rounded-full border border-[#046AED]/20">
               REAL CORPORATE PROJECTS
             </span>
-            <span className="text-gray-300">—</span>
+            <span className="text-gray-300"> </span>
             <span className="text-gray-500 text-[11px] font-bold tracking-wider uppercase">
               LIVE WORK
             </span>

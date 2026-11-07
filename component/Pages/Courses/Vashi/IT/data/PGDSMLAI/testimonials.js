@@ -10,7 +10,7 @@ const testimonials = [
       },
       {
               id: 2,
-              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
               excerpt: 'My goal of joining Digifine’s data science and machine learning course in Navi Mumbai was to give a proper start to my career after graduation. The training from Chetan sir is no doubt top-notch. It is clear that he has a lot of knowledge and was always ready to clear my doubts and help me anytime I needed.',
               linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

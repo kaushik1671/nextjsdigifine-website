@@ -10,7 +10,7 @@ const testimonials = [
       },
       {
               id: 2,
-              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
               excerpt: 'After learning photography & videography and working in the industry for a couple of years, my next aim was to learn video editing so that I could freelance for end-to-end services. Digifine’s Video Editing and Motion Graphics Course actually was super helpful in training me on the tools I would need to achieve my career goals.',
               linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

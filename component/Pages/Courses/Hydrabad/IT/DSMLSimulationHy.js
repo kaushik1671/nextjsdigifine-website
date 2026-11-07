@@ -91,7 +91,7 @@ const overviewSectionData = {
     { title: "Corporate Simulation", text: "Learn in a work-style environment with live projects, mentorship and daily challenges.", alwaysVisible: true },
     { title: "Complete Data Stack", text: "Move from Excel and SQL to Python, dashboards, machine learning and AI tools.", alwaysVisible: false },
     { title: "Portfolio Projects", text: "Build evidence across fraud detection, forecasting, recommendation and business analytics.", alwaysVisible: false },
-    { title: "Paid Internship", text: "Earn a stipend while you train — this is a job, not just a course.", alwaysVisible: false },
+    { title: "Paid Internship", text: "Earn a stipend while you train   this is a job, not just a course.", alwaysVisible: false },
     { title: "Placement Assistance", text: "Structured placement support through Digifine's hiring partner network.", alwaysVisible: false },
   ],
 };
@@ -133,8 +133,8 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
-    description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
+    subheading: "Life Without Digifine",
+    description: "And here's what usually happens when training misses the mark no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
     cards: [
       { text: "No Placement Assistance", icon: "Briefcase" },
       { text: "No Guarantee of High-Paying Jobs", icon: "TrendingUp" },
@@ -221,11 +221,11 @@ const syllabusSectionData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
-  { title: "Corporate training", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Interview Preparation", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 const analyticsSteps = [

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function StudentPortfolio({
   title = "See What Our Students Create",
   subtitle = "Student Portfolio Showcase",
-  caption = "Every student graduates with a live portfolio — not just a certificate.",
+  caption = "Every student graduates with a live portfolio   not just a certificate.",
   buttonText = "View the all portfolio", // 🔄 Text updated
   buttonLink = "#",
   projects = [], // Ek project object me { image, title, category, link } hona chahiye

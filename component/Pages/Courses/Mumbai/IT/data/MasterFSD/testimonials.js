@@ -10,7 +10,7 @@ const testimonials = [
       },
       {
               id: 2,
-              title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+              title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
               excerpt: 'Before starting my full stack development course in Digifine, I had very limited knowledge and experience in coding. I wanted to develop my skills to find a good job. And completing my course with Chetan sir actually helped me build a vast portfolio and I even got a job from the institute itself.',
               linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
               profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

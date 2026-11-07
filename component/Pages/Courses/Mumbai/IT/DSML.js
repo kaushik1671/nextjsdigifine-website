@@ -89,10 +89,10 @@ const overviewSectionData = {
   ],
   keyFeatures: [
     { title: "Placements", text: "A dedicated career panel connects you directly with hiring managers at global tech firms, backed by a 100% placement guarantee.", alwaysVisible: true },
-    { title: "Industry Tools", text: "Real depth in Python, SQL, Tableau, Power BI, Scikit-learn, and TensorFlow — not a surface tour, but working familiarity with each.", alwaysVisible: false },
+    { title: "Industry Tools", text: "Real depth in Python, SQL, Tableau, Power BI, Scikit-learn, and TensorFlow   not a surface tour, but working familiarity with each.", alwaysVisible: false },
     { title: "Certifications", text: "Professional credentials that reflect actual practical work in Data Analytics, Data Science, and Machine Learning pipelines.", alwaysVisible: false },
     { title: "Global Mentorship", text: "Live code reviews and algorithm-level guidance from overseas tech mentors who've built these systems in production.", alwaysVisible: false },
-    { title: "Practical Training", text: "A 9-month curriculum built around capstone projects and real-world case studies — the portfolio comes from work you actually did.", alwaysVisible: false },
+    { title: "Practical Training", text: "A 9-month curriculum built around capstone projects and real-world case studies   the portfolio comes from work you actually did.", alwaysVisible: false },
   ],
 };
 
@@ -131,8 +131,8 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
-    description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
+    subheading: "Life Without Digifine",
+    description: "And here's what usually happens when training misses the mark no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
     cards: [
       { text: "No Placement Guarantees or direct recruiter access", icon: "Briefcase" },
       { text: "No Internship Experience to show on your resume", icon: "FileText" },
@@ -217,11 +217,11 @@ const syllabusSectionData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
-  { title: "Corporate training", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Interview Preparation", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 const analyticsSteps = [

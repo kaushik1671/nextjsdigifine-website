@@ -240,11 +240,11 @@ const syllabusSectionData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "Mock Interview", description: "Practice with interview panels and boost your confidence." },
-  { title: "Get Placed", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Mock Interview", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 export default function AdvancedExecutiveDM() {

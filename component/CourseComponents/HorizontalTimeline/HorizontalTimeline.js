@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const HorizontalTimeline = ({ 
   stepsData = [], 
   title = "The Corporate Simulation Timeline",
-  subtitle = "Six stages that mirror a real agency career path — compressed into your training."
+  subtitle = "Six stages that mirror a real agency career path   compressed into your training."
 }) => {
   
   useEffect(() => {

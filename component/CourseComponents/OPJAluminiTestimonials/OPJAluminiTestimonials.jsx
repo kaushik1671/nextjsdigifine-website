@@ -273,7 +273,7 @@ export default OPJAlumniTestimonials;
 // //     },
 // //     {
 // //       id: 2,
-// //       title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+// //       title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
 // //       excerpt: 'Strategy, planning, audience targeting… everything made sense practically and clearly. I felt confident while giving job interviews because the institute covered what actually happens in the market. Got my placement exactly as promised.',
 // //       linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
 // //       profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

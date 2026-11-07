@@ -37,7 +37,6 @@ export default function ToolsMastered({ toolsData }) {
   ];
 
   return (
-    /* Outer top-bottom margin added (`my-12 md:my-16`) content ke bahar space ke liye */
     <section className="relative w-full my-14 md:my-18 py-26 bg-gradient-to-tr from-white via-white to-blue-50/40 flex justify-center px-4 overflow-hidden font-sans">
       
       {/* Abstract glowing shapes */}
@@ -68,13 +67,13 @@ export default function ToolsMastered({ toolsData }) {
           {tools?.map((tool, index) => (
             <div
               key={index}
-              className={`relative backdrop-blur-xl bg-white/90 rounded-2xl flex flex-col items-start justify-between border border-white/80 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_48px_-10px_rgba(4,106,237,0.15)] transition-all duration-300 hover:-translate-y-1 group ${cardSizeClass}`}
+              className={`relative backdrop-blur-xl bg-white/90 rounded-2xl flex flex-col items-start justify-between border border-white/80 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.04)] ${cardSizeClass}`}
             >
               {/* Top-right UI corner status indicator dot */}
               <span className={`absolute top-4 right-4 w-2 h-2 rounded-full ${dotColors[index % dotColors.length]}`} />
 
               {/* Tool Logo */}
-              <div className="w-11 h-11 rounded-xl bg-white shadow-sm flex items-center justify-center border border-gray-100/80 group-hover:scale-105 transition-transform duration-300">
+              <div className="w-11 h-11 rounded-xl bg-white shadow-sm flex items-center justify-center border border-gray-100/80">
                 {tool.image ? (
                   <img
                     src={tool.image}

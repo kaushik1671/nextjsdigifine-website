@@ -35,7 +35,7 @@ const TrainerProfile = lazy(()=>import("../../../../CourseComponents/Trainer/Tra
 //   },
 //   {
 //           id: 2,
-//           title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+//           title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
 //           excerpt: 'One of the most advanced and extensive programs out there for anyone looking to take their career to the next level! Throughout Digifine’s MBA in digital marketing, I’ve learnt some of the most unique modules and been to Dubai for the most insightful industrial visit. The placements after completion have literally been the best thing!',
 //           linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
 //           profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',
@@ -81,23 +81,23 @@ const TrainerProfile = lazy(()=>import("../../../../CourseComponents/Trainer/Tra
 // const steps = [
 //   {
 //     title: 'Enroll',
-//     description: 'Kickstart your journey by registering for our program!',
+//     description: 'Join our course today and open up new doors for yourself!',
 //   },
 //   {
 //     title: 'Get Trained',
-//     description: 'Learn from industry experts via hands-on sessions!',
+//     description: 'Learn in detail from experts in the field through our comprehensive training programs.',
 //   },
 //   {
 //     title: 'Assessments',
-//     description: 'Solve real-world problems to test your skills.',
+//     description: 'Measure yourself and track your progress through regular assessments.',
 //   },
 //   {
 //     title: 'Mock Interview',
-//     description: 'Practice with interview panels and boost your confidence.',
+//     description: 'Build confidence with real-time mock interviews and complete interview preparation support.',
 //   },
 //   {
 //     title: 'Get Placed',
-//     description: 'Secure a job with 100% placement support.',
+//     description: 'Move ahead with confidence into your new career!',
 //   },
 // ]
 

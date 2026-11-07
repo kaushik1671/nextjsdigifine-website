@@ -27,7 +27,7 @@ export default function DigifineOfferSection({onViewCourses}) {
               Digifine is your perfect go-to institute for all things digital. From
               expertly designed Data Science, Machine Learning, and Digital
               Marketing programs to industry-ready UI/UX and Graphic Design
-              courses — Digifine has it all.
+              courses   Digifine has it all.
             </p>
 
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">

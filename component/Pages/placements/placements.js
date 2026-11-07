@@ -86,7 +86,7 @@ export default function PlacementsPage() {
         title='What Our'
         bluetitle='Students Have To Say:'
         testimonial={testimonials}
-        paragraph="Still wondering what your career will look like after studying at Digifine? Whether it's Digital Marketing, Graphic Design, or IT — hear directly from our students about their journey, practical training, and placement success!" 
+        paragraph="Still wondering what your career will look like after studying at Digifine? Whether it's Digital Marketing, Graphic Design, or IT   hear directly from our students about their journey, practical training, and placement success!" 
       /> 
       <PlacementProcess />       
     </main>

@@ -76,3 +76,9 @@
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
+
+@layer base {
+  h2 {
+    font-weight: 600; /* Change to your desired Tailwind font weight, e.g., font-semibold (600) or font-bold (700) */
+  }
+}

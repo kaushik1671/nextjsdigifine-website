@@ -45,7 +45,7 @@ const pgdmStatsData = [
 const featuresData = [
   {
     title: "Paid Internship",
-    description: "Earn a stipend while you train — this is a job, not just a course.",
+    description: "Earn a stipend while you train   this is a job, not just a course.",
     imageSrc: "/images/banner-image/dm/Placement.webp",
   },
   {
@@ -100,7 +100,7 @@ const dataset = [
   },
   {
     title: "Paid Internship",
-    description: "Earn a stipend while you train — this is a job, not just a course.",
+    description: "Earn a stipend while you train   this is a job, not just a course.",
   },
   {
     title: "Offer Letter",
@@ -116,7 +116,7 @@ const timelineSteps = [
   { title: "Enroll", description: "Onboarding & cohort mapping" },
   { title: "Offer Letter", description: "Issued on day one" },
   { title: "Monthly Stipend", description: "₹20,000 while you train" },
-  { title: "Live Corporate Training", description: "Real client campaigns" },
+  { title: "Live Get Placed", description: "Real client campaigns" },
   { title: "Experience Letter", description: "Verifiable work history" },
   { title: "Placement", description: "Hiring partner network" },
 ];
@@ -141,8 +141,8 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
-    description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
+    subheading: "Life Without Digifine",
+    description: "And here's what usually happens when training misses the mark no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
     cards: [
       { text: "No Placement Assistance", icon: "Briefcase" },
       { text: "No Guarantee of High-Paying Jobs", icon: "TrendingUp" },
@@ -356,11 +356,11 @@ const mbaPlacementsData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
-  { title: "Corporate Training", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Interview Preparation", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 /* ---------- Component ---------- */

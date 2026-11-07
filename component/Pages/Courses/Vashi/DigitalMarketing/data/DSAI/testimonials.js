@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
           id: 2,
-          title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+          title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
           excerpt: 'Hats off to Sumeet sir, Siddharth sir and Siddhi ma’am for the patience and mentorship! These trainers have always encouraged and challenged me to be better everyday and get the best out of my digital marketing course at Digifine. Their support has played a huge role in helping me build this skillset and confidence today!',
           linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
           profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

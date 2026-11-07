@@ -35,7 +35,7 @@ const VerticalTimeline = lazy(()=>import("../../../../CourseComponents/VerticleT
 //   },
 //   {
 //           id: 2,
-//           title: 'At Digifine, the trainers didn\'t just teach us tools — they taught us how to think like smart marketers.',
+//           title: 'At Digifine, the trainers didn\'t just teach us tools   they taught us how to think like smart marketers.',
 //           excerpt: 'If you’ve done your 12th or are graduating / have graduated, I would say go for this masters in digital marketing course. Definitely a great decision on my part as just after my 12th standard I learned some relevant skills, built a pretty good resume and then got a high-paying internship at Hotstar.',
 //           linkedinUrl: 'https://www.linkedin.com/in/malay-roy-chowdhury-61602a12a/',
 //           profileImage: 'https://d2o2utebsixu4k.cloudfront.net/Malay%20Roy%20Chowdhury%20(1)-f186f5e5a84d44c1a6eae47ac3d21325.webp',

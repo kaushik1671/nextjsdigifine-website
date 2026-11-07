@@ -45,7 +45,7 @@ const CourseCard = ({
             <div>
               <div className="flex justify-between items-center mb-4">
                 <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8F4FF]">
-                  <span className="text-[#046AED] text-xs md:text-sm font-medium">New Course</span>
+                  <span className="text-[#046AED] text-xs md:text-sm font-medium">Career Focus</span>
                 </div>
                 <button suppressHydrationWarning className="text-xl md:text-2xl text-gray-500 hover:text-gray-700">
                   <i className="ri-share-fill"></i>

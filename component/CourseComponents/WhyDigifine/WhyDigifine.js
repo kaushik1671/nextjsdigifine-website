@@ -34,16 +34,16 @@ const Features = ({
           {featuresData.map((feature, index) => (
             <div 
               key={index} 
-              className="group border border-gray-100 bg-gray-50/60 hover:bg-white p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-gray-100/70 hover:border-[#046AED]/30 flex flex-col justify-between"
+              className="border border-gray-100 bg-gray-50/60 p-6 rounded-xl flex flex-col justify-between"
             >
               <div>
                 {/* Professional Diamond Metric Icon using Brand Blue */}
-                <div className="w-8 h-8 bg-[#046AED]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#046AED] transition-colors duration-300">
-                  <div className="w-2 h-2 bg-[#046AED] group-hover:bg-white transform rotate-45 transition-colors duration-300"></div>
+                <div className="w-8 h-8 bg-[#046AED] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-2 h-2 bg-white transform rotate-45"></div>
                 </div>
 
                 {/* Typography Scale Matching */}
-                <h3 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-[#046AED] transition-colors duration-300">
+                <h3 className="text-base font-semibold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
 

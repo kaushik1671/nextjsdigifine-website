@@ -100,7 +100,7 @@ const overviewSectionData = {
     { title: "Hands-on Tools", text: "The Digifine Master’s Program in Digital Marketing adopts the latest digital marketing tools used by leading global agencies and top international brands. The program covers nine mainstream marketing platforms, including those supporting SEO, Google Ads, and data analytics.", alwaysVisible: false },
     { title: "Certifications", text: "Certificate issued by Digifine Academy, and may also sign up to take certifications from leading industry platforms including Google and NSDC. The certificates serve as proof of practical skills in disciplines including SEO, Google Ads, social media marketing, and data analysis.", alwaysVisible: false },
     { title: "Real Mentorship", text: "Digifine has introduced a vocational educational service that incorporates a real mentor system for the digital marketing industry stream. The program participants will benefit from the mentorship of experienced and industry veterans.", alwaysVisible: false },
-    { title: "Practical Focus", text: "The program incorporates three types of content—real projects, industry case studies, and hands-on assignments—to replicate the actual marketing challenges faced by businesses, helping students refine their critical thinking, execution, and problem-solving skills, and grow into qualified professional digital marketing talents suited to today’s competitive landscape.", alwaysVisible: false },
+    { title: "Practical Focus", text: "The program incorporates three types of content real projects, industry case studies, and hands-on assignments to replicate the actual marketing challenges faced by businesses, helping students refine their critical thinking, execution, and problem-solving skills, and grow into qualified professional digital marketing talents suited to today’s competitive landscape.", alwaysVisible: false },
   ],
 };
 
@@ -124,7 +124,7 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
+    subheading: "Life Without Digifine",
     description: "Without practical exposure and structured career guidance, learning often stays limited to theory, making it difficult to build confidence and succeed in real-world digital marketing roles.",
     cards: [
       { text: "✕ No Internship Opportunities During the Course", icon: "FileX" },
@@ -237,11 +237,11 @@ const syllabusSectionData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "Mock Interview", description: "Practice with interview panels and boost your confidence." },
-  { title: "Get Placed", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Mock Interview", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 /* ---------- Component ---------- */

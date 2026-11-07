@@ -57,7 +57,7 @@ const timelineSteps = [
   { title: "Enroll", description: "Onboarding & cohort mapping" },
   { title: "Offer Letter", description: "Issued on day one" },
   { title: "Monthly Stipend", description: "₹10,000 while you train" },
-  { title: "Live Corporate Training", description: "Real client campaigns" },
+  { title: "Live Get Placed", description: "Real client campaigns" },
   { title: "Experience Letter", description: "Verifiable work history" },
   { title: "Placement", description: "Hiring partner network" },
 ];
@@ -116,9 +116,9 @@ const aiToolsList = [
 ];
 
 const journeySteps = [
-  { title: "Enroll for Our Simulation Program", description: "Kickstart your creative career today. Join our immersive graphic design simulation program designed to build real-world skills from the ground up — no prior experience needed." },
+  { title: "Enroll for Our Simulation Program", description: "Kickstart your creative career today. Join our immersive graphic design simulation program designed to build real-world skills from the ground up   no prior experience needed." },
   { title: "Receive Offer Letter Immediately", description: "Start earning Rs. 15,000 monthly from day one. Get your official offer letter instantly upon enrollment and begin earning a stipend while learning, turning your creativity into income." },
-  { title: "Learn While on the Job in a Real Corporate Environment", description: "Work on real design projects in a professional setup. Master Illustrator, Photoshop, InDesign, Premiere Pro, After Effects and more through live briefs, mentorship, and daily creative challenges — just like a pro designer." },
+  { title: "Learn While on the Job in a Real Corporate Environment", description: "Work on real design projects in a professional setup. Master Illustrator, Photoshop, InDesign, Premiere Pro, After Effects and more through live briefs, mentorship, and daily creative challenges   just like a pro designer." },
   { title: "Get Certified with Experience Letter", description: "Earn an industry-recognized certification along with a verifiable experience letter, showcasing your practical design expertise to employers and strengthening your portfolio." },
   { title: "Get Absorbed by Our Partner Agency", description: "Seamlessly transition into full-time placement with our partner agencies. Launch your graphic design career with strong portfolio projects, real experience, and industry connections." },
 ];
@@ -143,8 +143,8 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
-    description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
+    subheading: "Life Without Digifine",
+    description: "And here's what usually happens when training misses the mark no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
     cards: [
       { text: "No Placement Assistance", icon: "Briefcase" },
       { text: "No Guarantee of High-Paying Jobs", icon: "TrendingUp" },
@@ -246,11 +246,11 @@ const syllabusSectionData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
-  { title: "Corporate training", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Interview Preparation", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 /* ---------- Component ---------- */

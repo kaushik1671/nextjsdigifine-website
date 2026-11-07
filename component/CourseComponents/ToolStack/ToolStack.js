@@ -10,7 +10,7 @@ const ToolStack = ({
   subtitle = "AI tools and industry platforms in one stack — everything you'll run campaigns, analyze data, and create with."
 }) => {
   return (
-    <section className="bg-white py-12 sm:px-6 lg:px-8 font-sans antialiased selection:bg-blue-50">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 font-sans antialiased selection:bg-blue-50">
       <div className="max-w-6xl mx-auto">
         
         {/* Header Group */}
@@ -43,10 +43,17 @@ const ToolStack = ({
               {aiTools.map((tool, index) => (
                 <div 
                   key={index}
-                  className="flex items-center justify-center py-3.5 px-4 rounded-xl border border-gray-100 bg-[#046AED]/5 hover:bg-white hover:border-[#046AED] hover:shadow-lg hover:shadow-[#046AED]/10 transition-all duration-300 text-center group cursor-default"
+                  className="flex items-center space-x-3 py-3 px-4 rounded-xl border border-gray-100 bg-[#046AED]/5 hover:bg-[#046AED]/10 transition-colors"
                 >
-                  <span className="text-xs sm:text-sm font-semibold text-gray-700 group-hover:text-[#046AED] transition-colors duration-200">
-                    {tool}
+                  {tool.iconUrl && (
+                    <img 
+                      src={tool.iconUrl} 
+                      alt={tool.name} 
+                      className="w-6 h-6 object-contain flex-shrink-0"
+                    />
+                  )}
+                  <span className="text-xs sm:text-sm font-semibold text-gray-700 truncate">
+                    {tool.name || tool}
                   </span>
                 </div>
               ))}
@@ -64,10 +71,17 @@ const ToolStack = ({
               {platforms.map((platform, index) => (
                 <div 
                   key={index}
-                  className="flex items-center justify-center py-3.5 px-4 rounded-xl border border-gray-100 bg-[#046AED]/5 hover:bg-white hover:border-[#046AED] hover:shadow-lg hover:shadow-[#046AED]/10 transition-all duration-300 text-center group cursor-default"
+                  className="flex items-center space-x-3 py-3 px-4 rounded-xl border border-gray-100 bg-[#046AED]/5 hover:bg-[#046AED]/10 transition-colors"
                 >
-                  <span className="text-xs sm:text-sm font-semibold text-gray-700 group-hover:text-[#046AED] transition-colors duration-200">
-                    {platform}
+                  {platform.iconUrl && (
+                    <img 
+                      src={platform.iconUrl} 
+                      alt={platform.name} 
+                      className="w-6 h-6 object-contain flex-shrink-0"
+                    />
+                  )}
+                  <span className="text-xs sm:text-sm font-semibold text-gray-700 truncate">
+                    {platform.name || platform}
                   </span>
                 </div>
               ))}
@@ -80,9 +94,20 @@ const ToolStack = ({
   );
 };
 
+// Updated PropTypes for Object Structure
 ToolStack.propTypes = {
-  aiTools: PropTypes.arrayOf(PropTypes.string),
-  platforms: PropTypes.arrayOf(PropTypes.string),
+  aiTools: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      iconUrl: PropTypes.string
+    })
+  ),
+  platforms: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      iconUrl: PropTypes.string
+    })
+  ),
   title: PropTypes.string,
   subtitle: PropTypes.string,
 };

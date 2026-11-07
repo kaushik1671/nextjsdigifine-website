@@ -132,7 +132,7 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
+    subheading: "Life Without Digifine",
     description: "Without practical design exposure and structured career guidance, learning often stays limited to theory, making it difficult to build a professional portfolio and break into the creative industry.",
     cards: [
       { text: "✕ No Structured Placement Support", icon: "FileX" },
@@ -407,7 +407,7 @@ export default function Multimedia() {
           <StudentPortfolio
             subtitle="Student Portfolio Showcase"
             title="See What Our Students Create"
-            caption="Every student graduates with a live portfolio — not just a certificate."
+            caption="Every student graduates with a live portfolio   not just a certificate."
             buttonText="View Full Portfolio"
             buttonLink="https://www.behance.net"
             badgeText={"Portfolio\nDriven\nLearning"}

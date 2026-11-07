@@ -95,7 +95,7 @@ const overviewSectionData = {
   ],
   keyFeatures: [
     { title: "Placements", text: "3-month internship letter included. Placement support covers resume building, mock interviews, and introductions to hiring companies, backed by the placement guarantee.", alwaysVisible: true },
-    { title: "Industry Tools", text: "Excel, Python, MySQL, NumPy, Pandas, Power BI, Tableau, Julius AI, and Git — used throughout the course.", alwaysVisible: false },
+    { title: "Industry Tools", text: "Excel, Python, MySQL, NumPy, Pandas, Power BI, Tableau, Julius AI, and Git   used throughout the course.", alwaysVisible: false },
     { title: "Certifications", text: "Certifications in Data Analytics, Tableau, and Power BI, plus the internship letter, on completion.", alwaysVisible: false },
     { title: "Global Mentorship", text: "Mentors currently working in data analytics and AI, including some with international industry experience, give direct feedback on student projects.", alwaysVisible: false },
     { title: "Practical Training", text: "Live projects, assignments, and case studies from retail, banking, HR, and supply chain data 80% hands-on, 20% instruction.", alwaysVisible: false },
@@ -135,8 +135,8 @@ const toggleData = {
     ],
   },
   without: {
-    subheading: "Imagine Without Digifine",
-    description: "And here's what usually happens when training misses the mark—no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
+    subheading: "Life Without Digifine",
+    description: "And here's what usually happens when training misses the mark no real hands-on work, nothing that matches what the industry actually needs, and zero support when it comes to your career.",
     cards: [
       { text: "No Corporate Placement Networks", icon: "Briefcase" },
       { text: "Zero Corporate Internships", icon: "FileText" },
@@ -228,11 +228,11 @@ const syllabusSectionData = [
 ];
 
 const timelineStepsData = [
-  { title: "Enroll", description: "Kickstart your journey by registering for our program!" },
-  { title: "Get Trained", description: "Learn from industry experts via hands-on sessions!" },
-  { title: "Assessments", description: "Solve real-world problems to test your skills." },
-  { title: "International Immersion", description: "Practice with interview panels and boost your confidence." },
-  { title: "Corporate training", description: "Secure a job with 100% placement support." },
+  { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
+  { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
+  { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
+  { title: "Interview Preparation", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
+  { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
 const analyticsSteps = [

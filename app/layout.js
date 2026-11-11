@@ -1,5 +1,5 @@
 // app/layout.js
-
+import { Raleway } from 'next/font/google';
 import "./globals.css"; // if you have global CSS
 
 
@@ -16,9 +16,15 @@ export const metadata = {
   },
 };
 
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-raleway',
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={raleway.variable}>
         <head>
             <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
             <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
@@ -34,7 +40,7 @@ export default function RootLayout({ children }) {
             <link rel="stylesheet" href="output2.css" />
             <link rel="stylesheet" href="output3.css" />
         </head>
-        <body>
+        <body className="font-sans">
             <ScrollToTop />
             <Header />
 

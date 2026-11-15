@@ -55,11 +55,11 @@ export default function KeyBenefits() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative group hover:border-[#046AED]/50 hover:shadow-lg transition-all duration-300"
+              className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-2xs flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-2xs flex items-center justify-center">
                     {item.icon}
                   </div>
                   <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white text-slate-700 border border-slate-200 shadow-2xs">

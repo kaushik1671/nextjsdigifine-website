@@ -35,7 +35,7 @@ export default function HiringProcessSection({
       {/* Background Soft Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[250px] bg-[#046AED]/5 blur-[120px] rounded-full pointer-events-none" />
 
-      {/* Main Container - Matched with ExploreCareers max-w-7xl and px classes */}
+      {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -48,27 +48,24 @@ export default function HiringProcessSection({
           </p>
         </div>
 
-        {/* Desktop View: Compact Cards with Connecting Line */}
+        {/* Desktop View: Compact Cards */}
         <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {hiringSteps.map((item, index) => (
             <div 
               key={index}
-              className="group relative p-6 rounded-2xl bg-white border border-slate-200 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-[#046AED]/50 hover:shadow-lg hover:shadow-[#046AED]/5 flex flex-col justify-between"
+              className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between"
             >
-              {/* Top Accent Line on Hover */}
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#046AED] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl" />
-
               <div>
                 {/* Step Number Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-black text-[#046AED]/40 group-hover:text-[#046AED] transition-colors">
+                  <span className="text-2xl font-black text-[#046AED]/40">
                     {item.step}
                   </span>
-                  <div className="w-2 h-2 rounded-full bg-blue-100 group-hover:bg-[#046AED] transition-colors" />
+                  <div className="w-2 h-2 rounded-full bg-blue-100" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#046AED] transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
                   {item.title}
                 </h3>
 
@@ -89,7 +86,7 @@ export default function HiringProcessSection({
           {hiringSteps.map((item, index) => (
             <div 
               key={index}
-              className="group relative w-64 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex-shrink-0 flex flex-col justify-between active:border-[#046AED]"
+              className="relative w-64 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex-shrink-0 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">

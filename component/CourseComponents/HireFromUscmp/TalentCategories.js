@@ -13,10 +13,6 @@ export default function TalentCategories() {
         
         {/* Compact Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
-          {/* <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#046AED]/10 border border-[#046AED]/20 text-[#046AED] text-xs font-semibold uppercase tracking-wider shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-            Multi-Disciplinary Expertise
-          </div> */}
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             Explore All <span className="bg-gradient-to-r from-[#046AED] via-blue-600 to-[#F59E0B] bg-clip-text text-transparent">Talent Streams</span>
           </h2>
@@ -34,11 +30,11 @@ export default function TalentCategories() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative group hover:border-[#046AED]/50 hover:shadow-lg transition-all duration-300"
+            className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative"
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-[#046AED]/10 border border-[#046AED]/20 flex items-center justify-center text-[#046AED] group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-[#046AED]/10 border border-[#046AED]/20 flex items-center justify-center text-[#046AED]">
                   <Code2 className="w-6 h-6" />
                 </div>
                 <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white text-[#046AED] border border-slate-200 shadow-2xs">
@@ -70,11 +66,11 @@ export default function TalentCategories() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative group hover:border-[#F59E0B]/50 hover:shadow-lg transition-all duration-300"
+            className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative"
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 flex items-center justify-center text-[#F59E0B] group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 flex items-center justify-center text-[#F59E0B]">
                   <Palette className="w-6 h-6" />
                 </div>
                 <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white text-amber-700 border border-slate-200 shadow-2xs">
@@ -106,11 +102,11 @@ export default function TalentCategories() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative group hover:border-[#046AED]/50 hover:shadow-lg transition-all duration-300"
+            className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between relative"
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-[#046AED]/10 border border-[#046AED]/20 flex items-center justify-center text-[#046AED] group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-[#046AED]/10 border border-[#046AED]/20 flex items-center justify-center text-[#046AED]">
                   <Megaphone className="w-6 h-6" />
                 </div>
                 <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white text-[#046AED] border border-slate-200 shadow-2xs">

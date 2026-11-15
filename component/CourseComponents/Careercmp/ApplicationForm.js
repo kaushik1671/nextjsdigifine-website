@@ -33,25 +33,55 @@ export default function CareerPageWithImage({
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
+    setLoading(top => true);
+
+    try {
+      const dataToSend = new FormData();
+      dataToSend.append("name", formData.name);
+      dataToSend.append("mobile", formData.mobile);
+      dataToSend.append("email", formData.email);
+      dataToSend.append("qualification", formData.qualification);
+      dataToSend.append("jobTitle", formData.jobTitle);
+      dataToSend.append("expYears", formData.expYears);
+      dataToSend.append("expMonths", formData.expMonths);
+
+      if (formData.resume) {
+        dataToSend.append("resume", formData.resume);
+      }
+
+      const response = await fetch("http://localhost:5000/api/career/apply", {
+        method: "POST",
+        body: dataToSend,
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setLoading(false);
+        setSubmitted(true);
+        if (onSubmitSuccess) onSubmitSuccess(result);
+      } else {
+        alert(result.message || "Failed to submit application.");
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Server error or connection failed. Please check your backend.");
       setLoading(false);
-      setSubmitted(true);
-      if (onSubmitSuccess) onSubmitSuccess(formData);
-    }, 1500);
+    }
   };
 
   return (
     <section id="talent-form" className="min-h-screen bg-slate-50 text-slate-950 pt-31 pb-18 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-center">
         <div className="w-full bg-white rounded-3xl border border-slate-200/80 shadow-2xl shadow-slate-200/50 overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch max-h-[92vh]">
-          
+         
           {/* LEFT PART: Application Form */}
           <div className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto max-h-[92vh]">
             {submitted ? (
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 className="text-center py-12 space-y-4 my-auto"
@@ -80,7 +110,6 @@ export default function CareerPageWithImage({
                   <p className="text-slate-500 text-xs mt-0.5">{subtitle}</p>
                 </div>
 
-                {/* Name & Mobile Number */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[11px] font-semibold text-slate-700 mb-1">Full Name</label>
@@ -108,7 +137,6 @@ export default function CareerPageWithImage({
                   </div>
                 </div>
 
-                {/* Email Id */}
                 <div>
                   <label className="block text-[11px] font-semibold text-slate-700 mb-1">Email Address</label>
                   <input
@@ -122,7 +150,6 @@ export default function CareerPageWithImage({
                   />
                 </div>
 
-                {/* Qualification */}
                 <div>
                   <label className="block text-[11px] font-semibold text-slate-700 mb-1">Qualification</label>
                   <input
@@ -136,7 +163,6 @@ export default function CareerPageWithImage({
                   />
                 </div>
 
-                {/* Job Title */}
                 <div>
                   <label className="block text-[11px] font-semibold text-slate-700 mb-1">Applying For</label>
                   <input
@@ -150,7 +176,6 @@ export default function CareerPageWithImage({
                   />
                 </div>
 
-                {/* Experience */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[11px] font-semibold text-slate-700 mb-1">Experience (Years)</label>
@@ -182,7 +207,6 @@ export default function CareerPageWithImage({
                   </div>
                 </div>
 
-                {/* Resume Upload */}
                 <div>
                   <label className="block text-[11px] font-semibold text-slate-700 mb-1">
                     Resume <span className="text-slate-400 font-normal">(PDF only, max 5MB)</span>
@@ -202,7 +226,6 @@ export default function CareerPageWithImage({
                   </div>
                 </div>
 
-                {/* Submit Button */}
                 <motion.button
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
@@ -251,9 +274,9 @@ export default function CareerPageWithImage({
             </div>
 
             <div className="relative z-10 w-full flex items-center justify-center mt-4">
-              <img 
-                src="images/career/careerform.jpeg" 
-                alt="Career Illustration" 
+              <img
+                src="images/career/careerform.jpeg"
+                alt="Career Illustration"
                 className="w-full h-auto max-h-[220px] object-contain drop-shadow-2xl rounded-xl"
               />
             </div>

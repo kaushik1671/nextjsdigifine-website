@@ -56,15 +56,12 @@ export default function BenefitsSection({
           </p>
         </div>
 
-        {/* Honeycomb Grid Container:
-            - Mobile: Exact 2-column interlocking layout untouched (w-36 h-44, -mt-8).
-            - Desktop: Standard 3-column clean row layout (sm:grid-cols-3) with zero vertical overlapping/touching issues.
-        */}
+        {/* Honeycomb Grid Container */}
         <div className="grid grid-cols-2 sm:grid-cols-3 justify-center items-center max-w-5xl mx-auto py-8 gap-x-4 gap-y-6 sm:gap-8">
           {benefitsData.map((item, index) => (
             <div 
               key={index}
-              className={`group relative w-36 h-44 sm:w-72 sm:h-80 flex flex-col items-center justify-center p-3 sm:p-6 text-center transition-transform duration-300 hover:-translate-y-2 justify-self-center ${
+              className={`relative w-36 h-44 sm:w-72 sm:h-80 flex flex-col items-center justify-center p-3 sm:p-6 text-center justify-self-center ${
                 index % 2 !== 0 
                   ? '-mt-8 sm:mt-0' 
                   : 'mt-0'
@@ -74,15 +71,15 @@ export default function BenefitsSection({
               }}
             >
               <div 
-                className="absolute inset-0 bg-[#EAF2FE] border-2 border-[#D0E2FC] transition-all duration-300 group-hover:bg-[#046AED] group-hover:border-[#046AED] flex flex-col items-center justify-center p-3 sm:p-8 text-center shadow-md"
+                className="absolute inset-0 bg-[#EAF2FE] border-2 border-[#D0E2FC] flex flex-col items-center justify-center p-3 sm:p-8 text-center shadow-md"
                 style={{
                   clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
                 }}
               >
-                <div className="w-10 h-10 sm:w-20 sm:h-20 rounded-full bg-white shadow-sm flex items-center justify-center mb-2 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
+                <div className="w-10 h-10 sm:w-20 sm:h-20 rounded-full bg-white shadow-sm flex items-center justify-center mb-2 sm:mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-[10px] sm:text-base font-bold text-slate-900 group-hover:text-white transition-colors px-1">
+                <h3 className="text-[10px] sm:text-base font-bold text-slate-900 px-1">
                   {item.title}
                 </h3>
               </div>

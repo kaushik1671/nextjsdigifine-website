@@ -69,23 +69,18 @@ export default function PlacementCompactGridAnimated() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-              whileHover={{ y: -5 }}
-              className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-[#046AED]/10 hover:border-[#046AED]/40 transition-all duration-300 relative overflow-hidden group"
+              className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm relative overflow-hidden"
             >
-              {/* Glowing gradient aura on hover */}
-              <div className="absolute -right-10 -top-10 w-28 h-28 bg-gradient-to-br from-[#046AED]/15 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none" />
+              {/* Glowing gradient aura */}
+              <div className="absolute -right-10 -top-10 w-28 h-28 bg-gradient-to-br from-[#046AED]/15 to-transparent rounded-full blur-2xl pointer-events-none" />
 
-              {/* Icon Container with Spring Hover Effect */}
-              <motion.div 
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="w-10 h-10 rounded-xl bg-[#046AED]/10 text-[#046AED] flex items-center justify-center text-lg mb-4 shadow-sm border border-[#046AED]/20"
-              >
+              {/* Icon Container (Static) */}
+              <div className="w-10 h-10 rounded-xl bg-[#046AED]/10 text-[#046AED] flex items-center justify-center text-lg mb-4 shadow-sm border border-[#046AED]/20">
                 {item.icon}
-              </motion.div>
+              </div>
 
               {/* Title */}
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 group-hover:text-[#046AED] transition-colors">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
                 {item.title}
               </h3>
 

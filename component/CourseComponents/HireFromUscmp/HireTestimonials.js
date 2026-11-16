@@ -1,6 +1,6 @@
 'use client';
 
-import { Star, Building2, CheckCircle2 } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export default function HireTestimonials() {
   const testimonials = [
@@ -35,23 +35,23 @@ export default function HireTestimonials() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="max-w-2xl space-y-3 mb-16">
-  <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-    Trusted by Hiring Managers & <span className="bg-gradient-to-r from-[#046AED] via-[#3B82F6] to-[#60A5FA] bg-clip-text text-transparent">Tech Founders</span>
-  </h2>
-  <p className="text-slate-600 text-sm sm:text-base font-medium">
-    See why fast-growing startups and tech teams choose our talent pipeline for their scaling needs.
-  </p>
-</div>
+        <div className="max-w-2xl space-y-3 mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Trusted by Hiring Managers & <span className="bg-gradient-to-r from-[#046AED] via-[#3B82F6] to-[#60A5FA] bg-clip-text text-transparent">Tech Founders</span>
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
+            See why fast-growing startups and tech teams choose our talent pipeline for their scaling needs.
+          </p>
+        </div>
 
-        {/* 3-Column Modern Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Responsive Layout: Horizontal Scroll on Mobile with compact card widths */}
+        <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-6 md:pb-0 snap-x snap-mandatory scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none]">
           {testimonials.map((item, idx) => (
             <div 
               key={idx}
-              className="bg-white border border-slate-200/90 rounded-2xl p-7 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-300 flex flex-col justify-between"
+              className="w-[280px] sm:w-auto shrink-0 md:shrink md:w-full bg-white border border-slate-200/90 rounded-2xl p-6 shadow-xs flex flex-col justify-between snap-center"
             >
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {/* Rating & Badge */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1 text-amber-500">
@@ -59,7 +59,7 @@ export default function HireTestimonials() {
                       <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
+                  <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full border ${item.badgeColor}`}>
                     {item.hiredCount}
                   </span>
                 </div>
@@ -71,13 +71,13 @@ export default function HireTestimonials() {
               </div>
 
               {/* Author Info */}
-              <div className="pt-6 mt-6 border-t border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-slate-700 text-sm">
+              <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-slate-700 text-xs shrink-0">
                   {item.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm">{item.name}</h4>
-                  <p className="text-xs text-slate-500 font-medium flex items-center gap-1">
+                  <h4 className="font-bold text-slate-900 text-xs sm:text-sm">{item.name}</h4>
+                  <p className="text-[11px] text-slate-500 font-medium flex items-center gap-1">
                     <span>{item.role}</span>
                     <span className="text-slate-300">•</span>
                     <span className="text-slate-700 font-semibold">{item.company}</span>

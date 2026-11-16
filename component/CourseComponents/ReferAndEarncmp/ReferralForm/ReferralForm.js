@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { Gift } from "lucide-react";
+import { Gift, CheckCircle2 } from "lucide-react";
 
 export default function ReferralForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     yourName: "",
     yourContact: "",
@@ -17,9 +19,38 @@ export default function ReferralForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/referrals/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitted(true);
+        setFormData({
+          yourName: "",
+          yourContact: "",
+          yourEmail: "",
+          friendName: "",
+          friendContact: "",
+          friendEmail: "",
+        });
+      } else {
+        alert(result.message || "Failed to submit referral.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Server connection failed. Make sure your Express backend is running.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -46,125 +77,144 @@ export default function ReferralForm() {
 
         {/* Form Card */}
         <div className="bg-gray-50/70 border border-gray-200/80 rounded-2xl p-6 sm:p-10 shadow-sm">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            
-            {/* Your Details Section */}
-            <div className="space-y-4">
-              <div className="border-b border-gray-200 pb-2">
-                <h3 className="text-base font-bold text-[#046AED]">Your Details</h3>
+          {submitted ? (
+            <div className="py-12 text-center space-y-4">
+              <div className="w-16 h-16 bg-[#046AED]/10 border border-[#046AED]/20 text-[#046AED] rounded-full flex items-center justify-center mx-auto">
+                <CheckCircle2 className="w-8 h-8" />
               </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Your Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="yourName"
-                    required
-                    placeholder="Your Name"
-                    value={formData.yourName}
-                    onChange={handleChange}
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Your Contact Number <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    name="yourContact"
-                    required
-                    placeholder="Your Contact Number"
-                    value={formData.yourContact}
-                    onChange={handleChange}
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  Email Id? <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  name="yourEmail"
-                  required
-                  placeholder="Email Id"
-                  value={formData.yourEmail}
-                  onChange={handleChange}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
-                />
-              </div>
-            </div>
-
-            {/* Your Friends Details Section */}
-            <div className="space-y-4 pt-4">
-              <div className="border-b border-gray-200 pb-2">
-                <h3 className="text-base font-bold text-[#046AED]">Your Friends Details</h3>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="friendName"
-                    required
-                    placeholder="Name"
-                    value={formData.friendName}
-                    onChange={handleChange}
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Contact Number <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    name="friendContact"
-                    required
-                    placeholder="Contact Number"
-                    value={formData.friendContact}
-                    onChange={handleChange}
-                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  Email Id? <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  name="friendEmail"
-                  required
-                  placeholder="Email Id"
-                  value={formData.friendEmail}
-                  onChange={handleChange}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
-                />
-              </div>
-            </div>
-
-            {/* Submit Button */}
-            <div className="pt-4">
+              <h3 className="text-2xl font-bold text-gray-900">Referral Submitted!</h3>
+              <p className="text-sm text-gray-600 max-w-md mx-auto">
+                Thank you for referring your friend to Digifine Academy. Our team will reach out to them shortly!
+              </p>
               <button
-                type="submit"
-                className="w-full bg-[#046AED] hover:bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-sm text-sm cursor-pointer"
+                onClick={() => setSubmitted(false)}
+                className="mt-4 px-5 py-2.5 bg-[#046AED] hover:bg-blue-600 text-white text-xs font-bold rounded-xl transition-all cursor-pointer"
               >
-                Submit
+                Refer Another Friend
               </button>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* Your Details Section */}
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-2">
+                  <h3 className="text-base font-bold text-[#046AED]">Your Details</h3>
+                </div>
 
-          </form>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">
+                      Your Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="yourName"
+                      required
+                      placeholder="Your Name"
+                      value={formData.yourName}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">
+                      Your Contact Number <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      name="yourContact"
+                      required
+                      placeholder="Your Contact Number"
+                      value={formData.yourContact}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">
+                    Email Id? <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="yourEmail"
+                    required
+                    placeholder="Email Id"
+                    value={formData.yourEmail}
+                    onChange={handleChange}
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Your Friends Details Section */}
+              <div className="space-y-4 pt-4">
+                <div className="border-b border-gray-200 pb-2">
+                  <h3 className="text-base font-bold text-[#046AED]">Your Friends Details</h3>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">
+                      Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="friendName"
+                      required
+                      placeholder="Name"
+                      value={formData.friendName}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 mb-1">
+                      Contact Number <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      name="friendContact"
+                      required
+                      placeholder="Contact Number"
+                      value={formData.friendContact}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-gray-700 mb-1">
+                    Email Id? <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="friendEmail"
+                    required
+                    placeholder="Email Id"
+                    value={formData.friendEmail}
+                    onChange={handleChange}
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#046AED] focus:ring-1 focus:ring-[#046AED] transition-all"
+                  />
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="w-full bg-[#046AED] hover:bg-blue-600 disabled:opacity-60 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-sm text-sm cursor-pointer"
+                >
+                  {submitting ? "Submitting..." : "Submit"}
+                </button>
+              </div>
+
+            </form>
+          )}
         </div>
 
       </div>

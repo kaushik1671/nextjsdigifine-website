@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function PlacementFAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -28,7 +27,7 @@ export default function PlacementFAQ() {
       answer: "Yes, many of our top-tier partners offer 6-month pre-placement internships (PPIs) during the final year, which successfully convert into high-paying full-time roles based on student performance."
     }
   ];
-  
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -57,8 +56,9 @@ export default function PlacementFAQ() {
                 className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden transition-all shadow-sm"
               >
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 focus:outline-none"
+                  className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 focus:outline-none cursor-pointer"
                 >
                   <span className="font-bold text-slate-900 text-base sm:text-lg">
                     {faq.question}
@@ -68,20 +68,19 @@ export default function PlacementFAQ() {
                   </span>
                 </button>
 
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-200/50 pt-4">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* Smooth CSS Grid Accordion (No Scroll Jump) */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-200/50 pt-4">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
+
               </div>
             );
           })}

@@ -11,7 +11,7 @@ export default function ExploreCareers() {
   const [jobs, setJobs] = useState([]);
   const [loadingJobs, setLoadingJobs] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("All");
+  const [selectedLocation, setSelectedLocation] = useState("All");  
   const [activeJob, setActiveJob] = useState(null);
   const [isApplying, setIsApplying] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -348,7 +348,7 @@ export default function ExploreCareers() {
                             value={appForm.first_name}
                             onChange={(e) => setAppForm({ ...appForm, first_name: e.target.value })}
                             placeholder="John"
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
                           />
                         </div>
                         <div>
@@ -359,7 +359,7 @@ export default function ExploreCareers() {
                             value={appForm.last_name}
                             onChange={(e) => setAppForm({ ...appForm, last_name: e.target.value })}
                             placeholder="Doe"
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
                           />
                         </div>
                       </div>
@@ -373,7 +373,7 @@ export default function ExploreCareers() {
                             value={appForm.email}
                             onChange={(e) => setAppForm({ ...appForm, email: e.target.value })}
                             placeholder="john@example.com"
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
                           />
                         </div>
                         <div>
@@ -384,7 +384,7 @@ export default function ExploreCareers() {
                             value={appForm.phone}
                             onChange={(e) => setAppForm({ ...appForm, phone: e.target.value })}
                             placeholder="+91 98765 43210"
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
                           />
                         </div>
                       </div>
@@ -400,7 +400,7 @@ export default function ExploreCareers() {
                             value={appForm.linkedin_url}
                             onChange={(e) => setAppForm({ ...appForm, linkedin_url: e.target.value })}
                             placeholder="https://linkedin.com/in/username"
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
                           />
                         </div>
                         <div>
@@ -412,7 +412,7 @@ export default function ExploreCareers() {
                             value={appForm.portfolio_url}
                             onChange={(e) => setAppForm({ ...appForm, portfolio_url: e.target.value })}
                             placeholder="https://github.com/username"
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white"
                           />
                         </div>
                       </div>
@@ -452,7 +452,7 @@ export default function ExploreCareers() {
                           value={appForm.cover_letter}
                           onChange={(e) => setAppForm({ ...appForm, cover_letter: e.target.value })}
                           placeholder="Tell us why you are a great fit..."
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white resize-none"
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#046AED] bg-slate-50 focus:bg-white resize-none"
                         />
                       </div>
                     </form>
@@ -478,13 +478,13 @@ export default function ExploreCareers() {
                   </>
                 ) : (
                   <>
-                    <button
+                    {/* <button
                       type="button"
                       onClick={() => setIsApplying(false)}
                       className="w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-200 bg-slate-100 transition-all cursor-pointer"
                     >
                       Cancel
-                    </button>
+                    </button> */}
                     <button
                       type="submit"
                       form="job-apply-form"

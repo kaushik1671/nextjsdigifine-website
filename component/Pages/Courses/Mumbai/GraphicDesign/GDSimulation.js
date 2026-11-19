@@ -11,7 +11,7 @@ import MyComponent from "../../../../Container/MyComponent";
 const WhyDigifine = lazy(() => import("../../../../CourseComponents/WhyDigifine/WhyDigifine"));
 const HorizontalTimeline = lazy(() => import("../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"));
 const Toggle = lazy(() => import("../../../../CourseComponents/Toggle/Toggle"));
-const ToolStack = lazy(() => import("../../../../CourseComponents/ToolStack/ToolStack"));
+const ToolsMastered = lazy(() => import("../../../../CourseComponents/ToolsMastered/ToolsMastered"));
 const CorporateProjects = lazy(() => import("../../../../CourseComponents/CorporateProjects/CorporateProjects"));
 const SyllabusTimeLine = lazy(() => import("../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine"));
 const StudentJourney = lazy(() => import("../../../../CourseComponents/StudentJourney/StudentJourney"));
@@ -56,7 +56,7 @@ const dataset = [
 const timelineSteps = [
   { title: "Enroll", description: "Onboarding & cohort mapping" },
   { title: "Offer Letter", description: "Issued on day one" },
-  { title: "Monthly Stipend", description: "₹10,000 while you train" },
+  { title: "Monthly Stipend", description: "₹20,000 while you train" },
   { title: "Live Get Placed", description: "Real client campaigns" },
   { title: "Experience Letter", description: "Verifiable work history" },
   { title: "Placement", description: "Hiring partner network" },
@@ -107,13 +107,19 @@ const digitalMarketingProjects = [
   },
 ];
 
-const aiToolsList = [
-  "Adobe Illustrator",
-  "Adobe Photoshop",
-  "Adobe InDesign",
-  "Adobe Premiere",
-  "Adobe After Effects",
-];
+const toolsSectionData = {
+  title: "Master",
+  highlightTitle: "Industry-Standard Design Tools",
+  caption: "Learn the same software used by professional designers, creative agencies, marketing teams, and production studios worldwide.",
+  tools: [
+    { name: "Adobe Illustrator", image: "images/toolslogo/adobe.png" },
+    { name: "Adobe Photoshop", image: "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" },
+    { name: "Adobe InDesign", image: "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc-icon.svg" },
+    { name: "Figma", image: "images/toolslogo/figma.webp" },
+    { name: "Adobe Premiere Pro", image: "images/toolslogo/APPro.webp" },
+    { name: "Adobe After Effects", image: "images/toolslogo/AE.jpg" },
+  ],
+};
 
 const journeySteps = [
   { title: "Enroll for Our Simulation Program", description: "Kickstart your creative career today. Join our immersive graphic design simulation program designed to build real-world skills from the ground up   no prior experience needed." },
@@ -336,10 +342,10 @@ export default function GDSimulation() {
 
       <div className="border-b border-gray-50">
         <LazySection>
-          <Suspense fallback={null}>
-            <ToolStack aiTools={aiToolsList} title="Tools you'll master" />
-          </Suspense>
-        </LazySection>
+        <Suspense fallback={null}>
+          <ToolsMastered toolsData={toolsSectionData} />
+        </Suspense>
+      </LazySection>
       </div>
 
       <div className="py-15 md:py-22 border-b border-gray-50">

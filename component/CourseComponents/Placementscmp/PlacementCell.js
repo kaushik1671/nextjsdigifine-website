@@ -5,33 +5,33 @@ import { motion } from 'framer-motion';
 export default function PlacementCompactGridAnimated() {
   const items = [
     {
-      title: 'Resume Building',
-      desc: 'Create an ATS-friendly resume that highlights your core skills and projects.',
+      title: 'Resume and Portfolio Building',
+      desc: 'Build an ATS-friendly resume and a portfolio that shows your real projects, not just your marks.',
       icon: '📄',
     },
     {
       title: 'Mock Interviews',
-      desc: 'Practice real interview scenarios to boost your confidence with experts.',
+      desc: 'Practice with industry experts and get honest feedback before the real interview.',
       icon: '💬',
     },
     {
-      title: 'Technical Preparation',
-      desc: 'Prepare for coding rounds, assessments, and technical interviews.',
+      title: 'Skill and Tool Training',
+      desc: 'Get hands-on with the tools employers expect, from Google Ads and Figma to Python and React.',
       icon: '💻',
     },
     {
-      title: 'Career Guidance',
-      desc: 'Get personalized advice on job roles, career paths, and industries.',
+      title: 'Personal Career Guidance',
+      desc: 'One-to-one advice on the right role, industry and salary for your skills.',
       icon: '👤',
     },
     {
       title: 'Interview Opportunities',
-      desc: 'Direct access to job openings and placement drives from our partners.',
+      desc: 'Get shortlisted for openings and placement drives from our 100+ hiring partners.',
       icon: '🤝',
     },
     {
-      title: 'Industry Ready Skills',
-      desc: 'Work on practical projects aligned with modern technology demands.',
+      title: 'Hands-On Projects',
+      desc: 'Work on real-world assignments that build a portfolio you can show in interviews.',
       icon: '🚀',
     },
   ];
@@ -53,10 +53,10 @@ export default function PlacementCompactGridAnimated() {
           className="text-center max-w-2xl mx-auto mb-14"
         >
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            More Than Just <span className="text-[#046AED]">Placement Assistance</span>
+            More Than Placement. <span className="text-[#046AED]">We Build Careers.</span>
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
-            Our ecosystem helps students transform technical knowledge into real-world career success.
+            From your first resume to your final interview, we guide you at every step, across Marketing, Tech and Design.
           </p>
         </motion.div>
 

@@ -40,7 +40,7 @@ export default function StatsBar() {
         <div className="grid grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-[22px] bg-[#046AED] shadow-[0_30px_65px_rgba(5,22,43,0.25)] border border-slate-800">
           
           <div className="relative text-center px-5 py-7 max-[760px]:px-2.5 max-[760px]:py-6 after:content-[''] after:absolute after:top-1/4 after:right-0 after:w-px after:h-1/2 after:bg-white/10 max-lg:after:hidden">
-            <Counter target={92} suffix="%" />
+            <Counter target={96} suffix="%" />
             <p className={statLabel}>Placement Success</p>
           </div>
 
@@ -50,7 +50,7 @@ export default function StatsBar() {
           </div>
 
           <div className="relative text-center px-5 py-7 max-[760px]:px-2.5 max-[760px]:py-6 after:content-[''] after:absolute after:top-1/4 after:right-0 after:w-px after:h-1/2 after:bg-white/10 max-lg:after:hidden">
-            <Counter target={5} suffix=" LPA" />
+            <Counter target={4.9} suffix=" LPA" />
             <p className={statLabel}>Average Package</p>
           </div>
 

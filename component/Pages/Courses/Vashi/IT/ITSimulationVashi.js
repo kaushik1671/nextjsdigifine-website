@@ -18,7 +18,7 @@ import WhyDigifine from "../../../../CourseComponents/WhyDigifine/WhyDigifine"
 import HorizontalTimeline from "../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"
 import CorporateProjects from "../../../../CourseComponents/CorporateProjects/CorporateProjects";
 import CourseOverview from "../../../../CourseComponents/CourseOverview/CourseOverview";
-import ToolStack from "../../../../CourseComponents/ToolStack/ToolStack"
+import ToolsMastered from "../../../../CourseComponents/ToolsMastered/ToolsMastered";
 import StudentJourney from "../../../../CourseComponents/StudentJourney/StudentJourney";
 
 export default function ITSimulationVashi() {
@@ -313,6 +313,23 @@ const marqueeBottomLogos = [
     }
   ];
 
+  const toolsSectionData = {
+  title: "Master",
+  highlightTitle: "Industry-Standard Full Stack Tools",
+  caption: "Work with the tools employers recognise across front end, back end and cloud.",
+  tools: [
+    { name: "React JS", image: "images/toolslogo/IT/react.png" },
+    { name: "Next JS", image: "images/toolslogo/IT/nextjs.png" },
+    { name: "Tailwind CSS", image: "images/toolslogo/IT/tailwind.png" },
+    { name: "NodeJS", image: "images/toolslogo/IT/nodejs.png" },
+    { name: "MongoDB", image: "images/toolslogo/IT/mongodb.png" },
+    { name: "MySQL", image: "images/toolslogo/IT/mysql.png" },
+    { name: "Django", image: "images/toolslogo/IT/django.png" },
+    { name: "AWS", image: "images/toolslogo/IT/aws.png" },
+    { name: "Azure", image: "images/toolslogo/IT/azure.png" },
+  ],
+};
+
 
 
   const [testimonials, setTestimonials] = useState([]);
@@ -382,11 +399,7 @@ const marqueeBottomLogos = [
       <Toggle content={toggleData} />
 
       <div className="py-5 md:py-13 border-b border-gray-50">
-        <ToolStack 
-          aiTools={aiToolsList}
-          platforms={platformsList}
-          title="Tools you'll master"
-        />
+        <ToolsMastered toolsData={toolsSectionData} />
       </div>
 
       <div className="py-15 md:py-22 border-b border-gray-50">

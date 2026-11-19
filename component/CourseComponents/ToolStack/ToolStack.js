@@ -40,23 +40,34 @@ const ToolStack = ({
               AI Tools
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5">
-              {aiTools.map((tool, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center space-x-3 py-3 px-4 rounded-xl border border-gray-100 bg-[#046AED]/5 hover:bg-[#046AED]/10 transition-colors"
-                >
-                  {tool.iconUrl && (
-                    <img 
-                      src={tool.iconUrl} 
-                      alt={tool.name} 
-                      className="w-6 h-6 object-contain flex-shrink-0"
-                    />
-                  )}
-                  <span className="text-xs sm:text-sm font-semibold text-gray-700 truncate">
-                    {tool.name || tool}
-                  </span>
-                </div>
-              ))}
+              {aiTools.map((tool, index) => {
+                const toolName = typeof tool === 'object' ? tool.name : tool;
+                const toolIcon = typeof tool === 'object' ? tool.iconUrl : null;
+
+                return (
+                  <div 
+                    key={index}
+                    className="flex flex-col items-center justify-center p-3 h-20 rounded-xl border border-gray-100 bg-[#046AED]/5 text-center"
+                  >
+                    {toolIcon ? (
+                      <>
+                        <img 
+                          src={toolIcon} 
+                          alt={toolName} 
+                          className="w-6 h-6 object-contain mb-1.5"
+                        />
+                        <span className="text-[11px] sm:text-xs font-semibold text-gray-700 truncate w-full">
+                          {toolName}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-xs sm:text-sm font-semibold text-gray-700 truncate w-full">
+                        {toolName}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
@@ -68,23 +79,34 @@ const ToolStack = ({
               Platforms
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5">
-              {platforms.map((platform, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center space-x-3 py-3 px-4 rounded-xl border border-gray-100 bg-[#046AED]/5 hover:bg-[#046AED]/10 transition-colors"
-                >
-                  {platform.iconUrl && (
-                    <img 
-                      src={platform.iconUrl} 
-                      alt={platform.name} 
-                      className="w-6 h-6 object-contain flex-shrink-0"
-                    />
-                  )}
-                  <span className="text-xs sm:text-sm font-semibold text-gray-700 truncate">
-                    {platform.name || platform}
-                  </span>
-                </div>
-              ))}
+              {platforms.map((platform, index) => {
+                const platformName = typeof platform === 'object' ? platform.name : platform;
+                const platformIcon = typeof platform === 'object' ? platform.iconUrl : null;
+
+                return (
+                  <div 
+                    key={index}
+                    className="flex flex-col items-center justify-center p-3 h-20 rounded-xl border border-gray-100 bg-[#046AED]/5 text-center"
+                  >
+                    {platformIcon ? (
+                      <>
+                        <img 
+                          src={platformIcon} 
+                          alt={platformName} 
+                          className="w-6 h-6 object-contain mb-1.5"
+                        />
+                        <span className="text-[11px] sm:text-xs font-semibold text-gray-700 truncate w-full">
+                          {platformName}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-xs sm:text-sm font-semibold text-gray-700 truncate w-full">
+                        {platformName}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
@@ -94,20 +116,9 @@ const ToolStack = ({
   );
 };
 
-// Updated PropTypes for Object Structure
 ToolStack.propTypes = {
-  aiTools: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      iconUrl: PropTypes.string
-    })
-  ),
-  platforms: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      iconUrl: PropTypes.string
-    })
-  ),
+  aiTools: PropTypes.array,
+  platforms: PropTypes.array,
   title: PropTypes.string,
   subtitle: PropTypes.string,
 };

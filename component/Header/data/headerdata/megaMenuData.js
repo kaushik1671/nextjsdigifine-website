@@ -275,7 +275,7 @@ export const megaMenuData = [
               provider: "DSML Simulation",
               title: "Certification in DSML Simulation",
               image: "/images/logo/digi-logo.svg",
-              link: "/DS-ML-simulation-course-in-vashi-navi-mumbai"
+              link: "/ds-ml-simulation-course-in-vashi-navi-mumbai"
             }
           ]
         }

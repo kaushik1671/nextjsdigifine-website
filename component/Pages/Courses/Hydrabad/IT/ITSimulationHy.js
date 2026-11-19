@@ -160,16 +160,6 @@ const toggleData = {
   },
 };
 
-const aiToolsList = [
-  "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-  "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more",
-];
-
-const platformsList = [
-  "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-  "Looker Studio", "Power BI", "DV360", "Merchant Center",
-];
-
 // NEW (not in original file): tool names taken from the syllabus modules. Image paths are a GUESS - please check the files exist.
 const toolsSectionData = {
   title: "Master",
@@ -462,17 +452,13 @@ export default function ITSimulationHy() {
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      {/* <LazySection>
         <Suspense fallback={null}>
           <div className="py-5 md:py-13 border-b border-gray-50">
-            <ToolStack
-              aiTools={aiToolsList}
-              platforms={platformsList}
-              title="Tools you'll master"
-            />
+            <ToolStack aiTools={aiToolsList} platforms={platformsList} />
           </div>
         </Suspense>
-      </LazySection>
+      </LazySection> */}
 
       <LazySection>
         <Suspense fallback={null}>

@@ -15,16 +15,19 @@ const courseOptionsMap = {
     "Master Program in Digital Marketing",
     "Graduate Program in Digital Marketing",
     "Advanced Executive Program in Digital Marketing",
+    "Coorparate Simulation in Digital Marketing"
   ],
   ds: [
     "Masters Certification in Data Science and Machine Learning with Ai",
     "Masters Certification in Data Science and Machine Learning",
-    "Masters Certification in Data Analytics with Gen AI"
+    "Masters Certification in Data Analytics with Gen AI",
+    "Coorparate Simulation in DSML AI"
   ],
   fsd: [
     "Master Certification in Full Stack Developer with Ai & Cloud Engineering",
     "Masters Certification in Full Stack Developer Java",
-    "Masters Certification in Full Stack Developer Python"
+    "Masters Certification in Full Stack Developer Python",
+    "Coorparate Simulation in Full Stack Developer Python"
   ],
   design: [
     "AI Powered Graphic Designing and Animation Program with Corporate Simulation",
@@ -33,6 +36,7 @@ const courseOptionsMap = {
     "Graduate Graphic Design Program",
     "Master Certification in Video Editing and Motion Graphics Program",
     "Master Certification in UI and UX Design Program",
+    "Coorparate Simulation in Graphic design"
   ],
   all: [
     "MBA Level Program AI Powered Marketing Data Analytics Program",
@@ -41,18 +45,22 @@ const courseOptionsMap = {
     "Master Program in Digital Marketing",
     "Graduate Program in Digital Marketing",
     "Advanced Executive Program in Digital Marketing",
+    "Coorparate Simulation in Digital Marketing",
     "AI Powered Graphic Designing and Animation Program with Corporate Simulation",
     "Master Certification in Multimedia Design and Animation Program",
     "Master Certification in Graphic Design Program",
     "Graduate Graphic Design Program",
     "Master Certification in Video Editing and Motion Graphics Program",
     "Master Certification in UI and UX Design Program",
+    "Coorparate Simulation in Graphic design",
     "Masters Certification in Data Science and Machine Learning with AI",
     "Masters Certification in Data Science and Machine Learning",
     "Masters Certification in Data Analytics",
     "Master Certification in Full Stack Developer with AI & Cloud Engineering",
     "Masters Certification in Full Stack Developer Java",
-    "Masters Certification in Full Stack Developer Python"
+    "Masters Certification in Full Stack Developer Python",
+    "Coorparate Simulation in Full Stack Developer Python",
+    "Coorparate Simulation in DSML AI"
   ]
 };
 

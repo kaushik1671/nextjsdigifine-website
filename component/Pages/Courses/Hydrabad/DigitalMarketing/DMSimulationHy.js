@@ -11,10 +11,10 @@ import MyComponent from "../../../../Container/MyComponent";
 // Lazy Loaded Components (Below the Fold - Deferred)
 const PlacementStats = lazy(() => import("../../../../CourseComponents/PlacementStats/PlacementStats"));
 const FeaturesSection = lazy(() => import("../../../../CourseComponents/FeatureSection/FeatureSection"));
-const CareerPath = lazy(() => import("../../../../CourseComponents/CareerPath/CareerPath"));
+// const CareerPath = lazy(() => import("../../../../CourseComponents/CareerPath/CareerPath"));
 const SupportSection = lazy(() => import("../../../../CourseComponents/SupportSection/SupportSection"));
 const CourseOverview = lazy(() => import("../../../../CourseComponents/CourseOverview/CourseOverview"));
-const ToolsMastered = lazy(() => import("../../../../CourseComponents/ToolsMastered/ToolsMastered"));
+const Toolstack = lazy(()=> import ("../../../../CourseComponents/ToolStack/ToolStack"))
 const Toggle = lazy(() => import("../../../../CourseComponents/Toggle/Toggle"));
 const CompanyMarquee = lazy(() => import("../../../../CourseComponents/CompanyMarquee/CompanyMarquee"));
 const SyllabusTimeLine = lazy(() => import("../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine"));
@@ -96,22 +96,34 @@ const overviewSectionData = {
   ],
 };
 
-const toolsSectionData = {
-  title: "Master",
-  highlightTitle: "Industry-Standard Marketing Tools",
-  caption: "Work with the AI tools and ad platforms that agencies and marketing teams rely on every day.",
-  tools: [
-    { name: "ChatGPT", image: "images/toolslogo/DM/chatgpt.png" },
-    { name: "Claude", image: "images/toolslogo/DM/claude.png" },
-    { name: "Gemini", image: "images/toolslogo/DM/gemini.png" },
-    { name: "Canva AI", image: "images/toolslogo/DM/canva.png" },
-    { name: "Google Ads", image: "images/toolslogo/DM/googleads.png" },
-    { name: "Meta", image: "images/toolslogo/DM/meta.png" },
-    { name: "GA4", image: "images/toolslogo/DM/ga4.png" },
-    { name: "Looker Studio", image: "images/toolslogo/DM/lookerstudio.png" },
-    { name: "Power BI", image: "images/toolslogo/DM/powerbi.png" },
-  ],
-};
+const aiToolsList = [
+  { name: "ChatGPT", iconUrl: "/images/careericons/chatgpt.svg" },
+  { name: "Claude", iconUrl: "/images/careericons/claude.svg" },
+  { name: "Gemini", iconUrl: "/images/careericons/gemini.webp  " },
+  { name: "Midjourney", iconUrl: "/images/careericons/midjourney.webp" },
+  { name: "Perplexity", iconUrl: "/images/careericons/perplexity.webp" },
+  { name: "Canva AI", iconUrl: "/images/careericons/canva.jpeg" },
+  { name: "Notion AI", iconUrl: "/images/careericons/notion.png" },
+  { name: "Gamma", iconUrl: "/images/careericons/gamma.webp" },
+  { name: "Runway", iconUrl: "/images/careericons/runway.png" },
+  { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.png" },
+  { name: "Meta AI", iconUrl: "/images/careericons/meta.jpeg" },
+  // Agar last mein "+ more" text hi rakhna hai (image nahi):
+  { name: "+ more", iconUrl: null, isText: true } 
+];
+
+const platformsList = [
+  { name: "Google Ads", iconUrl: "/images/careericons/platforms/google-ads.jpeg" },
+  { name: "Meta", iconUrl: "/images/careericons/platforms/meta.jpeg" },
+  { name: "GA4", iconUrl: "/images/careericons/platforms/ga4.png" },
+  { name: "Clarity", iconUrl: "/images/careericons/platforms/clarity.png" },
+  { name: "Tag Manager", iconUrl: "/images/careericons/platforms/tag-manager.webp" },
+  { name: "WordPress", iconUrl: "/images/careericons/platforms/wordpress.png" },
+  { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.svg" },
+  { name: "Power BI", iconUrl: "/images/careericons/platforms/powerbi.webp" },
+  { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.png" },
+  { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.png" },
+];
 
 const toggleData = {
   digifine: {
@@ -258,38 +270,38 @@ const timelineStepsData = [
   { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
 ];
 
-const analyticsSteps = [
-  {
-    id: "01",
-    title: "Performance Marketer",
-    description: "Plan, run and optimise paid campaigns on Google Ads and Meta to drive leads and sales within a budget.",
-    icon: <Target size={32} strokeWidth={1.5} />,
-  },
-  {
-    id: "02",
-    title: "SEO Specialist",
-    description: "Grow organic visibility through keyword research, on-page optimisation, content strategy and link building.",
-    icon: <Search size={32} strokeWidth={1.5} />,
-  },
-  {
-    id: "03",
-    title: "Social Media Manager",
-    description: "Build brand presence and engagement across social platforms with content calendars, community management and influencer collaborations.",
-    icon: <Share2 size={32} strokeWidth={1.5} />,
-  },
-  {
-    id: "04",
-    title: "Marketing Analyst",
-    description: "Track campaign performance in GA4 and Looker Studio, and turn the data into clear decisions and reports.",
-    icon: <BarChart3 size={32} strokeWidth={1.5} />,
-  },
-  {
-    id: "05",
-    title: "Digital Marketing Manager",
-    description: "Lead end-to-end marketing strategy across channels, manage budgets and teams, and drive business growth.",
-    icon: <Megaphone size={32} strokeWidth={1.5} />,
-  },
-];
+// const analyticsSteps = [
+//   {
+//     id: "01",
+//     title: "Performance Marketer",
+//     description: "Plan, run and optimise paid campaigns on Google Ads and Meta to drive leads and sales within a budget.",
+//     icon: <Target size={32} strokeWidth={1.5} />,
+//   },
+//   {
+//     id: "02",
+//     title: "SEO Specialist",
+//     description: "Grow organic visibility through keyword research, on-page optimisation, content strategy and link building.",
+//     icon: <Search size={32} strokeWidth={1.5} />,
+//   },
+//   {
+//     id: "03",
+//     title: "Social Media Manager",
+//     description: "Build brand presence and engagement across social platforms with content calendars, community management and influencer collaborations.",
+//     icon: <Share2 size={32} strokeWidth={1.5} />,
+//   },
+//   {
+//     id: "04",
+//     title: "Marketing Analyst",
+//     description: "Track campaign performance in GA4 and Looker Studio, and turn the data into clear decisions and reports.",
+//     icon: <BarChart3 size={32} strokeWidth={1.5} />,
+//   },
+//   {
+//     id: "05",
+//     title: "Digital Marketing Manager",
+//     description: "Lead end-to-end marketing strategy across channels, manage budgets and teams, and drive business growth.",
+//     icon: <Megaphone size={32} strokeWidth={1.5} />,
+//   },
+// ];
 
 /* ---------- Component ---------- */
 
@@ -364,18 +376,18 @@ export default function DMSimulationHy() {
 
       <LazySection>
         <Suspense fallback={null}>
-          <ToolsMastered toolsData={toolsSectionData} />
+          <Toolstack aiTools={aiToolsList} platforms={platformsList} />
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      {/* <LazySection>
         <Suspense fallback={null}>
           <CareerPath
             mainDescription="Build job-ready skills in Performance Marketing, SEO, Social Media, and high-demand digital marketing careers."
             steps={analyticsSteps}
           />
         </Suspense>
-      </LazySection>
+      </LazySection> */}
 
       <LazySection>
         <Suspense fallback={null}>

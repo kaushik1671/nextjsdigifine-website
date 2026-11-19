@@ -24,12 +24,12 @@ export default function HeroSection() {
             className="lg:col-span-6 text-left"
           >
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-              From Learning <br />
-              To <span className="text-[#046AED]">Placement.</span>
+              PLACEMENTS AT DIGIFINE ACADEMY <br />
+              To <span className="text-[#046AED]">Skills That Get You Hired</span>
             </h1>
             
             <p className="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-              At our institute, we don't just teach skills. We prepare students to build successful careers with industry-ready training, career guidance, and strong placement support.
+              Starting a career can feel uncertain. That’s why we stay with you beyond the course, with practical training, resume support, interview preparation and direct access to hiring partners, until you land the role you deserve.
             </p>
 
             {/* Action Buttons */}
@@ -49,7 +49,7 @@ export default function HeroSection() {
                 className="px-7 py-3.5 rounded-xl bg-white text-slate-700 font-semibold border border-slate-200 hover:bg-slate-50 transition-all duration-300 shadow-sm text-sm sm:text-base flex items-center gap-2"
               >
                 <span className="w-2 h-2 rounded-full bg-[#046AED]"></span>
-                <span>Student Success</span>
+                <span>Meet Our Placed Students</span>
               </Link>
             </div>
           </motion.div>
@@ -108,12 +108,12 @@ export default function HeroSection() {
               <div className="grid grid-cols-3 gap-3">
                 <div className="bg-slate-50/80 p-3.5 rounded-xl border border-slate-100">
                   <p className="text-[11px] font-semibold text-slate-400 uppercase">Placed Rate</p>
-                  <p className="text-lg font-black text-slate-900 mt-0.5">92%</p>
+                  <p className="text-lg font-black text-slate-900 mt-0.5">96%</p>
                 </div>
 
                 <div className="bg-slate-50/80 p-3.5 rounded-xl border border-slate-100">
                   <p className="text-[11px] font-semibold text-slate-400 uppercase">Highest Pack</p>
-                  <p className="text-lg font-black text-[#046AED] mt-0.5">45 LPA</p>
+                  <p className="text-lg font-black text-[#046AED] mt-0.5">12 LPA</p>
                 </div>
 
                 <div className="bg-slate-50/80 p-3.5 rounded-xl border border-slate-100">

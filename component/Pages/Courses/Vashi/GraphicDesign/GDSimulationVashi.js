@@ -13,9 +13,9 @@ const PlacementStats = lazy(() => import("../../../../CourseComponents/Placement
 const WhyDigifine = lazy(() => import("../../../../CourseComponents/WhyDigifine/WhyDigifine"));
 const HorizontalTimeline = lazy(() => import("../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"));
 const ToolsMastered = lazy(() => import("../../../../CourseComponents/ToolsMastered/ToolsMastered"));
-const CareerPath = lazy(() => import("../../../../CourseComponents/CareerPath/CareerPath"));
+// const CareerPath = lazy(() => import("../../../../CourseComponents/CareerPath/CareerPath"));
 const Toggle = lazy(() => import("../../../../CourseComponents/Toggle/Toggle"));
-const ToolStack = lazy(() => import("../../../../CourseComponents/ToolStack/ToolStack"));
+// const ToolStack = lazy(() => import("../../../../CourseComponents/ToolStack/ToolStack"));
 const CorporateProjects = lazy(() => import("../../../../CourseComponents/CorporateProjects/CorporateProjects"));
 const SyllabusTimeLine = lazy(() => import("../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine"));
 const StudentJourney = lazy(() => import("../../../../CourseComponents/StudentJourney/StudentJourney"));
@@ -67,7 +67,7 @@ const dataset = [
 const timelineSteps = [
   { title: "Enroll", description: "Onboarding & cohort mapping" },
   { title: "Offer Letter", description: "Issued on day one" },
-  { title: "Monthly Stipend", description: "₹10,000 while you train" },
+  { title: "Monthly Stipend", description: "₹20,000 while you train" },
   { title: "Live Get Placed", description: "Real client campaigns" },
   { title: "Experience Letter", description: "Verifiable work history" },
   { title: "Placement", description: "Hiring partner network" },
@@ -75,38 +75,40 @@ const timelineSteps = [
 
 // NEW (not in original file): tools taken from platformsList below. Image paths are a GUESS (copied from the MBA Vashi pattern) - please check the files exist.
 const toolsSectionData = {
-  title: "Tools You'll",
-  highlightTitle: "Master",
-  caption: "Work with the platforms used across paid media and analytics.",
+  title: "Master",
+  highlightTitle: "Industry-Standard Design Tools",
+  caption: "Learn the same software used by professional designers, creative agencies, marketing teams, and production studios worldwide.",
   tools: [
-    { name: "Google Ads", image: "images/toolslogo/DM/googleads.png" },
-    { name: "GA4", image: "images/toolslogo/DM/ga4.png" },
-    { name: "Meta", image: "images/toolslogo/DM/meta.png" },
-    { name: "Clarity", image: "images/toolslogo/DM/clarity.png" },
+    { name: "Adobe Illustrator", image: "images/toolslogo/adobe.png" },
+    { name: "Adobe Photoshop", image: "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" },
+    { name: "Adobe InDesign", image: "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc-icon.svg" },
+    { name: "Figma", image: "images/toolslogo/figma.webp" },
+    { name: "Adobe Premiere Pro", image: "images/toolslogo/APPro.webp" },
+    { name: "Adobe After Effects", image: "images/toolslogo/AE.jpg" },
   ],
 };
 
 // NEW (not in original file): built from the 3 syllabus terms. Icons are my pick.
-const careerSteps = [
-  {
-    id: "01",
-    title: "Performance Marketing & Analytics",
-    description: "Master data-driven strategies, paid campaigns, and analytical tools to track and scale business growth effectively.",
-    icon: <Gauge size={32} strokeWidth={1.5} />,
-  },
-  {
-    id: "02",
-    title: "Organic Marketing & Engagement",
-    description: "Build powerful brand presence and organic visibility through search optimization, content funnels, and social engagement.",
-    icon: <Rocket size={32} strokeWidth={1.5} />,
-  },
-  {
-    id: "03",
-    title: "Advanced Marketing & Management",
-    description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
-    icon: <Castle size={32} strokeWidth={1.5} />,
-  },
-];
+// const careerSteps = [
+//   {
+//     id: "01",
+//     title: "Performance Marketing & Analytics",
+//     description: "Master data-driven strategies, paid campaigns, and analytical tools to track and scale business growth effectively.",
+//     icon: <Gauge size={32} strokeWidth={1.5} />,
+//   },
+//   {
+//     id: "02",
+//     title: "Organic Marketing & Engagement",
+//     description: "Build powerful brand presence and organic visibility through search optimization, content funnels, and social engagement.",
+//     icon: <Rocket size={32} strokeWidth={1.5} />,
+//   },
+//   {
+//     id: "03",
+//     title: "Advanced Marketing & Management",
+//     description: "Deep dive into executive-level leadership tracks covering programmatic media, luxury systems, and technical architectures.",
+//     icon: <Castle size={32} strokeWidth={1.5} />,
+//   },
+// ];
 
 const toggleData = {
   digifine: {
@@ -147,15 +149,15 @@ const toggleData = {
   },
 };
 
-const aiToolsList = [
-  "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-  "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more",
-];
+// const aiToolsList = [
+//   "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
+//   "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more",
+// ];
 
-const platformsList = [
-  "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-  "Looker Studio", "Power BI", "DV360", "Merchant Center",
-];
+// const platformsList = [
+//   "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
+//   "Looker Studio", "Power BI", "DV360", "Merchant Center",
+// ];
 
 const digitalMarketingProjects = [
   {
@@ -392,14 +394,14 @@ export default function GDSimulationVashi() {
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      {/* <LazySection>
         <Suspense fallback={null}>
           <CareerPath
             mainDescription="Build job-ready skills across performance marketing, organic marketing and advanced marketing management."
             steps={careerSteps}
           />
         </Suspense>
-      </LazySection>
+      </LazySection> */}
 
       <LazySection>
         <Suspense fallback={null}>
@@ -407,7 +409,7 @@ export default function GDSimulationVashi() {
         </Suspense>
       </LazySection>
 
-      <LazySection>
+      {/* <LazySection>
         <Suspense fallback={null}>
           <div className="py-5 md:py-13 border-b border-gray-50">
             <ToolStack
@@ -417,7 +419,7 @@ export default function GDSimulationVashi() {
             />
           </div>
         </Suspense>
-      </LazySection>
+      </LazySection> */}
 
       <LazySection>
         <Suspense fallback={null}>

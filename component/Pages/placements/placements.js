@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react"; 
+import { lazy, useState, useEffect } from "react"; 
+import LazySection from "../../../hooks/LazySection";
 
 import Hero from '../../CourseComponents/Placementscmp/Hero';
 import PlacementCell from '../../CourseComponents/Placementscmp/PlacementCell';
@@ -8,7 +9,7 @@ import StatsBar from '../../CourseComponents/Placementscmp/StatsBar';
 import CompanyMarquee from '../../CourseComponents/CompanyMarquee/CompanyMarquee';
 import StudentPlacedAt from '../../CourseComponents/StudentPlacedAt/StudentPlacedAt';
 import Testimonal from "../../CourseComponents/Testimonal/Testimonal";
-import PlacementProcess from "../../CourseComponents/Placementscmp/PlacementProcess"
+const FAQsSection = lazy(() => import("../../FAQsSection/FAQsSection"));
 
 const marqueeTopLogos = [
   "/images/company_logo/dm/1.webp",
@@ -57,12 +58,18 @@ const mbaPlacementsData = [
 export default function PlacementsPage() {
   // Hooks belong inside the React component function body
   const [testimonials, setTestimonials] = useState([]);
+  const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
     import("../../CourseComponents/Placementscmp/data/testimonal")
       .then((m) => setTestimonials(m.default))
       .catch((err) => console.error("Testimonial data load fail:", err));
   }, []);
+
+  useEffect(() => {
+      import("../Home/data/faqs").then((m) => setFaqs(m.default));
+    }, []);
+  
 
   return (
     <main>
@@ -88,7 +95,8 @@ export default function PlacementsPage() {
         testimonial={testimonials}
         paragraph="Still wondering what your career will look like after studying at Digifine? Whether it's Digital Marketing, Graphic Design, or IT   hear directly from our students about their journey, practical training, and placement success!" 
       /> 
-      <PlacementProcess />       
+      <LazySection> 
+      <FAQsSection sectionTitle="Frequently Asked Questions" faqData={faqs} />  </LazySection>   
     </main>
   );
 }

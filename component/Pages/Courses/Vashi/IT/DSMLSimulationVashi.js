@@ -1,11 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react"; 
+import { Lightbulb, Rocket, Gauge, BarChart3, Castle } from "lucide-react";
+
 import CourseCard from "../../../../CourseComponents/CourseCard/CourseCard";
 import MyComponent from "../../../../Container/MyComponent";
 import Toggle from "../../../../CourseComponents/Toggle/Toggle";
 import CompanyMarquee from "../../../../CourseComponents/CompanyMarquee/CompanyMarquee";
-import SuccessStories from "../../../../CourseComponents/SuccessStories/SuccessStories";
+import CareerPath from "../../../../CourseComponents/CareerPath/CareerPath";
 import StudentPlacedAt from "../../../../CourseComponents/StudentPlacedAt/StudentPlacedAt"; 
 import Testimonal from "../../../../CourseComponents/Testimonal/Testimonal";
 import SyllabusTimeLine from "../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine";
@@ -17,9 +19,8 @@ import Location from "../../../../CourseComponents/Location/Location";
 import WhyDigifine from "../../../../CourseComponents/WhyDigifine/WhyDigifine"
 import HorizontalTimeline from "../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"
 import CorporateProjects from "../../../../CourseComponents/CorporateProjects/CorporateProjects";
-import CourseOverview from "../../../../CourseComponents/CourseOverview/CourseOverview";
-import ToolStack from "../../../../CourseComponents/ToolStack/ToolStack"
 import StudentJourney from "../../../../CourseComponents/StudentJourney/StudentJourney";
+import ToolsMastered from "../../../../CourseComponents/ToolsMastered/ToolsMastered";
 
 export default function DSMLSimulationVashi() {
 
@@ -110,16 +111,6 @@ export default function DSMLSimulationVashi() {
         placeholderText: "YouTube funnel preview"
       }
     ];
-
-    const aiToolsList = [
-        "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-        "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more"
-      ];
-    
-      const platformsList = [
-        "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-        "Looker Studio", "Power BI", "DV360", "Merchant Center"
-      ];
 
         const journeySteps = [
           { title: "Enrollment", description: "Counselling call, city & mode selection, admission confirmed." },
@@ -311,7 +302,55 @@ const marqueeBottomLogos = [
       timing: "Mon - Sat: 10:00 AM - 7:00 PM"
     }
   ];
+ const analyticsSteps = [
+  {
+    id: "01",
+    title: "Data Scientist",
+    description: "Apply statistical analysis and predictive modeling on complex data to solve core business problems.",
+    icon: <Gauge size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "02",
+    title: "ML Engineer",
+    description: "Deploy machine learning models into production, build data pipelines, and monitor model performance.",
+    icon: <Rocket size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "03",
+    title: "AI Research Scientist",
+    description: "Experiment with advanced deep learning architectures, fine-tune LLMs, and develop novel AI algorithms.",
+    icon: <Castle size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "04",
+    title: "Data Analyst",
+    description: "Clean raw data, run SQL queries, and build dashboards in Power BI or Tableau to track key performance metrics.",
+    icon: <BarChart3 size={32} strokeWidth={1.5} />,
+  },
+  {
+    id: "05",
+    title: "Business Analyst",
+    description: "Gather business requirements, analyze operational workflows, and translate stakeholder needs into clear technical specs.",
+    icon: <Lightbulb size={32} strokeWidth={1.5} />,
+  },
+];
 
+const toolsSectionData = {
+  title: "Master",
+  highlightTitle: "Industry-Standard Data Tools",
+  caption: "Work with the tools employers recognise across analytics, machine learning and AI.",
+  tools: [
+    { name: "MySQL Workbench", image: "images/toolslogo/IT/mysqlworkbench.png" },
+    { name: "SQL Server", image: "images/toolslogo/IT/sqlserver.jpg" },
+    { name: "Github", image: "images/toolslogo/IT/github.png" },
+    { name: "Git", image: "images/toolslogo/IT/git.png" },
+    { name: "Kaggle", image: "images/toolslogo/IT/kaggle.jpg" },
+    { name: "Jupyter Notebook", image: "images/toolslogo/IT/jupyter.png" },
+    { name: " AI Tools like Julius AI", image: "images/toolslogo/IT/julius.webp" },
+    { name: "Streamlit", image: "images/toolslogo/IT/streamlit.png" },
+    { name: "MLflow", image: "images/toolslogo/IT/mlflow.jpg" },
+  ],
+};
 
 
   const [testimonials, setTestimonials] = useState([]);
@@ -343,7 +382,7 @@ const marqueeBottomLogos = [
     <>
       <CourseCard
         title="DSML Corporate Simulation with"
-        highlightText="100% Placement Assistance in vashi"
+        highlightText="100% Placement Assistance in Vashi"
         description="Experience the real agency flow, manage actual budgets, and earn dynamic experience letters with professional guidance."
         emi="Placements"
         startDate="Industry Experts"
@@ -380,13 +419,12 @@ const marqueeBottomLogos = [
 
       <Toggle content={toggleData} />
 
-      <div className="py-5 md:py-13 border-b border-gray-50">
-        <ToolStack 
-          aiTools={aiToolsList}
-          platforms={platformsList}
-          title="Tools you'll master"
-        />
-      </div>
+      <ToolsMastered toolsData={toolsSectionData} />
+
+      <CareerPath
+            mainDescription="Build job-ready skills in Data Science, Machine Learning, and high-demand tech careers."
+            steps={analyticsSteps}
+          />
 
       <div className="py-15 md:py-22 border-b border-gray-50">
         <CorporateProjects 
@@ -405,6 +443,8 @@ const marqueeBottomLogos = [
       </div> 
 
       {/* <CourseOverview overviewData={overviewSectionData} /> */}
+
+      
       
       <CompanyMarquee tagline="Our Placements"
         title="Companies They"

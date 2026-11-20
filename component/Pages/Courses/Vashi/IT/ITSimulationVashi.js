@@ -17,8 +17,7 @@ import Location from "../../../../CourseComponents/Location/Location";
 import WhyDigifine from "../../../../CourseComponents/WhyDigifine/WhyDigifine"
 import HorizontalTimeline from "../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"
 import CorporateProjects from "../../../../CourseComponents/CorporateProjects/CorporateProjects";
-import CourseOverview from "../../../../CourseComponents/CourseOverview/CourseOverview";
-import ToolsMastered from "../../../../CourseComponents/ToolsMastered/ToolsMastered";
+import ToolStack from "../../../../CourseComponents/ToolStack/ToolStack";
 import StudentJourney from "../../../../CourseComponents/StudentJourney/StudentJourney";
 
 export default function ITSimulationVashi() {
@@ -112,14 +111,35 @@ export default function ITSimulationVashi() {
     ];
 
     const aiToolsList = [
-        "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-        "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more"
-      ];
-    
-      const platformsList = [
-        "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-        "Looker Studio", "Power BI", "DV360", "Merchant Center"
-      ];
+  { name: "Vercel", iconUrl: "/images/careericons/IT/aitools/vercel.webp" },
+  { name: "Telepart HQ", iconUrl: "/images/careericons/IT/aitools/teleport.webp" },
+  { name: "Codeium", iconUrl: "/images/careericons/IT/aitools/codeium.png" },
+  { name: "Cursor Ai", iconUrl: "/images/careericons/IT/aitools/cursor.webp" },
+  { name: "Replit Ai", iconUrl: "/images/careericons/IT/aitools/replit.webp" },
+  { name: "Google Gemini", iconUrl: "/images/careericons/IT/aitools/gemini.webp" },
+  { name: "HuggingFace inference API", iconUrl: "/images/careericons/IT/aitools/huggingface.webp" },
+  { name: "Leonardo Ai", iconUrl: "/images/careericons/IT/aitools/leonardo.webp" },
+  { name: "Flowise Ai", iconUrl: "/images/careericons/IT/aitools/flowise.webp" },
+  { name: "Botpress Ai", iconUrl: "/images/careericons/IT/aitools/botpress.png" },
+  // Agar last mein "+ more" text hi rakhna hai (image nahi):
+  { name: "+ more", iconUrl: null, isText: true } 
+];
+
+const platformsList = [
+  { name: "HTML", iconUrl: "/images/careericons/IT/platform/html.webp" },
+  { name: "CSS", iconUrl: "/images/careericons/IT/platform/css3.webp" },
+  { name: "javascript", iconUrl: "/images/careericons/IT/platform/javascript.webp" },
+  { name: "Bootstrap", iconUrl: "/images/careericons/IT/platform/bootstrap.webp" },
+  { name: "React.js", iconUrl: "/images/careericons/IT/platform/reactjs.webp" },
+  { name: "Next.js", iconUrl: "/images/careericons/IT/platform/nextjs.webp" },
+  { name: "Angular", iconUrl: "/images/careericons/IT/platform/angular.webp" },
+  { name: "Python", iconUrl: "/images/careericons/IT/platform/python.webp" },
+  { name: "Node.js", iconUrl: "/images/careericons/IT/platform/node-js.webp" },
+  { name: "Express.js", iconUrl: "/images/careericons/IT/platform/express.png" },
+  { name: "Django", iconUrl: "/images/careericons/IT/platform/django.webp" },
+  { name: "MySql", iconUrl: "/images/careericons/IT/platform/mysql.webp" },
+  { name: "MongoDB", iconUrl: "/images/careericons/IT/platform/mongodb.webp" },
+];
 
         const journeySteps = [
           { title: "Enrollment", description: "Counselling call, city & mode selection, admission confirmed." },
@@ -130,21 +150,6 @@ export default function ITSimulationVashi() {
           { title: "Certification", description: "14 certifications across platforms and specializations." },
           { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." }
         ];
-
-  // const uniqueModulesSectionData = {
-  //   tagline: "About us",
-  //   title: "Advanced Marketing Specializations for",
-  //   highlightTitle: "Future Marketing Leaders",
-  //   description: "You’ll also get to learn in-demand specializations like Programmatic Advertising, OTT Advertising, Luxury Brand Management, and Strategic Management.",
-  //   modules: [
-  //     { iconName: "Gem", title: "Luxury Brand", subtitle: "Management" },
-  //     { iconName: "Users", title: "Experiential", subtitle: "Marketing" },
-  //     { iconName: "RectangleHorizontal", title: "Programmatic", subtitle: "Advertising" },
-  //     { iconName: "Tv", title: "BARC Television", subtitle: "Ad Planning" },
-  //     { iconName: "PlayCircle", title: "OTT", subtitle: "Ads" },
-  //     { iconName: "Landmark", title: "Strategic", subtitle: "Management" }
-  //   ]
-  // };
 
   const overviewSectionData = {
     title: "Overview of",
@@ -313,22 +318,6 @@ const marqueeBottomLogos = [
     }
   ];
 
-  const toolsSectionData = {
-  title: "Master",
-  highlightTitle: "Industry-Standard Full Stack Tools",
-  caption: "Work with the tools employers recognise across front end, back end and cloud.",
-  tools: [
-    { name: "React JS", image: "images/toolslogo/IT/react.png" },
-    { name: "Next JS", image: "images/toolslogo/IT/nextjs.png" },
-    { name: "Tailwind CSS", image: "images/toolslogo/IT/tailwind.png" },
-    { name: "NodeJS", image: "images/toolslogo/IT/nodejs.png" },
-    { name: "MongoDB", image: "images/toolslogo/IT/mongodb.png" },
-    { name: "MySQL", image: "images/toolslogo/IT/mysql.png" },
-    { name: "Django", image: "images/toolslogo/IT/django.png" },
-    { name: "AWS", image: "images/toolslogo/IT/aws.png" },
-    { name: "Azure", image: "images/toolslogo/IT/azure.png" },
-  ],
-};
 
 
 
@@ -399,7 +388,11 @@ const marqueeBottomLogos = [
       <Toggle content={toggleData} />
 
       <div className="py-5 md:py-13 border-b border-gray-50">
-        <ToolsMastered toolsData={toolsSectionData} />
+        <ToolStack 
+                  aiTools={aiToolsList}
+                  platforms={platformsList}
+                  title="Tools you'll master"
+                />
       </div>
 
       <div className="py-15 md:py-22 border-b border-gray-50">
@@ -416,9 +409,7 @@ const marqueeBottomLogos = [
           stepsData={journeySteps}
           title="Student journey"
         />
-      </div> 
-
-      {/* <CourseOverview overviewData={overviewSectionData} /> */}
+      </div>
       
       <CompanyMarquee tagline="Our Placements"
         title="Companies They"

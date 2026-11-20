@@ -16,12 +16,10 @@ const WhyDigifine = lazy(() => import("../../../../CourseComponents/WhyDigifine/
 const HorizontalTimeline = lazy(() => import("../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"));
 const Toggle = lazy(() => import("../../../../CourseComponents/Toggle/Toggle"));
 const ToolStack = lazy(() => import("../../../../CourseComponents/ToolStack/ToolStack"));
-const ToolsMastered = lazy(() => import("../../../../CourseComponents/ToolsMastered/ToolsMastered"));
 const CareerPath = lazy(() => import("../../../../CourseComponents/CareerPath/CareerPath"));
 const CorporateProjects = lazy(() => import("../../../../CourseComponents/CorporateProjects/CorporateProjects"));
 const SyllabusTimeLine = lazy(() => import("../../../../CourseComponents/SyllabusTimeLine/SyllabusTimeLine"));
 const StudentJourney = lazy(() => import("../../../../CourseComponents/StudentJourney/StudentJourney"));
-const CourseOverview = lazy(() => import("../../../../CourseComponents/CourseOverview/CourseOverview"));
 const CompanyMarquee = lazy(() => import("../../../../CourseComponents/CompanyMarquee/CompanyMarquee"));
 const SuccessStories = lazy(() => import("../../../../CourseComponents/SuccessStories/SuccessStories"));
 const StudentPlacedAt = lazy(() => import("../../../../CourseComponents/StudentPlacedAt/StudentPlacedAt"));
@@ -160,23 +158,36 @@ const toggleData = {
   },
 };
 
-// NEW (not in original file): tool names taken from the syllabus modules. Image paths are a GUESS - please check the files exist.
-const toolsSectionData = {
-  title: "Master",
-  highlightTitle: "Industry-Standard Full Stack Tools",
-  caption: "Work with the tools employers recognise across front end, back end and cloud.",
-  tools: [
-    { name: "React JS", image: "images/toolslogo/IT/react.png" },
-    { name: "Next JS", image: "images/toolslogo/IT/nextjs.png" },
-    { name: "Tailwind CSS", image: "images/toolslogo/IT/tailwind.png" },
-    { name: "NodeJS", image: "images/toolslogo/IT/nodejs.png" },
-    { name: "MongoDB", image: "images/toolslogo/IT/mongodb.png" },
-    { name: "MySQL", image: "images/toolslogo/IT/mysql.png" },
-    { name: "Django", image: "images/toolslogo/IT/django.png" },
-    { name: "AWS", image: "images/toolslogo/IT/aws.png" },
-    { name: "Azure", image: "images/toolslogo/IT/azure.png" },
-  ],
-};
+    const aiToolsList = [
+  { name: "Vercel", iconUrl: "/images/careericons/IT/aitools/vercel.webp" },
+  { name: "Telepart HQ", iconUrl: "/images/careericons/IT/aitools/teleport.webp" },
+  { name: "Codeium", iconUrl: "/images/careericons/IT/aitools/codeium.png" },
+  { name: "Cursor Ai", iconUrl: "/images/careericons/IT/aitools/cursor.webp" },
+  { name: "Replit Ai", iconUrl: "/images/careericons/IT/aitools/replit.webp" },
+  { name: "Google Gemini", iconUrl: "/images/careericons/IT/aitools/gemini.webp" },
+  { name: "HuggingFace inference API", iconUrl: "/images/careericons/IT/aitools/huggingface.webp" },
+  { name: "Leonardo Ai", iconUrl: "/images/careericons/IT/aitools/leonardo.webp" },
+  { name: "Flowise Ai", iconUrl: "/images/careericons/IT/aitools/flowise.webp" },
+  { name: "Botpress Ai", iconUrl: "/images/careericons/IT/aitools/botpress.png" },
+  // Agar last mein "+ more" text hi rakhna hai (image nahi):
+  { name: "+ more", iconUrl: null, isText: true } 
+];
+
+const platformsList = [
+  { name: "HTML", iconUrl: "/images/careericons/IT/platform/html.webp" },
+  { name: "CSS", iconUrl: "/images/careericons/IT/platform/css3.webp" },
+  { name: "javascript", iconUrl: "/images/careericons/IT/platform/javascript.webp" },
+  { name: "Bootstrap", iconUrl: "/images/careericons/IT/platform/bootstrap.webp" },
+  { name: "React.js", iconUrl: "/images/careericons/IT/platform/reactjs.webp" },
+  { name: "Next.js", iconUrl: "/images/careericons/IT/platform/nextjs.webp" },
+  { name: "Angular", iconUrl: "/images/careericons/IT/platform/angular.webp" },
+  { name: "Python", iconUrl: "/images/careericons/IT/platform/python.webp" },
+  { name: "Node.js", iconUrl: "/images/careericons/IT/platform/node-js.webp" },
+  { name: "Express.js", iconUrl: "/images/careericons/IT/platform/express.png" },
+  { name: "Django", iconUrl: "/images/careericons/IT/platform/django.webp" },
+  { name: "MySql", iconUrl: "/images/careericons/IT/platform/mysql.webp" },
+  { name: "MongoDB", iconUrl: "/images/careericons/IT/platform/mongodb.webp" },
+];
 
 // NEW (not in original file): built from the 3 syllabus terms. Icons are my pick.
 const careerSteps = [
@@ -276,26 +287,6 @@ const journeySteps = [
   { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." },
 ];
 
-// Used only in the commented-out CourseOverview block below (kept as in original)
-const overviewSectionData = {
-  title: "Overview of",
-  highlightTitle: "MBA-Level Digital Marketing Program in Mumbai",
-  paragraphs: [
-    {
-      text: "This is one of India’s top MBA-level Postgraduate Digital Marketing programs in Mumbai. The program runs for 6 months of intensive classroom training followed by 6 months of industry residency at top agencies across the country. In Mumbai, you also get an extra 6+6 months of guaranteed extensions and salary hikes with partner companies to support your career growth.",
-      alwaysVisible: true,
-    },
-  ],
-  keyFeatures: [
-    { title: "Expert Training", text: "Learn from experienced professionals who’ve worked on real campaigns and know the current digital marketing landscape.", alwaysVisible: true },
-    { title: "Comprehensive Curriculum", text: "Covers Experiential Marketing, Website Development, E-Commerce Management, Programmatic Media Buying, OTT Advertising, Data Analytics, Television Planning, and more.", alwaysVisible: false },
-    { title: "Strong Placements", text: "Get help securing high-paying jobs with leading companies. You’ll build a portfolio, update your resume, and do mock interviews.", alwaysVisible: false },
-    { title: "Hands-on Tools", text: "Master the tools and software actually used in the industry, with free access to major AI tools.", alwaysVisible: false },
-    { title: "Certifications", text: " Earn multiple Google certificates, an international certification from Digifine Academy, and one from the IBM Institute in Berlin, Germany.", alwaysVisible: false },
-    { title: "Real Mentorship", text: "Get trained by in-house trainers and guest lecturers who have real industry experience.", alwaysVisible: false },
-    { title: "Practical Focus", text: "Lots of live projects, real case studies, and hands-on assignments instead of just theory.", alwaysVisible: false },
-  ],
-};
 
 const marqueeTopLogos = [
   "/images/company_logo/dm/1.webp",
@@ -452,28 +443,22 @@ export default function ITSimulationHy() {
         </Suspense>
       </LazySection>
 
-      {/* <LazySection>
+      <LazySection>
         <Suspense fallback={null}>
           <div className="py-5 md:py-13 border-b border-gray-50">
             <ToolStack aiTools={aiToolsList} platforms={platformsList} />
           </div>
         </Suspense>
-      </LazySection> */}
-
-      <LazySection>
-        <Suspense fallback={null}>
-          <ToolsMastered toolsData={toolsSectionData} />
-        </Suspense>
       </LazySection>
 
-      <LazySection>
+      {/* <LazySection>
         <Suspense fallback={null}>
           <CareerPath
             mainDescription="Build job-ready skills across front end, back end, cloud deployment and Gen AI."
             steps={careerSteps}
           />
         </Suspense>
-      </LazySection>
+      </LazySection> */}
 
       <LazySection>
         <Suspense fallback={null}>

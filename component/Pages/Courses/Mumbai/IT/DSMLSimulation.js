@@ -112,11 +112,11 @@ export default function DSMLSimulationVashi() {
     ];
 
     const aiToolsList = [
-  { name: "ChatGPT", iconUrl: "/images/careericons/chatgpt.svg" },
-  { name: "Claude", iconUrl: "/images/careericons/claude.svg" },
-  { name: "Gemini", iconUrl: "/images/careericons/gemini.webp  " },
-  { name: "Midjourney", iconUrl: "/images/careericons/midjourney.webp" },
-  { name: "Perplexity", iconUrl: "/images/careericons/perplexity.webp" },
+  { name: "Chatgpt", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
+  { name: "Claude", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
+  { name: "Gemini", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
+  { name: "Midjourney", iconUrl: "/images/careericons/dsml/tools/chatgpt.webpp" },
+  { name: "Perplexity", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
   { name: "Canva AI", iconUrl: "/images/careericons/canva.jpeg" },
   { name: "Notion AI", iconUrl: "/images/careericons/notion.png" },
   { name: "Gamma", iconUrl: "/images/careericons/gamma.webp" },
@@ -128,16 +128,21 @@ export default function DSMLSimulationVashi() {
 ];
 
 const platformsList = [
-  { name: "Google Ads", iconUrl: "/images/careericons/platforms/google-ads.jpeg" },
-  { name: "Meta", iconUrl: "/images/careericons/platforms/meta.jpeg" },
-  { name: "GA4", iconUrl: "/images/careericons/platforms/ga4.png" },
-  { name: "Clarity", iconUrl: "/images/careericons/platforms/clarity.png" },
-  { name: "Tag Manager", iconUrl: "/images/careericons/platforms/tag-manager.webp" },
-  { name: "WordPress", iconUrl: "/images/careericons/platforms/wordpress.png" },
-  { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.svg" },
-  { name: "Power BI", iconUrl: "/images/careericons/platforms/powerbi.webp" },
-  { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.png" },
-  { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.png" },
+  { name: "Microsoft Excel", iconUrl: "/images/careericons/dsml/tools/excel.webp" },
+  { name: "Python", iconUrl: "/images/careericons/IT/platform/python.webp" },
+  { name: "MySql", iconUrl: "/images/careericons/IT/platform/mysql.webp" },
+  { name: "NumPy", iconUrl: "/images/careericons/dsml/tools/numpy.png" },
+  { name: "Matplotlib", iconUrl: "/images/careericons/dsml/tools/matplotlib.webp" },
+  { name: "Seaborn", iconUrl: "/images/careericons/dsml/tools/seaborn.png" },
+  { name: "Statistics", iconUrl: "/images/careericons/dsml/tools/statistics.webp" },
+  { name: "Power BI", iconUrl: "/images/careericons/dsml/tools/powerbi.webp" },
+  { name: "Tableau", iconUrl: "/images/careericons/dsml/tools/tableau.webp" },
+  { name: "Scipy", iconUrl: "/images/careericons/dsml/tools/scipy.png" },
+  { name: "Scikit-learn", iconUrl: "/images/careericons/dsml/tools/scikitlearn.png" },
+  { name: "Tensorflow", iconUrl: "/images/careericons/dsml/tools/tensorflow.webp" },
+  { name: "Deep Learning", iconUrl: "/images/careericons/dsml/tools/dl.jpg" },
+
+  
 ];
 
         const journeySteps = [

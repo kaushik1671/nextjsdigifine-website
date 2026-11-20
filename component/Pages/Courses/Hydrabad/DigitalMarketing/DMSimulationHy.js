@@ -122,7 +122,7 @@ const platformsList = [
   { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.svg" },
   { name: "Power BI", iconUrl: "/images/careericons/platforms/powerbi.webp" },
   { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.png" },
-  { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.png" },
+  { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.webp" },
 ];
 
 const toggleData = {

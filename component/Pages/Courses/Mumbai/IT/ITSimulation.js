@@ -17,8 +17,7 @@ import Location from "../../../../CourseComponents/Location/Location";
 import WhyDigifine from "../../../../CourseComponents/WhyDigifine/WhyDigifine"
 import HorizontalTimeline from "../../../../CourseComponents/HorizontalTimeline/HorizontalTimeline"
 import CorporateProjects from "../../../../CourseComponents/CorporateProjects/CorporateProjects";
-import CourseOverview from "../../../../CourseComponents/CourseOverview/CourseOverview";
-import ToolStack from "../../../../CourseComponents/ToolStack/ToolStack"
+import ToolStack from "../../../../CourseComponents/ToolStack/ToolStack";
 import StudentJourney from "../../../../CourseComponents/StudentJourney/StudentJourney";
 
 export default function ITSimulation() {
@@ -112,14 +111,35 @@ export default function ITSimulation() {
     ];
 
     const aiToolsList = [
-        "ChatGPT", "Claude", "Gemini", "Midjourney", "Perplexity", "Canva AI",
-        "Notion AI", "Gamma", "Runway", "ElevenLabs", "Meta AI", "+ more"
-      ];
-    
-      const platformsList = [
-        "Google Ads", "Meta", "GA4", "Clarity", "Tag Manager", "WordPress",
-        "Looker Studio", "Power BI", "DV360", "Merchant Center"
-      ];
+  { name: "Vercel", iconUrl: "/images/careericons/IT/aitools/vercel.webp" },
+  { name: "Telepart HQ", iconUrl: "/images/careericons/IT/aitools/teleport.webp" },
+  { name: "Codeium", iconUrl: "/images/careericons/IT/aitools/codeium.png" },
+  { name: "Cursor Ai", iconUrl: "/images/careericons/IT/aitools/cursor.webp" },
+  { name: "Replit Ai", iconUrl: "/images/careericons/IT/aitools/replit.webp" },
+  { name: "Google Gemini", iconUrl: "/images/careericons/IT/aitools/gemini.webp" },
+  { name: "HuggingFace inference API", iconUrl: "/images/careericons/IT/aitools/huggingface.webp" },
+  { name: "Leonardo Ai", iconUrl: "/images/careericons/IT/aitools/leonardo.webp" },
+  { name: "Flowise Ai", iconUrl: "/images/careericons/IT/aitools/flowise.webp" },
+  { name: "Botpress Ai", iconUrl: "/images/careericons/IT/aitools/botpress.png" },
+  // Agar last mein "+ more" text hi rakhna hai (image nahi):
+  { name: "+ more", iconUrl: null, isText: true } 
+];
+
+const platformsList = [
+  { name: "HTML", iconUrl: "/images/careericons/IT/platform/html.webp" },
+  { name: "CSS", iconUrl: "/images/careericons/IT/platform/css3.webp" },
+  { name: "javascript", iconUrl: "/images/careericons/IT/platform/javascript.webp" },
+  { name: "Bootstrap", iconUrl: "/images/careericons/IT/platform/bootstrap.webp" },
+  { name: "React.js", iconUrl: "/images/careericons/IT/platform/reactjs.webp" },
+  { name: "Next.js", iconUrl: "/images/careericons/IT/platform/nextjs.webp" },
+  { name: "Angular", iconUrl: "/images/careericons/IT/platform/angular.webp" },
+  { name: "Python", iconUrl: "/images/careericons/IT/platform/python.webp" },
+  { name: "Node.js", iconUrl: "/images/careericons/IT/platform/node-js.webp" },
+  { name: "Express.js", iconUrl: "/images/careericons/IT/platform/express.png" },
+  { name: "Django", iconUrl: "/images/careericons/IT/platform/django.webp" },
+  { name: "MySql", iconUrl: "/images/careericons/IT/platform/mysql.webp" },
+  { name: "MongoDB", iconUrl: "/images/careericons/IT/platform/mongodb.webp" },
+];
 
         const journeySteps = [
           { title: "Enrollment", description: "Counselling call, city & mode selection, admission confirmed." },

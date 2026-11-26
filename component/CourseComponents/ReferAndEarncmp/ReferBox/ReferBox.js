@@ -13,9 +13,9 @@ export default function TransparentRewardStructure() {
       label: "School of Marketing Courses",
       courses: [
         { name: "MBA in Digital Marketing", reward: "₹6,000" },
-        { name: "Post Graduate in Digital Marketing", reward: "₹4,000" },
-        { name: "Graduate in Digital Marketing", reward: "₹3,000" },
-        { name: "Master in Digital Marketing Program", reward: "₹4,000" },
+        { name: "Post Graduate Program in Digital Marketing", reward: "₹4,000" },
+        { name: "Graduate Program in Digital Marketing", reward: "₹3,000" },
+        { name: "Master Program in Digital Marketing", reward: "₹4,000" },
         { name: "Advance Executive Program in Digital Marketing", reward: "₹5,000" },
         { name: "Simulation Program in Digital Marketing", reward: "₹6,000" },
       ],
@@ -24,22 +24,22 @@ export default function TransparentRewardStructure() {
       id: "technology",
       label: "School of Tech Courses",
       courses: [
-        { name: "Masters in Full Stack Development", reward: "₹3,000" },
-        { name: "Masters in Full Stack Development with Python", reward: "₹4,000" },
-        { name: "Post Graduation in Data Science with ML and AI", reward: "₹5,000" },
-        { name: "Certification with Data Science with Machine Learning", reward: "₹3,000" },
-        { name: "Certification in Data Analytics Course", reward: "₹3,000" },
+        { name: "Master Certification in Full Stack Developer Program", reward: "₹3,000" },
+        { name: "Master Certification in Full Stack Developer Program with Python", reward: "₹4,000" },
+        { name: "Master Program in Data Science, Machine Learning and AI", reward: "₹5,000" },
+        { name: "Master Program in Data Science and Machine Learning", reward: "₹3,000" },
+        { name: "Master Program in Data Analytics with Gen AI", reward: "₹3,000" },
         { name: "Simulation Program in Full Stack Development with Python", reward: "₹6,000" },
-        { name: "Simulation Program in DA and DSML", reward: "₹6,000" },
+        { name: "Simulation Program in DA/DSML", reward: "₹6,000" },
       ],
     },
     {
       id: "design",
       label: "School of Graphics Courses",
       courses: [
-        { name: "Graduate in Graphic Design", reward: "₹3,000" },
-        { name: "Masters in Graphic Design", reward: "₹3,000" },
-        { name: "Multimedia in Graphic Design", reward: "₹4,000" },
+        { name: "Graduate Program in Graphic Design", reward: "₹3,000" },
+        { name: "Master in Graphic Design", reward: "₹3,000" },
+        { name: "Multimedia & Animation in Graphic Design", reward: "₹4,000" },
         { name: "Video Editing and Animation Program", reward: "₹4,000" },
         { name: "Simulation Program in Graphic Design", reward: "₹6,000" },
       ],
@@ -59,11 +59,11 @@ export default function TransparentRewardStructure() {
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-            Reward Structure by <span className="text-[#046AED]">School & Course</span>
+            Referral Rewards Across<span className="text-[#046AED]"> Our Course</span>
           </h2>
 
           <p className="mt-2 text-xs sm:text-sm text-gray-600">
-            Explore the specific referral bonuses unlocked for every successful course enrollment.
+            Refer your friends to us for courses in Digital Marketing, Technology & Graphic Design and earn incentives for successful referrals.
           </p>
         </div>
 

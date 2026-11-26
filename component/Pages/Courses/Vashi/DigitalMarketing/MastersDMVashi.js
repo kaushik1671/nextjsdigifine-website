@@ -100,8 +100,8 @@ const toolsSectionData = {
   caption: "Work with the tools employers recognise across paid media, analytics and social advertising.",
   tools: [
     { name: "Google Ads", image: "images/toolslogo/DM/googleads.png" },
-    { name: "Google Analytics", image: "images/toolslogo/DM/ga4.png" },
-    { name: "Microsoft Clarity", image: "images/toolslogo/DM/clarity.png" },
+    { name: "Google Analytics", image: "images/toolslogo/DM/ga4.webp" },
+    { name: "Microsoft Clarity", image: "images/toolslogo/DM/clarity.webp" },
     { name: "Meta Ads", image: "images/toolslogo/DM/meta.png" },
     { name: "LinkedIn", image: "images/toolslogo/DM/linkedin.png" },
     { name: "X", image: "images/toolslogo/DM/x.png" },

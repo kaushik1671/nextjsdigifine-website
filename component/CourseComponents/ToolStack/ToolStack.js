@@ -18,7 +18,8 @@ const ToolStack = ({
     path.includes('full-stack') ||
     path.includes('fullstack') ||
     path.includes('fsd') ||
-    path.includes('dsml') ||
+    path.includes('ds') ||
+    path.includes('ml') ||
     path.includes('data-science') ||
     path.includes('/it');
 
@@ -34,7 +35,7 @@ const ToolStack = ({
         className="flex items-center gap-3 px-3.5 py-3 rounded-xl border border-gray-200/90 bg-white cursor-default select-none"
       >
         {icon ? (
-          <div className="w-8 h-8 rounded-lg bg-[#046AED]/[0.06] border border-[#046AED]/15 flex items-center justify-center shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-[#046AED]/6 border border-[#046AED]/15 flex items-center justify-center shrink-0">
             <img
               src={icon}
               alt={name}

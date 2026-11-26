@@ -101,7 +101,7 @@ function FullStack() {
             contactNumber=""
             imageUrl="/images/banner-image/37D0C444-9D61-4921-B9D47E7E60D2DE75_source.webp"
             ondownloadsyllabus={scrollTosyllabus}
-                 redirectlink = "/it-course-brochures"
+                 redirectlink = "/ds-course-brochures"
 //   universityName="O.P.Jindal Global University"
 />
 

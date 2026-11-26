@@ -303,7 +303,7 @@ export default function MasterFSD() {
         highlightTitle="in Mumbai"
         statsSubheading="100% Placement Assurance Upon Course Completion"
         statsData={pgdmStatsData}
-        redirectlink="course-brochures"
+        redirectlink="/fsd-course-brochures"
       />
 
       {/* Lazy-Loaded Below-The-Fold Sections */}

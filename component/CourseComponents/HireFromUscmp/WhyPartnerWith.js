@@ -6,20 +6,20 @@ import { ShieldCheck, Zap, Users, Sparkles } from 'lucide-react';
 export default function KeyBenefits() {
   const benefits = [
     {
-      title: 'Pre-vetted Candidates',
-      desc: 'Eliminate zero bad hires risk with rigorously tested and verified professionals.',
+      title: 'Skill-Tested Candidates',
+      desc: 'Every candidate is assessed on practical skills and live projects before we share their profile with you.',
       icon: <ShieldCheck className="w-6 h-6 text-[#046AED]" />,
       badge: 'Zero Risk',
     },
     {
-      title: 'Plug-and-Play Ready',
-      desc: 'Interns and professionals equipped to start contributing to your workflows immediately.',
+      title: 'Trained on Real Tools',
+      desc: 'With a course structure of 80% practical and 20% theory, our students already know the tools your team uses.',
       icon: <Zap className="w-6 h-6 text-[#F59E0B]" />,
       badge: 'Instant Deploy',
     },
     {
-      title: 'Dedicated Support',
-      desc: 'Assigned coordination to manage communication, onboarding, and seamless execution.',
+      title: 'One Point of Contact',
+      desc: 'A coordinator handles shortlisting, interview scheduling and onboarding follow-up, so you don’t chase anyone.',
       icon: <Users className="w-6 h-6 text-[#046AED]" />,
       badge: '24/7 Assistance',
     },
@@ -39,10 +39,10 @@ export default function KeyBenefits() {
             Why Partner With Us
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-            Key Benefits for <span className="bg-gradient-to-r from-[#046AED] via-blue-600 to-[#F59E0B] bg-clip-text text-transparent">Your Business</span>
+            Why Companies Hire <span className="bg-gradient-to-r from-[#046AED] via-blue-600 to-[#F59E0B] bg-clip-text text-transparent">From Digifine</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Designed to bring absolute efficiency, reliability, and speed to your team scaling process.
+            Skip the screening and training gap. Hire talent that is tested, trained on real tools and ready to contribute.
           </p>
         </div>
 

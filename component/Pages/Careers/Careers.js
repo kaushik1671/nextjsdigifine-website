@@ -12,8 +12,8 @@ import FinalCta from '../../CourseComponents/FinalCta/FinalCta';
 
 const heroStatsData = [
   { value: '12+', label: 'Open Positions' },
-  { value: '3', label: 'Prime Locations' },
-  { value: '4.9★', label: 'Culture Score' }
+  { value: '3', label: 'Office Locations' },
+  { value: 'Growing Team', label: 'Career Opportunities' }
 ];
 
 // 1. ADDED: Dummy data for Job Openings to fix the error
@@ -49,7 +49,8 @@ export default function Page() {
         badgeText="WE'RE HIRING ACROSS 3 LOCATIONS"
         titleLine1="Build Your Career."
         titleLine2="Build the Future."
-        description="Join Digifine's team of tech innovators, digital experts, and educators shaping next-generation careers in Mumbai and Hyderabad."
+        description="At Digifine Academy, we bring together passionate educators, digital marketers, developers, designers, and creative thinkers who believe in shaping the future of education and technology.
+Join a team that values innovation, continuous learning, collaboration, and real-world impact. Be part of an environment where your ideas matter, your skills grow, and your work helps people build successful careers."
         primaryBtnText="Explore Open Positions"
         onPrimaryClick={handleExploreClick}
         secondaryBtnText="Join Talent Network"

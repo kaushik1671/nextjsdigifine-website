@@ -86,19 +86,20 @@ export default function HeroSection({
 
             {/* Stats Counter */}
             {stats && stats.length > 0 && (
-              <div className="pt-8 border-t border-slate-200/60 grid grid-cols-3 gap-4 text-center lg:text-left max-w-lg mx-auto lg:mx-0">
-                {stats.map((stat, idx) => (
-                  <div key={idx}>
-                    <div className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-slate-500 font-medium mt-0.5">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+  <div className="pt-8 border-t border-slate-200/60 flex flex-wrap items-start justify-center lg:justify-between gap-8 max-w-xl mx-auto lg:mx-0">
+    {stats.map((stat, idx) => (
+      <div key={idx} className="flex flex-col text-center lg:text-left">
+        <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 whitespace-nowrap leading-tight">
+          {stat.value}
+        </div>
+        <div className="text-xs text-slate-500 font-medium mt-1">
+          {stat.label}
+        </div>
+        
+      </div>
+    ))}
+  </div>
+)}
           </div>
 
           {/* Right Visual Element */}

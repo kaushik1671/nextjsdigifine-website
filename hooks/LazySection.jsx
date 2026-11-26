@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 function LazySection({
   children,
-  fallback = <div className="min-h-[100px]" />,
+  fallback = <div className="min-h-25" />,
   threshold = 0.1,
   rootMargin = "300px",
   triggerOnce = true,

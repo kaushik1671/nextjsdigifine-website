@@ -111,19 +111,11 @@ export default function DSMLSimulationVashi() {
       }
     ];
 
-    const aiToolsList = [
+const aiToolsList = [
   { name: "Chatgpt", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
-  { name: "Claude", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
-  { name: "Gemini", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
-  { name: "Midjourney", iconUrl: "/images/careericons/dsml/tools/chatgpt.webpp" },
-  { name: "Perplexity", iconUrl: "/images/careericons/dsml/tools/chatgpt.webp" },
-  { name: "Canva AI", iconUrl: "/images/careericons/canva.jpeg" },
-  { name: "Notion AI", iconUrl: "/images/careericons/notion.png" },
-  { name: "Gamma", iconUrl: "/images/careericons/gamma.webp" },
-  { name: "Runway", iconUrl: "/images/careericons/runway.png" },
-  { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.png" },
-  { name: "Meta AI", iconUrl: "/images/careericons/meta.jpeg" },
-  // Agar last mein "+ more" text hi rakhna hai (image nahi):
+  { name: "Microsoft Copilot", iconUrl: "/images/careericons/dsml/tools/copilot.webp" },
+  { name: "NotebookLM", iconUrl: "/images/careericons/dsml/tools/notebooklm.webp" },
+  { name: "Julius", iconUrl: "/images/careericons/dsml/tools/julius.webp" },
   { name: "+ more", iconUrl: null, isText: true } 
 ];
 
@@ -131,18 +123,16 @@ const platformsList = [
   { name: "Microsoft Excel", iconUrl: "/images/careericons/dsml/tools/excel.webp" },
   { name: "Python", iconUrl: "/images/careericons/IT/platform/python.webp" },
   { name: "MySql", iconUrl: "/images/careericons/IT/platform/mysql.webp" },
-  { name: "NumPy", iconUrl: "/images/careericons/dsml/tools/numpy.png" },
+  { name: "NumPy", iconUrl: "/images/careericons/dsml/tools/numpy.webp" },
   { name: "Matplotlib", iconUrl: "/images/careericons/dsml/tools/matplotlib.webp" },
-  { name: "Seaborn", iconUrl: "/images/careericons/dsml/tools/seaborn.png" },
+  { name: "Seaborn", iconUrl: "/images/careericons/dsml/tools/seaborn.webp" },
   { name: "Statistics", iconUrl: "/images/careericons/dsml/tools/statistics.webp" },
   { name: "Power BI", iconUrl: "/images/careericons/dsml/tools/powerbi.webp" },
   { name: "Tableau", iconUrl: "/images/careericons/dsml/tools/tableau.webp" },
-  { name: "Scipy", iconUrl: "/images/careericons/dsml/tools/scipy.png" },
-  { name: "Scikit-learn", iconUrl: "/images/careericons/dsml/tools/scikitlearn.png" },
+  { name: "Scipy", iconUrl: "/images/careericons/dsml/tools/scipy.webp" },
+  { name: "Scikit-learn", iconUrl: "/images/careericons/dsml/tools/scikitlearn.webp" },
   { name: "Tensorflow", iconUrl: "/images/careericons/dsml/tools/tensorflow.webp" },
-  { name: "Deep Learning", iconUrl: "/images/careericons/dsml/tools/dl.jpg" },
-
-  
+  { name: "Deep Learning", iconUrl: "/images/careericons/dsml/tools/dl.webp" },
 ];
 
         const journeySteps = [

@@ -71,7 +71,9 @@ export default function ReferralForm() {
           </h2>
 
           <p className="mt-2 text-xs sm:text-sm text-gray-600">
-            Fill out the details below to refer your friends or connections to Digifine Academy.
+            Do you have a friend that is keen on starting a career in Digital Marketing, Technology or Graphic Design?
+Refer him or her to Digifine Academy through completing the form provided below. Our team will reach out to your referred person.
+
           </p>
         </div>
 
@@ -82,9 +84,9 @@ export default function ReferralForm() {
               <div className="w-16 h-16 bg-[#046AED]/10 border border-[#046AED]/20 text-[#046AED] rounded-full flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Referral Submitted!</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Thank you for referring your friend to Digifine Academy!</h3>
               <p className="text-sm text-gray-600 max-w-md mx-auto">
-                Thank you for referring your friend to Digifine Academy. Our team will reach out to them shortly!
+                Our team will get in touch with your referral with details about our courses and admission procedure.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
@@ -209,7 +211,7 @@ export default function ReferralForm() {
                   disabled={submitting}
                   className="w-full bg-[#046AED] hover:bg-blue-600 disabled:opacity-60 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-sm text-sm cursor-pointer"
                 >
-                  {submitting ? "Submitting..." : "Submit"}
+                  {submitting ? "Submitting..." : "Submit Referral"}
                 </button>
               </div>
 

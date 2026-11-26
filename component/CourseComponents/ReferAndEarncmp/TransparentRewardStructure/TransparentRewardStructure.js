@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export default function TransparentRewardStructure({ 
   title = "Transparent Reward Structure", 
-  subtitle = "No hidden clauses or complex terms. Rewards are designed to benefit both you and your friend!",
+  subtitle = "Digifine Academy’s “Refer & Earn” initiative aims to help you earn rewards for guiding your friends and contacts to the best learning platforms at Digifine Academy.Make sure to learn about the eligibility criteria and the rewards available.",
   badgeText = "Crystal Clear Payouts",
   customTiers = null,
   referrerReward = "₹3,000 Cash Reward credited directly upon successful enrollment.",
@@ -115,7 +115,7 @@ export default function TransparentRewardStructure({
                       {tier.referrals}
                     </h3>
                     <p className="text-[11px] text-slate-500 mb-4">
-                      Successful admissions
+                      Reward per successful admission
                     </p>
 
                     <div className="bg-slate-50 border border-blue-100/60 rounded-xl p-3.5 mb-4">

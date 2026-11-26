@@ -46,7 +46,7 @@ export default function TopReferrersLeaderboard() {
             Top Referrers Leaderboard
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            Compete with peers, climb the ranks, and unlock massive cash rewards!
+            Celebrate our best referrers that are helping their friends explore new career avenues through Digifine Academy.Refer more friends and reap more rewards!
           </p>
         </div>
 
@@ -168,7 +168,7 @@ export default function TopReferrersLeaderboard() {
           {/* Footer Callout */}
           <div className="pt-4 border-t border-slate-100 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs sm:text-sm text-slate-500">
-              🚀 Rankings update in real-time based on verified admissions.
+              🚀 Start Referring & Climb the Leaderboard
             </p>
             <span className="text-xs font-bold text-[#046AED] bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100">
               Season 2026 Active

@@ -93,25 +93,25 @@ export default function PartnerInquiry() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
-                Hire Pre-Vetted, Job-Ready{' '}
+                Hire Job-Ready Talent,{' '}
                 <span className="bg-gradient-to-r from-[#046AED] via-blue-600 to-[#F59E0B] bg-clip-text text-transparent">
-                  Professionals
+                  Faster.
                 </span>
               </h1>
 
               <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                Connect with skilled developers, creative graphic designers, and performance-driven digital marketers. Skip the lengthy screening process and hire verified talent ready to deliver results.
+                Connect with trained developers, graphic designers and digital marketers from Digifine Academy. Every candidate is skill-tested and project-trained, so you spend less time screening and more time building your team.
               </p>
 
               {/* Stats / Highlights */}
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200">
                 <div>
                   <div className="text-2xl sm:text-3xl font-bold text-[#046AED]">100%</div>
-                  <div className="text-xs sm:text-sm text-slate-500">Industry Ready</div>
+                  <div className="text-xs sm:text-sm text-slate-500">Skill-Tested</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-bold text-[#046AED]">Zero</div>
-                  <div className="text-xs sm:text-sm text-slate-500">Hiring Fee Hassle</div>
+                  <div className="text-xs sm:text-sm text-slate-500">Hiring Fee</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-bold text-[#F59E0B]">24h</div>
@@ -122,9 +122,9 @@ export default function PartnerInquiry() {
               {/* Perks List */}
               <div className="space-y-3 pt-2">
                 {[
-                  'Verified skill assessments in Tech, Creative & Marketing',
-                  'Trained on practical workflows, tools & real campaigns',
-                  'Flexible hiring models: Internships, Contract, & Full-Time',
+                  'Skill-tested candidates across Tech, Design and Marketing',
+                  'Trained on real tools, workflows and live campaigns',
+                  'Hire as intern, contract or full-time, whatever suits you',
                 ].map((perk, idx) => (
                   <div key={idx} className="flex items-center gap-3 text-slate-700 text-sm">
                     <CheckCircle2 className="w-5 h-5 text-[#046AED] shrink-0" />
@@ -149,7 +149,7 @@ export default function PartnerInquiry() {
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-slate-900">Looking to Hire?</h3>
                   <p className="text-slate-500 text-sm mt-1">
-                    Fill out your requirements and our team will get back to you with matched candidate profiles.
+                    Tell us who you need. We’ll share matched profiles within 24 hours.
                   </p>
                 </div>
 

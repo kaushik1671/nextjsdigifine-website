@@ -27,7 +27,7 @@ const WhoDigifineFor = lazy(()=>import("../../CourseComponents/WhoDigifneFor/Who
 // const HeroSection = lazy(()=>import("../../Sections/HeroSection"))
 // const cardData = lazy(()=>import("./data/cardData"))
 // const LogoSlider = lazy(()=>import("../../Sections/LogoSlider"))
-// const FieldSelector = lazy(()=>import("../../Sections/FieldSelector"))
+// const FieldSelector = lazy(()=>import("../../Sections/FieldSelector"))x
 // const Banner = lazy(()=>import("../../Sections/Banner"))
 // const CardSection = lazy(()=>import("../../Sections/CardSection"))
 // const CourseFAQs = lazy(()=>import("../../Sections/CourseFAQs"))

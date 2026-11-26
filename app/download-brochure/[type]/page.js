@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 
 const conversionMap = {
   "course-brochures": "AW-834246291/hphSCNW6i7IaEJOt5o0D",
-  "it-course-brochures": "AW-834246291/29uyCLu-i7IaEJOt5o0D",
+  "ds-course-brochures": "AW-834246291/29uyCLu-i7IaEJOt5o0D",
   "graphic-design-curriculum": "AW-834246291/XMXzCLi-i7IaEJOt5o0D",
 };
 

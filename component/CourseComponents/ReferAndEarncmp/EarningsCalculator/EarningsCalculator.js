@@ -19,14 +19,14 @@ export default function PotentialEarningsCalculator() {
         
         {/* Title */}
         <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
-          Calculate Your Potential Earnings
+          Calculate Your Referral Earnings
         </h2>
 
         {/* Inner Interactive Box - Increased padding and max width */}
         <div className="bg-slate-50/80 border border-blue-100/80 rounded-2xl p-6 sm:p-10 shadow-sm max-w-3xl mx-auto">
           
           <p className="text-sm sm:text-base font-medium text-slate-600 mb-8">
-            Slide to select how many friends you can refer:
+            The more successful admissions that you refer, the greater your rewards will be. Use the referral earnings calculator for estimating your rewards.
           </p>
 
           {/* Custom Slider Container with Filled Track behind the thumb */}

@@ -99,9 +99,9 @@ const toolsSectionData = {
   caption: "Work with the tools employers recognise across paid media and analytics.",
   tools: [
     { name: "Google Ads", image: "images/toolslogo/DM/googleads.png" },
-    { name: "Google Analytics 4", image: "images/toolslogo/DM/ga4.png" },
+    { name: "Google Analytics 4", image: "images/toolslogo/DM/ga4.webp" },
     { name: "Meta Ads Manager", image: "images/toolslogo/DM/meta.png" },
-    { name: "Microsoft Clarity", image: "images/toolslogo/DM/clarity.png" },
+    { name: "Microsoft Clarity", image: "images/toolslogo/DM/clarity.webp" },
   ],
 };
 

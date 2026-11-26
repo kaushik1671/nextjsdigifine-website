@@ -6,20 +6,20 @@ export default function HowTheProgramWorks() {
   const steps = [
     {
       stepNumber: '01',
-      title: 'Share Your Link',
-      description: 'Copy your unique referral link and share it with your friends, batchmates, or network.',
+      title: 'Refer Your Friends',
+      description: 'Enter the contact information of your friends via our referral form and introduce them to the courses available at Digifine Academy.',
       icon: '🔗',
     },
     {
       stepNumber: '02',
-      title: 'Friends Join',
-      description: 'Your friends sign up or complete their successful admission using your referral link.',
+      title: 'Your Friends Enrol',
+      description: 'Your friends meet with our admission officers, go through the course that they like, and get admitted.',
       icon: '🎓',
     },
     {
       stepNumber: '03',
-      title: 'Earn Rewards',
-      description: 'Get instant cash rewards credited for every successful referral and admission.',
+      title: 'Earn Your Rewards',
+      description: 'After your referral goes through the necessary admission and payment procedure successfully, you become qualified for the referral reward.',
       icon: '🏆',
     },
   ];
@@ -34,10 +34,10 @@ export default function HowTheProgramWorks() {
             Simple & Fast
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight pt-4">
-            How The Program Works
+            How Our Refer & Earn Program Works
           </h2>
           <p className="text-slate-600 max-w-lg mx-auto text-sm sm:text-base">
-            Start earning rewards in three simple steps. Here is everything you need to know to get started.
+            Refer your friends to Digifine Academy and enjoy benefits using just three simple steps.
           </p>
         </div>
 

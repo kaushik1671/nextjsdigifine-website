@@ -168,7 +168,7 @@ const toggleData = {
   { name: "HuggingFace inference API", iconUrl: "/images/careericons/IT/aitools/huggingface.webp" },
   { name: "Leonardo Ai", iconUrl: "/images/careericons/IT/aitools/leonardo.webp" },
   { name: "Flowise Ai", iconUrl: "/images/careericons/IT/aitools/flowise.webp" },
-  { name: "Botpress Ai", iconUrl: "/images/careericons/IT/aitools/botpress.png" },
+  { name: "Botpress Ai", iconUrl: "/images/careericons/IT/aitools/botpress.webp" },
   // Agar last mein "+ more" text hi rakhna hai (image nahi):
   { name: "+ more", iconUrl: null, isText: true } 
 ];
@@ -183,7 +183,7 @@ const platformsList = [
   { name: "Angular", iconUrl: "/images/careericons/IT/platform/angular.webp" },
   { name: "Python", iconUrl: "/images/careericons/IT/platform/python.webp" },
   { name: "Node.js", iconUrl: "/images/careericons/IT/platform/node-js.webp" },
-  { name: "Express.js", iconUrl: "/images/careericons/IT/platform/express.png" },
+  { name: "Express.js", iconUrl: "/images/careericons/IT/platform/express.webp" },
   { name: "Django", iconUrl: "/images/careericons/IT/platform/django.webp" },
   { name: "MySql", iconUrl: "/images/careericons/IT/platform/mysql.webp" },
   { name: "MongoDB", iconUrl: "/images/careericons/IT/platform/mongodb.webp" },

@@ -30,7 +30,7 @@ const routes = [
     changeFrequency: "monthly",
   },
   {
-    path: "/it-course-brochures",
+    path: "/ds-course-brochures",
     priority: 0.8,
     changeFrequency: "monthly",
   },

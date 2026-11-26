@@ -21,7 +21,6 @@ const logos = [
   { src: '/images/logo/company/clogo17.webp', alt: 'Logo 17' },
   { src: '/images/logo/company/clogo18.webp', alt: 'Logo 18' },
   { src: '/images/logo/company/clogo19.webp', alt: 'Logo 19' },
-
 ];
 
 const animations = [

@@ -82,14 +82,14 @@ const Blog = () => {
         <main className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
           {blogPosts.length > 0 ? (
             <section className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-label="Blog posts">
-              {blogPosts.map(({ blogs_data, slug, id }) => (
+              {blogPosts.map(({ blogs_data, slug, id, createdAt, created_at }) => (
                 <Link
                   href={`/blog/${slug}`}
                   key={id}
                   className="group block rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
                   aria-label={`Read more about ${blogs_data.headline || 'blog post'}`}
                 >
-                  <BlogCard blogsData={blogs_data} />
+                  <BlogCard blogsData={blogs_data} createdAt={createdAt || created_at} />
                 </Link>
               ))}
             </section>

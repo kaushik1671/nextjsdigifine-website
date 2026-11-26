@@ -99,9 +99,9 @@ const toolsSectionData = {
   highlightTitle: "Industry-Standard Digital Marketing Tools",
   caption: "Work with the tools employers recognise across paid media and analytics.",
   tools: [
-    { name: "Google Analytics", image: "images/toolslogo/DM/ga4.png" },
+    { name: "Google Analytics", image: "images/toolslogo/DM/ga4.webp" },
     { name: "Google Ads", image: "images/toolslogo/DM/googleads.png" },
-    { name: "Microsoft Clarity", image: "images/toolslogo/DM/clarity.png" },
+    { name: "Microsoft Clarity", image: "images/toolslogo/DM/clarity.webp" },
     { name: "Microsoft Excel", image: "images/toolslogo/DM/excel.png" },
   ],
 };

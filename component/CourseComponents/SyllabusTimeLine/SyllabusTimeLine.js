@@ -47,7 +47,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
             >
               
               {/* Timeline Track Node Anchor Indicator */}
-              <div className="absolute -left-[9px] top-8 w-4 h-4 rounded-full bg-white border-4 border-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] group-hover:bg-blue-600 transition-colors duration-300 z-10" />
+              <div className="absolute xleft-[2.25] top-8 w-4 h-4 rounded-full bg-white border-4 border-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] group-hover:bg-blue-600 transition-colors duration-300 z-10" />
 
               {/* Absolute Fixed Left Floating Term Badge (Only Visible on Desktop Layouts) */}
               <div className="absolute hidden md:block -left-36 top-6 w-24 text-right select-none">
@@ -63,7 +63,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
                 <div className="w-full lg:w-[32%] bg-[#1E293B] p-6 flex flex-col justify-between shrink-0 relative overflow-hidden">
                   
                   {/* Subtle Background Pattern Mesh inside Left Card Side */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-transparent opacity-40" />
+                  <div className="absolute inset-0 bg-linear-to-br from-slate-800 to-transparent opacity-40" />
 
                   <div className="relative z-10">
                     <div className="flex justify-between items-center md:items-start lg:flex-col">
@@ -85,7 +85,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
                 </div>
 
                 {/* Right Area Layout for Core Modules */}
-                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center bg-gradient-to-b from-white to-slate-50/30">
+                <div className="flex-1 p-6 md:p-8 flex flex-col justify-center bg-linear-to-b from-white to-slate-50/30">
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-4">
                     Core Modules & Competencies
                   </span>
@@ -99,7 +99,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
                           key={i} 
                           className={`bg-white border border-slate-100 ${chipPadding} rounded-xl flex items-center gap-2 shadow-[0_1px_3px_rgba(0,0,0,0.02)] group/chip`}
                         >
-                          <div className="flex-shrink-0">
+                          <div className="shrink-0">
                             {/* FIXED: Icon pehle gray rahega, hover par wapis pure blue ho jayega */}
                             <HiCheckCircle className="w-4 h-4 text-slate-300 group-hover/chip:text-blue-500 transition-colors duration-200" />
                           </div>
@@ -126,7 +126,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
                           <div className={gridClass}>
                             {data.part1Modules.map((module, i) => (
                               <div key={i} className={`bg-white border border-slate-100 ${chipPadding} rounded-xl flex items-center gap-2 shadow-[0_1px_3px_rgba(0,0,0,0.02)] group/chip`}>
-                                <div className="flex-shrink-0">
+                                <div className="shrink-0">
                                   <HiCheckCircle className="w-4 h-4 text-slate-300 group-hover/chip:text-blue-500 transition-colors duration-200" />
                                 </div>
                                 <span className="text-xs font-semibold text-slate-700 tracking-tight group-hover/chip:text-slate-900 transition-colors duration-200">{module}</span>
@@ -147,7 +147,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
                           <div className={gridClass}>
                             {data.part2Modules.map((module, i) => (
                               <div key={i} className={`bg-white border border-slate-100 ${chipPadding} rounded-xl flex items-center gap-2 shadow-[0_1px_3px_rgba(0,0,0,0.02)] group/chip`}>
-                                <div className="flex-shrink-0">
+                                <div className="shrink-0">
                                   <HiCheckCircle className="w-4 h-4 text-slate-300 group-hover/chip:text-blue-500 transition-colors duration-200" />
                                 </div>
                                 <span className="text-xs font-semibold text-slate-700 tracking-tight group-hover/chip:text-slate-900 transition-colors duration-200">{module}</span>

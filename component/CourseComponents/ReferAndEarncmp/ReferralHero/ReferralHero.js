@@ -2,9 +2,9 @@ import React from 'react';
 
 const ReferralHero = ({ 
   badgeText = "⚡ Instant Payouts & Rewards", 
-  mainTitle = "Refer Friends, Earn ₹3,000 Cash!", 
-  subtitle = "Help your friends build an exceptional career in Full Stack Developer, Digital Marketing, and Graphic Design with Digifine Academy, and unlock massive bonuses for every successful admission.",
-  buttonText = "Fill Referral Form",
+  mainTitle = "Refer Your Friends & Earn Rewards with Digifine Academy", 
+  subtitle = "Get your friends on track in their career by referring them to Digifine Academy. Get students enrolled in our Digital Marketing, Technology & Graphic Design courses and earn rewards for each successful admission.",
+  buttonText = "Refer Now",
   onCtaClick 
 }) => {
   return (
@@ -25,7 +25,7 @@ const ReferralHero = ({
           {mainTitle.split('₹3,000').map((part, i) => (
             <React.Fragment key={i}>
               {part}
-              {i === 0 && <span className="text-yellow-400 drop-shadow-sm"> ₹3,000 </span>}
+              {i === 0 && <span className="text-yellow-400 drop-shadow-sm"> </span>}
             </React.Fragment>
           ))}
         </h1>

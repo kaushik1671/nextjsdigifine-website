@@ -107,21 +107,21 @@ const aiToolsList = [
   { name: "Gamma", iconUrl: "/images/careericons/gamma.webp" },
   { name: "Runway", iconUrl: "/images/careericons/runway.png" },
   { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.png" },
-  { name: "Meta AI", iconUrl: "/images/careericons/meta.jpeg" },
+  { name: "Meta AI", iconUrl: "/images/careericons/meta.webp" },
   // Agar last mein "+ more" text hi rakhna hai (image nahi):
   { name: "+ more", iconUrl: null, isText: true } 
 ];
 
 const platformsList = [
-  { name: "Google Ads", iconUrl: "/images/careericons/platforms/google-ads.jpeg" },
-  { name: "Meta", iconUrl: "/images/careericons/platforms/meta.jpeg" },
-  { name: "GA4", iconUrl: "/images/careericons/platforms/ga4.png" },
-  { name: "Clarity", iconUrl: "/images/careericons/platforms/clarity.png" },
+  { name: "Google Ads", iconUrl: "/images/careericons/platforms/google-ads.webp" },
+  { name: "Meta", iconUrl: "/images/careericons/platforms/meta.webp" },
+  { name: "GA4", iconUrl: "/images/careericons/platforms/ga4.webp" },
+  { name: "Clarity", iconUrl: "/images/careericons/platforms/clarity.webp" },
   { name: "Tag Manager", iconUrl: "/images/careericons/platforms/tag-manager.webp" },
-  { name: "WordPress", iconUrl: "/images/careericons/platforms/wordpress.png" },
-  { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.svg" },
+  { name: "WordPress", iconUrl: "/images/careericons/platforms/wordpress.webp" },
+  { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.webp" },
   { name: "Power BI", iconUrl: "/images/careericons/platforms/powerbi.webp" },
-  { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.png" },
+  { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.webp" },
   { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.webp" },
 ];
 

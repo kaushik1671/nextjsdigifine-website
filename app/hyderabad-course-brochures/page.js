@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <DownloadBrochure type="course-brochures" />;
+  return <DownloadBrochure type="hyderabad-course-brochures" />;
 }

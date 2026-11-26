@@ -7,20 +7,20 @@ export default function HowItWorks() {
   const steps = [
     {
       step: '01',
-      title: 'Share Your Requirement',
-      desc: 'Tell us the role you need (Tech, Graphic Design, or Digital Marketing) and your project requirements.',
+      title: 'Tell Us What You Need',
+      desc: 'Share the role, skills and hiring type (intern, contract or full-time) across Tech, Design or Marketing.',
       icon: <ClipboardList className="w-6 h-6 text-[#046AED]" />,
     },
     {
       step: '02',
-      title: 'Get Vetted Profiles',
-      desc: 'Our team handpicks and shares pre-screened, job-ready candidate profiles within 24 hours.',
+      title: 'Review Matched Profiles',
+      desc: 'We shortlist skill-tested candidates that fit your brief and share their profiles within 24 hours. ',
       icon: <UserCheck className="w-6 h-6 text-[#046AED]" />,
     },
     {
       step: '03',
       title: 'Interview & Hire',
-      desc: 'Conduct quick interviews, select the best fit, and seamlessly onboard them to your team.',
+      desc: 'Meet your shortlisted candidates, pick the best fit and onboard them on your terms.',
       icon: <Rocket className="w-6 h-6 text-[#F59E0B]" />,
     },
   ];
@@ -36,10 +36,10 @@ export default function HowItWorks() {
             Simple & Fast Process
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-            How It <span className="text-[#046AED]">Works</span>
+            Hire in 3 Simple <span className="text-[#046AED]">Steps</span>
           </h2>
           <p className="text-slate-600 text-base">
-            Skip the hassle of endless resumes. Hire top talent in just three straightforward steps.
+            No job portals, no endless resumes. Tell us what you need and meet trained, skill-tested candidates within 24 hours.
           </p>
         </div>
 

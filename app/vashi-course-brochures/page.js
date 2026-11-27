@@ -6,4 +6,4 @@ export const metadata = {
 
 export default function Page() {
   return <DownloadBrochure type="vashi-course-brochures" />;
-} 
+}

@@ -43,15 +43,15 @@ export default function DMSimulation() {
     },
     {
       title: "Real Client Projects",
-      description: "Execute live briefs for actual Digifine and Adbizit clients, not mock data."
+      description: "Manage live campaigns and budgets for actual Digifine and Adbizit clients, with real results and real accountability."
     },
     {
-      title: "Paid Internship",
-      description: "Earn a stipend while you train   this is a job, not just a course."
+      title: "Earn Monthly",
+      description: "Get paid every month while you build real agency experience on live campaigns."
     },
     {
-      title: "Offer Letter",
-      description: "Receive your offer letter on day one, before you've written a single ad."
+      title: "Offer Letter on Day One",
+      description: "Get your official offer letter the day you enrol, before you've run a single campaign."
     },
     {
       title: "Placement Assistance",
@@ -62,8 +62,8 @@ export default function DMSimulation() {
   const timelineSteps = [
     { title: "Enroll", description: "Onboarding & cohort mapping" },
     { title: "Offer Letter", description: "Issued on day one" },
-    { title: "Monthly Stipend", description: "₹20,000 while you train" },
-    { title: "Live Get Placed", description: "Real client campaigns" },
+    { title: "Monthly Stipend", description: "₹30,000 while you train" },
+    { title: "Live Campaigns", description: "Run real client Projects" },
     { title: "Experience Letter", description: "Verifiable work history" },
     { title: "Placement", description: "Hiring partner network" }
   ];
@@ -114,16 +114,16 @@ export default function DMSimulation() {
   ];
 
   const aiToolsList = [
-  { name: "ChatGPT", iconUrl: "/images/careericons/chatgpt.svg" },
-  { name: "Claude", iconUrl: "/images/careericons/claude.svg" },
+  { name: "ChatGPT", iconUrl: "/images/careericons/chatgpt.webp" },
+  { name: "Claude", iconUrl: "/images/careericons/claude.webp" },
   { name: "Gemini", iconUrl: "/images/careericons/gemini.webp  " },
   { name: "Midjourney", iconUrl: "/images/careericons/midjourney.webp" },
   { name: "Perplexity", iconUrl: "/images/careericons/perplexity.webp" },
-  { name: "Canva AI", iconUrl: "/images/careericons/canva.jpeg" },
-  { name: "Notion AI", iconUrl: "/images/careericons/notion.png" },
+  { name: "Canva AI", iconUrl: "/images/careericons/canva.webp" },
+  { name: "Notion AI", iconUrl: "/images/careericons/notion.webp" },
   { name: "Gamma", iconUrl: "/images/careericons/gamma.webp" },
-  { name: "Runway", iconUrl: "/images/careericons/runway.png" },
-  { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.png" },
+  { name: "Runway", iconUrl: "/images/careericons/runway.webp" },
+  { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.webp" },
   { name: "Meta AI", iconUrl: "/images/careericons/meta.webp" },
   // Agar last mein "+ more" text hi rakhna hai (image nahi):
   { name: "+ more", iconUrl: null, isText: true } 
@@ -136,7 +136,7 @@ const platformsList = [
   { name: "Clarity", iconUrl: "/images/careericons/platforms/clarity.webp" },
   { name: "Tag Manager", iconUrl: "/images/careericons/platforms/tag-manager.webp" },
   { name: "WordPress", iconUrl: "/images/careericons/platforms/wordpress.webp" },
-  { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.webp" },
+  { name: "Tableau", iconUrl: "/images/careericons/dsml/tools/tableau.webp" },
   { name: "Power BI", iconUrl: "/images/careericons/platforms/powerbi.webp" },
   { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.webp" },
   { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.webp" },
@@ -148,7 +148,7 @@ const platformsList = [
     { title: "Assignments", description: "Weekly graded assignments to lock in each concept." },
     { title: "Live Projects", description: "Real client briefs from Digifine and Adbizit accounts." },
     { title: "Corporate Simulation", description: "Full agency-floor simulation with deliverables and deadlines." },
-    { title: "Certification", description: "14 certifications across platforms and specializations." },
+    { title: "Certification", description: "10+ certifications across platforms and specializations." },
     { title: "Placement", description: "Resume prep, mock interviews, hiring partner introductions." }
   ];
 
@@ -177,12 +177,12 @@ const platformsList = [
       subheading: "Life With Digifine",
       description: "We designed this learning experience to actually help you build useful skills, get real exposure to the industry, and walk into career opportunities feeling like you're ready for them.",
       cards: [
-        { text: "100% Placement Assistance with Industry Residency Program", icon: "Briefcase" },
+        { text: "100% Placement Assistance with Industry", icon: "Briefcase" },
         { text: "Guaranteed Extensions & Salary Hikes", icon: "TrendingUp" },
         { text: "In-Hand Offer Letter on Day 1", icon: "FileCheck" },
-        { text: "International Visit to Dubai", icon: "Plane" },
+        { text: "Domestric Industry Visit", icon: "Plane" },
         { text: "Unique Modules for Real-World Edge", icon: "Zap" },
-        { text: "10+ Globally Recognized Certifications", icon: "Award" },
+        { text: "10+ Industry Recognized Certifications", icon: "Award" },
         { text: "Industry Expert, Highly Skilled In-House Trainers", icon: "Users" },
         { text: "400+ Hours of Intense Classroom Training", icon: "Clock" },
         { text: "Post-Course Support Even After Completion", icon: "ShieldCheck" },
@@ -198,9 +198,9 @@ const platformsList = [
         { text: "No Placement Assistance", icon: "Briefcase" },
         { text: "No Guarantee of High-Paying Jobs", icon: "TrendingUp" },
         { text: "No Offer Letter Upon Admission", icon: "FileCheck" },
-        { text: "No International Exposure", icon: "Plane" },
+        { text: "No International Visit", icon: "Plane" },
         { text: "Outdated & Generic Syllabus", icon: "Zap" },
-        { text: "No Globally Recognized Certifications", icon: "Award" },
+        { text: "No Industry Recognized Certifications", icon: "Award" },
         { text: "Teachers & Trainers with Limited Experience", icon: "Users" },
         { text: "Not Enough Hours of Classroom Training", icon: "Clock" },
         { text: "No Post-Course Guidance", icon: "ShieldCheck" },
@@ -310,11 +310,11 @@ const platformsList = [
   ];
 
   const timelineStepsData = [
-    { title: "Enrollment", description: "Join our course today and open up new doors for yourself!" },
-    { title: "Get Trained", description: "Learn in detail from experts in the field through our comprehensive training programs." },
-    { title: "Assessments", description: "Measure yourself and track your progress through regular assessments." },
-    { title: "Interview Preparation", description: "Build confidence with real-time mock interviews and complete interview preparation support." },
-    { title: "Get Placed", description: "Move ahead with confidence into your new career!" },
+    { title: "Enroll", description: "Secure your spot and start building real-world digital marketing skills from the ground up. No prior experience needed." },
+    { title: "Get Offer Letter", description: "Get your official offer letter immediately on enrollment, from Day 1." },
+    { title: "Learn on the Job", description: "Work in a real corporate environment on live Google Ads, Meta and SEO projects, with mentorship and daily challenges." },
+    { title: "Get Certified", description: "Earn an industry-recognised certification and a verifiable experience letter for your portfolio and future employers." },
+    { title: "Get Absorbed", description: "Move into full-time placement with our trusted partner agencies and launch your digital marketing career." },
   ];
 
   const [testimonials, setTestimonials] = useState([]);
@@ -335,7 +335,7 @@ const platformsList = [
       .then((m) => setCategories(m.default))
       .catch((err) => console.error("Boxcard load fail:", err));
 
-    import("./data/MBA/faqs")
+    import("./data/DMSimulation/faqs")
       .then((m) => setFaqs(m.default))
       .catch((err) => console.error("Faqs load fail:", err));
   }, []);
@@ -346,10 +346,10 @@ const platformsList = [
       <CourseCard
         title="Digital Marketing Corporate Simulation with"
         highlightText="100% Placement Assistance"
-        description="Experience the real agency flow, manage actual budgets, and earn dynamic experience letters with professional guidance."
+        description="Digifine's Corporate Simulation is a Mumbai digital marketing program where you work in a real agency environment from Day 1, with an offer letter, live Google Ads, Meta and SEO projects, and an experience letter on completion."
         emi="Placements"
-        startDate="Industry Experts"
-        startDateby='Practical Training from'
+        startDate="Live Client Campaigns"
+        startDateby='Work on'
         duration="Curriculum with Unique Modules"
         durationValue='One of its kind'
         appliedText=""

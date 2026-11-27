@@ -114,16 +114,16 @@ export default function DMSimulationVashi() {
   ];
 
   const aiToolsList = [
-  { name: "ChatGPT", iconUrl: "/images/careericons/chatgpt.svg" },
-  { name: "Claude", iconUrl: "/images/careericons/claude.svg" },
+  { name: "ChatGPT", iconUrl: "/images/careericons/chatgpt.webp" },
+  { name: "Claude", iconUrl: "/images/careericons/claude.webp" },
   { name: "Gemini", iconUrl: "/images/careericons/gemini.webp  " },
   { name: "Midjourney", iconUrl: "/images/careericons/midjourney.webp" },
   { name: "Perplexity", iconUrl: "/images/careericons/perplexity.webp" },
-  { name: "Canva AI", iconUrl: "/images/careericons/canva.jpeg" },
-  { name: "Notion AI", iconUrl: "/images/careericons/notion.png" },
+  { name: "Canva AI", iconUrl: "/images/careericons/canva.webp" },
+  { name: "Notion AI", iconUrl: "/images/careericons/notion.webp" },
   { name: "Gamma", iconUrl: "/images/careericons/gamma.webp" },
-  { name: "Runway", iconUrl: "/images/careericons/runway.png" },
-  { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.png" },
+  { name: "Runway", iconUrl: "/images/careericons/runway.webp" },
+  { name: "ElevenLabs", iconUrl: "/images/careericons/elevenlabs.webp" },
   { name: "Meta AI", iconUrl: "/images/careericons/meta.webp" },
   // Agar last mein "+ more" text hi rakhna hai (image nahi):
   { name: "+ more", iconUrl: null, isText: true } 
@@ -136,7 +136,7 @@ const platformsList = [
   { name: "Clarity", iconUrl: "/images/careericons/platforms/clarity.webp" },
   { name: "Tag Manager", iconUrl: "/images/careericons/platforms/tag-manager.webp" },
   { name: "WordPress", iconUrl: "/images/careericons/platforms/wordpress.webp" },
-  { name: "Looker Studio", iconUrl: "/images/careericons/platforms/looker.webp" },
+  { name: "Tableau", iconUrl: "/images/careericons/dsml/tools/tableau.webp" },
   { name: "Power BI", iconUrl: "/images/careericons/platforms/powerbi.webp" },
   { name: "DV360", iconUrl: "/images/careericons/platforms/dv360.webp" },
   { name: "Merchant Center", iconUrl: "/images/careericons/platforms/merchant.webp" },

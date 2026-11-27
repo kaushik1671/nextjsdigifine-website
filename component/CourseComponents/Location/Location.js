@@ -12,7 +12,7 @@ const DEFAULT_LOCATIONS_DATA = [
     address: "303, 3rd Floor, Vertex Vikas Building, A Wing, Court Ln, above A2Z Xerox, opposite Railway Station, Andheri East, Mumbai, Maharashtra 400069",
     phone: "+91 81690-04863 /+91 88790-25425",
     email: "info@adbizit.com",
-    timing: "Mon - Sat: 10:00 AM - 7:00 PM",
+    timing: "Mon - Sun: 10:00 AM - 8:00 PM",
   },
   {
     city: "Hyderabad",
@@ -30,7 +30,7 @@ const DEFAULT_LOCATIONS_DATA = [
     address: "6th Floor, Vashi Infotech Park, 610, 611, Sector 30A, Vashi, Navi Mumbai, Maharashtra 400703, India",
     phone: "+91 81690-04863 /+91 88790-25425",
     email: "info@adbizit.com",
-    timing: "Mon - Sat: 10:00 AM - 7:00 PM",
+    timing: "Mon - Sat: 10:00 AM - 8:00 PM",
   },
 ];
 

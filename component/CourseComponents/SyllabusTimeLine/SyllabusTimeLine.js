@@ -47,7 +47,7 @@ export default function SyllabusTimeLine({ syllabusData, columns = 3 }) {
             >
               
               {/* Timeline Track Node Anchor Indicator */}
-              <div className="absolute xleft-[2.25] top-8 w-4 h-4 rounded-full bg-white border-4 border-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] group-hover:bg-blue-600 transition-colors duration-300 z-10" />
+              <div className="absolute -left-[9px] top-8 w-4 h-4 rounded-full bg-white border-4 border-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.15)] group-hover:bg-blue-600 transition-colors duration-300 z-10" />
 
               {/* Absolute Fixed Left Floating Term Badge (Only Visible on Desktop Layouts) */}
               <div className="absolute hidden md:block -left-36 top-6 w-24 text-right select-none">

@@ -1,6 +1,6 @@
 const faqs = [
     {
-      tabLabel: "MBA in Digital Marketing",
+      tabLabel: "Digital Marketing Corporate Simulation",
       faqs: [
         {
           question: "What is a digital marketing corporate simulation program?",
@@ -29,7 +29,7 @@ const faqs = [
       ],
     },
     {
-      tabLabel: "Eligibility for MBA in Digital Marketing",
+      tabLabel: "Eligibility for the Corporate Simulation Program ",
       faqs: [
         {
           question: "Who can join the digital marketing simulation program?",
@@ -42,7 +42,7 @@ const faqs = [
       ],
     },
     {
-      tabLabel: "Career after MBA in Digital Marketing",
+      tabLabel: "Carrer after Corporate Simulation Program",
       faqs: [
         {
           question: "What jobs can I get after the program?",
@@ -55,7 +55,7 @@ const faqs = [
       ],
     },
     {
-      tabLabel: "MBA in Digital Marketing Fees and Duration",
+      tabLabel: "Digital Marketing Corporate Simulation Program Duration",
       faqs: [
         {
           question: "What is the duration of the program?",
